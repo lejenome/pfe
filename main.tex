@@ -1,0 +1,218 @@
+\documentclass[
+paper=a4,
+fontsize=12pt,
+%oneside, % Two side (alternating margins) for binding by default, uncomment to switch to one side
+twoside,
+%singlespacing, % Single line spacing, alternatives: onehalfspacing or doublespacing
+%draft, % Uncomment to enable draft mode (no pictures, no links, overfull hboxes indicated)
+%nolistspacing, % If the document is onehalfspacing or doublespacing, uncomment this to set spacing in lists to single
+liststotoc, % Uncomment to add the list of figures/tables/etc to the table of contents
+toctotoc, % Uncomment to add the main table of contents to the table of contents
+%parskip, % Uncomment to add space between paragraphs
+%nohyperref, % Uncomment to not load the hyperref package
+%headsepline, % Uncomment to get a line under the header
+%chapterinoneline, % Uncomment to place the chapter title next to the number on one line
+%consistentlayout, % Uncomment to change the layout of the declaration, abstract and acknowledgements pages to match the default layout
+]{article} % {scrartcl}
+
+\usepackage[shorthands=off,english]{babel}
+%\usepackage{polyglossia}
+%\setmainlanguage{}
+%\setotherlanguages{}
+
+\usepackage[acronym,toc]{glossaries}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{mathspec}
+\usepackage{xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+\newcommand{\euro}{€}
+\setmainfont{TeX Gyre Pagella}
+\setsansfont{FreeSans}
+\setmonofont[Mapping=tex-ansi]{Monaco}
+
+\usepackage{graphicx}
+\graphicspath{ {figures/} }
+\usepackage{array}
+
+\usepackage[intoc]{nomencl}
+\makenomenclature
+
+\usepackage[setpagesize=false, % page size defined by xetex
+            unicode=false, % unicode breaks when used with xetex
+            xetex]{hyperref}
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+	    pdfauthor={Moez Bouhlel; Rihab Majdoub},
+	    pdftitle={CityWatch - Final Year Project},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+% Make links footnotes instead of hotlinks:
+\renewcommand{\href}[2]{#2\footnote{\url{#1}}}
+
+\usepackage{minted}
+%\usemintedstyle{borland}
+\usemintedstyle{tango}
+
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+%\geometry{
+%	paper=a4paper, % Change to letterpaper for US letter
+%	inner=2.5cm, % Inner margin
+%	outer=3.8cm, % Outer margin
+%	bindingoffset=.5cm, % Binding offset
+%	top=1.5cm, % Top margin
+%	bottom=1.5cm, % Bottom margin
+%	%showframe, % Uncomment to show how the type block is set on the page
+%}
+
+%%% Custom sectioning
+\usepackage{sectsty}
+\allsectionsfont{\centering \normalfont\scshape}
+
+
+%%% Custom headers/footers (fancyhdr package)
+\usepackage{fancyhdr}
+\fancyhf{}
+\fancyhead[LE,RO]{\itshape CityWatch}
+\fancyhead[RE,LO]{\itshape{\nouppercase{\leftmark}}}
+%\lfoot{v $version$}
+\fancyfoot[RE,LO]{\thepage}
+%\renewcommand{\headrulewidth}{2pt}		% Remove header underlines
+%\renewcommand{\footrulewidth}{1pt}		% Remove footer underlines
+%\setlength{\headheight}{13.6pt}
+
+\usepackage{fancyvrb}
+\VerbatimFootnotes
+
+%%% Equation and float numbering
+%\numberwithin{equation}{section}		% Equationnumbering: section.eq#
+%\numberwithin{figure}{section}			% Figurenumbering: section.fig#
+%\numberwithin{table}{section}			% Tablenumbering: section.tab#
+
+
+\makeglossaries
+
+\newglossaryentry{maths}
+{
+    name=mathematics,
+    description={Mathematics is what mathematicians do}
+}
+\newacronym{gcd}{GCD}{Greatest Common Divisor}
+
+\newacronym{lcm}{LCM}{Least Common Multiple}
+
+\title{
+		%\vspace{-1in}
+		%\usefont{OT1}{bch}{b}{n}
+		%\normalfont \normalsize \textsc{Faculty of Sciences of Sfax} \\ [25pt]
+		%\horrule{0.5pt} \\[0.4cm]
+		CityWatch \\\vspace{0.5em}
+		{\large Final Year Project Report}
+		%\horrule{2pt} \\[0.5cm]
+}
+
+\author{Moez Bouhlel \and Rihab Majdoub}
+
+\begin{document}
+\pagestyle{plain}
+\pagenumbering{roman}
+
+\maketitle
+
+
+% Quotation Page
+\clearpage
+\vspace*{0.2\textheight}
+
+\noindent{\itshape Thanks to my solid academic training, today I can write hundreds of words on virtually any topic without possessing a shred of information, which is how I got a good job in journalism.}\bigbreak
+
+\hfill Dave Barry
+
+% Abstract Page
+\clearpage
+\begin{abstract}
+	this is an abstract.
+\end{abstract}
+
+% ACKNOWLEDGEMENTS Page?
+
+{ % BEGIN REF LISTS
+
+\clearpage
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{3}
+\tableofcontents
+
+\clearpage
+\listoffigures % Prints the list of figures
+
+\clearpage
+\listoftables % Prints the list of tables
+
+\clearpage
+\renewcommand\listoflistingscaption{List of source codes}
+\listoflistings
+
+% list of abbreviations
+\clearpage
+
+\nomenclature{$c$}{Speed of light in a vacuum inertial frame}
+\nomenclature{$h$}{Planck constant}
+
+\printnomenclature
+
+} % END REF LISTS
+
+\newpage
+
+\pagestyle{fancy}
+\pagenumbering{arabic}
+
+\part{Hello}
+
+\section{Introduction}
+
+lol \gls{maths} \acrshort{gcd}, \acrfull{lcm}.
+
+\newpage
+\section{GoodBye!}
+
+Goodbye \footnote{this is in english lang}.
+
+\begin{listing}[ht]
+\begin{minted}[linenos]{python}
+#!/usr/env python
+
+print("Goodbye")
+\end{minted}
+\caption{Example from external file}
+\label{listing:3}
+\end{listing}
+
+%%%% INCLUDE CHAPTERS
+
+
+\appendix
+
+% APPENDEX A, B, ...
+
+\clearpage
+\printglossary[type=\acronymtype]
+\printglossaries
+
+% BIBLIOGRAPHY
+
+%\printbibliography[heading=bibintoc]
+
+\end{document}
