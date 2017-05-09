@@ -1,8 +1,10 @@
+% @Author: Moez Bouhlel
+
 \documentclass[
 paper=a4,
 fontsize=12pt,
 %oneside, % Two side (alternating margins) for binding by default, uncomment to switch to one side
-twoside,
+%twoside,
 %singlespacing, % Single line spacing, alternatives: onehalfspacing or doublespacing
 %draft, % Uncomment to enable draft mode (no pictures, no links, overfull hboxes indicated)
 %nolistspacing, % If the document is onehalfspacing or doublespacing, uncomment this to set spacing in lists to single
@@ -39,6 +41,7 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
 \usepackage[intoc]{nomencl}
 \makenomenclature
 
+\usepackage{url} %for proper url entries
 \usepackage[setpagesize=false, % page size defined by xetex
             unicode=false, % unicode breaks when used with xetex
             xetex]{hyperref}
@@ -46,11 +49,14 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
             bookmarks=true,
 	    pdfauthor={Moez Bouhlel; Rihab Majdoub},
 	    pdftitle={CityWatch - Final Year Project},
-            colorlinks=true,
+	    % pdfsubject={<subject here>},
+	    % pdfkeywords={<keywords here>}
+	    colorlinks=true, % false
             citecolor=blue,
             urlcolor=blue,
             linkcolor=magenta,
             pdfborder={0 0 0}}
+
 \urlstyle{same}  % don't use monospace font for urls
 % Make links footnotes instead of hotlinks:
 \renewcommand{\href}[2]{#2\footnote{\url{#1}}}
@@ -125,12 +131,13 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
 \author{Moez Bouhlel \and Rihab Majdoub}
 
 \begin{document}
+
+% \maketitle
+\input{title}
+
+
 \pagestyle{plain}
 \pagenumbering{roman}
-
-\maketitle
-
-
 % Quotation Page
 \clearpage
 \vspace*{0.2\textheight}
@@ -141,12 +148,9 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
 
 % Abstract Page
 \clearpage
-\begin{abstract}
-	\input{abstract}
-\end{abstract}
+\input{abstract}
 
 % ACKNOWLEDGEMENTS Page?
-\clearpage
 \input{merci}
 
 { % BEGIN REF LISTS
@@ -215,6 +219,7 @@ print("Goodbye")
 
 % BIBLIOGRAPHY
 
+\renewcommand\bibname{References} %Renames "Bibliography" to "References" on ref page
 %\printbibliography[heading=bibintoc]
 
 \end{document}

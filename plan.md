@@ -1,3 +1,5 @@
+# PLAN #
+
 What to Present:
 
 - Academy
@@ -20,7 +22,7 @@ N2: BI
 integration
 upload
 
-**Document scrum**:
+## Document Scrum ##
 
 - iter 0:
   - preparation
@@ -64,10 +66,9 @@ upload
 
 data size estimation to n TB on 1 mill users and x roads
 
+## Sprints ##
 
-**Sprints**:
-
-_Sprint 1_
+### Sprint 1 ###
 
 - DB Concept
 - Post Position
@@ -79,7 +80,7 @@ _Sprint 1_
 - Docs (phpdoc, apidoc)
 - Linting (phplint, phpcbf)
 
-_Sprint 2_
+### Sprint 2 ###
 
 - Laravel Framework
 - ORM
@@ -98,15 +99,17 @@ _Sprint 2_
 - Pothole API
 - Speedbump API
 - Report API
+  - Gestion des Reports
 - Trace API
   - GeoJSON, KML
+  - Gestion du Trace History
 - Auto Upload/Deploy Script
 - Traffic Path Reduction Algos
 - Mapping positions to road
 - Dynamic Server Configuration API
 - Delete Image on delay
 
-_Sprint 3_
+### Sprint 3 ###
 
 - Feedback API
   - Post Feedback
