@@ -4,7 +4,7 @@
 paper=a4,
 fontsize=12pt,
 %oneside, % Two side (alternating margins) for binding by default, uncomment to switch to one side
-%twoside,
+twoside,
 %singlespacing, % Single line spacing, alternatives: onehalfspacing or doublespacing
 %draft, % Uncomment to enable draft mode (no pictures, no links, overfull hboxes indicated)
 %nolistspacing, % If the document is onehalfspacing or doublespacing, uncomment this to set spacing in lists to single
@@ -72,15 +72,19 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
 \usepackage{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
-%\geometry{
-%	paper=a4paper, % Change to letterpaper for US letter
-%	inner=2.5cm, % Inner margin
-%	outer=3.8cm, % Outer margin
-%	bindingoffset=.5cm, % Binding offset
-%	top=1.5cm, % Top margin
-%	bottom=1.5cm, % Bottom margin
-%	%showframe, % Uncomment to show how the type block is set on the page
-%}
+
+\usepackage{geometry}
+\geometry{
+	left=3.5cm,
+	right=2.5cm,
+	paper=a4paper, % Change to letterpaper for US letter
+	inner=2.5cm, % Inner margin
+	outer=3.8cm, % Outer margin
+	bindingoffset=.5cm, % Binding offset
+	top=3cm, % Top margin
+	bottom=2.5cm, % Bottom margin
+	%showframe, % Uncomment to show how the type block is set on the page
+}
 
 %%% Custom sectioning
 \usepackage{sectsty}
@@ -186,28 +190,11 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
 \pagenumbering{arabic}
 
 \part{Hello}
-
-\section{Introduction}
-
-lol \gls{maths} \acrshort{gcd}, \acrfull{lcm}.
-
+\input{section1}
 \newpage
-\section{GoodBye!}
-
-Goodbye \footnote{this is in english lang}.
-
-\begin{listing}[ht]
-\begin{minted}[linenos]{python}
-#!/usr/env python
-
-print("Goodbye")
-\end{minted}
-\caption{Example from external file}
-\label{listing:3}
-\end{listing}
+\input{section2}
 
 %%%% INCLUDE CHAPTERS
-
 
 \appendix
 
