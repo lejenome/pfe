@@ -142,10 +142,12 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
 % Abstract Page
 \clearpage
 \begin{abstract}
-	this is an abstract.
+	\input{abstract}
 \end{abstract}
 
 % ACKNOWLEDGEMENTS Page?
+\clearpage
+\input{merci}
 
 { % BEGIN REF LISTS
 
@@ -208,7 +210,7 @@ print("Goodbye")
 % APPENDEX A, B, ...
 
 \clearpage
-\printglossary[type=\acronymtype]
+% \printglossary[type=\acronymtype]
 \printglossaries
 
 % BIBLIOGRAPHY
