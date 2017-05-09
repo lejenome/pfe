@@ -63,3 +63,62 @@ upload
 - Map pos to road
 
 data size estimation to n TB on 1 mill users and x roads
+
+
+**Sprints**:
+
+_Sprint 1_
+
+- DB Concept
+- Post Position
+- Get Position
+- Get Erros
+- Header Last-Modified
+- Header Access-Control-Allow-Origin
+- Unit Testing (Error, Position, Common)
+- Docs (phpdoc, apidoc)
+- Linting (phplint, phpcbf)
+
+_Sprint 2_
+
+- Laravel Framework
+- ORM
+- Devices API
+  - Get Devices
+  - Get Device
+  - Post Device
+- Param since
+- Header Last-Modified
+- Header Access-Control-Allow-Origin
+- Photo API
+  - Put Image
+  - Get Image
+  - Param h, w, f
+- Position API
+- Pothole API
+- Speedbump API
+- Report API
+- Trace API
+  - GeoJSON, KML
+- Auto Upload/Deploy Script
+- Traffic Path Reduction Algos
+- Mapping positions to road
+- Dynamic Server Configuration API
+- Delete Image on delay
+
+_Sprint 3_
+
+- Feedback API
+  - Post Feedback
+  - Email Feedback
+- PhoneSignal API
+- User API
+- OAuth2
+- User Permissions
+- Scopes
+- Traffic API ?
+- BI integration ?
+  - Export to Bi
+  - Traffic API using BI results
+- User Ranking
+- Data Mining
