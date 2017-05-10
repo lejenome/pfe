@@ -173,7 +173,7 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
 \pagestyle{fancy}
 \pagenumbering{arabic}
 
-\part{Hello}
+\part{}
 \input{section0}
 \input{section1}
 \newpage
@@ -191,8 +191,11 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
 \printglossaries
 
 % BIBLIOGRAPHY
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{bib}
 
 \renewcommand\bibname{References} %Renames "Bibliography" to "References" on ref page
-%\printbibliography[heading=bibintoc]
+%\printbibliography
 
 \end{document}
