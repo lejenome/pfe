@@ -129,6 +129,21 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
 \author{Rihab Majdoub}
 \affil{Faculté des Sciences de Sfax, Tunisie}
 
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\tikzset{%
+  >={Latex[width=2mm,length=2mm]},
+  % Specifications for style of nodes:
+            base/.style = {rectangle, rounded corners, draw=black,
+                           minimum width=4cm, minimum height=1cm,
+                           text centered, font=\sffamily},
+  activityStarts/.style = {base, fill=blue!30},
+       startstop/.style = {base, fill=red!30},
+    activityRuns/.style = {base, fill=green!30},
+         process/.style = {base, minimum width=2.5cm, fill=orange!15,
+                           font=\ttfamily},
+}
+
 \begin{document}
 
 % \maketitle
@@ -177,6 +192,7 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
 
 \part{}
 \input{section0}
+\newpage
 \input{section1}
 \newpage
 \input{section2}
