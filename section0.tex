@@ -64,6 +64,71 @@ VisualSVN Server vous permet d’installer et de gérer facilement un serveur Su
 sion entièrement fonctionnel sur la plate-forme Windows. est utile tant pour les petites
 entreprises que pour les entreprises.
 \subsubsection{Android}
+Android est un système d'exploitation conçu en 2007 par la societé android,
+start-up racheté par Google . Android est ``Open Source`` ca veut dire on peut
+lire le code de ce logiciel le modifier et le redistribuer.
+
+bases que nous utilisons:
+\paragraph{IDE:}
+C'est un logiciel dont son objectif est de faciliter le développement 
+Il est toujours possible de développer une application sans IDE . 
+l'IDE est constitué d'outils dont au moins un éditeur de texte. 
+on utilisera dans notre projet l'IDE Android Studio, l'IDE privilège 
+de Google . Android Studio comporte l'auto-complétion la génération
+automatique  du code des outils de compilation et débogage et plusieurs
+autres services qui permettent de développer une application facilement et
+rapidement.
+\paragraph{SDK:}
+C’est une abréviation qui peut faire référence a :
+Software Developpement Kit. les application android sont 
+développé en JAVA un appareil sous android  ne comprend pas
+le langage JAVA il comprend une variante de JAVA adapté pour lui.
+on a recours ici SDK c'est ensemble un outil permettant de développer 
+dans une  cible particulière une SDK android est alors un ensemble d'outil
+qui permettent de développer des application pour android.
+\paragraph{Activity:}
+Un utilisateur habile d'android remarque que lors de l'exploitation d'une
+application android qu'il est en train de naviguer entre des fenêtres et 
+l'application ne afficher qu'une seule fenêtre a la fois  ces fenêtre la sont 
+des activities on peut différencier ces activité a travers leur interface 
+graphique ceci s'applique sur la plupart des application android car il y'a
+des applications qui contiennent pas d'activities. un première idée qui nous
+frappe la tète c'est que une activity est un conteneur d'élément graphique qui 
+constitue un interface graphique. Alors que ne non une activity n'est pas 
+seulement une interface graphique mais elle va établir les liens entre l'interface 
+graphique et la logique programmatique de plus l'activity contient des 
+informations sur le statut actuel de l'application qui s'appelle le context
+ce context permet de faire la liaison entre le systeme android et les autres 
+activities de l'application.
+\subparagraph{États d'activities:}
+le système android met en place un système priorités entre application 
+par exemple l'utilisateur est en train de naviguer sur internet et écouter 
+de la musique il reçois un appel comme l'application qui gère les appel est 
+une application plus prioritaire elle prend la du navigateur et le lecteur 
+musique pour que l'utilisateur puisse répondre a son appel. Si une application
+consomme trop de ressources et peut bloquer le fonctionnement du système android,
+Android arrêtera cette application. et aussi comme expliqué précédemment 
+les activity sont gérer a partir d'un système de pile d'activities .
+D’ou l'apparition de plus d'un état qui sont centré sur l'activity.
+
+On peut différencier ces états par leur visibilité :
+\begin{itemize}
+ \item Etat Active
+ \item Etat Paused 
+ \item Etat Stopped
+\end{itemize}
+
+\subparagraph{Cycle de vie d'une activity :}
+
+une activity n'a pas de contrôle sur son état . 
+son état change suivant un cycle rythmique entre l
+e système android et les autres application (un système quasi 
+dépendant sur des priorités comme expliqué précédemment) la figure qui suit 
+explique le cycle de vie d'une activité. (Les états sont représenter comme des 
+méthodes parce que lors de la programmation ces états sont interroges par le nom 
+de ces méthodes.
+
+\input{android-activity}
 
 \subsubsection{Web Services}
 
