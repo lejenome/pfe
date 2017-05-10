@@ -4,6 +4,7 @@ all: main.pdf
 	+xelatex -shell-escape $<
 	+makeindex $*.nlo -s nomencl.ist -o $*.nls
 	+makeglossaries $*
+	+bibtex %
 	+xelatex -shell-escape $<
 
 clean:
