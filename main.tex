@@ -17,7 +17,12 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
 %consistentlayout, % Uncomment to change the layout of the declaration, abstract and acknowledgements pages to match the default layout
 ]{article} % {scrartcl}
 
-\usepackage[shorthands=off,english]{babel}
+\usepackage{abstract}
+\renewcommand{\abstractnamefont}{\large\bfseries}
+
+\usepackage{authblk}
+
+\usepackage[shorthands=off,french,english]{babel}
 %\usepackage{polyglossia}
 %\setmainlanguage{}
 %\setotherlanguages{}
@@ -29,7 +34,6 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
 \usepackage{mathspec}
 \usepackage{xltxtra,xunicode}
 \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
-\newcommand{\euro}{€}
 \setmainfont{TeX Gyre Pagella}
 \setsansfont{FreeSans}
 \setmonofont[Mapping=tex-ansi]{Monaco}
@@ -41,7 +45,7 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
 \usepackage[intoc]{nomencl}
 \makenomenclature
 
-\usepackage{url} %for proper url entries
+\usepackage{url}
 \usepackage[setpagesize=false, % page size defined by xetex
             unicode=false, % unicode breaks when used with xetex
             xetex]{hyperref}
@@ -49,8 +53,8 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
             bookmarks=true,
 	    pdfauthor={Moez Bouhlel; Rihab Majdoub},
 	    pdftitle={CityWatch - Final Year Project},
-	    % pdfsubject={<subject here>},
-	    % pdfkeywords={<keywords here>}
+	    % pdfsubject={<subject here>}, % TODO
+	    % pdfkeywords={<keywords here>}, % TODO
 	    colorlinks=true, % false
             citecolor=blue,
             urlcolor=blue,
@@ -90,6 +94,11 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
 \usepackage{sectsty}
 \allsectionsfont{\centering \normalfont\scshape}
 
+\usepackage{titlesec}
+\newcommand{\hsp}{\hspace{20pt}}
+\titleformat{\chapter}[block]{\Huge\bfseries}{\thechapter \hsp {|}\hsp}{0pt}{\Huge\bfseries}
+\titleformat{\section}[block]{\Large\bfseries}{\thesection \ }{0pt}{\Large \bfseries}
+\titleformat{\subsection}[block]{\large\bfseries}{\thesubsection \ }{0pt}{\large \bfseries}
 
 %%% Custom headers/footers (fancyhdr package)
 \usepackage{fancyhdr}
@@ -110,51 +119,24 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
 %\numberwithin{figure}{section}			% Figurenumbering: section.fig#
 %\numberwithin{table}{section}			% Tablenumbering: section.tab#
 
-
 \makeglossaries
+\input{glossary}
 
-\newglossaryentry{maths}
-{
-    name=mathematics,
-    description={Mathematics is what mathematicians do}
-}
-\newacronym{gcd}{GCD}{Greatest Common Divisor}
-
-\newacronym{lcm}{LCM}{Least Common Multiple}
-
-\title{
-		%\vspace{-1in}
-		%\usefont{OT1}{bch}{b}{n}
-		%\normalfont \normalsize \textsc{Faculty of Sciences of Sfax} \\ [25pt]
-		%\horrule{0.5pt} \\[0.4cm]
-		CityWatch \\\vspace{0.5em}
-		{\large Final Year Project Report}
-		%\horrule{2pt} \\[0.5cm]
-}
-
-\author{Moez Bouhlel \and Rihab Majdoub}
+\title{CityWatch - Final Project Report}
+\author{Moez Bouhlel}
+\author{Rihab Majdoub}
+\affil{Faculty of Sciences of Sfax, Tunisia}
 
 \begin{document}
 
 % \maketitle
 \input{title}
 
-
 \pagestyle{plain}
 \pagenumbering{roman}
-% Quotation Page
-\clearpage
-\vspace*{0.2\textheight}
 
-\noindent{\itshape Thanks to my solid academic training, today I can write hundreds of words on virtually any topic without possessing a shred of information, which is how I got a good job in journalism.}\bigbreak
-
-\hfill Dave Barry
-
-% Abstract Page
-\clearpage
+\input{quote}
 \input{abstract}
-
-% ACKNOWLEDGEMENTS Page?
 \input{merci}
 
 { % BEGIN REF LISTS
@@ -165,17 +147,20 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
 \tableofcontents
 
 \clearpage
+\addcontentsline{toc}{chapter}{List of Figures}
 \listoffigures % Prints the list of figures
 
 \clearpage
+\addcontentsline{toc}{chapter}{List of Tables}
 \listoftables % Prints the list of tables
 
 \clearpage
 \renewcommand\listoflistingscaption{List of source codes}
+\addcontentsline{toc}{chapter}{List of Source Codes}
 \listoflistings
 
 % list of abbreviations
-\clearpage
+\newpage
 
 \nomenclature{$c$}{Speed of light in a vacuum inertial frame}
 \nomenclature{$h$}{Planck constant}
@@ -185,7 +170,6 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
 } % END REF LISTS
 
 \newpage
-
 \pagestyle{fancy}
 \pagenumbering{arabic}
 
@@ -202,6 +186,7 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
 
 \clearpage
 % \printglossary[type=\acronymtype]
+\addcontentsline{toc}{chapter}{List of Accronymtype}
 \printglossaries
 
 % BIBLIOGRAPHY
