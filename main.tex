@@ -24,19 +24,20 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
 
 \usepackage[shorthands=off,english,french]{babel}
 %\usepackage{polyglossia}
-%\setmainlanguage{}
-%\setotherlanguages{}
+%\setmainlanguage{french}
+%\setotherlanguages{english}
 
 \usepackage[acronym,toc]{glossaries}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
-\usepackage{mathspec}
-\usepackage{xltxtra,xunicode}
-\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
-\setmainfont{TeX Gyre Pagella}
-\setsansfont{FreeSans}
-\setmonofont[Mapping=tex-ansi]{Monaco}
+
+%\usepackage{mathspec}
+%\usepackage{xltxtra,xunicode}
+%\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+%\setmainfont{TeX Gyre Pagella}
+%\setsansfont{FreeSans}
+%\setmonofont[Mapping=tex-ansi]{Monaco}
 
 \usepackage{graphicx}
 \graphicspath{ {figures/} }
@@ -46,9 +47,10 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
 \makenomenclature
 
 \usepackage{url}
-\usepackage[setpagesize=false, % page size defined by xetex
-            unicode=false, % unicode breaks when used with xetex
-            xetex]{hyperref}
+\usepackage[% setpagesize=false, % page size defined by xetex
+            % unicode=false, % unicode breaks when used with xetex
+            % xetex
+	    ]{hyperref}
 \hypersetup{breaklinks=true,
             bookmarks=true,
 	    pdfauthor={Moez Bouhlel; Rihab Majdoub},
@@ -92,7 +94,7 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
 
 %%% Custom sectioning
 \usepackage{sectsty}
-\allsectionsfont{\centering \normalfont\scshape}
+\allsectionsfont{\large\bfseries\scshape}
 
 \usepackage{titlesec}
 \newcommand{\hsp}{\hspace{20pt}}
@@ -148,20 +150,20 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
 
 \clearpage
 \addcontentsline{toc}{chapter}{Table des figures}
-\listoffigures % Prints the list of figures
+\listoffigures
 
 \clearpage
 \addcontentsline{toc}{chapter}{Liste des tableaux}
-\listoftables % Prints the list of tables
+\listoftables
 
 \clearpage
 \renewcommand\listoflistingscaption{Liste des codes sources}
 \addcontentsline{toc}{chapter}{Liste des codes sources}
 \listoflistings
 
-% list of abbreviations
 \newpage
 
+% list of abbreviations
 \nomenclature{$c$}{Speed of light in a vacuum inertial frame}
 \nomenclature{$h$}{Planck constant}
 
