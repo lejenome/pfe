@@ -3,18 +3,14 @@
 \documentclass[
 paper=a4,
 fontsize=12pt,
-%oneside, % Two side (alternating margins) for binding by default, uncomment to switch to one side
 twoside,
 %singlespacing, % Single line spacing, alternatives: onehalfspacing or doublespacing
-%draft, % Uncomment to enable draft mode (no pictures, no links, overfull hboxes indicated)
 %nolistspacing, % If the document is onehalfspacing or doublespacing, uncomment this to set spacing in lists to single
-liststotoc, % Uncomment to add the list of figures/tables/etc to the table of contents
-toctotoc, % Uncomment to add the main table of contents to the table of contents
 %parskip, % Uncomment to add space between paragraphs
-%nohyperref, % Uncomment to not load the hyperref package
 %headsepline, % Uncomment to get a line under the header
 %chapterinoneline, % Uncomment to place the chapter title next to the number on one line
 %consistentlayout, % Uncomment to change the layout of the declaration, abstract and acknowledgements pages to match the default layout
+titlepage
 ]{article} % {scrartcl}
 
 \usepackage{abstract}
@@ -50,14 +46,14 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
 \usepackage[% setpagesize=false, % page size defined by xetex
             % unicode=false, % unicode breaks when used with xetex
             % xetex
-	    ]{hyperref}
+            ]{hyperref}
 \hypersetup{breaklinks=true,
             bookmarks=true,
-	    pdfauthor={Moez Bouhlel; Rihab Majdoub},
-	    pdftitle={CityWatch - Final Year Project},
-	    % pdfsubject={<subject here>}, % TODO
-	    % pdfkeywords={<keywords here>}, % TODO
-	    colorlinks=true, % false
+            pdfauthor={Moez Bouhlel; Rihab Majdoub},
+            pdftitle={La Platforme CityWatch},
+            pdfsubject={Mémoire de projet de fin d'études - La Platforme CityWatch},
+            pdfkeywords={CityWatch, Djagora, PFE, FSS},
+            colorlinks=true, % false
             citecolor=blue,
             urlcolor=blue,
             linkcolor=magenta,
@@ -81,15 +77,15 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
 
 \usepackage{geometry}
 \geometry{
-	left=3.5cm,
-	right=2.5cm,
-	paper=a4paper, % Change to letterpaper for US letter
-	inner=2.5cm, % Inner margin
-	outer=3.8cm, % Outer margin
-	bindingoffset=.5cm, % Binding offset
-	top=3cm, % Top margin
-	bottom=2.5cm, % Bottom margin
-	%showframe, % Uncomment to show how the type block is set on the page
+    left=3.5cm,
+    right=2.5cm,
+    paper=a4paper, % Change to letterpaper for US letter
+    inner=2.5cm, % Inner margin
+    outer=3.8cm, % Outer margin
+    bindingoffset=.5cm, % Binding offset
+    top=3cm, % Top margin
+    bottom=2.5cm, % Bottom margin
+    %showframe, % Uncomment to show how the type block is set on the page
 }
 
 %%% Custom sectioning
@@ -107,24 +103,22 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
 \fancyhf{}
 \fancyhead[LE,RO]{\itshape CityWatch}
 \fancyhead[RE,LO]{\itshape{\nouppercase{\leftmark}}}
-%\lfoot{v $version$}
 \fancyfoot[RE,LO]{\thepage}
-%\renewcommand{\headrulewidth}{2pt}		% Remove header underlines
-%\renewcommand{\footrulewidth}{1pt}		% Remove footer underlines
+\renewcommand{\headrulewidth}{2pt} % Remove header underlines%\renewcommand{\footrulewidth}{1pt} % Remove footer underlines
 %\setlength{\headheight}{13.6pt}
 
 \usepackage{fancyvrb}
 \VerbatimFootnotes
 
 %%% Equation and float numbering
-%\numberwithin{equation}{section}		% Equationnumbering: section.eq#
-%\numberwithin{figure}{section}			% Figurenumbering: section.fig#
-%\numberwithin{table}{section}			% Tablenumbering: section.tab#
+%\numberwithin{equation}{section}   % Equationnumbering: section.eq#
+%\numberwithin{figure}{section}     % Figurenumbering: section.fig#
+%\numberwithin{table}{section}      % Tablenumbering: section.tab#
 
 \makeglossaries
 \input{glossary}
 
-\title{CityWatch - Memoire de Projet de Fin d'Etudes}
+\title{La Platforme CityWatch - Memoire de Projet de Fin d'Etudes}
 \author{Moez Bouhlel}
 \author{Rihab Majdoub}
 \affil{Faculté des Sciences de Sfax, Tunisie}
@@ -133,47 +127,45 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
 \usetikzlibrary{arrows.meta}
 \tikzset{%
   >={Latex[width=2mm,length=2mm]},
-  % Specifications for style of nodes:
-            base/.style = {rectangle, rounded corners, draw=black,
-                           minimum width=4cm, minimum height=1cm,
-                           text centered, font=\sffamily},
+  base/.style = {rectangle, rounded corners, draw=black,
+      minimum width=4cm, minimum height=1cm,
+      text centered, font=\sffamily},
   activityStarts/.style = {base, fill=blue!30},
-       startstop/.style = {base, fill=red!30},
-    activityRuns/.style = {base, fill=green!30},
-         process/.style = {base, minimum width=2.5cm, fill=orange!15,
-                           font=\ttfamily},
+  startstop/.style = {base, fill=red!30},
+  activityRuns/.style = {base, fill=green!30},
+  process/.style = {base, minimum width=2.5cm, fill=orange!15, font=\ttfamily},
 }
 
 \begin{document}
 
-% \maketitle
 \input{title}
 
-\pagestyle{plain}
+\pagestyle{empty}
 \pagenumbering{roman}
 
 \input{quote}
 \input{abstract}
 \input{merci}
 
-{ % BEGIN REF LISTS
-
 \clearpage
+\pagestyle{plain}
+
 \hypersetup{linkcolor=black}
 \setcounter{tocdepth}{3}
+
 \tableofcontents
 
 \clearpage
-\addcontentsline{toc}{chapter}{Table des figures}
+\addcontentsline{toc}{section}{Table des figures}
 \listoffigures
 
 \clearpage
-\addcontentsline{toc}{chapter}{Liste des tableaux}
+\addcontentsline{toc}{section}{Liste des tableaux}
 \listoftables
 
 \clearpage
 \renewcommand\listoflistingscaption{Liste des codes sources}
-\addcontentsline{toc}{chapter}{Liste des codes sources}
+\addcontentsline{toc}{section}{Liste des codes sources}
 \listoflistings
 
 \newpage
@@ -183,8 +175,6 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
 \nomenclature{$h$}{Planck constant}
 
 \printnomenclature
-
-} % END REF LISTS
 
 \newpage
 \pagestyle{fancy}
@@ -205,15 +195,11 @@ toctotoc, % Uncomment to add the main table of contents to the table of contents
 
 \clearpage
 % \printglossary[type=\acronymtype]
-\addcontentsline{toc}{chapter}{Glossaire des Acronymes}
+\addcontentsline{toc}{section}{Glossaire des Acronymes}
 \printglossaries
 
-% BIBLIOGRAPHY
 \nocite{*}
 \bibliographystyle{plain}
 \bibliography{bib}
-
-\renewcommand\bibname{References} %Renames "Bibliography" to "References" on ref page
-%\printbibliography
 
 \end{document}
