@@ -136,6 +136,14 @@ titlepage
   process/.style = {base, minimum width=2.5cm, fill=orange!15, font=\ttfamily},
 }
 
+\usepackage{todonotes}
+\newcommand{\TODO}[1]{\setlength{\marginparwidth}{3cm}\todo{#1}}
+\newcommand{\HTODO}[2]{\setlength{\marginparwidth}{3cm}\colorbox{yellow}{#1}\todo{#2}}
+\newcommand{\FIXME}[1]{\setlength{\marginparwidth}{3cm}\todo[backgroundcolor=red]{#1}}
+\newcommand{\HFIXME}[2]{\setlength{\marginparwidth}{3cm}\colorbox{pink}{#1}\todo[backgroundcolor=red]{#2}}
+\newcommand{\DONE}[1]{\setlength{\marginparwidth}{3cm}\todo[done]{#1}}
+\newcommand{\HDONE}[2]{\setlength{\marginparwidth}{3cm}\colorbox{green}{#1}\todo[done,backgroundcolor=green]{#2}}
+
 \begin{document}
 
 \input{title}
@@ -202,5 +210,7 @@ titlepage
 \nocite{*}
 \bibliographystyle{plain}
 \bibliography{bib}
+
+% \listoftodos % TODO FIXME list
 
 \end{document}
