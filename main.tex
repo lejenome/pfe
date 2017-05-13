@@ -10,6 +10,7 @@ twoside,
 %headsepline, % Uncomment to get a line under the header
 %chapterinoneline, % Uncomment to place the chapter title next to the number on one line
 %consistentlayout, % Uncomment to change the layout of the declaration, abstract and acknowledgements pages to match the default layout
+final,
 titlepage
 ]{article} % {scrartcl}
 
@@ -24,16 +25,21 @@ titlepage
 %\setotherlanguages{english}
 
 \usepackage[acronym,toc]{glossaries}
-\usepackage{lmodern}
-\usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 
 %\usepackage{mathspec}
+\usepackage{amssymb,amsmath}
+
 %\usepackage{xltxtra,xunicode}
 %\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
 %\setmainfont{TeX Gyre Pagella}
 %\setsansfont{FreeSans}
 %\setmonofont[Mapping=tex-ansi]{Monaco}
+
+\usepackage{lmodern}
+%\usepackage{tgpagella}
+\usepackage{palatino}
+\usepackage{helvet}
 
 \usepackage{graphicx}
 \graphicspath{ {figures/} }
@@ -52,7 +58,7 @@ titlepage
             pdfauthor={Moez Bouhlel; Rihab Majdoub},
             pdftitle={La Platforme CityWatch},
             pdfsubject={Mémoire de projet de fin d'études - La Platforme CityWatch},
-            pdfkeywords={CityWatch, Djagora, PFE, FSS},
+            pdfkeywords={CityWatch, Djagora, pfe, FSS, report, internship},
             colorlinks=true, % false
             citecolor=blue,
             urlcolor=blue,
