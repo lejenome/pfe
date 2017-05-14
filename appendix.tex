@@ -3,13 +3,14 @@
 \pagebreak
 
 \begin{figure}[H]
-	\centering
-	 \caption{A Big Image}
-	\includegraphics[width=0.95\textwidth]{example-image.pdf}
-	\label{fig:appendixImage}
+    \centering
+    \caption{A Big Image}
+    \includegraphics[width=0.95\textwidth]{fss-old}
+    \label{fig:appendixImage}
 \end{figure}
 
-\begin{lstlisting}[caption={Fibonacci}, label={lst:fibAppendix}, captionpos=t]
+\begin{listing}[ht]
+    \begin{minted}{c}
 public class Fibonacci {
 	public static long fib(int n) {
 		if (n <= 2) {
@@ -25,5 +26,9 @@ public class Fibonacci {
 		}
 	}
 }
-\end{lstlisting}
+    \end{minted}
+    \caption{Fibonacci}
+    \label{lst:fibAppendix}
+\end{listing}
+
 \end{appendices}
