@@ -45,6 +45,7 @@ bonnes pratiques et cultures du défi, de la concurrence, du challenge et du
 leadership.
 \subsection{Méthode de gestion de projet utilisée}
 \subsubsection{Présentation de la méthode agile SCRUM}
+
 Scrum est une méthode de gestion de projets dans laquelle des équipes
 multifonctionnelles réalisent des produits de manière itérative et incrémentale. Tout au
 long de cette méthode, le développement est définit, d’une façon incrémentale, en cycles
@@ -65,6 +66,9 @@ fin de chaque Sprint, une revue est organisée avec les parties prenantes durant
 l’équipe montre ce qu’elle a réalisé. Le feedback obtenu peut être pris en compte sur le
 Sprint suivant. Scrum insiste sur la nécessité de livrer un produit opérationnel,
 testé et documenté à la fin de chaque itération.
+
+\input{figures/scrum-model}
+
 \subsubsection{Répartition des rôles}
 Chaque projet utilisant la méthode Scrum est monté autour d’une équipe auto-
 organisée et multifonctionnelle : auto-organisée car il n’y a pas de chef d’équipe qui
@@ -213,9 +217,9 @@ On peut différencier ces états par leur visibilité :
 Une activité n'a pas de contrôle sur son état.
 Son état change suivant un cycle rythmique entre le système Android et les
 autres application (un système quasi dépendant sur des priorités comme expliqué
-précédemment) la figure qui suit explique le cycle de vie d'une activité. (Les
-états sont représenter comme des méthodes parce que lors de la programmation ces
-états sont interroges par le nom de ces méthodes.
+précédemment) la figure~\ref{fig:android-activity} explique le cycle de vie
+d'une activité. (Les états sont représenter comme des méthodes parce que lors de
+la programmation ces états sont interroges par le nom de ces méthodes.
 
 \input{android-activity}
 \subparagraph{Comment choisir le SDK optimale :}
@@ -248,6 +252,15 @@ Les variantes principales des services web sont:
 \end{itemize}
 
 \subsubsection{Lumen}
+
+Pour le développement de backend du notre plateforme, la langue du programmation
+PHP a été pré choisi. Mais, on avait la responsabilité de choisir les
+bibliothèques et les frameworks. Pendant la 1\iere{} itération, le but était de
+se familiariser avec la langue PHP. Donc, on a utilisé seulement les extensions
+officiel du PHP includant PDO, $\dotsc$ . Dans l'itération suivante, on a étudié
+les frameworks disponibles. A la fin, on a choisi le framework Lumen qui est
+une version simplifié du Laravel pour le dévelopemment des API RESTful. Les
+resons de choisir Lumen seront présentés dans le section du 2\ieme{} intération.
 
 \subsection{Backlog générale}
 La première étape de la méthode Scrum consiste à préparer un carnet du produit
