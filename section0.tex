@@ -216,7 +216,7 @@ On peut différencier ces états par leur visibilité :
 \subparagraph{Cycle de vie d'une activité :}
 Une activité n'a pas de contrôle sur son état.
 Son état change suivant un cycle rythmique entre le système Android et les
-autres application (un système quasi dépendant sur des priorités comme expliqué
+AUTres application (un système quasi dépendant sur des priorités comme expliqué
 précédemment) la figure~\ref{fig:android-activity} explique le cycle de vie
 d'une activité. (Les états sont représenter comme des méthodes parce que lors de
 la programmation ces états sont interroges par le nom de ces méthodes.
@@ -273,6 +273,40 @@ qu’aura chacun des items dans le carnet du produit.
 Il y a donc effectivement eu un gros travail
 d’échanges et discussions avec le client pour comprendre tout le cahier des charge
 initial,C’est comme ça que le Backlog a été défini.
+
+La figure~\ref{fig:product-backlog} présente une version simplifié du product
+backlog décrit dans le tableau~\ref{tab:product-backlog}.
 \input{product-backlog}
+
+\begin{center}
+    \footnotesize
+    \setlength\LTleft{-50pt}
+\begin{longtable}{| l | p{3.5cm} | l | p{4.5cm} | p{4.5cm} | l |}
+ \caption{Product Backlog}
+ \label{tab:product-backlog} \\
+
+ \hline
+ \textbf{ID} & \textbf{Cas d'utilisations} & \textbf{En tant qu'} & \textbf{Je veux qu'} & \textbf{Pour} & \textbf{Priorité} \\ \hline
+ \endhead
+
+ \hline \multicolumn{6}{|r|}{{Continué en page suivante$\dotsc$}} \\ \hline
+ \endfoot
+
+ \hline \hline
+ \endlastfoot
+
+\hline
+ 1 & Gestion du Trajectoire & Utilisateur & Il soit possible de démarrer le tracking & Avoir un feedback dans l'application et sur le site web & 1 \\
+   &                        & Utilisateur & Il soit possible d’arrêter le tracking & Avoir un feedback dans l’application & 1 \\ \hline
+ 2 & Gestion de Rapports    & Utilisateur & Il soit possible de choisir entre une variété de problèmes à déclarer depuis l’application & Avoir un feedback sur le site web & 1 \\
+   &                        & Utilisateur & Il soit possible de choisir l’emplacement du problème à déclarer dans une carte & Avoir un feedback sur le site web & 1 \\
+   &                        & Utilisateur & Il soit possible d’ajouter une description ou une image au problème & Avoir un feedback sur le site web & 2 \\ \hline
+ 3 & Consulter la carte     & Utilisateur & Il soit possible de consulter la carte depuis l’application & Voir la carte dans l’application & 2 \\ \hline
+ 4 & Compte                 & Utilisateur & Il soit possible de consulter le site web sans avoir un compte & Consulter le site web avec un minimum d’informations & 1 \\
+   &                        & Utilisateur & Il soit possible de créer un compte & Avoir un compte personnel & 2 \\ \hline
+ 5 & Groupement des rapports& Utilisateur & Il est possible de voir les rapports en groupe lors d’un zoom out & Avoir une vision globale sur le nombre des rapports & 1 \\ \hline
+ 6 & Déclarer un rapport    & Utilisateur & Il est possible de déclarer un rapport à partir du site web & Avoir accès à une page rapport comme celle de l’application & 1 \\ \hline
+\end{longtable}
+\end{center}
 
 \subsection{Modélisation UML}
