@@ -41,51 +41,45 @@
     ]
 
     node[root] {Platforme CityWatch} [clockwise from=0]
+
     child[concept color=blue!70] {
-        node {Gestions des Rapports} [clockwise from=95]
-        child { node (goForum) { Consultation } }
-        child { node (goWiki) { Déclaration } }
+        node {Gestions des Rapports} [clockwise from=50]
+        child { node { Consultation } }
+        child { node { Déclaration } }
     }
     child[concept color=green!40!black] {
-        node[concept] {Systeme de protection }[clockwise from=20]
-        child { node[concept] (TeXweltQA)
-            { Alert Sonores} }
-        child { node[concept] (TeXweltBlog)
-            { Détections }}
+        node[concept] {Information Routière} [clockwise from=30]
+        child { node[concept] {Secousses} }
+        child { node[concept] {Ralentisseurs}}
+        child { node[concept] {Emboutiage}}
     }
     child[concept color=blue] {
-        node[concept] {Gestion du Trajectoire} [clockwise from=310]
-        child { node[concept] (TikZGalerie)
-            {Localisation instantanée} }
-        child { node[concept] (Planet)
-            {Tracer itinéraire } }
-    }
-    child[concept color=red] {
-        node[concept] (PGFPlots){Déclarations Rapport}
-        [clockwise from=270]
-    }
-    child[concept color=orange] {
-        node[concept] {Tableau de Bord}
-        [counterclockwise from=100]
-        child { node[concept] (LaTeXForum)
-            {Carte en Temps Réel}}
-        child { node[concept] (LaTeXArtikel)
-            { Authentification } }
-        child { node[concept] (LaTeXNews)
-            {Filtrages} }
+        node[concept] {Itinéraire} [clockwise from=305]
+        child { node[concept] {Localisation instantanée} }
+        child { node[concept] {Projection du Trajectoire} }
+        child { node[concept] {Historie des Trajectoires} }
     }
     child[concept color=red!60!black] {
-        node[concept] (TeXdoc)
-        {\href{http://texdoc.net/}{\TeX doc\\.net}}
-        [clockwise from=100]
-        child { node[concept] {\href{http://www.tex.ac.uk}{UK \TeX \\FAQ}}
-        }}
+        node[concept] {Assitance} [clockwise from=235]
+        child { node[concept] {Alert des secouces} }
+        child { node[concept] {Alert des ralentisseurs} }
+    }
+    child[concept color=orange] {
+        node[concept] {Tableau de Bord} [counterclockwise from=100]
+        child { node[concept] {Carte en Temps Réel}}
+        child { node[concept] { Authentification } }
+        child { node[concept] {Filtrages} }
+    }
     child[concept color=yellow!60!black] {
-        node[concept] (Blogs) {Blogs} [clockwise from=139]
-        child { node[concept] {\href{http://texblog.net/}{\TeX blog\\.net}}}
-        child { node[concept] {\href{http://tikz.de/}{TikZ.de}} }
-        child { node[concept] (Cookbook)
-            {\href{http://latex-cookbook.net/}{\LaTeX-\\Cookbook\\.net}} }
+        node[concept] (Blogs) {Analyse et Visualization} [clockwise from=135]
+        child { node[concept] {Visualisation des données}}
+        child { node[concept] {Tableau du board intéractive}}
+    }
+    child[concept color=red] {
+        node[concept] {Information Réseau} [clockwise from=110]
+        child { node[concept] {Signal Réseau} }
+        child { node[concept] {Génération Réseau} }
+        child { node[concept] {Opérateur Réseau} }
     };
     %\info{goForum.north east}{above,anchor=west,xshift=1em}{%
     %  \item[] Seit 2008
