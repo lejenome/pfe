@@ -15,27 +15,25 @@ spécifications du Backlog doivent être:
 \end{itemize}
 Ayant une bonne idée sur le produit ainsi que l’objectif à atteindre, l’équipe et le
 product-owner peuvent passer à l’élaboration des itérations.
-Dans notre projet
-``Plateforme CityWatch''
-la durée d’une Itération est fixée à trois
+Dans notre projet ``Plateforme CityWatch'' la durée d’une Itération est fixée à trois
 semaines (170h par itération). Dans ce chapitre nous décrivons le déroulement des deux
 premières itérations. Une itération commence par sa planification et finit par être revue
 avec ”Product-Owner”.
 \subsubsection{Planification de l'itération 1}
-La planification de l’itération représente une étape importante dans la vie de
-l’itération parce que au cours du planification, on divise l’itération a plusieurs étapes
-pour mieux atteindre le résultats attendu à la fin de l’itération.
+La planification de l'itération représente une étape importante dans la vie de
+l'itération parce que au cours du planification, on divise l'itération a plusieurs étapes
+pour mieux atteindre le résultats attendu à la fin de l'itération.
 Dans cette première itération on a décidé de diviser cette dernière en trois grandes
 parties une partie consacrée pour la création de la base de donnée et la génération du
-model, la deuxième partie est consacré pour la réalisation de la page d’accueil, et une
+modèle, la deuxième partie est consacré pour la réalisation de la page d’accueil, et une
 troisième partie qui répond aux besoins des autres tâches de cette itérations
 \subsubsection{But de la première itération}
 Le but de cette itération est d'étudier notre Serveur ,de générer notre modèle,de réaliser
-la page Web (dashboard) et développer les vues nécessaires pour permettre à l'utilisateur 
-de consulter la dernière position du véhicule selon les spécifications du Backlog. 
+la page Web (dashboard) et développer les vues nécessaires pour permettre à l'utilisateur
+de consulter la dernière position du véhicule selon les spécifications du Backlog.
 \subsection{Backlog du sprint}
 Le sprint Backlog est un outil qui facilite la récupération des tâches et qui fait
-la mise au point du travail tout en précisant les taches que contient chaque 
+la mise au point du travail tout en précisant les taches que contient chaque
 user-story du Product Backlog.
 Le Backlog agrée pour ce sprint est:
 %\begin{table}
@@ -48,6 +46,29 @@ Le Backlog agrée pour ce sprint est:
 %\end{table}
 \subsection{Mises des normes}
 
+L'exigence de l'api RESTful est:
+\begin{itemize}
+    \item Performance: Le temps de réponse doit être en une durée raisonnable.
+    \item Multi-Utilisateurs: Les positions des différents utilisateurs sont distinguables.
+    \item Fiabilité: L'implémentation doit vérifier la structure des données reçus, la disponibilité des champs obligatoires et leurs formats.
+    \item Portabilité: Le système doit support la différence en zone du temps et en internalisation, format de présentation des données géologique et sa précision.
+\end{itemize}
+
+Ces caractéristique ont étés adressés pendant l'implémentation du service web.
+
+\subsubsection{Performance}
+
+On a minimisé la dépendance en bibliothèques externes et extensions PHP.
+De plus, Le nombre des requêtes SQL ont étés minimisés à une seule requêtes pour
+chaque méthode du notre service web.
+
+\subsubsection{Multi-Utilisateurs}
+
+On a utilisé diffrent id pour chaque périphériques basé sur le MAC du phone
+
+\subsubsection{Fiabilité}
+
+\subsubsection{Portabilité}
 
 \subsection{Modélisation UML}
 \subsection{Évaluation suivant les normes mise}
@@ -57,7 +78,8 @@ bien compréhensible pour l'utilisateur.
 
 \TODO{imprime ecran dashboard de première itération }
 \subsubsection{Implementé la method POST}
-Dans 1\ier{} phase, on a implementé la method POST du resource Postion,
+
+Dans 1\ier{} phase, on a implémenté la méthode POST du ressource Position,
 
 \subsection{Travail contribué}
 
