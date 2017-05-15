@@ -11,6 +11,7 @@
   \endlist
   };
 }
+\hspace{-8ex}
 \begin{tikzpicture}[every annotation/.style={draw, fill=white, font=\Large}]
     \renewcommand{\href}[2]{#2}
 
@@ -40,46 +41,40 @@
     ]
 
     node[root] {Platforme CityWatch} [clockwise from=0]
-    child[concept color=blue!60] {
-        node {Gestions des Rapports} [clockwise from=90]
+    child[concept color=blue!70] {
+        node {Gestions des Rapports} [clockwise from=95]
         child { node (goForum) { Consultation } }
         child { node (goWiki) { Déclaration } }
     }
-    child[concept color=blue] {
-        node[concept] {Systeme de protection }
-        [clockwise from=30]
-        child { node[concept] (TeXnique)
-            { Alert Secousses} }
-        child { node[concept] (TeXweltQA)
-            { Alert Doudannes} }
-        child { node[concept] (TeXweltBlog)
-            { Dedaction }}
-    }
     child[concept color=green!40!black] {
-        node[concept] {\href{http://texample.net/}{\TeX ample\\.net}}
-        [clockwise from=310]
+        node[concept] {Systeme de protection }[clockwise from=20]
+        child { node[concept] (TeXweltQA)
+            { Alert Sonores} }
+        child { node[concept] (TeXweltBlog)
+            { Détections }}
+    }
+    child[concept color=blue] {
+        node[concept] {Gestion du Trajectoire} [clockwise from=310]
         child { node[concept] (TikZGalerie)
-            {\href{http://texample.net/tikz/examples/}{TikZ-Galerie}} }
-        child { node[concept] (TeXampleBlog)
-            {\href{http://texample.net/weblog/}{Blog}} }
+            {Localisation instantanée} }
         child { node[concept] (Planet)
-            {\href{http://texample.net/community/}{Planet}} }
+            {Tracer itinéraire } }
     }
     child[concept color=red] {
-        node[concept] (PGFPlots) {\href{http://pgfplots.net}{PGFPlots\\.net}}
+        node[concept] (PGFPlots){Déclarations Rapport}
         [clockwise from=270]
     }
-    child[concept color=red!60!black] {
-        node[concept] {\href{http://latex-community.org/}{\LaTeX-Community\\.org}}
+    child[concept color=orange] {
+        node[concept] {Tableau de Bord}
         [counterclockwise from=100]
         child { node[concept] (LaTeXForum)
-            {\href{http://latex-community.org/forum/}{Forum}}}
+            {Carte en Temps Réel}}
         child { node[concept] (LaTeXArtikel)
-            {\href{http://latex-community.org/know-how}{Artikel-Archiv}} }
+            { Authentification } }
         child { node[concept] (LaTeXNews)
-            {\href{http://latex-community.org/home/news}{News}} }
+            {Filtrages} }
     }
-    child[concept color=orange] {
+    child[concept color=red!60!black] {
         node[concept] (TeXdoc)
         {\href{http://texdoc.net/}{\TeX doc\\.net}}
         [clockwise from=100]
