@@ -1,30 +1,28 @@
 % @Author: Moez Bouhlel
 
 \documentclass[
-paper=a4,
-fontsize=12pt,
+a4paper,
+12pt,
 twoside,
-%singlespacing, % Single line spacing, alternatives: onehalfspacing or doublespacing
-%nolistspacing, % If the document is onehalfspacing or doublespacing, uncomment this to set spacing in lists to single
-%parskip, % Uncomment to add space between paragraphs
-%headsepline, % Uncomment to get a line under the header
-%chapterinoneline, % Uncomment to place the chapter title next to the number on one line
-%consistentlayout, % Uncomment to change the layout of the declaration, abstract and acknowledgements pages to match the default layout
+onecolumn,
+titlepage,
 final,
-titlepage
 ]{article} % {scrartcl}
 
-\usepackage{abstract}
-\renewcommand{\abstractnamefont}{\large\bfseries}
-
-\usepackage{authblk}
-
-\usepackage[shorthands=off,english,french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[shorthands=off,english,frenchb]{babel}
 %\usepackage{polyglossia}
 %\setmainlanguage{french}
 %\setotherlanguages{english}
 
+\usepackage{abstract}
+\renewcommand{\abstractnamefont}{\large\bfseries}
+\usepackage[toc,page]{appendix}
+
+\usepackage{authblk}
 \usepackage[acronym,toc]{glossaries}
+
 \usepackage{ifxetex,ifluatex}
 
 %\usepackage{mathspec}
@@ -36,10 +34,18 @@ titlepage
 %\setsansfont{FreeSans}
 %\setmonofont[Mapping=tex-ansi]{Monaco}
 
+\usepackage{color}
+
 \usepackage{lmodern}
 %\usepackage{tgpagella}
 \usepackage{palatino}
 \usepackage{helvet}
+\fontfamily{ppl}\selectfont
+% \fontsize{<nominal font size>}{<baselineskip>}\selectfont
+
+\setlength{\parskip}{8pt}
+\setlength{\parindent}{0pt}
+\renewcommand{\baselinestretch}{1.2}\normalsize
 
 \usepackage{graphicx}
 \graphicspath{ {figures/} }
@@ -59,10 +65,13 @@ titlepage
             pdftitle={La Platforme CityWatch},
             pdfsubject={Mémoire de projet de fin d'études - La Platforme CityWatch},
             pdfkeywords={CityWatch, Djagora, pfe, FSS, report, internship},
+            pdflang={fr},
+            pdfdisplaydoctitle=true,
             colorlinks=true, % false
             citecolor=blue,
             urlcolor=blue,
             linkcolor=magenta,
+            bookmarksnumbered=true,
             pdfborder={0 0 0}}
 
 \urlstyle{same}  % don't use monospace font for urls
@@ -72,6 +81,20 @@ titlepage
 \usepackage{minted}
 %\usemintedstyle{borland}
 \usemintedstyle{tango}
+\definecolor{darkBlue}{RGB}{4, 53, 98}
+\definecolor{lightBlue}{RGB}{102, 153, 204}
+\definecolor{lightGrey}{RGB}{245, 247, 249}
+\definecolor{magenta}{RGB}{177, 0, 89}
+\setminted{
+    linenos=true,
+    numbersep=5pt,
+    frame=leftline,
+    framesep=2mm,
+    bgcolor=lightGrey,
+    rulecolor=lightBlue,
+    framerule=1.1pt,
+    tabsize=4,
+}
 
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -100,18 +123,13 @@ titlepage
 
 \usepackage{titlesec}
 \newcommand{\hsp}{\hspace{20pt}}
-\titleformat{\chapter}[block]{\Huge\bfseries}{\thechapter \hsp {|}\hsp}{0pt}{\Huge\bfseries}
+% \titleformat{\chapter}[block]{\Huge\bfseries}{\thechapter \hsp {|}\hsp}{0pt}{\Huge\bfseries}
 \titleformat{\section}[block]{\Large\bfseries}{\thesection \ }{0pt}{\Large \bfseries}
 \titleformat{\subsection}[block]{\large\bfseries}{\thesubsection \ }{0pt}{\large \bfseries}
 
 %%% Custom headers/footers (fancyhdr package)
 \usepackage{fancyhdr}
-\fancyhf{}
-\fancyhead[LE,RO]{\itshape CityWatch}
-\fancyhead[RE,LO]{\itshape{\nouppercase{\leftmark}}}
-\fancyfoot[RE,LO]{\thepage}
-\renewcommand{\headrulewidth}{2pt} % Remove header underlines%\renewcommand{\footrulewidth}{1pt} % Remove footer underlines
-%\setlength{\headheight}{13.6pt}
+\usepackage[bottom]{footmisc}
 
 \usepackage{fancyvrb}
 \VerbatimFootnotes
@@ -163,8 +181,15 @@ titlepage
 \newpage
 \input{dedicaces}
 \clearpage
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[RE,LO]{\thepage}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+}
 \pagestyle{plain}
 
+\setlength{\parskip}{0pt}
 \hypersetup{linkcolor=black}
 \setcounter{tocdepth}{3}
 
@@ -178,25 +203,34 @@ titlepage
 \addcontentsline{toc}{section}{Liste des tableaux}
 \listoftables
 
-\clearpage
-\renewcommand\listoflistingscaption{Liste des codes sources}
-\addcontentsline{toc}{section}{Liste des codes sources}
-\listoflistings
+%\clearpage
+%\renewcommand\listoflistingscaption{Liste des codes sources}
+%\addcontentsline{toc}{section}{Liste des codes sources}
+%\listoflistings
 
-\newpage
+%\newpage
 
 % list of abbreviations
-\nomenclature{$c$}{Speed of light in a vacuum inertial frame}
-\nomenclature{$h$}{Planck constant}
+%\nomenclature{$c$}{Speed of light in a vacuum inertial frame}
+%\nomenclature{$h$}{Planck constant}
 
-\printnomenclature
+%\printnomenclature
 
-\newpage
+\cleardoublepage
+\setlength{\parskip}{8pt}
+\renewcommand{\baselinestretch}{1.4}\normalsize
+\fancyhf{}
+%\fancyhead[LE,RO]{\itshape CityWatch}
+\fancyhead[RE,LO]{\rightmark}
+\fancyfoot[RE,LO]{\thepage}
+\renewcommand{\headrulewidth}{1pt}
+%\setlength{\headheight}{13.6pt}
 \pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ \ --\ \ #1}}
 \pagenumbering{arabic}
 
 \part{Introduction}
-\part{Sprints}
+\part{Itérations}
 \input{section0}
 \newpage
 \input{section1}
@@ -207,15 +241,27 @@ titlepage
 
 %%%% INCLUDE CHAPTERS
 
-\appendix
+\clearpage
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ \ --\ \ #1}}
+%\appendix
+\input{appendix}
 
 % APPENDEX A, B, ...
 
 \clearpage
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[RE,LO]{\thepage}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+}
+\pagestyle{plain}
+
 % \printglossary[type=\acronymtype]
 \addcontentsline{toc}{section}{Glossaire des Acronymes}
 \printglossaries
 
+\clearpage
 \nocite{*}
 \bibliographystyle{plain}
 \bibliography{bib}
