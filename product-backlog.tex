@@ -1,6 +1,4 @@
-%\usepackage{dtklogos}
 \usetikzlibrary{mindmap,shadows}
-% Information boxes
 \newcommand*{\info}[4][16.3]{%
   \node [ annotation, #3, scale=0.65, text width = #1em,
           inner sep = 2mm ] at (#2) {%
@@ -11,6 +9,8 @@
   \endlist
   };
 }
+\begin{figure}[htbp]
+%\usepackage{dtklogos}
 \hspace{-8ex}
 \begin{tikzpicture}[every annotation/.style={draw, fill=white, font=\Large}]
     \renewcommand{\href}[2]{#2}
@@ -140,3 +140,6 @@
     %          Community-Rezepte
     %}
 \end{tikzpicture}
+\caption{Objective du produit}
+\label{fig:product-backlog}
+\end{figure}
