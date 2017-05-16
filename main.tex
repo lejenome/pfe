@@ -3,7 +3,7 @@
 \documentclass[
 a4paper,
 12pt,
-twoside,
+%twoside,
 onecolumn,
 titlepage,
 final,
@@ -12,7 +12,7 @@ final,
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[shorthands=off,english,frenchb]{babel}
-\usepackage[fixlanguage]{babelbib}
+%\usepackage[fixlanguage]{babelbib}
 %\usepackage{polyglossia}
 %\setmainlanguage{french}
 %\setotherlanguages{english}
@@ -22,6 +22,9 @@ final,
 \usepackage[toc,page]{appendix}
 \renewcommand{\appendixtocname}{Annexes}
 
+\usepackage[nottoc]{tocbibind}
+\usepackage[style=alphabetic,backend=bibtex8]{biblatex}
+\addbibresource{bib.bib}
 
 \usepackage{authblk}
 \usepackage[acronym,toc]{glossaries}
@@ -187,7 +190,7 @@ final,
 \clearpage
 \fancypagestyle{plain}{
     \fancyhf{}
-    \fancyfoot[RE,LO]{\thepage}
+    \rfoot{\thepage}
     \renewcommand{\headrulewidth}{0pt}
     \renewcommand{\footrulewidth}{0pt}
 }
@@ -225,8 +228,8 @@ final,
 \renewcommand{\baselinestretch}{1.4}\normalsize
 \fancyhf{}
 %\fancyhead[LE,RO]{\itshape CityWatch}
-\fancyhead[RE,LO]{\rightmark}
-\fancyfoot[RE,LO]{\thepage}
+\rhead{\rightmark}
+\rfoot{\thepage}
 \renewcommand{\headrulewidth}{1pt}
 %\setlength{\headheight}{13.6pt}
 \pagestyle{fancy}
@@ -255,7 +258,7 @@ final,
 \clearpage
 \fancypagestyle{plain}{
     \fancyhf{}
-    \fancyfoot[RE,LO]{\thepage}
+    \rfoot{\thepage}
     \renewcommand{\headrulewidth}{0pt}
     \renewcommand{\footrulewidth}{0pt}
 }
@@ -267,8 +270,9 @@ final,
 
 \clearpage
 \nocite{*}
-\bibliographystyle{bababbrv}
-\bibliography{bib}
+\printbibheading
+\printbibliography[type=book,heading=subbibliography,title={Livres}]
+\printbibliography[nottype=book,heading=subbibliography,title={Autres Sources}]
 
 % \listoftodos % TODO FIXME list
 
