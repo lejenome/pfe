@@ -75,9 +75,11 @@ assure que la portabilité des représentations des différents types des donné
 (nombres, booléens, strings, $\dotsc$) indépendant du localisation.
 
 Pour le représentation des dates dans le content du requêtes HTTP, on a utilisé
-la format RFC3339 \cite{RFC3339} avec UTC comme la défaut zone du temps.
+la format RFC3339 \cite{RFC3339} avec UTC comme la défaut zone du temps, ex:
+\verb|2005-08-15T15:52:01|.
+
 Pour les en-têtes du requêtes HTTP, la format de représentation des dates est
-RFC1123 \cite{RFC1123}.
+RFC1123 \cite{RFC1123}, ex: \verb|Mon, 15 Aug 2005 15:52:01 +0000|.
 
 La format du présentation des positions géologique (latitude et longitude)
 choisi est la même représentation des nombres en JSON avec une précision jusqu'à
@@ -91,6 +93,8 @@ Pour assuré la fiabilité d'un service web, on doit vérifier la validité de
 contenu reçu même si envoyé depuis un source de confiance avant de les
 utiliser. La vérification inclue le test de disponibilité des entités
 obligatoires et le test de leurs formats.
+
+\TODO{add Position POST/GET apidoc}
 
 \subsection{Modélisation UML}
 \subsection{Évaluation suivant les normes mise}
