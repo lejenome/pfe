@@ -36,6 +36,7 @@ troisième partie qui répond aux besoins des autres tâches de cette itération
 Le but de cette itération est d'étudier notre Serveur ,de générer notre modèle,de réaliser
 la page Web (dashboard) et développer les vues nécessaires pour permettre à l'utilisateur
 de consulter la dernière position du véhicule selon les spécifications du Backlog.
+
 \begin{center}
     \footnotesize
     \begin{longtable}{| p{1cm} | p{5cm} | p{7cm} | p{1cm} |}
@@ -56,7 +57,7 @@ de consulter la dernière position du véhicule selon les spécifications du Bac
 1 & Présentation et Configuration SVN & Présenter SVN, installer le serveur SVN et créer les répertoires  & 1 \\ \hline
 2 & Recherche sur les Services Web & Présenter les différentes Solutions des services web et choisir la meilleur solution & 1 \\ \hline
 3 & Implémenter service Save Position & Enregistrement les coordonnées requis dans la base de données & 2 \\ \hline
-4 & Implémenter la consommation du service Save Position & Coordonnées enregistrés instantané dans la BD & 1 \\ \hline
+4 & Implémenter la consommation du service Save Position & Coordonnées enregistrés instantané et continuellement dans la BD & 1 \\ \hline
 5 & Recherche sur les spécifications de la plateforme Android & Présenter le modèle de développement Android et choisir le SDK optimale & 1 \\ \hline
 6 & Création Application Template minimal & Application fonctionnel et intégration au SVN & 1 \\ \hline
 7 & Implémenter service Get Last Position & Le serveur retourne les dernières coordonnées requis & 1 \\ \hline
@@ -69,9 +70,54 @@ de consulter la dernière position du véhicule selon les spécifications du Bac
 
 \subsubsection{Estimation de la première itération}
 
-Lors de l’itération 0 nous avons fixé la période d’une itération à 3 semaine. Dans
+Lors de l'itération 0 nous avons fixé la période d’une itération à 3 semaine. Dans
 cette section, nous présentons une estimation du nombre d’heures pendant lesquelles
 nous nous engageons à travailler.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{| c | c | c | c |}
+\hline
+\textbf{Membre} & \textbf{Nombre d'heures par jour} & \textbf{Nombre de jours présent} & \textbf{Total en heures} \\ \hline
+\hline
+
+Moez & 6 & 12 & 72 \\ \hline
+Rihab & 6 & 12 & 72 \\ \hline
+\multicolumn{2}{c|}{} & \textbf{Total} & 144 \\ \cline{3-4}
+    \end{tabular}
+    \caption{Nombre d'heures de travail estimé de l'itération 1}
+    \label{tab:sprint1-capacity}
+\end{table}
+
+\begin{center}
+    \begin{longtable}{| l | l | l |}
+        \caption{Nombre d'heures estimé pour la réalisation des taches}
+        \label{tab:sprint1-estimation} \\
+
+ \hline
+ \textbf{Spécification} & \textbf{Membre} & \textbf{Heures} \\ \hline
+ \endhead
+
+ \hline \multicolumn{3}{|r|}{{Continué en page suivante$\dotsc$}} \\ \hline
+ \endfoot
+
+ \hline \hline
+ \endlastfoot
+
+\hline
+Présentation et Configuration SVN & Moez & 5 x 2 \\ \hline
+Recherche sur les Services Web & Moez & 13 x 2 \\ \hline
+Implémenter service Save Position & Moez & 5 \\ \hline
+Implémenter la consommation du service Save Position & Rihab & 5 x 2 \\ \hline
+Recherche sur les spécifications de la plateforme Android & Rihab & 5 x 2 \\ \hline
+Création Application Template minimal & Rihab & 8 \\ \hline
+Implémenter service Get Last Position & Moez & 2 \\ \hline
+Rectification service Save Positon & Moez & 2 \\ \hline
+Rectification service Get Last Position & Moez & 1 \\ \hline
+Affiche Multiple marqueurs & Moez & 5 \\ \hline
+Affiche état du périphérique & Moez & 5 \\ \hline
+\end{longtable}
+\end{center}
 
 \subsection{Présentation des outils utilisés}
 
