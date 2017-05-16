@@ -1,6 +1,7 @@
 \section{Itération 1: Système de tracking}
 
 \subsection{L'objectif du sprint}
+
 Dans le but de définir le périmètre fonctionnel du Sprint 1 et faire
 sa planification, tous les membres de l'équipe ont participé à un réunion
 avec le Scrum Master et le Product Owner pour définir le backlog du sprint.\\
@@ -19,25 +20,64 @@ Dans notre projet ``Plateforme CityWatch'' la durée d’une Itération est fix�
 semaines (170h par itération). Dans ce chapitre nous décrivons le déroulement des deux
 premières itérations. Une itération commence par sa planification et finit par être revue
 avec ”Product-Owner”.
+
 \subsubsection{Planification de l'itération 1}
+
 La planification de l'itération représente une étape importante dans la vie de
 l'itération parce que au cours du planification, on divise l'itération a plusieurs étapes
 pour mieux atteindre le résultats attendu à la fin de l'itération.
 Dans cette première itération on a décidé de diviser cette dernière en trois grandes
 parties une partie consacrée pour la création de la base de donnée et la génération du
 modèle, la deuxième partie est consacré pour la réalisation de la page d’accueil, et une
-troisième partie qui répond aux besoins des autres tâches de cette itérations
+troisième partie qui répond aux besoins des autres tâches de cette itérations.
+
 \subsubsection{But de la première itération}
+
 Le but de cette itération est d'étudier notre Serveur ,de générer notre modèle,de réaliser
 la page Web (dashboard) et développer les vues nécessaires pour permettre à l'utilisateur
 de consulter la dernière position du véhicule selon les spécifications du Backlog.
+
+\begin{center}
+    \footnotesize
+    \begin{longtable}{| p{1cm} | p{5cm} | p{7cm} | p{1cm} |}
+        \caption{Taches à faire de la première itération}
+        \label{tab:sprint1-backlog} \\
+
+ \hline
+ \textbf{Réf} & \textbf{Spécification} & \textbf{Description} & \textbf{Priorité} \\ \hline
+ \endhead
+
+ \hline \multicolumn{4}{|r|}{{Continué en page suivante$\dotsc$}} \\ \hline
+ \endfoot
+
+ \hline \hline
+ \endlastfoot
+
+\hline
+1 & Présentation et Configuration SVN & Présenter SVN, installer le serveur SVN et créer les répertoires  & 1 \\ \hline
+2 & Recherche sur les Services Web & Présenter les différentes Solutions des services web et choisir la meilleur solution & 1 \\ \hline
+3 & Implémenter service Save Position & Enregistrement les coordonnées requis dans la base de données & 2 \\ \hline
+4 & Implémenter la consommation du service Save Position & Coordonnées enregistrés instantané dans la BD & 1 \\ \hline
+5 & Recherche sur les spécifications de la plateforme Android & Présenter le modèle de développement Android et choisir le SDK optimale & 1 \\ \hline
+6 & Création Application Template minimal & Application fonctionnel et intégration au SVN & 1 \\ \hline
+7 & Implémenter service Get Last Position & Le serveur retourne les dernières coordonnées requis & 1 \\ \hline
+8 & Rectification service Save Positon & Support multiple périphériques et enregistrer la date d'envoyé & 2 \\ \hline
+9 & Rectification service Get Last Position & Retourné la position du périphérique et la date du dernier modification & 2 \\ \hline
+10 & Affiche Multiple marqueurs & Afficher dernière position de chaque périphérique dans la carte & 2 \\ \hline
+11 & Affiche état du périphérique & Afficher si le périphérique est en ligne ou hors ligne & 3 \\ \hline
+\end{longtable}
+\end{center}
+
 \subsection{Présentation des outils utilisés}
+
 Le stage chez Djagora Academy nous a permis d'acquérir de nouvelles
 compétences tant au nivrau relationnel que technique.Pour bien entamer la réalisation
 de la plateforme 
 ``City Watch''nous avons suivi différentes
 formations sur les outils et les technologies que nous venons de citer. 
+
 \subsubsection{Apache Subversion}
+
 Un logiciel de gestion de versions est un logiciel de gestion de configuration
 permettant de stocker des informations pour une ou plusieurs ressources
 informatiques permettant de récupérer toutes les versions intermédiaires des
@@ -64,6 +104,7 @@ Subversion entièrement fonctionnel sur la plateforme Windows. Il est utile tant
 pour les petites entreprises que pour les entreprises.
 
 \subsubsection{Android}
+
 Android est un système d'exploitation conçu en 2007 par la societé Android,
 start-up racheté par Google . Android est Open Source, ca veut dire on peut lire
 le code de ce logiciel le modifier et le redistribuer.
@@ -71,6 +112,7 @@ le code de ce logiciel le modifier et le redistribuer.
 Les bases que nous utilisons:
 
 \paragraph{IDE:}
+
 C'est un logiciel dont son objectif est de faciliter le développement. Il est
 toujours possible de développer une application sans IDE.
 l'IDE est constitué d'outils dont au moins un éditeur de texte.
@@ -80,6 +122,7 @@ outils de compilation et débogage et plusieurs autres services qui permettent d
 développer une application facilement et rapidement.
 
 \paragraph{SDK:}
+
 C’est une abréviation qui peut faire référence a Software Developpement Kit.
 Les applications Android sont développés en JAVA. Un appareil Android ne
 comprend pas le langage JAVA, il comprend une variante de JAVA adaptée pour lui.
@@ -88,6 +131,7 @@ une cible particulière. Un SDK Android est alors un ensemble des outils qui
 permettent de développer des application pour Android.
 
 \paragraph{Activity:}
+
 Un utilisateur habile d'Android remarque que lors de l'exploitation d'une
 application Android qu'il est en train de naviguer entre des fenêtres et
 l'application ne afficher qu'une seule fenêtre à la fois ces fenêtre la sont
@@ -103,6 +147,7 @@ contexte ce contexte permet de faire la liaison entre le système Android et les
 autres activities de l'application.
 
 \subparagraph{États d'activities:}
+
 Le système Android met en place un système priorités entre application
 par exemple l'utilisateur est en train de naviguer sur internet et écouter
 de la musique il reçois un appel comme l'application qui gère les appel est
@@ -121,6 +166,7 @@ On peut différencier ces états par leur visibilité :
 \end{itemize}
 
 \subparagraph{Cycle de vie d'une activité :}
+
 Une activité n'a pas de contrôle sur son état.
 Son état change suivant un cycle rythmique entre le système Android et les
 AUTres application (un système quasi dépendant sur des priorités comme expliqué
@@ -128,8 +174,11 @@ précédemment) la figure~\ref{fig:android-activity} explique le cycle de vie
 d'une activité. (Les états sont représenter comme des méthodes parce que lors de
 la programmation ces états sont interroges par le nom de ces méthodes.
 la figure~\ref{fig:android-activity} représente le cycle de vie d'une activité.
+
 \input{android-activity}
+
 \subparagraph{Comment choisir le SDK optimale :}
+
 Une SDK permet l'application de marcher sur la version Android visé
 et les versions ultérieure il  a noté de prendre en considération le taux des
 utilisateurs visé par cette application. Aussi il faut travailler avec une SDK
@@ -168,7 +217,9 @@ officiel du PHP includant PDO, $\dotsc$ . Dans l'itération suivante, on a étud
 les frameworks disponibles. A la fin, on a choisi le framework Lumen qui est
 une version simplifié du Laravel pour le dévelopemment des API RESTful. Les
 resons de choisir Lumen seront présentés dans le section du 2\ieme{} itération.
+
 \subsection{Backlog du sprint}
+
 Le sprint Backlog est un outil qui facilite la récupération des tâches et qui fait
 la mise au point du travail tout en précisant les taches que contient chaque
 user-story du Product Backlog.
@@ -236,6 +287,7 @@ obligatoires et le test de leurs formats.
 \subsection{Modélisation UML}
 
 \subsection{Évaluation suivant les normes mise}
+
 \subsubsection{Page Web ``Dashboard''}
 
 \TODO{sprint1 dashboard screenshot}
@@ -247,4 +299,3 @@ Dans 1\ier{} phase, on a implémenté la méthode POST du ressource Position,
 \TODO{RESTful API design describtion as http-api-design-en.pdf}
 
 \subsection{Travail contribué}
-
