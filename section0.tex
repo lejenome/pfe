@@ -74,6 +74,12 @@ problématiques localisations de multiple individu,la réalisation d'un module
 d'itinéraire pour les véhicules vers enfin la création d'un mécanisme qui donne
 la main à effectuer divers types de rapport dans une carte.
 
+La figure~\ref{fig:citywatch-architecture} représente le flux des informations
+géographiques dés l'envoye des coordonnées depuis les satellites GPS aux smartphones
+dans les véhicules, les informations sont ensoite envoyées au serveur à travers
+le réseaux cellulaire et l'internet pour les analyser et les stocker. A la fin,
+elles seront accessibles par le tableau du board de CityWatch.
+
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{citywatch-architecture}
@@ -106,11 +112,11 @@ fin de chaque Sprint, une revue est organisée avec les parties prenantes durant
 l’équipe montre ce qu’elle a réalisé. Le feedback obtenu peut être pris en compte sur le
 Sprint suivant. Scrum insiste sur la nécessité de livrer un produit opérationnel,
 testé et documenté à la fin de chaque itération.
-la figure~\ref{fig:scrum-model} représente la méthode agile SCRUM. 
+la figure~\ref{fig:scrum-model} représente la méthode agile SCRUM.
 
 \input{figures/scrum-model}
 
-\paragraph{Pourquoi SCRUM ?}
+\paragraph{Pourquoi Scrum?}
 
 Scrum place l’humain au centre de la méthodologie. Le client intervient tout au long
 du processus de création et l’équipe travaille en collaboration, et aussi parce que cette
@@ -137,9 +143,9 @@ Dans Scrum existe trois principaux rôles:
 \paragraph{Le responsable produit}
 
 Il prend en charge de communiquer la
-vision globale du produit à l’équipe. 
+vision globale du produit à l’équipe.
 Il se voit représenter le client final, se met à sa place
-et priorise ses besoins. Celui qui tient ce rôle est celui qui 
+et priorise ses besoins. Celui qui tient ce rôle est celui qui
 a le plus de visibilité, de responsabilité et d’autorité.
 En effet, la méthode Scrum favorise l’auto-organisation de l'équipe.
 
@@ -163,7 +169,7 @@ néanmoins cadrée par l’obligation de répondre aux objectifs du sprint.
 
 Pour montrer l’avancement durant une itération donnée, on a besoin de tracer le
 Burndown Chart. Il s’agit d’un graphique simple qui montre le nombre d’heures restant
-à effectuer pour finaliser le produit. 
+à effectuer pour finaliser le produit.
 
 \subsubsection{Modélisation UML}
 
@@ -202,13 +208,13 @@ backlog décrit dans le tableau~\ref{tab:product-backlog}.
  \endlastfoot
 
 \hline
- 1 & Gestion du Trajectoire & Utilisateur & Il soit possible de démarrer le tracking & Avoir un feedback dans l'application et sur le site web & 1 \\
+ 1 & Gestion du Trajectoire & Utilisateur & Il soit possible de démarrer le tracking & Avoir un feedback dans l'application et sur le site web & 1 \\ \cline{3-6}
    &                        & Utilisateur & Il soit possible d’arrêter le tracking & Avoir un feedback dans l’application & 1 \\ \hline
- 2 & Gestion de Rapports    & Utilisateur & Il soit possible de choisir entre une variété de problèmes à déclarer depuis l’application & Avoir un feedback sur le site web & 1 \\
-   &                        & Utilisateur & Il soit possible de choisir l’emplacement du problème à déclarer dans une carte & Avoir un feedback sur le site web & 1 \\
+ 2 & Gestion de Rapports    & Utilisateur & Il soit possible de choisir entre une variété de problèmes à déclarer depuis l’application & Avoir un feedback sur le site web & 1 \\ \cline{3-6}
+   &                        & Utilisateur & Il soit possible de choisir l’emplacement du problème à déclarer dans une carte & Avoir un feedback sur le site web & 1 \\ \cline{3-6}
    &                        & Utilisateur & Il soit possible d’ajouter une description ou une image au problème & Avoir un feedback sur le site web & 2 \\ \hline
  3 & Consulter la carte     & Utilisateur & Il soit possible de consulter la carte depuis l’application & Voir la carte dans l’application & 2 \\ \hline
- 4 & Compte                 & Utilisateur & Il soit possible de consulter le site web sans avoir un compte & Consulter le site web avec un minimum d’informations & 1 \\
+ 4 & Compte                 & Utilisateur & Il soit possible de consulter le site web sans avoir un compte & Consulter le site web avec un minimum d’informations & 1 \\ \cline{3-6}
    &                        & Utilisateur & Il soit possible de créer un compte & Avoir un compte personnel & 2 \\ \hline
  5 & Groupement des rapports& Utilisateur & Il est possible de voir les rapports en groupe lors d’un zoom out & Avoir une vision globale sur le nombre des rapports & 1 \\ \hline
  6 & Déclarer un rapport    & Utilisateur & Il est possible de déclarer un rapport à partir du site web & Avoir accès à une page rapport comme celle de l’application & 1 \\ \hline
