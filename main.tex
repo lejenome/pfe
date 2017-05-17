@@ -41,6 +41,7 @@ final,
 %\setmonofont[Mapping=tex-ansi]{Monaco}
 
 \usepackage{color}
+\usepackage[table]{xcolor}
 
 \usepackage{lmodern}
 %\usepackage{tgpagella}
@@ -236,7 +237,12 @@ final,
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ \ --\ \ #1}}
 \pagenumbering{arabic}
 
-\part{Introduction}
+\part{Introduction générale}
+\input{introduction}
+\newpage
+\part{Contexte du projet}
+\input{cadreprojet}
+\newpage
 \part{Itérations}
 \input{section0}
 \newpage
