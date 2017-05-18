@@ -11,7 +11,7 @@ watch:
 %.nls:
 	+makeindex $*.nlo -s nomencl.ist -o $*.nls
 
-%.gls:
+%.gls: %.aux
 	+makeglossaries $*
 
 main.pdf: main.tex

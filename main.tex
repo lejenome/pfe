@@ -26,9 +26,6 @@ final,
 \usepackage[style=alphabetic,backend=bibtex8]{biblatex}
 \addbibresource{bib.bib}
 
-\usepackage{authblk}
-\usepackage[acronym,toc]{glossaries}
-
 \usepackage{ifxetex,ifluatex}
 
 %\usepackage{mathspec}
@@ -86,6 +83,9 @@ final,
 \urlstyle{same}  % don't use monospace font for urls
 % Make links footnotes instead of hotlinks:
 \renewcommand{\href}[2]{#2\footnote{\url{#1}}}
+
+\usepackage{authblk}
+\usepackage[acronym,toc]{glossaries}
 
 \usepackage{minted}
 %\usemintedstyle{borland}
@@ -157,6 +157,7 @@ final,
 \affil{Faculté des Sciences de Sfax, Tunisie}
 
 \usepackage{tikz}
+\usepackage{pgfplots}
 \usetikzlibrary{arrows.meta}
 \tikzset{%
   >={Latex[width=2mm,length=2mm]},
@@ -272,7 +273,9 @@ final,
 \pagestyle{plain}
 
 % \printglossary[type=\acronymtype]
-\addcontentsline{toc}{section}{Glossaire des Acronymes}
+%\addcontentsline{toc}{section}{Glossaire des Acronymes}
+\glossarystyle{altlistgroup}
+\glsaddall
 \printglossaries
 
 \clearpage
