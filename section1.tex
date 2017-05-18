@@ -270,7 +270,7 @@ les frameworks disponibles. A la fin, on a choisi le framework Lumen qui est
 une version simplifié du Laravel pour le dévelopemment des API \acrshort{RESTful}. Les
 resons de choisir Lumen seront présentés dans le section du 2\ieme{} itération.
 
-\subsection{Backlog du sprint}
+\subsection{Backlog de l'itération}
 
 Le sprint Backlog est un outil qui facilite la récupération des tâches et qui fait
 la mise au point du travail tout en précisant les taches que contient chaque
@@ -292,6 +292,35 @@ L'exigence de l'api RESTful est:
         et en internalisation, format de présentation des données géologique et
         sa précision.
 \end{itemize}
+
+
+\subsection{Modélisation UML}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=1\textwidth]{sprint1-webservices-usecase}
+  \caption{Diagram de case d'utilisation du services web en itération 1}
+  \label{fig:sprint1-webservices-usecase}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=1\textwidth]{sprint1-webservices-post-sequence}
+  \caption{Diagram de sequence du service Post Postion en itération 1}
+  \label{fig:sprint1-webservices-post-sequence}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=1\textwidth]{sprint1-webservices-get-sequence}
+  \caption{Diagram de sequence du service Get Postion en itération 1}
+  \label{fig:sprint1-webservices-get-sequence}
+\end{figure}
+
+\subsection{Évaluation suivant les normes mise}
+L’avis du Product-Owner sur notre première itération, nous a permis de commencer la
+deuxième itération avec plus de confiance. Pour que nous puissions mieux nous
+organiser, nous avons fait une petite étude
 
 Ces caractéristique ont étés adressés pendant l'implémentation du service web.
 
@@ -336,39 +365,48 @@ obligatoires et le test de leurs formats.
 
 \TODO{add Position POST/GET apidoc}
 
-\subsection{Modélisation UML}
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=1\textwidth]{sprint1-webservices-usecase}
-  \caption{Diagram de case d'utilisation du services web en itération 1}
-  \label{fig:sprint1-webservices-usecase}
-\end{figure}
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=1\textwidth]{sprint1-webservices-post-sequence}
-  \caption{Diagram de sequence du service Post Postion en itération 1}
-  \label{fig:sprint1-webservices-post-sequence}
-\end{figure}
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=1\textwidth]{sprint1-webservices-get-sequence}
-  \caption{Diagram de sequence du service Get Postion en itération 1}
-  \label{fig:sprint1-webservices-get-sequence}
-\end{figure}
-
-\subsection{Évaluation suivant les normes mise}
-
-\subsubsection{Page Web ``Dashboard''}
-
-\TODO{sprint1 dashboard screenshot}
-
 \subsubsection{Implementé la method POST}
 
 Dans 1\ier{} phase, on a implémenté la méthode POST du ressource Position,
 
 \TODO{RESTful API design describtion as http-api-design-en.pdf}
 
-\subsection{Travail contribué}
+\subsection{Revue de cette itération}
+
+Le but de cette réunion est de présenter le travail réalisé au cours de cette itération.
+Généralement les membres de l’équipe à travers une démonstration vont présenter leur produit.
+
+\subsubsection{Produit de l'itération}
+
+A la fin de l’itération 1, nous avons un première produit partiel permettant de 
+suivre la position des multiple smartphone et les afficher dans la carte
+maps de notre site web.
+
+\paragraph{Page Web ``Dashboard''}
+
+La figure \ref{fig:sprint1-dashboard-screenshot} affiche la position des individus et son état.
+\begin{itemize}
+ \item \textit{Marqueur en Vert}: Périphérique en ligne  
+ \item \textit{Marqueur en Rouge}:Périphérique en hors ligne 
+\end{itemize}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.6\textwidth]{sprint1-dashboard-screenshot}
+  \caption{Capture écran de la page web de l'itération 1}
+  \label{fig:sprint1-dashboard-screenshot}
+\end{figure}
+
+\paragraph{Application Android}
+La figure \ref{fig:sprint1-android-screenshot} représente l'interface de l'application 
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.4\textwidth]{sprint1-android-screenshot}
+  \caption{Capture écran d'application Android de l'itération 1}
+  \label{fig:sprint1-android-screenshot}
+\end{figure}
+
+\subsubsection{Avis du ProductOwner}
+Le Product Owner était ravi des résultats de cette première itération. Il a validé donc notre
+travail et nous a encouragé pour l’élaboration des suivantes itérations.
+\subsection{Burndown de l'itération}
