@@ -253,11 +253,26 @@ Un service web est un protocole d'interface de communication et l'échange de
 données entre applications et systèmes hétérogènes à distance en utilisant les
 technologies Web (HTTP dans notre cas).
 
-Les variantes principales des services web peuvent etre divisées en deux types:
+Pendant la conception de l'api du service de position, on a étudié les
+différentes variantes des architectures des services web:
 \begin{itemize}
-        \item \HTODO{Orienté RPC:}{add definition}
-        \item \HTODO{Orienté Ressources:}{add definition}
+    \item Orienté RPC: (ex: XML-RPC, SOAP, JSON-RPC)
+        \begin{itemize}
+            \item Meilleur pour présenter des actions et commandes.
+        \end{itemize}
+    \item Orienté Ressources: (ex: RESTful)
+        \begin{itemize}
+            \item Représenter les données sous formes des ressources.
+            \item Utiliser les méthodes HTTP pour modifier/creer/lire/supprimer les données.
+            \item Utiliser les paramètres query pour passer des paramètres
+            \item Stateless
+            \item Meilleur pour modeler un domaine et entités
+        \end{itemize}
 \end{itemize}
+
+On a choisi d'utiliser l'architecture RESTful comme notre API est mieux décri
+comme ensemble des collections des données dont on peut performer avec des
+actions CRUD.
 
 \subsubsection{Lumen}
 
@@ -363,11 +378,14 @@ contenu reçu même si envoyé depuis un source de confiance avant de les
 utiliser. La vérification inclue le test de disponibilité des entités
 obligatoires et le test de leurs formats.
 
-\TODO{add Position POST/GET apidoc}
-
 \subsubsection{Implementé la method POST}
 
-Dans 1\ier{} phase, on a implémenté la méthode POST du ressource Position,
+Dans 1\ier{} phase, on a implémenté la méthode POST du ressource Position.
+La documentation de l'api est dans l'annex~\ref{appendix:sprint1-position-post-doc}.
+
+\subsection{Implementé la Méthod Get}
+
+\TODO{add Position GET apidoc}
 
 \TODO{RESTful API design describtion as http-api-design-en.pdf}
 
@@ -398,6 +416,7 @@ La figure \ref{fig:sprint1-dashboard-screenshot} affiche la position des individ
 \end{figure}
 
 \paragraph{Application Android}
+
 La figure \ref{fig:sprint1-android-screenshot} représente l'interface de l'application 
 \begin{figure}[htbp]
   \centering
@@ -407,6 +426,10 @@ La figure \ref{fig:sprint1-android-screenshot} représente l'interface de l'appl
 \end{figure}
 
 \subsubsection{Avis du ProductOwner}
+
 Le Product Owner était ravi des résultats de cette première itération. Il a validé donc notre
 travail et nous a encouragé pour l’élaboration des suivantes itérations.
+
 \subsection{Burndown de l'itération}
+
+\input{figures/sprint1-burndown}

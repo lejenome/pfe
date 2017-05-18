@@ -2,33 +2,56 @@
 \section{Annexe}
 \pagebreak
 
-\begin{figure}[H]
-    \centering
-    \caption{FSS logo}
-    \includegraphics[width=0.95\textwidth]{fss-old}
-    \label{fig:appendixImage}
-\end{figure}
+\subsection{Documentation des Service Web d'Itération 1}
+
+\subsubsection{Service Post Position}
+\label{appendix:sprint1-position-post-doc}
+
+\textbf{POST} \ \texttt{/positions/\textit{:id}}
+
+%\subparagraph*{Paramètres}
+\begin{table}[htbp]
+    \caption{Paramètres Service Post Position - Itération 1}
+    \begin{tabular}{|l | l | l | l|}
+        \hline
+        \multicolumn{1}{|c|}{\textbf{Element}} &
+        \multicolumn{1}{c|}{\textbf{Obligation}} &
+        \multicolumn{1}{c|}{\textbf{Type}} &
+        \multicolumn{1}{c|}{\textbf{Description}} \\ \hline
+        \verb|:id| & obligatoire & string & identificateur du périphérique \\ \hline
+        \verb|lat| & obligatoire & nombre & latitude de la position \\ \hline
+        \verb|lng| & obligatoire & nombre & longitude de la position \\ \hline
+        \verb|ast_modified| & optionnel & string (RFC3339) & date du capture de la position \\ \hline
+    \end{tabular}
+\end{table}
+
+\subparagraph*{Reponse Codes}
+\begin{description}
+    \item[\texttt{204 No Content}] Position était crée ou mette à jour avec succés.
+    \item[\texttt{400 Bad Request}] Le contenu JSON n'est pas valide.
+    \item[\texttt{422 Unprocessable Entity}] Entité obligatoire absante ou format d'une entité est invalide.
+\end{description}
+
+\subparagraph*{Entités de reponse}
+
+n/a
+
+\begin{listing}
+    \caption{Démonstration Service Post Position - Itération 1}
+\begin{minted}{shell}
+curl -i -X POST http://citywatch.factorycampus.net/api/v1/positions/1 \
+    -d '{"lat": 10.71979600000000,
+         "lat": "34.72563400000000",
+         "last_modified": "2017-03-27 10:34:01"}' \
+    -H 'Content-Type: application/json'
+\end{minted}
+\end{listing}
 
 \begin{listing}[ht]
-    \begin{minted}{c}
-public class Fibonacci {
-	public static long fib(int n) {
-		if (n <= 2) {
-			return 1;
-		} else {
-			return fib(n - 1) + fib(n - 2);
-		}
-	}
-
-	public static void main(String[] args) {
-		for(int i = 1; i < 10; i++) {
-			System.out.println(i + " - " + fib(i));
-		}
-	}
-}
-    \end{minted}
-    \caption{Fibonacci}
-    \label{lst:fibAppendix}
+    \caption{Réponse en succés du Service Post Position - Itération 1}
+\begin{minted}{http}
+HTTP/1.1 204 No Content
+\end{minted}
 \end{listing}
 
 \end{appendices}
