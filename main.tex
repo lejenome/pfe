@@ -53,6 +53,7 @@ final,
 
 \usepackage{graphicx}
 \graphicspath{{figures/}, {diagrams/}}
+\usepackage{subcaption}
 %\usepackage{svg}
 \usepackage{array}
 \usepackage{longtable}
@@ -189,7 +190,7 @@ final,
 \input{quote}
 \input{abstract}
 \input{dedicaces}
-\newpage
+\clearpage
 \input{merci}
 \clearpage
 \fancypagestyle{plain}{
@@ -242,17 +243,17 @@ final,
 
 \part{Introduction générale}
 \input{introduction}
-\newpage
+\clearpage
 \part{Contexte du projet}
 \input{cadreprojet}
-\newpage
+\clearpage
 \part{Itérations}
 \input{section0}
-\newpage
+\clearpage
 \input{section1}
-\newpage
+\clearpage
 \input{section2}
-\newpage
+\clearpage
 \input{section3}
 
 %%%% INCLUDE CHAPTERS
@@ -260,9 +261,9 @@ final,
 \clearpage
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ \ --\ \ #1}}
 %\appendix
+\begin{appendices}
 \input{appendix}
-
-% APPENDEX A, B, ...
+\end{appendices}
 
 \clearpage
 \fancypagestyle{plain}{
