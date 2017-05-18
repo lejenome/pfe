@@ -89,19 +89,20 @@ final,
 
 \usepackage{minted}
 %\usemintedstyle{borland}
-\usemintedstyle{tango}
+%\usemintedstyle{tango}
 \definecolor{darkBlue}{RGB}{4, 53, 98}
 \definecolor{lightBlue}{RGB}{102, 153, 204}
 \definecolor{lightGrey}{RGB}{245, 247, 249}
 \definecolor{magenta}{RGB}{177, 0, 89}
 \setminted{
+    mathescape,
     linenos=true,
     numbersep=5pt,
-    frame=leftline,
+    frame=lines,
     framesep=2mm,
-    bgcolor=lightGrey,
-    rulecolor=lightBlue,
-    framerule=1.1pt,
+    %bgcolor=lightGrey,
+    %rulecolor=lightBlue,
+    %framerule=1.1pt,
     tabsize=4,
 }
 

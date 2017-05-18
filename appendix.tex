@@ -2,44 +2,44 @@
 \section{Annexe}
 \pagebreak
 
-\subsection{Documentation des Service Web d'Itération 1}
+\subsection{Documentation des Service Web d'itération 1}
 
 \subsubsection{Service Post Position}
 \label{appendix:sprint1-position-post-doc}
 
 \textbf{POST} \ \texttt{/positions/\textit{:id}}
 
-%\subparagraph*{Paramètres}
 \begin{table}[htbp]
+    \centering
     \caption{Paramètres Service Post Position - Itération 1}
     \begin{tabular}{|l | l | l | l|}
         \hline
-        \multicolumn{1}{|c|}{\textbf{Element}} &
+        \multicolumn{1}{|c|}{\textbf{Élément}} &
         \multicolumn{1}{c|}{\textbf{Obligation}} &
         \multicolumn{1}{c|}{\textbf{Type}} &
         \multicolumn{1}{c|}{\textbf{Description}} \\ \hline
         \verb|:id| & obligatoire & string & identificateur du périphérique \\ \hline
-        \verb|lat| & obligatoire & nombre & latitude de la position \\ \hline
-        \verb|lng| & obligatoire & nombre & longitude de la position \\ \hline
-        \verb|ast_modified| & optionnel & string (RFC3339) & date du capture de la position \\ \hline
+        \verb|lat| & obligatoire & nombre [-90, 90] & latitude de la position \\ \hline
+        \verb|lng| & obligatoire & nombre [-180, 180] & longitude de la position \\ \hline
+        \verb|last_modified| & optionnel & string (RFC3339) & date du capture de la position \\ \hline
     \end{tabular}
 \end{table}
 
-\subparagraph*{Reponse Codes}
+\subparagraph*{Réponse Codes}
 \begin{description}
-    \item[\texttt{204 No Content}] Position était crée ou mette à jour avec succés.
+    \item[\texttt{204 No Content}] Position était crée ou mette à jour avec succès.
     \item[\texttt{400 Bad Request}] Le contenu JSON n'est pas valide.
-    \item[\texttt{422 Unprocessable Entity}] Entité obligatoire absante ou format d'une entité est invalide.
+    \item[\texttt{422 Unprocessable Entity}] Entité obligatoire absente ou format d'une entité est invalide.
 \end{description}
 
-\subparagraph*{Entités de reponse}
+\subparagraph*{Entités de réponse}
 
 n/a
 
 \begin{listing}
     \caption{Démonstration Service Post Position - Itération 1}
-\begin{minted}{shell}
-curl -i -X POST http://citywatch.factorycampus.net/api/v1/positions/1 \
+    \begin{minted}{bash}
+curl -i -X POST http://localhost/positions/1 \
     -d '{"lat": 10.71979600000000,
          "lat": "34.72563400000000",
          "last_modified": "2017-03-27 10:34:01"}' \
@@ -48,9 +48,78 @@ curl -i -X POST http://citywatch.factorycampus.net/api/v1/positions/1 \
 \end{listing}
 
 \begin{listing}[ht]
-    \caption{Réponse en succés du Service Post Position - Itération 1}
+    \caption{Réponse en succès du Service Post Position - Itération 1}
 \begin{minted}{http}
 HTTP/1.1 204 No Content
+\end{minted}
+\end{listing}
+
+\subsubsection{Service Get Position}
+\label{appendix:sprint1-position-get-doc}
+
+\textbf{GET} \ \texttt{/positions/\textit{:id}}
+
+\begin{table}[htbp]
+    \centering
+    \caption{Paramètres Service Get Position - Itération 1}
+    \begin{tabular}{|l | l | l | l|}
+        \hline
+        \multicolumn{1}{|c|}{\textbf{Élément}} &
+        \multicolumn{1}{c|}{\textbf{Obligation}} &
+        \multicolumn{1}{c|}{\textbf{Type}} &
+        \multicolumn{1}{c|}{\textbf{Description}} \\ \hline
+        \verb|:id| & obligatoire & string & identificateur du périphérique \\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+    \centering
+    \caption{Entités du réponse du Service Post Position - Itération 1}
+    \begin{tabular}{|l | l | l|}
+        \hline
+        \multicolumn{1}{|c|}{\textbf{Élément}} &
+        \multicolumn{1}{c|}{\textbf{Type}} &
+        \multicolumn{1}{c|}{\textbf{Description}} \\ \hline
+        \verb|lat| & nombre [-90, 90] & latitude de la position \\ \hline
+        \verb|lng| & nombre [-180, 180] & longitude de la position \\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+    \centering
+    \caption{En-tête Réponse Service Get Position - Itération 1}
+    \begin{tabular}{|l | l | l | l|}
+        \hline
+        \multicolumn{1}{|c|}{\textbf{En-tête}} &
+        \multicolumn{1}{c|}{\textbf{Type}} &
+        \multicolumn{1}{c|}{\textbf{Description}} \\ \hline
+        \verb|Last-Modified| & string (RFC1123) & Date du dernier modification du position \\ \hline
+    \end{tabular}
+\end{table}
+
+\subparagraph*{Réponse Codes}
+\begin{description}
+    \item[\texttt{200 Success}] Dernière position du périphérique spécifié retournée.
+    \item[\texttt{404 Not Found}] Aucune position trouvée pour le périphérique spécifié.
+\end{description}
+
+\begin{listing}
+    \caption{Démonstration Service Post Position - Itération 1}
+\begin{minted}{shell}
+curl -i http://localhost/api/v1/positions/1
+\end{minted}
+\end{listing}
+
+\begin{listing}[htbp]
+    \caption{Réponse en succès du Service Get Position - Itération 1}
+\begin{minted}{http}
+HTTP/1.1 200 OK
+Last-Modified: Wed, 17 May 2017 14:51:00 GMT
+
+{
+    "lng": "10.71989600000000",
+    "lat": "34.72526400000000"
+}
 \end{minted}
 \end{listing}
 
