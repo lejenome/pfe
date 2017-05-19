@@ -38,26 +38,30 @@
           level 2 concept/.append style={
               font=\footnotesize\bfseries,
               level distance=8em},
+          ours/.append style = {
+              line width=0.5ex,
+              concept color = black,
+          }
     ]
 
     node[root] {Platforme CityWatch} [clockwise from=0]
 
     child[concept color=blue!70] {
-        node {Gestions des Rapports} [clockwise from=50]
-        child { node { Consultation } }
-        child { node { Déclaration } }
+        node {\ul{Gestions des Rapports}} [clockwise from=50]
+        child { node { \ul{Consultation} } }
+        child { node { \ul{Declaration} } }
     }
     child[concept color=green!40!black] {
-        node[concept] {Information Routière} [clockwise from=30]
-        child { node[concept] {Secousses} }
-        child { node[concept] {Ralentisseurs}}
+        node[concept] {\ul{Information Routiere}} [clockwise from=30]
+        child { node[concept] {\ul{Secousses}} }
+        child { node[concept] {\ul{Ralentisseurs}}}
         child { node[concept] {Emboutiage}}
     }
     child[concept color=blue] {
-        node[concept] {Itinéraire} [clockwise from=305]
-        child { node[concept] {Localisation instantanée} }
-        child { node[concept] {Projection du Trajectoire} }
-        child { node[concept] {Historie des Trajectoires} }
+        node[concept] {\ul{Itineraire}} [clockwise from=305]
+        child { node[concept] {\ul{Localisation instantanee}} }
+        child { node[concept] {\ul{Projection du Trajectoire}} }
+        child { node[concept] {\ul{Historie des Trajectoires}} }
     }
     child[concept color=red!60!black] {
         node[concept] {Assitance} [clockwise from=235]
@@ -65,15 +69,15 @@
         child { node[concept] {Alert des ralentisseurs} }
     }
     child[concept color=orange] {
-        node[concept] {Tableau de Bord} [counterclockwise from=100]
-        child { node[concept] {Carte en Temps Réel}}
-        child { node[concept] { Authentification } }
-        child { node[concept] {Filtrages} }
+        node[concept] {\ul{Tableau de Bord}} [counterclockwise from=100]
+        child { node[concept] {\ul{Carte en Temps Reel}}}
+        child { node[concept] {\ul{uthentification}} }
+        child { node[concept] {\ul{Filtrages}} }
     }
     child[concept color=yellow!60!black] {
-        node[concept] (Blogs) {Analyse et Visualization} [clockwise from=135]
+        node[concept] (Blogs) {\ul{Analyse et Visualization}} [clockwise from=135]
         child { node[concept] {Visualisation des données}}
-        child { node[concept] {Tableau du board intéractive}}
+        child { node[concept] {\ul{Tableau du board interactive}}}
     }
     child[concept color=red] {
         node[concept] {Information Réseau} [clockwise from=110]

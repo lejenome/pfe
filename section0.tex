@@ -17,7 +17,7 @@ montage du produit.
   \centering
   \includegraphics[width=0.8\textwidth]{citywatch-architecture}
   \caption[Flux des information Géographiques en CityWatch]
-  {Flux des informations Géographiques dans le systéme de tracking}
+  {Flux des informations Géographiques dans le système de localisation}
   \label{fig:citywatch-architecture}
 \end{figure}
 
@@ -42,39 +42,57 @@ Les valeurs d'affaires sont définies comme suit :
     \item [3] Définie une priorité moyenne ou parfois faible.
 \end{description}
 
-La figure~\ref{fig:product-backlog} présente une version simplifié du product
-backlog décrit dans le tableau~\ref{tab:product-backlog}.
+La figure~\ref{fig:product-backlog} présente une version simplifié du Product
+Backlog décrit dans le tableau~\ref{tab:product-backlog}. Nous représentons
+notre participation par les cercles du text soulignés.
 
 \input{product-backlog}
 
 \begin{center}
     \footnotesize
-    \setlength\LTleft{-40pt}
-\begin{longtable}{| l | p{3.5cm} | l | p{4.5cm} | p{4.5cm} | l |}
+    \setlength\LTleft{-20pt}
+    \begin{longtable}{| l | p{3.5cm} | p{5.5cm} | p{5cm} | l |}
  \caption{Backlog du Produit}
  \label{tab:product-backlog} \\
 
  \hline
- \textbf{ID} & \textbf{Cas d'utilisations} & \textbf{En tant qu'} & \textbf{Je veux qu'} & \textbf{Pour} & \textbf{Priorité} \\ \hline
+ \textbf{ID} & \textbf{Cas d'utilisation} & \textbf{Je veux qu'il soit possible de} & \textbf{Pour} & \textbf{Priorité} \\ \hline
  \endhead
 
- \hline \multicolumn{6}{|r|}{{Continué en page suivante$\dotsc$}} \\ \hline
+ \hline \multicolumn{5}{|r|}{{Continué en page suivante$\dotsc$}} \\ \hline
  \endfoot
 
  \hline \hline
  \endlastfoot
 
 \hline
- 1 & Gestion du Trajectoire & Utilisateur & Il soit possible de démarrer le tracking & Avoir un feedback dans l'application et sur le site web & 1 \\
-   &                        & Utilisateur & Il soit possible d'arrêter le tracking & Avoir un feedback dans l'application & 1 \\ \hline
- 2 & Gestion de Rapports    & Utilisateur & Il soit possible de choisir entre une variété de problèmes à déclarer depuis l'application & Avoir un feedback sur le site web & 1 \\
-   &                        & Utilisateur & Il soit possible de choisir l'emplacement du problème à déclarer dans une carte & Avoir un feedback sur le site web & 1 \\
-   &                        & Utilisateur & Il soit possible d'ajouter une description ou une image au problème & Avoir un feedback sur le site web & 2 \\ \hline
- 3 & Consulter la carte     & Utilisateur & Il soit possible de consulter la carte depuis l'application & Voir la carte dans l'application & 2 \\ \hline
- 4 & Compte                 & Utilisateur & Il soit possible de consulter le site web sans avoir un compte & Consulter le site web avec un minimum d'informations & 1 \\
-   &                        & Utilisateur & Il soit possible de créer un compte & Avoir un compte personnel & 2 \\ \hline
- 5 & Groupement des rapports& Utilisateur & Il est possible de voir les rapports en groupe lors d'un zoom out & Avoir une vision globale sur le nombre des rapports & 1 \\ \hline
- 6 & Déclarer un rapport    & Utilisateur & Il est possible de déclarer un rapport à partir du site web & Avoir accès à une page rapport comme celle de l'application & 1 \\ \hline
+1 & Gestion du Trajectoire & démarrer le localisation & Avoir un feedback dans l'application et sur le site web & 1 \\ \cline{3-5}
+  &                        & arrêter le localisation & Avoir un feedback dans l'application & 1 \\ \hline
+2 & Gestion de Rapports    & choisir entre une variété de problèmes à déclarer depuis l'application & Avoir un feedback sur le site web & 1 \\ \cline{3-5}
+  &                        & choisir l'emplacement du problème à déclarer dans une carte & Avoir un feedback sur le site web & 1 \\ \cline{3-5}
+  &                        & ajouter une description ou une image au problème & Avoir un feedback sur le site web & 2 \\ \hline
+3 & Consulter la carte     & consulter la carte depuis l'application & Voir la carte dans l'application & 2 \\ \hline
+4 & Compte                 & consulter le site web sans avoir un compte & Consulter le site web avec un minimum d'informations & 1 \\ \cline{3-5}
+  &                        & créer un compte & Avoir un compte personnel & 2 \\ \hline
+5 & Groupement des rapports& voir les rapports en groupe lors d'un zoom out & Avoir une vision globale sur le nombre des rapports & 1 \\ \hline
+6 & Déclarer un rapport    & déclarer un rapport à partir du site web & Avoir accès à une page rapport comme celle de l'application & 1 \\ \hline
+ \hline \ldots & \ldots & \ldots & \ldots & \ldots \\ \hline
+
+%
+1 & Gestion du Trajectoire & Activer le localisation & Enregistrer le trajectoire & 1 \\ \cline{3-5}
+&                          & Consulter le dashboard  & Afficher le trajectoire instantané & 1 \\ \cline{3-5}
+&                          & Filtrer le trajectoire  & Consulter l'histoire des trajectoires & 2 \\ \hline
+2 & Gestion des Rapports   & Déclarer un rapport depuis le site & Avoir un rapport dans la carte & 1 \\ \cline{3-5}
+&                          & Choisir un emplacement & Afficher et filtrer par catégorie & 1 \\ \cline{3-5}
+&                          & Ajouter une image et commentaire & Enrichir le rapport & 1 \\ \cline{3-5}
+&                          & Accéder à formulaire depuis l'application mobile & rapporter instantané et facilement & 2 \\ \cline{3-5}
+&                          & Activer/Désactiver le groupement des marqueurs & Avoir une vision sur le nombre des rapports plus claire & 3 \\ \hline
+3 & Tableau de bord (Dashboard) & Consulter le dashboard & Visualiser diffèrent type de données comme marqueurs et zones & 1 \\ \cline{3-5}
+&                               & Manipuler la légende    & Filtrer les données affichés & 1 \\ \hline
+4 & Comptes                     & Créer un compte & Pouvoir enregistrer des données personnels (trajectoire) & 3 \\ \cline{3-5}
+&                               & Se connecter & Accéder au données routières privées (trajectoire) & 3 \\ \cline{3-5}
+&                               & Visiter le dashboard sans compte & Consulter une version minimale des fonctionnalités & 3 \\
+\hline
 \end{longtable}
 \end{center}
 
@@ -82,33 +100,36 @@ backlog décrit dans le tableau~\ref{tab:product-backlog}.
 
 \subsubsection{Environnement logiciel}
 
-La réalisation de ce projet nécessite l'ensemble de ces logiciels et bibliothèques:
+La réalisation de ce projet nécessite l'ensemble de ces logiciels et
+bibliothèques:
 
 \paragraph{Android studio}
-est un environnement
-de développement pour développer des applications Android. Il est basé sur IntelliJ IDEA.\\
-Android studio permet principalement d'éditer les fichiers Java et les fichiers 
-de configuration d'une application 
-Android.Il propose entre autres des outils pour gérer le développement d'applications multilingues 
-et permet de visualiser la mise en page des écrans sur des écrans de résolutions variées simultanément
+est un environnement de développement pour développer des applications Android.
+Il est basé sur IntelliJ IDEA.\\ Android studio permet principalement d'éditer
+les fichiers Java et les fichiers de configuration d'une application Android.Il
+propose entre autres des outils pour gérer le développement d'applications
+multilingues et permet de visualiser la mise en page des écrans sur des écrans
+de résolutions variées simultanément
 
 \paragraph{PHPStorm}
 il est un environnement de développement intégré (IDE) dédié pour la
-programmation en PHP. Il regroupe sous une interface conviviale un éditeur de texte, un
-interpréteur et un débogueur.... Ceci permet de faciliter la tâche de programmation et de
-maximiser la productivité des développeurs.
-\TODO{description}
-\paragraph{VIM}
-Vim est un éditeur de texte pour le terminal sous GNU/Linux.
-Il a une stabilité exemplaire et ne cesse d'être amélioré. Malgré son austérité, 
-c'est un outil très puissant qui n'a rien à envier aux éditeurs graphiques comme GEdit, Kate ou Mousepad. 
-Il est très apprécié des développeurs pour toutes ses fonctions qui en font un très bon IDE
-(coloration syntaxique de 200 langages, complétion automatique, comparaison de fichiers, recherche évoluée, …) 
-et est extensible par des scripts. 
+programmation en PHP. Il regroupe sous une interface conviviale un éditeur de
+texte, un interpréteur et un débogueur\ldots. Ceci permet de faciliter la tâche de
+programmation et de maximiser la productivité des développeurs.
+
+\paragraph{Vim}
+Vim est un éditeur de texte pour le terminal sous GNU/Linux. Il a une
+stabilité exemplaire et ne cesse d'être amélioré. Malgré son austérité, c'est
+un outil très puissant qui n'a rien à envier aux éditeurs graphiques comme
+Gedit, Kate ou Mousepad. Il est très apprécié des développeurs pour toutes ses
+fonctions qui en font un très bon IDE (coloration syntaxique de 200 langages,
+complétion automatique, comparaison de fichiers, recherche évoluée, …) et est
+extensible par des scripts.
 \paragraph{Composer}
 
-Le logiciel Composer est un gestionnaire de dépendances sous licence libre écrit en PHP.
-Il permet à ses utilisateurs de déclarer et d'installer les bibliothèques dont le projet principal a besoin. 
+Le logiciel Composer est un gestionnaire de dépendances sous licence libre
+écrit en PHP\@. Il permet à ses utilisateurs de déclarer et d'installer les
+bibliothèques dont le projet principal a besoin.
 
 \subsubsection{environnements matériels}
 
@@ -125,7 +146,7 @@ Pour le développement de ce projet il était demandé d'avoir :
  \item Serveur de production:
      \begin{itemize}
       \item Linux
-      \item Access FTP
+      \item Accès FTP
       \item Apache 2.4
       \item PHP 7.0
       \item MySQL 5.7
@@ -136,7 +157,7 @@ Pour le développement de ce projet il était demandé d'avoir :
 
 L'itération 0 à permis de préparer le terrain pour une bonne entame de
 développement. Mis à part la mise en place des environnement de travail et les
-formations que nous avons suivi sur les technologies, cette itération a permis d'élaborer
-le carnet de Plateforme CityWatch avec la collaboration du product owner et de fixer le
-nombre des itérations et leur durée. Rappelons que l'itération 0 à durée trois jours,
-du 20 février 2017 au 22 février 2017.
+formations que nous avons suivi sur les technologies, cette itération a permis
+d'élaborer le carnet de Plateforme CityWatch avec la collaboration du Product
+Owner et de fixer le nombre des itérations et leur durée. Rappelons que
+l'itération 0 à durée trois jours, du 20 février 2017 au 22 février 2017.
