@@ -15,25 +15,30 @@ spécifications du Backlog doivent être:
 Ayant une bonne idée sur le produit ainsi que l’objectif à atteindre, l’équipe et le
 product-owner peuvent passer à l’élaboration des itérations.
 Dans notre projet ``Plateforme CityWatch'' la durée d’une Itération est fixée à trois
-semaines (170h par itération). Dans ce chapitre nous décrivons le déroulement des deux
-premières itérations. Une itération commence par sa planification et finit par être revue
+semaines. Dans cette section nous décrivons le déroulement de la première itération. 
+Une itération commence par sa planification et finit par être revue
 avec ”Product-Owner”.
 
 \subsection{Planification de l'itération}
 
 Dans le but de définir le périmètre fonctionnel de l'itération 1 et faire
 sa planification, tous les membres de l'équipe ont participé à un réunion
-avec le Scrum Master et le Product Owner pour définir le backlog du sprint.\\
+avec le Scrum Master et le Product Owner pour définir le backlog du sprint.
 
 La planification de l'itération représente une étape importante dans la vie de
-l'itération parce que au cours du planification, on divise l'itération a plusieurs étapes
+l'itération parce que au cours du planification, on divise l'itération a plusieurs tâche
 pour mieux atteindre le résultats attendu à la fin de l'itération.
-Dans cette première itération on a décidé de diviser cette dernière en trois grandes
-parties une partie consacrée pour la création de la base de donnée et la génération du
-modèle, la deuxième partie est consacré pour la réalisation de la page d’accueil, et une
-troisième partie qui répond aux besoins des autres tâches de cette itérations.
 
-\subsubsection{Préparation de la liste des tâches }
+Dans cette première itération on a décidé de diviser cette itération en trois grandes
+parties:
+
+\begin{enumerate}
+ \item Une partie consacrée pour la création de la base de donnée et la génération du modèle.
+ \item Une partie consacré pour la réalisation de la page d’accueil.
+ \item Une partie qui répond aux besoins des autres tâches de cette itérations.
+\end{enumerate}
+
+\subsubsection{Backlog de l'itération }
 Les tâches à réaliser peuvent être soient des tâches de recherche, de documentation, de
 conception, de développement ou bien d’installation, de tests, d’intégration...etc.
 Il est recommandé lors de la planification de la liste des tâches de bien les détailler. Une tâche
@@ -41,7 +46,7 @@ ne doit pas inclure d’autres tâches. Ceci permet de bien cerner le travail de
 \begin{center}
     \footnotesize
     \begin{longtable}{| p{1cm} | p{5cm} | p{7cm} | p{1cm} |}
-        \caption{Taches à faire de la première itération}
+        \caption{Backlog de l'itération 1}
         \label{tab:sprint1-backlog} \\
 
  \hline
@@ -188,7 +193,6 @@ start-up racheté par Google . Android est Open Source, ca veut dire on peut lir
 le code de ce logiciel le modifier et le redistribuer.
 
 Les bases que nous utilisons:
-
 \paragraph{IDE:}
 
 C'est un logiciel dont son objectif est de faciliter le développement. Il est
@@ -300,26 +304,6 @@ On a choisi d'utiliser l'architecture RESTful comme notre API est mieux décri
 comme ensemble des collections des données dont on peut performer avec des
 actions CRUD.
 
-\subsubsection{Lumen}
-
-Pour le développement de backend du notre plateforme, la langue du programmation
-PHP a été pré choisi. Mais, on avait la responsabilité de choisir les
-bibliothèques et les frameworks. Pendant la 1\iere{} itération, le but était de
-se familiariser avec la langue PHP. Donc, on a utilisé seulement les extensions
-officiel du PHP includant PDO, $\dotsc$ . Dans l'itération suivante, on a étudié
-les frameworks disponibles. A la fin, on a choisi le framework Lumen qui est
-une version simplifié du Laravel pour le dévelopemment des API \acrshort{RESTful}. Les
-resons de choisir Lumen seront présentés dans le section du 2\ieme{} itération.
-
-\subsection{Backlog de l'itération}
-
-Le sprint Backlog est un outil qui facilite la récupération des tâches et qui fait
-la mise au point du travail tout en précisant les taches que contient chaque
-user-story du Product Backlog.
-Le Backlog agrée pour ce sprint est:
-
-\TODO{sprint backlog}
-
 \subsection{Mises des normes}
 
 L'exigence de l'api RESTful est:
@@ -359,10 +343,6 @@ L'exigence de l'api RESTful est:
 \end{figure}
 
 \subsection{Évaluation suivant les normes mise}
-L’avis du Product-Owner sur notre première itération, nous a permis de commencer la
-deuxième itération avec plus de confiance. Pour que nous puissions mieux nous
-organiser, nous avons fait une petite étude
-
 Ces caractéristique ont étés adressés pendant l'implémentation du service web.
 
 \subsubsection{Performance}
