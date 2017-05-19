@@ -11,11 +11,12 @@ final,
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[shorthands=off,english,frenchb]{babel}
+\usepackage[shorthands=off,english,french]{babel}
 %\usepackage[fixlanguage]{babelbib}
 %\usepackage{polyglossia}
 %\setmainlanguage{french}
 %\setotherlanguages{english}
+\usepackage{csquotes}
 
 \usepackage{abstract}
 \renewcommand{\abstractnamefont}{\large\bfseries}
@@ -56,6 +57,7 @@ final,
 \usepackage{subcaption}
 %\usepackage{svg}
 \usepackage{array}
+\usepackage{booktabs}
 \usepackage{longtable}
 
 \usepackage[intoc]{nomencl}
@@ -137,6 +139,7 @@ final,
 % \titleformat{\chapter}[block]{\Huge\bfseries}{\thechapter \hsp {|}\hsp}{0pt}{\Huge\bfseries}
 \titleformat{\section}[block]{\Large\bfseries}{\thesection \ }{0pt}{\Large \bfseries}
 \titleformat{\subsection}[block]{\large\bfseries}{\thesubsection \ }{0pt}{\large \bfseries}
+\usepackage[shortlabels]{enumitem}
 
 %%% Custom headers/footers (fancyhdr package)
 \usepackage{fancyhdr}
@@ -208,11 +211,11 @@ final,
 \tableofcontents
 
 \clearpage
-\addcontentsline{toc}{section}{Table des figures}
+%\addcontentsline{toc}{section}{Table des figures}
 \listoffigures
 
 \clearpage
-\addcontentsline{toc}{section}{Liste des tableaux}
+%\addcontentsline{toc}{section}{Liste des tableaux}
 \listoftables
 
 %\clearpage
