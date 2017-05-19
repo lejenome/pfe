@@ -1,48 +1,31 @@
-\subsection{Introduction}
-Dans le cadre de notre Licence Fondamentale en Sciences de L'informatique à 
-la Faculté des Sciences de Sfax,Nous avons utilisé nos connaissances pour 
-réaliser un projet de fin d'études pendant un stage dans Djagora Academy .
-Ce chapitre présente une mise en contexte et une description de la problématique
-et trace les objectifs de notre projet.De tel projet consiste a réaliser une
-plateforme
-\subsection{Présentation du sujet}
-Le projet consiste en la création d'un système logiciel de collecte, 
-de traitement, d'analyse, de fouille et de visualisation des données/informations.
- Il est décomposé en deux sous systèmes. L'un se charge de la collecte. L'autre,
- quant à lui, est chargé du reste; du traitement à la visualisation. 
- Celui, chargé de la collecte, peut être assimilé dans un premier temps 
- à une application mobile capable de collecter des informations. Dans ce cas, 
- l'information est collectée soit d'une façon automatique en se basant uniquement 
- sur les capteurs intégrés aux smartphones/tablettes (mobile sensors), 
- soit encore de façon semi-automatique faisant appel aux simples intéractions 
- de l'utilisateur (utilisateur citoyen). Le deuxième sous système peut être 
- assimilé à une application web permettant le traitement, l'analyse syntaxique
- et sémantique, la fouille des informations/données collectées (big data et
- data-mining) pour enfin assurer leur visualisation. \\
-En prenant départ d'un récepteur de position, le sujet mit à résoudre les
-problématiques localisations de multiple individu,la réalisation d'un module
-d'itinéraire pour les véhicules vers enfin la création d'un mécanisme qui donne
-la main à effectuer divers types de rapport dans une carte.
+%\section{Introduction}
 
-\subsection{Présentation de l'académie}
+%Dans le cadre de notre Licence Fondamentale en Sciences de L'informatique à
+%la Faculté des Sciences de Sfax, nous avons utilisé nos connaissances pour
+%réaliser un projet de fin d'études pendant un stage dans Djagora Academy.
+%Ce chapitre présente une mise en contexte et une description de la problématique
+%et trace les objectifs de notre projet. De tel projet consiste a réaliser une
+%plateforme \FIXME{complete phrase}
 
-Djagora Academy est un programme dont l'objectif est la mise en pratique des
-aspects philosophiques liés au Leadership et à l'Entrepreneurship.
+Dans cette partie, nous allons présenter l'académie ``Djagora Academy'' au sein
+duquel nous avons effectué notre stage de fin d'études et le projet
+``CityWatch'' que nous sommes en train de réaliser avec la communauté de
+l'académie. Nous allons présenter l'objective du projet et la méthodologie de
+gestion suivi pour le réaliser.
 
-Il est à noter que le Leadership ou/et l'entrepreneurship inefficace/s
-demeure/ent un obstacle majeur aux actions industrielles, économiques,
-humanitaires, etc., efficaces.
-Basé sur la méthodologie dite «le Leadership Diamond®», développée par Dr. Peter
-Koestenbaum et présentée à la Faculté des Sciences de Sfax Dr. Mahamouda
-Salouhou\footnote{visiter think.factorycampus.net pour plus de détails},
-L'académie Djagora est vue comme un programme de mentorat visant accompagner des
-étudiants (mentorés) en année terminale par des universitaires et des
-industriels (mentors) avec le soutien de plusieurs compagnies internationales,
-telles que l'European Center for Leadership and Entrepreneurship Education
-(Eclee France, Eclee USA), Djagora University (SénégaL), NorthStar Paradigm
-Education (USA), Continental (Allemagne), Sivantos (Allemagne), Yousoft-IT
-(Tunisie), Factory Campus (Tunisie) dans la réalisation de projets d’intérêt
-publique.
+\section{Présentation de l'académie}
+
+Djagora Academy est un programme de mentorat visant accompagner des étudiants
+en année terminale dans la réalisation de projets d'intéret publique dans le but
+est la création des start-ups.
+
+Pendant la réalisation des projets des idées des start-ups, les étudiants
+(mentorés)  seront accompagnés par des universitaires et des industriels
+(mentors) avec le soutien de plusieurs compagnies internationales, telles que
+l'European Center for Leadership and Entrepreneurship Education (Eclee France,
+Eclee USA), Djagora University (SénégaL), NorthStar Paradigm Education (USA),
+Continental (Allemagne), Sivantos (Allemagne), Yousoft-IT (Tunisie),
+Factory Campus (Tunisie).
 
 %Considérés comme des idées de startups, les projets proposés par le comité de
 %pilotage de l'Académie Djagora se substituent aux projets de fin d'études.
@@ -50,18 +33,43 @@ publique.
 %correspond à un cycle d’accélération de startups. Tout au long de ce cycle,
 %les mentorés suivront un programme de formations généralement certifiantes.
 
-Mis-à-part le programme de mentorat et le cycle d’accélération de startups,
-l'Académie Djagora déclare le défi et organise une compétition tout au long
-du cycle d’accélération de startups. Nommée «Bourse des startups», cette
-compétition unique en son genre, dont l'idée est attribuée à Factory Campus,
-est une bonne opportunité pour tous les intervenants de l'Académie Djagora.
-La «Bourse des startups» vise joindre l'utile du modèle financier et des retombées
-économiques de la bourse et de l'entrepreneuriat en général à l'agréable des
-bonnes pratiques et cultures du défi, de la concurrence, du challenge et du
-leadership.
-\subsection{Méthode de gestion de projet utilisée}
+%Mis-à-part le programme de mentorat et le cycle d’accélération de startups,
+%l'Académie Djagora déclare le défi et organise une compétition tout au long
+%du cycle d’accélération de startups. Nommée «Bourse des startups», cette
+%compétition unique en son genre, dont l'idée est attribuée à Factory Campus,
+%est une bonne opportunité pour tous les intervenants de l'Académie Djagora.
+%La «Bourse des startups» vise joindre l'utile du modèle financier et des retombées
+%économiques de la bourse et de l'entrepreneuriat en général à l'agréable des
+%bonnes pratiques et cultures du défi, de la concurrence, du challenge et du
+%leadership.
 
-\subsubsection{Présentation de la méthode agile SCRUM}
+\section{Présentation du sujet}
+
+Le projet consiste en la création d'un système logiciel de collecte, de
+traitement, d'analyse, de fouille et de visualisation des données/informations.
+Il est décomposé en deux sous systèmes. L'un se charge de la collecte. L'autre,
+quant à lui, est chargé du reste; du traitement à la visualisation.
+Celui, chargé de la collecte, assimile dans un premier temps à une application
+mobile capable de collecter des informations d'une façon automatique en se
+basant uniquement sur les capteurs intégrés aux smartphones/tablettes
+(mobile sensors), soit encore de façon semi-automatique faisant appel aux
+simples intéractions de l'utilisateur (utilisateur citoyen).
+Le deuxième sous système assimile à une application web permettant le
+traitement, l'analyse syntaxique et sémantique, la fouille des
+informations/données collectées pour enfin assurer leur visualisation.
+
+En prenant départ d'un récepteur de position, le sujet mit à résoudre les
+problématiques localisations de multiple individu, la réalisation d'un module
+d'itinéraire pour les véhicules vers enfin la création d'un mécanisme qui donne
+la main à effectuer divers types de rapport dans une carte.
+
+\section{objectifs du projet}
+
+\TODO{objectif?}
+
+\section{Méthode de gestion de projet utilisée}
+
+\subsection{Présentation de la méthode agile SCRUM}
 
 Scrum est une méthode de gestion de projets dans laquelle des équipes
 multifonctionnelles réalisent des produits de manière itérative et incrémentale. Tout au
@@ -86,7 +94,8 @@ testé et documenté à la fin de chaque itération.
 la figure~\ref{fig:scrum-model} représente la méthode agile SCRUM. 
 
 \input{figures/scrum-model}
-\subsubsection{Répartition des rôles}
+
+\subsection{Répartition des rôles}
 
 Chaque projet utilisant la méthode Scrum est monté autour d’une équipe auto-
 organisée et multifonctionnelle : auto-organisée car il n’y a pas de chef d’équipe qui
@@ -101,7 +110,7 @@ Dans Scrum existe trois principaux rôles:
  \item le membre de l’équipe
 \end{itemize}
 
-\paragraph{Le responsable produit}
+\subsubsection{Le responsable produit}
 
 Il prend en charge de communiquer la
 vision globale du produit à l’équipe. 
@@ -110,7 +119,7 @@ et priorise ses besoins. Celui qui tient ce rôle est celui qui
 a le plus de visibilité, de responsabilité et d’autorité.
 En effet, la méthode Scrum favorise l’auto-organisation de l'équipe.
 
-\paragraph{Le Scrum Master}
+\subsubsection{Le Scrum Master}
 
 Il joue le rôle du communiquant entre le responsable produit et
 l’équipe. Il ne gère pas l’équipe, mais veille à éliminer tous les obstacles qui peuvent
@@ -118,7 +127,7 @@ empêcher l’équipe d’atteindre les objectifs fixés au cours d’un Sprint.
 permet à l’équipe de rester créative et productive, tout en veillant à ce que les
 réalisations soient visibles pour le responsable produit.
 
-\paragraph{L'équipe}
+\subsubsection{L'équipe}
 
 Dans la méthode Scrum, l’équipe est responsable de la réalisation
 opérationnelle des Sprints. L’équipe est généralement composée de personnes
@@ -126,15 +135,14 @@ multitâches. C’est toute l’équipe qui est responsable du résultat final d
 La manière dont sont exécutées les tâches est très libre mais cette liberté doit être
 néanmoins cadrée par l’obligation de répondre aux objectifs du sprint.
 
-\subsubsection{Durées estimées}
+\subsection{Durées estimées}
 
 Pour montrer l’avancement durant une itération donnée, on a besoin de tracer le
 Burndown Chart. Il s’agit d’un graphique simple qui montre le nombre d’heures restant
 à effectuer pour finaliser le produit. 
 
+\section{Justification du choix de la méthode agile SCRUM}
 
-
-\subsection{Justification du choix de la méthode agile SCRUM}
 Aujourd'hui, La méthodes classique présente beaucoup des inconvénients 
 \begin{itemize}
  \item Parfois le client a
@@ -172,7 +180,9 @@ Scrum est la méthode idéale pour le cas d’une petite équipe et le fait d’
 projet réparti entre cette équipe et aussi il est paraît la meilleure solution pour 
 répondre aux exigences du client et réduire la complexité croissante de 
 certains projets.
-\subsection{Conclusion}
+
+\section{Conclusion}
+
 Cette partie nous a permis de présenter le contexte général de notre projet ainsi que la
 méthodologie de développement que nous allons adopter
 
