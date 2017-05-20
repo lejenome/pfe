@@ -42,12 +42,27 @@ Les valeurs d'affaires sont définies comme suit :
     \item [3] Définie une priorité moyenne ou parfois faible.
 \end{description}
 
-La figure~\ref{fig:product-backlog} présente une version simplifié du Product
-Backlog décrit dans le tableau~\ref{tab:product-backlog}. Nous représentons
-notre participation par les cercles du text soulignés.
+La figure~\ref{fig:product-backlog} présente une version simplifiée du Product
+Backlog complète des 3 premières itérations. Nous représentons notre
+participation par les cercles du texte souligné.
 
 \input{product-backlog}
 
+Le tableau~\ref{tab:product-backlog} représente la liste plus détaillé des cas
+d'utilisations que nous allons implémentés pendant les 3 premières itérations.
+Ils suivent la forme:
+\begin{displayquote}
+    En tant que \textbf{X}, je peux \textbf{Y} Afin d'\textbf{Z}.
+\end{displayquote}
+ou aussi la forme:
+\begin{displayquote}
+    En tant que \textbf{X}, je veux qu'il soit possible de \textbf{Y} pour \textbf{Z}.
+\end{displayquote}
+
+Dans notre liste des cas d'utilisation, l'acteur initiateur (\textbf{X}) est
+toujours l'utilisateur.
+
+\Needspace{5\baselineskip}
 \begin{center}
     \footnotesize
     \setlength\LTleft{-20pt}
@@ -66,17 +81,17 @@ notre participation par les cercles du text soulignés.
  \endlastfoot
 
 \hline
-1 & Gestion du Trajectoire & démarrer le localisation & Avoir un feedback dans l'application et sur le site web & 1 \\ \cline{3-5}
-  &                        & arrêter le localisation & Avoir un feedback dans l'application & 1 \\ \hline
-2 & Gestion de Rapports    & choisir entre une variété de problèmes à déclarer depuis l'application & Avoir un feedback sur le site web & 1 \\ \cline{3-5}
-  &                        & choisir l'emplacement du problème à déclarer dans une carte & Avoir un feedback sur le site web & 1 \\ \cline{3-5}
-  &                        & ajouter une description ou une image au problème & Avoir un feedback sur le site web & 2 \\ \hline
-3 & Consulter la carte     & consulter la carte depuis l'application & Voir la carte dans l'application & 2 \\ \hline
-4 & Compte                 & consulter le site web sans avoir un compte & Consulter le site web avec un minimum d'informations & 1 \\ \cline{3-5}
-  &                        & créer un compte & Avoir un compte personnel & 2 \\ \hline
-5 & Groupement des rapports& voir les rapports en groupe lors d'un zoom out & Avoir une vision globale sur le nombre des rapports & 1 \\ \hline
-6 & Déclarer un rapport    & déclarer un rapport à partir du site web & Avoir accès à une page rapport comme celle de l'application & 1 \\ \hline
- \hline \ldots & \ldots & \ldots & \ldots & \ldots \\ \hline
+%1 & Gestion du Trajectoire & démarrer le localisation & Avoir un feedback dans l'application et sur le site web & 1 \\ \cline{3-5}
+%  &                        & arrêter le localisation & Avoir un feedback dans l'application & 1 \\ \hline
+%2 & Gestion de Rapports    & choisir entre une variété de problèmes à déclarer depuis l'application & Avoir un feedback sur le site web & 1 \\ \cline{3-5}
+%  &                        & choisir l'emplacement du problème à déclarer dans une carte & Avoir un feedback sur le site web & 1 \\ \cline{3-5}
+%  &                        & ajouter une description ou une image au problème & Avoir un feedback sur le site web & 2 \\ \hline
+%3 & Consulter la carte     & consulter la carte depuis l'application & Voir la carte dans l'application & 2 \\ \hline
+%4 & Compte                 & consulter le site web sans avoir un compte & Consulter le site web avec un minimum d'informations & 1 \\ \cline{3-5}
+%  &                        & créer un compte & Avoir un compte personnel & 2 \\ \hline
+%5 & Groupement des rapports& voir les rapports en groupe lors d'un zoom out & Avoir une vision globale sur le nombre des rapports & 1 \\ \hline
+%6 & Déclarer un rapport    & déclarer un rapport à partir du site web & Avoir accès à une page rapport comme celle de l'application & 1 \\ \hline
+% \hline \ldots & \ldots & \ldots & \ldots & \ldots \\ \hline
 
 %
 1 & Gestion du Trajectoire & Activer le localisation & Enregistrer le trajectoire & 1 \\ \cline{3-5}
@@ -149,7 +164,7 @@ Pour le développement de ce projet il était demandé d'avoir :
       \item Accès FTP
       \item Apache 2.4
       \item PHP 7.0
-      \item MySQL 5.7
+      \item MySQL 5.5
      \end{itemize}
 \end{itemize}
 
