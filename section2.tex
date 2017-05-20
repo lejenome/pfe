@@ -114,44 +114,86 @@ une version simplifié du Laravel pour le développement des API \acrshort{RESTf
 
 Les critaires à respecter pour cette itération sont:
 
-\begin{itemize}
-        \item \HTODO{Qualité trajectoire}{en quentité et qualité}
-        \item Architecture de back-end doit étre modulaire: On doit changer
-            notre code procédurale par un code orienté objet et minimiser la
-            duplication du code et séparer le code des models et le code des
-            controlleurs.
-        \item Affiche claire et responsive des marqueurs dans la carte meme si
-            le nombre est trés élevé.
-\end{itemize}
-
-
 \paragraph{Qualité d trajectoire}
+Le trajectoire doit être aligné sur le trajet avec bonne précision. Et le nombre
+des positions nécessaire pour tracer le trajectoire doivent être le minimum le
+plus possible.
 
-\paragraph{Qualité du code}
+\paragraph{Architecture modulaire}
+Architecture de back-end doit étre modulaire: On doit changer notre code
+procédurale par un code orienté objet et minimiser la duplication du code et
+séparer le code des models et le code des controlleurs.
 
-\paragraph{IHM Responsive}
+\paragraph{IHM de la page Dashboard Responsive}
+Affiche claire et responsive des marqueurs dans la carte meme si le nombre est
+trés élevé.
 
 \subsection{Modélisation UML}
-\TODO{uml DE post et get du page rapport}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=1\textwidth]{sprint2-webservices-report-usecase}
+  \caption{Diagramme de case d'utilisation du services Rapports en itération 2}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{sprint2-webservices-database}
+    \caption{Diagramme entité-association du service Position en itération 2}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=1\textwidth]{sprint2-webservices-report-post-sequence}
+  \caption{Diagramme de séquence du services Post Rapports en itération 2}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=1\textwidth]{sprint2-webservices-report-get-sequence}
+  \caption{Diagramme de séquence du services Get Rapports en itération 2}
+\end{figure}
 
 \subsection{Évaluation suivant les normes mise}
+
 \TODO{EVALUATION}
+
+\subsection{Contributions}
+
+\TODO{Rewrite Front end js}
+
 \subsection{Revue de cette itération}
 \subsubsection{Produit de l'itération}
 
-A la fin de l'itération 2,nous détaillons les différentes spécifications qui caractérisent et 
-implémenté le systeme de gestion des rapport.
-\paragraph{Page ``Rapport''}
-Dans cette page, nous donne la main à l'utilisateur pour faire un petit rapport comme expliqué dans la
-figure \ref{fig:sprint2-rapport-screenshot1} . 
-\TODO{description comment l'envoi les information et comment l'enregister dans serveur }
+A la fin de l'itération 2,nous détaillons les différentes spécifications qui
+caractérisent et implémenté le systeme de gestion des rapport.
+
+\paragraph{Page \textquote{Rapport}}
+
+Dans cette page, nous donne la main à l'utilisateur pour faire un petit rapport
+comme expliqué dans la figure~\ref{fig:sprint2-rapport-screenshot1}.
+Cette page permet à l'utilisateur d'envoyer son rapport au serveur pour
+l'enregistrer.
+La position du rapport est détecté automatique à travers l'api JavaScript
+standard Location. On donne la main à l'utilisateur pour changer la location
+manuellement en glissant le marqueur ou en changer les inputs.
+Le chargement de l'image est obligatoire.
+\TODO{Cette obligation était éliminer en review}
+
+L'envoie du rapport est éxecuté en deux phases:
+\begin{enumerate}
+    \item Chargement de l'image au serveur. Si le type et le taille de l'image
+        est valide, le serveur retourne un id unique (UUID) de l'image.
+    \item Envoie du rapport au serveur. Les informations envoyées sont: type du rapport, id image, commentaire (optionnel) et les coordonnées.
+\end{enumerate}
+
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.7\textwidth]{sprint2-rapport-screenshot1}
   \caption{Page Rapport}
   \label{fig:sprint2-rapport-screenshot1}
 \end{figure}
-\paragraph{Page ``Dashboard''}
+\paragraph{Page \textquote{Dashboard}}
 L'utilitaire de regroupement de marqueurs vous aide à gérer plusieurs marqueurs à différents niveaux de zoom.
 Précisément, les  marqueurs  sont en fait des éléments à ce stade et ne deviennent réellement des
 marqueurs qu'après leur rendu. Par souci de clarté, nous ne parlerons que de marqueurs 
