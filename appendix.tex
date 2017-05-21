@@ -10,20 +10,22 @@
 
 \begin{table}[htbp]
     \centering
-    \caption{Paramètres Service Post Position - Itération 1}
-    \begin{tabular}{|l | l | l | l|}
-        \hline
-        \multicolumn{1}{|c|}{\textbf{Élément}} &
-        \multicolumn{1}{c|}{\textbf{Obligation}} &
-        \multicolumn{1}{c|}{\textbf{Type}} &
-        \multicolumn{1}{c|}{\textbf{Description}} \\ \hline
-        \verb|:id| & obligatoire & string & identificateur du périphérique \\ \hline
-        \verb|lat| & obligatoire & nombre [-90, 90] & latitude de la position \\ \hline
-        \verb|lng| & obligatoire & nombre [-180, 180] & longitude de la position \\ \hline
-        \verb|last_modified| & optionnel & string (RFC3339) & date du capture de la position \\ \hline
+    \caption*{Paramètres Service Post Position}
+    \begin{tabular}{llll}
+        \toprule
+        \multicolumn{1}{c}{\textbf{Élément}} &
+        \multicolumn{1}{c}{\textbf{Obligation}} &
+        \multicolumn{1}{c}{\textbf{Type}} &
+        \multicolumn{1}{c}{\textbf{Description}} \\
+        \midrule
+        \verb|:id| & obligatoire & string & identificateur du périphérique \\
+        \verb|lat| & obligatoire & nombre [-90, 90] & latitude de la position \\
+        \verb|lng| & obligatoire & nombre [-180, 180] & longitude de la position \\
+        \verb|last_modified| & optionnel & string (RFC3339) & date du capture de la position \\
+        \bottomrule
     \end{tabular}
 \end{table}
- 
+
 \subparagraph*{Réponse Codes}
 \begin{description}
     \item[\texttt{204 No Content}] Position était crée ou mette à jour avec succès.
@@ -36,20 +38,21 @@
 n/a
 
 \begin{listing}
-    \caption{Démonstration Service Post Position - Itération 1}
-    \begin{minted}{bash}
+    \caption*{Démonstration Service Post Position}
+    \begin{minted}[label={Requéte}]{bash}
 curl -i -X POST http://localhost/positions/1 \
      -d '{"lat": 10.71979600000000,
           "lat": "34.72563400000000",
           "last_modified": "2017-03-27 10:34:01"}' \
      -H 'Content-Type: application/json'
 \end{minted}
-\end{listing}
+\begin{minted}[label={Réponse en Succés}]{http}
+HTTP/1.1 200 Success
+Content-Type: application/json
 
-\begin{listing}[htbp]
-    \caption{Réponse en succès du Service Post Position - Itération 1}
-\begin{minted}{http}
-HTTP/1.1 204 No Content
+{
+    "success": true
+}
 \end{minted}
 \end{listing}
 
@@ -60,39 +63,45 @@ HTTP/1.1 204 No Content
 
 \begin{table}[htbp]
     \centering
-    \caption{Paramètres Service Get Position - Itération 1}
-    \begin{tabular}{|l | l | l | l|}
-        \hline
-        \multicolumn{1}{|c|}{\textbf{Élément}} &
-        \multicolumn{1}{c|}{\textbf{Obligation}} &
-        \multicolumn{1}{c|}{\textbf{Type}} &
-        \multicolumn{1}{c|}{\textbf{Description}} \\ \hline
-        \verb|:id| & obligatoire & string & identificateur du périphérique \\ \hline
+    \caption*{Paramètres Service Get Position}
+    \begin{tabular}{llll}
+        \toprule
+        \multicolumn{1}{c}{\textbf{Élément}} &
+        \multicolumn{1}{c}{\textbf{Obligation}} &
+        \multicolumn{1}{c}{\textbf{Type}} &
+        \multicolumn{1}{c}{\textbf{Description}} \\
+        \midrule
+        \verb|:id| & obligatoire & string & identificateur du périphérique \\
+        \bottomrule
     \end{tabular}
 \end{table}
 
 \begin{table}[htbp]
     \centering
-    \caption{Entités du réponse du Service Post Position - Itération 1}
-    \begin{tabular}{|l | l | l|}
-        \hline
-        \multicolumn{1}{|c|}{\textbf{Élément}} &
-        \multicolumn{1}{c|}{\textbf{Type}} &
-        \multicolumn{1}{c|}{\textbf{Description}} \\ \hline
-        \verb|lat| & nombre [-90, 90] & latitude de la position \\ \hline
-        \verb|lng| & nombre [-180, 180] & longitude de la position \\ \hline
+    \caption*{Entités du réponse du Service Post Position}
+    \begin{tabular}{lll}
+        \toprule
+        \multicolumn{1}{c}{\textbf{Élément}} &
+        \multicolumn{1}{c}{\textbf{Type}} &
+        \multicolumn{1}{c}{\textbf{Description}} \\
+        \midrule
+        \verb|lat| & nombre [-90, 90] & latitude de la position \\
+        \verb|lng| & nombre [-180, 180] & longitude de la position \\
+        \bottomrule
     \end{tabular}
 \end{table}
 
 \begin{table}[htbp]
     \centering
-    \caption{En-tête Réponse Service Get Position - Itération 1}
-    \begin{tabular}{|l | l | l | l|}
-        \hline
-        \multicolumn{1}{|c|}{\textbf{En-tête}} &
-        \multicolumn{1}{c|}{\textbf{Type}} &
-        \multicolumn{1}{c|}{\textbf{Description}} \\ \hline
-        \verb|Last-Modified| & string (RFC1123) & Date du dernier modification du position \\ \hline
+    \caption*{En-tête Réponse Service Get Position}
+    \begin{tabular}{llll}
+        \toprule
+        \multicolumn{1}{c}{\textbf{En-tête}} &
+        \multicolumn{1}{c}{\textbf{Type}} &
+        \multicolumn{1}{c}{\textbf{Description}} \\
+        \midrule
+        \verb|Last-Modified| & string (RFC1123) & Date du dernier modification du position \\
+        \bottomrule
     \end{tabular}
 \end{table}
 
@@ -103,16 +112,13 @@ HTTP/1.1 204 No Content
 \end{description}
 
 \begin{listing}
-    \caption{Démonstration Service Get Position - Itération 1}
-\begin{minted}{shell}
+    \caption*{Démonstration Service Get Position}
+    \begin{minted}[label={Requéte}]{bash}
 curl -i http://localhost/api/v1/positions/1
 \end{minted}
-\end{listing}
-
-\begin{listing}[htbp]
-    \caption{Réponse en succès du Service Get Position - Itération 1}
-\begin{minted}{http}
+\begin{minted}[label={Réponse en Succés}]{http}
 HTTP/1.1 200 OK
+Content-Type: application/json
 Last-Modified: Wed, 17 May 2017 14:51:00 GMT
 
 {
