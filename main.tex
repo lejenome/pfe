@@ -138,9 +138,11 @@ final,
 
 \usepackage{titlesec}
 \newcommand{\hsp}{\hspace{20pt}}
-% \titleformat{\chapter}[block]{\Huge\bfseries}{\thechapter \hsp {|}\hsp}{0pt}{\Huge\bfseries}
-\titleformat{\section}[block]{\Large\bfseries}{\thesection \ }{0pt}{\Large \bfseries}
-\titleformat{\subsection}[block]{\large\bfseries}{\thesubsection \ }{0pt}{\large \bfseries}
+\definecolor{gray75}{gray}{0.75}
+\titleformat{\part}[hang]{\Huge\bfseries}{\thepart\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries\scshape}
+\titleformat{\section}[block]{\LARGE\bfseries}{\thesection \hsp {---}\hsp}{0pt}{\LARGE\bfseries}
+\titleformat{\subsection}[block]{\Large\bfseries}{\thesubsection \ }{0pt}{\Large \bfseries}
+\titleformat{\subsubsection}[block]{\large\bfseries}{\thesubsubsection \ }{0pt}{\large \bfseries}
 \usepackage[shortlabels]{enumitem}
 
 %%% Custom headers/footers (fancyhdr package)
@@ -246,11 +248,11 @@ final,
 \pagenumbering{arabic}
 
 \cleardoublepage
-\part{Introduction générale}
+\part{Introduction Générale}
 \input{introduction}
 
 \cleardoublepage
-\part{Contexte du projet}
+\part{Contexte du Projet}
 \input{cadreprojet}
 
 \cleardoublepage

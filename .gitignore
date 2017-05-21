@@ -1,6 +1,5 @@
 /build/
 /main.pdf
-*-eps-converted-to.pdf
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
