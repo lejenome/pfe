@@ -175,39 +175,66 @@ Les logiciels de gestion de versions nous permettent de
 conserver la chronologie des modifications du source de code, ainsi récupérer
 les version intermédiaires et les différences entre eux, et facilitent la
 collaboration au développement.
-Les deux logiciels de gestion de versions les plus répondus sont Git et SVN.
+Les deux logiciels de gestion de versions les plus répondus sont Git et Apache
+SVN.
 
 \begin{description}
-    \item [Git] \TODO{pros du git}
-    \item [SVN] \TODO{pros du SVN}
+    \item [Git] Logiciel de gestion de versions distribué avec des branches
+        légères. La récupération des versions précédentes et l'enregistrement
+        des changements sont possibles sans besoin d'accès au dépôt distant car
+        chaque développeur à un clone complet du dépôt. Le modèle Fork
+        (Dupliquer), Commit (Modifier), Merge (Fusionner) a eu un grand succès
+        dans les projets libres.
+    \item [Apache SVN] Logiciel de gestion de versions centralisé. Il est connu
+        pour sa simplicité comme il n'est pas un distinct entre un dépôt local
+        vs.  Dépôt distant, on faire juste une copie du dossier de travail dans
+        une version précise. Les commandes sont simples:
+        \begin{itemize}
+            \item \verb|svn checkint| vs. \verb|git commit; git push|
+            \item \verb|svn update| vs. \verb|git fetch; git rebase|
+        \end{itemize}
+        Le support du Windows est excellent surtout les outils graphiques.  La
+        plus tard des fonctionnalités du SVN nécessitent l'accès au dépôt
+        (distant).
 \end{description}
 
-\TODO{conclusion et pourquoi choisi SVN}
+Apache SVN était choisi pour sa simplicité, sa bon support de Windows et pour
+des exigences de spécification. \FIXME{improve sentance}
 
-Un logiciel de gestion de versions est un logiciel de gestion de configuration
-permettant de stocker des informations pour une ou plusieurs ressources
-informatiques permettant de récupérer toutes les versions intermédiaires des
-ressources,vainsi que les différences entre les versions.
+L'outil serveur choisi est VisualSVN pour sa simplicité d'installer et de
+configurer et pour son support du Windows.
 
-Apache Subversion (en abrégé SVN) est un logiciel de gestion de versions,
-distribué sous licence Apache et BSD\@.
-VisualSVN est un plug-in d'intégration de Subversion de qualité professionnelle.
-Les principaux avantages de VisualSVN sont les suivants:
-
+Les outils clients choisis sont:
 \begin{itemize}
-    \item Fiabilité imbattable : Visual Studio ne s'arrêtera jamais ni ne
-        s'arrêtera à cause de VisualSVN.
-    \item Intégration transparente : VisualSVN gère automatiquement les fichiers
-        ajoutés ou renommés et reflète ces opérations sur Subversion.
-    \item Statut en temps réel : VisualSVN suit attentivement et affiche toutes
-        les modifications apportées à votre copie de travail.
-    \item Courbe d'apprentissage courte : VisualSVN utilise les boîtes de
-        dialogue TortoiseSVN et fournit un assistant intelligent pour mettre
-        vos sources sous Subversion.
+    \item TortoiseSVN pour l'intégration avec le système Windows.
+    \item La commande de ligne \verb|svn| est utilisée en Linux.
+    \item Le support de SVN est intégré au Android Studio et PHPStorm.
 \end{itemize}
-VisualSVN Server vous permet d'installer et de gérer facilement un serveur
-Subversion entièrement fonctionnel sur la plateforme Windows. Il est utile tant
-pour les petites entreprises que pour les entreprises.
+
+%Un logiciel de gestion de versions est un logiciel de gestion de configuration
+%permettant de stocker des informations pour une ou plusieurs ressources
+%informatiques permettant de récupérer toutes les versions intermédiaires des
+%ressources,vainsi que les différences entre les versions.
+%
+%Apache Subversion (en abrégé SVN) est un logiciel de gestion de versions,
+%distribué sous licence Apache et BSD\@.
+%VisualSVN est un plug-in d'intégration de Subversion de qualité professionnelle.
+%Les principaux avantages de VisualSVN sont les suivants:
+%
+%\begin{itemize}
+%    \item Fiabilité imbattable : Visual Studio ne s'arrêtera jamais ni ne
+%        s'arrêtera à cause de VisualSVN.
+%    \item Intégration transparente : VisualSVN gère automatiquement les fichiers
+%        ajoutés ou renommés et reflète ces opérations sur Subversion.
+%    \item Statut en temps réel : VisualSVN suit attentivement et affiche toutes
+%        les modifications apportées à votre copie de travail.
+%    \item Courbe d'apprentissage courte : VisualSVN utilise les boîtes de
+%        dialogue TortoiseSVN et fournit un assistant intelligent pour mettre
+%        vos sources sous Subversion.
+%\end{itemize}
+%VisualSVN Server vous permet d'installer et de gérer facilement un serveur
+%Subversion entièrement fonctionnel sur la plateforme Windows. Il est utile tant
+%pour les petites entreprises que pour les entreprises.
 
 \subsubsection{Android}
 
