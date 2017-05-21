@@ -26,7 +26,7 @@ final,
 
 \usepackage[nottoc]{tocbibind}
 \usepackage[style=alphabetic,backend=bibtex8]{biblatex}
-\addbibresource{bib.bib}
+\addbibresource{bibliography.bib}
 
 \usepackage{ifxetex,ifluatex}
 
@@ -55,6 +55,7 @@ final,
 
 \usepackage{graphicx}
 \graphicspath{{figures/}, {diagrams/}}
+\usepackage[update,prepend]{epstopdf}
 \usepackage{subcaption}
 %\usepackage{svg}
 \usepackage{array}
@@ -99,7 +100,7 @@ final,
 \definecolor{lightBlue}{RGB}{102, 153, 204}
 \definecolor{lightGrey}{RGB}{245, 247, 249}
 \definecolor{magenta}{RGB}{177, 0, 89}
-\setminted{
+\setminted{%
     mathescape,
     linenos=true,
     numbersep=5pt,
@@ -120,7 +121,7 @@ final,
 }{}
 
 \usepackage{geometry}
-\geometry{
+\geometry{%
     left=3.5cm,
     right=2.5cm,
     paper=a4paper, % Change to letterpaper for US letter
@@ -138,9 +139,11 @@ final,
 
 \usepackage{titlesec}
 \newcommand{\hsp}{\hspace{20pt}}
-% \titleformat{\chapter}[block]{\Huge\bfseries}{\thechapter \hsp {|}\hsp}{0pt}{\Huge\bfseries}
-\titleformat{\section}[block]{\Large\bfseries}{\thesection \ }{0pt}{\Large \bfseries}
-\titleformat{\subsection}[block]{\large\bfseries}{\thesubsection \ }{0pt}{\large \bfseries}
+\definecolor{gray75}{gray}{0.75}
+\titleformat{\part}[hang]{\Huge\bfseries}{\thepart\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries\scshape}
+\titleformat{\section}[block]{\LARGE\bfseries}{\thesection \hsp {---}\hsp}{0pt}{\LARGE\bfseries}
+\titleformat{\subsection}[block]{\Large\bfseries}{\thesubsection \ }{0pt}{\Large \bfseries}
+\titleformat{\subsubsection}[block]{\large\bfseries}{\thesubsubsection \ }{0pt}{\large \bfseries}
 \usepackage[shortlabels]{enumitem}
 
 %%% Custom headers/footers (fancyhdr package)
@@ -192,13 +195,12 @@ final,
 \pagestyle{empty}
 \pagenumbering{roman}
 
-\input{quote}
-\input{abstract}
-\input{dedicaces}
-\clearpage
-\input{merci}
-\clearpage
-\fancypagestyle{plain}{
+\include{quote}
+\cleardoublepage
+\include{abstract}
+\include{dedicaces}
+\include{merci}
+\fancypagestyle{plain}{%
     \fancyhf{}
     \rfoot{\thepage}
     \renewcommand{\headrulewidth}{0pt}
@@ -225,7 +227,7 @@ final,
 %\addcontentsline{toc}{section}{Liste des codes sources}
 %\listoflistings
 
-%\newpage
+%\clearpage
 
 % list of abbreviations
 %\nomenclature{$c$}{Speed of light in a vacuum inertial frame}
@@ -236,42 +238,42 @@ final,
 \cleardoublepage
 \setlength{\parskip}{8pt}
 \renewcommand{\baselinestretch}{1.4}\normalsize
+\pagestyle{fancy}
 \fancyhf{}
+\renewcommand{\headrulewidth}{1pt}
 %\fancyhead[LE,RO]{\itshape CityWatch}
 \rhead{\rightmark}
 \rfoot{\thepage}
-\renewcommand{\headrulewidth}{1pt}
-%\setlength{\headheight}{13.6pt}t
-\pagestyle{fancy}
+%\setlength{\headheight}{13.6pt}
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ \ --\ \ #1}}
 \pagenumbering{arabic}
 
-\part{Introduction générale}
+\cleardoublepage
+\part{Introduction Générale}
 \input{introduction}
-\clearpage
-\part{Contexte du projet}
+
+\cleardoublepage
+\part{Contexte du Projet}
 \input{cadreprojet}
-\clearpage
+
+\cleardoublepage
 \part{Itérations}
 \input{section0}
-\clearpage
-\input{section1}
-\clearpage
-\input{section2}
-\clearpage
-\input{section3}
+\include{section1}
+\include{section2}
+\include{section3}
 
 %%%% INCLUDE CHAPTERS
 
-\clearpage
+\cleardoublepage
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ \ --\ \ #1}}
 %\appendix
 \begin{appendices}
 \input{appendix}
 \end{appendices}
 
-\clearpage
-\fancypagestyle{plain}{
+\cleardoublepage
+\fancypagestyle{plain}{%
     \fancyhf{}
     \rfoot{\thepage}
     \renewcommand{\headrulewidth}{0pt}

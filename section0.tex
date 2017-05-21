@@ -1,4 +1,4 @@
-\section{Itération 0: ( 2/20/2017 - 2/22/2017 )}
+\section{Itération~0:~(~2/20/2017~-~2/22/2017~)}
 
 \subsection{Objectif de l'itération}
 
@@ -46,7 +46,7 @@ La figure~\ref{fig:product-backlog} présente une version simplifiée du Product
 Backlog complète des 3 premières itérations. Nous représentons notre
 participation par les cercles du texte souligné.
 
-\input{product-backlog}
+\input{figures/product-backlog}
 
 Le tableau~\ref{tab:product-backlog} représente la liste plus détaillé des cas
 d'utilisations que nous allons implémentés pendant les 3 premières itérations.
@@ -56,7 +56,8 @@ Ils suivent la forme:
 \end{displayquote}
 ou aussi la forme:
 \begin{displayquote}
-    En tant que \textbf{X}, je veux qu'il soit possible de \textbf{Y} pour \textbf{Z}.
+    En tant que \textbf{X}, je veux qu'il soit possible de \textbf{Y} pour
+    \textbf{Z}.
 \end{displayquote}
 
 Dans notre liste des cas d'utilisation, l'acteur initiateur (\textbf{X}) est
@@ -118,37 +119,72 @@ toujours l'utilisateur.
 La réalisation de ce projet nécessite l'ensemble de ces logiciels et
 bibliothèques:
 
-\paragraph{Android studio}
-est un environnement de développement pour développer des applications Android.
-Il est basé sur IntelliJ IDEA.\\ Android studio permet principalement d'éditer
-les fichiers Java et les fichiers de configuration d'une application Android.Il
-propose entre autres des outils pour gérer le développement d'applications
-multilingues et permet de visualiser la mise en page des écrans sur des écrans
-de résolutions variées simultanément
+\paragraph{Android}
 
-\paragraph{PHPStorm}
-il est un environnement de développement intégré (IDE) dédié pour la
-programmation en PHP. Il regroupe sous une interface conviviale un éditeur de
-texte, un interpréteur et un débogueur\ldots. Ceci permet de faciliter la tâche de
-programmation et de maximiser la productivité des développeurs.
+On a choisi du supporter le système Android comme notre première plateforme. Ce
+choix était basé sur différents aspects:
+\begin{itemize}
+    \item La part de marché des smartphones et tablettes Android.
+    \item L'ouverture de la plateforme, et l'accessibilité aux différentes
+        fonctionnalités et aux outils de développements.
+    \item Android Auto, Android Wear, Android Things\ldots
+\end{itemize}
 
-\paragraph{Vim}
-Vim est un éditeur de texte pour le terminal sous GNU/Linux. Il a une
-stabilité exemplaire et ne cesse d'être amélioré. Malgré son austérité, c'est
-un outil très puissant qui n'a rien à envier aux éditeurs graphiques comme
-Gedit, Kate ou Mousepad. Il est très apprécié des développeurs pour toutes ses
-fonctions qui en font un très bon IDE (coloration syntaxique de 200 langages,
-complétion automatique, comparaison de fichiers, recherche évoluée, …) et est
-extensible par des scripts.
-\paragraph{Composer}
+Android Studio était le choix naturel pour le développement d'application
+grâce au support officiel du Google et les fonctionnalités héritées de l'ide
+IntelliJ IDEA de JetBrains comme un concepteur d’interface utilisateur pour
+des résolutions variées simultanément, débogueur, \ldots
 
-Le logiciel Composer est un gestionnaire de dépendances sous licence libre
-écrit en PHP\@. Il permet à ses utilisateurs de déclarer et d'installer les
-bibliothèques dont le projet principal a besoin.
+%\subparagraph{Android studio}
+%est un environnement de développement pour développer des applications Android.
+%Il est basé sur IntelliJ IDEA.\\ Android studio permet principalement d'éditer
+%les fichiers Java et les fichiers de configuration d'une application Android.Il
+%propose entre autres des outils pour gérer le développement d'applications
+%multilingues et permet de visualiser la mise en page des écrans sur des écrans
+%de résolutions variées simultanément
+
+\paragraph{PHP}
+La langue du programmation PHP était prés chois.
+Les points fort de la langue PHP:
+\begin{itemize}
+    \item Une langue très répondu dans le développement Web, Elle a une
+        grande communauté des développeurs.
+    \item Une grande liste des outils de développement incluant les
+        gestionnaires des dépendances (Composer, Phar), outils des tests
+        unitaires (PHPUnit), générateurs du documentation (PHPDoc, Sami),
+        débogueurs (Xdebug), analyseurs du code et analyseurs statiques
+        (php\_CodeSniffer, PHPLint), outils d'automatisation (Phing) and
+        multiple IDEs.
+    \item Multiple bibliotheques et frameworks pour différent type des projets.
+\end{itemize}
+
+Les points faibles de la langue PHP:
+\begin{itemize}
+    \item Gestion d'erreurs très souple par défaut même si les erreurs sont
+        fatales.
+    \item Manque d'un paradigme unique dans l'architecture de la langue (le
+        choix du syntaxe et du noms des fonctions)
+\end{itemize}
+
+L'ide choisie pour le développement PHP est PHPStorm, un IDE multiplatforme de
+JetBrains. Il regroupe sous une interface conviviale un éditeur de
+texte avancé et intelligent, un interpréteur et un débogueur\ldots.
+Vim a été aussi utilisé avec un ensemble des extensions pour enrichir ses
+fonctionnalités.
+
+%\paragraph{Composer}
+%
+%Le logiciel Composer est un gestionnaire de dépendances sous licence libre
+%écrit en PHP\@. Il permet à ses utilisateurs de déclarer et d'installer les
+%bibliothèques dont le projet principal a besoin.
+
+\paragraph{Technologies du Web}
+
+\TODO{Wht HTML5, CSS3, JS}
 
 \subsubsection{environnements matériels}
 
-Pour le développement de ce projet il était demandé d'avoir :
+Pour le développement de ce projet, il était demandé d'avoir :
 \begin{itemize}
  \item Serveur Local pour les tests
      \begin{itemize}
