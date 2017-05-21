@@ -39,8 +39,8 @@ Dans cette première itération, on a décidé de diviser cette itération en tr
 grandes parties:
 
 \begin{enumerate}
- \item Une partie consacrée pour la création de la base de donnée et les
-     services web.
+    \item Une partie consacrée pour la création de la base de donnée et les
+        services web.
  \item Une partie consacré pour la réalisation de la page d'accueil.
  \item Une partie qui répond aux besoins des autres tâches de cette itérations.
 \end{enumerate}
@@ -59,17 +59,17 @@ demandé.
         \caption{Backlog de l'itération 1}
         \label{tab:sprint1-backlog} \\
 
- \hline
- \textbf{Réf} & \textbf{Spécification} & \textbf{Description} & \textbf{Priorité} \\ \hline
- \endhead
+        \hline
+        \textbf{Réf} & \textbf{Spécification} & \textbf{Description} & \textbf{Priorité} \\ \hline
+        \endhead
 
- \hline \multicolumn{4}{|r|}{{Continué en page suivante$\dotsc$}} \\ \hline
- \endfoot
+        \hline \multicolumn{4}{|r|}{{Continué en page suivante$\dotsc$}} \\ \hline
+        \endfoot
 
- \hline \hline
- \endlastfoot
+        \hline \hline
+        \endlastfoot
 
-\hline
+        \hline
 1 & Présentation et Configuration SVN & Présenter SVN, installer le serveur SVN et créer les répertoires  & 1 \\ \hline
 2 & Recherche sur les Services Web & Présenter les différentes Solutions des services web et choisir la meilleur solution & 1 \\ \hline
 3 & Implémenter service Save Position & Enregistrement les coordonnées requis dans la base de données & 2 \\ \hline
@@ -81,7 +81,7 @@ demandé.
 9 & Rectification service Get Last Position & Retourné la position du périphérique et la date du dernier modification & 2 \\ \hline
 10 & Affiche Multiple marqueurs & Afficher dernière position de chaque périphérique dans la carte & 2 \\ \hline
 11 & Affiche état du périphérique & Afficher si le périphérique est en ligne ou hors ligne & 3 \\ \hline
-\end{longtable}
+    \end{longtable}
 \end{center}
 
 \subsubsection{Estimation de la Première Itération}
@@ -93,9 +93,9 @@ engageons à travailler.
 \begin{table}[htbp]
     \centering
     \begin{tabular}{| c | c | c | c |}
-\hline
-\textbf{Membre} & \textbf{Nombre d'heures par jour} & \textbf{Nombre de jours présent} & \textbf{Total en heures} \\ \hline
-\hline
+        \hline
+        \textbf{Membre} & \textbf{Nombre d'heures par jour} & \textbf{Nombre de jours présent} & \textbf{Total en heures} \\ \hline
+        \hline
 
 Moez & 6 & 10 & 60\\ \hline
 Rihab & 6 & 10 & 60 \\ \hline
@@ -110,17 +110,17 @@ Rihab & 6 & 10 & 60 \\ \hline
         \caption{Nombre d'heures estimé pour la réalisation des taches}
         \label{tab:sprint1-estimation} \\
 
- \hline
- \textbf{Spécification} & \textbf{Membre} & \textbf{Heures} \\ \hline
- \endhead
+        \hline
+        \textbf{Spécification} & \textbf{Membre} & \textbf{Heures} \\ \hline
+        \endhead
 
- \hline \multicolumn{3}{|r|}{{Continué en page suivante$\dotsc$}} \\ \hline
- \endfoot
+        \hline \multicolumn{3}{|r|}{{Continué en page suivante$\dotsc$}} \\ \hline
+        \endfoot
 
- \hline \hline
- \endlastfoot
+        \hline \hline
+        \endlastfoot
 
-\hline
+        \hline
 Présentation et Configuration SVN & Rihab & 5 x 2 \\ \hline
 Recherche sur les Services Web & Moez & 13 x 2 \\ \hline
 Implémenter service Save Position & Moez & 5 \\ \hline
@@ -132,7 +132,7 @@ Rectification service Save Positon & Moez & 5 \\ \hline
 Rectification service Get Last Position & Moez & 5 \\ \hline
 Affiche Multiple marqueurs & Moez & 5 \\ \hline
 Affiche état du périphérique & Rihab & 5 \\ \hline
-\end{longtable}
+    \end{longtable}
 \end{center}
 
 \subsubsection{Évolution du travail}
@@ -187,7 +187,7 @@ SVN.
         dans les projets libres.
     \item [Apache SVN] Logiciel de gestion de versions centralisé. Il est connu
         pour sa simplicité comme il n'est pas un distinct entre un dépôt local
-        vs.  Dépôt distant, on faire juste une copie du dossier de travail
+        vs. Dépôt distant, on faire juste une copie du dossier de travail
         d'une version précise. Les commandes sont simples:
         \begin{itemize}
             \item \verb|svn checkin| \ \ vs. \ \ \verb|git commit; git push|
@@ -292,14 +292,14 @@ D'où l'apparition de plus d'un état qui sont centré sur l'activité.
 
 On peut différencier ces états par leur visibilité :
 \begin{itemize}
- \item État Active.
- \item État en Pause.
- \item État Arrêté.
+    \item État Active.
+    \item État en Pause.
+    \item État Arrêté.
 \end{itemize}
 
 \subparagraph{Cycle de vie d'une activité :}
 
-Une activité n'a pas de contrôle sur son état.  Son état change suivant un
+Une activité n'a pas de contrôle sur son état. Son état change suivant un
 cycle rythmique entre le système Android et les autres application (un système
 quasi dépendant sur des priorités comme expliqué précédemment) la
 figure~\ref{fig:android-activity} explique le cycle de vie d'une activité. (Les
@@ -373,10 +373,10 @@ Les exigence de l'api RESTful sont:
 \subsection{Modélisation UML}
 
 \begin{figure}[htbp]
-  \centering
-  \includegraphics[width=1\textwidth]{sprint1-webservices-usecase}
-  \caption{Diagramme de case d'utilisation du services web en itération 1}
-  \label{fig:sprint1-webservices-usecase}
+    \centering
+    \includegraphics[width=1\textwidth]{sprint1-webservices-usecase}
+    \caption{Diagramme de case d'utilisation du services web en itération 1}
+    \label{fig:sprint1-webservices-usecase}
 \end{figure}
 
 \begin{figure}[htbp]
@@ -386,21 +386,46 @@ Les exigence de l'api RESTful sont:
 \end{figure}
 
 \begin{figure}[htbp]
-  \centering
-  \includegraphics[width=1\textwidth]{sprint1-webservices-post-sequence}
-  \caption{Diagramme de séquence du service Post Position en itération 1}
-  \label{fig:sprint1-webservices-post-sequence}
+    \centering
+    \includegraphics[width=1\textwidth]{sprint1-webservices-post-sequence}
+    \caption{Diagramme de séquence du service Post Position en itération 1}
+    \label{fig:sprint1-webservices-post-sequence}
 \end{figure}
 
 \begin{figure}[htbp]
-  \centering
-  \includegraphics[width=1\textwidth]{sprint1-webservices-get-sequence}
-  \caption{Diagramme de séquence du service Get Position en itération 1}
-  \label{fig:sprint1-webservices-get-sequence}
+    \centering
+    \includegraphics[width=1\textwidth]{sprint1-webservices-get-sequence}
+    \caption{Diagramme de séquence du service Get Position en itération 1}
+    \label{fig:sprint1-webservices-get-sequence}
 \end{figure}
 
 \subsection{Évaluation suivant les normes mise}
-Ces caractéristique ont étés adressés pendant l'implémentation du service web.
+Avant de commencer le développement, on a fixé quelques règles à respecter pour
+assurer la qualité du code.
+
+\begin{itemize}
+    \item Activer le mode strict du PHP et changer le mode de traitement des
+        erreurs au déclenchement des exceptions si possible (PDO, \ldots).
+        Activer le mode strict du JavaScript aussi.
+    \item Utiliser des analyseurs statiques du code: PHP\_CodeSniffer, PHPLint et
+        ESLint pour détecter les erreurs formelles de programmation ou de
+        conception.
+    \item Documenter chaque fonction, classe, constante et variable global. On
+        a utilisé PHPDoc, apiDoc et JSDoc pour documenter le code PHP, l'api
+        RESTful et le code JavaScript respectivement.
+    \item Ecrire les tests unitaires pour les fonctions et les classes selon la
+        technique \acrshort{TDD}. On a autorisé l'ecrire des tests unitaires
+        aprés le développement du code. Les outils utilisés sont PHPUnit pour
+        PHP et Mocha/Chai pour JavaScript.
+        \TODO{Move to sp2}
+\end{itemize}
+
+Dans 1\ier{} phase, on a implémenté les méthodes POST et GET du ressource
+Position. L'architecture résultante est documentée dans
+l'annexe~\ref{appendix:sprint1-position-post-doc}
+et~\ref{appendix:sprint1-position-get-doc}.
+
+On a essayé d'adresser les différents les mises des normes spécifiés;
 
 \subsubsection{Performance}
 
@@ -411,7 +436,7 @@ chaque méthode du notre service web.
 \subsubsection{Multi-Utilisateurs}
 
 Les positions à enregistrer doivent contenus un id qui doit être utilisé aussi
-pour retirer la dernière position.  On a utilisé diffèrent identificateur pour
+pour retirer la dernière position. On a utilisé diffèrent identificateur pour
 chaque périphériques basé sur le MAC du phone.
 
 \subsubsection{Portabilité}
@@ -443,20 +468,16 @@ contenu reçu même si envoyé depuis un source de confiance avant de les
 utiliser. La vérification inclue le test de disponibilité des entités
 obligatoires et le test de leurs formats.
 
-\subsubsection{Implémenté la méthode POST}
-
-Dans 1\ier{} phase, on a implémenté la méthode POST du ressource Position.
-La documentation de l'api est dans l'annexe~\ref{appendix:sprint1-position-post-doc}.
-
-\subsubsection{Implémenté la Méthode Get}
-
-La documentation de l'api est dans l'annexe~\ref{appendix:sprint1-position-get-doc}.
-
-\TODO{RESTful API design describtion as http-api-design-en.pdf}
+\TODO{tips from Heroku HTTP API design guide}
 
 \subsection{Contributions}
 
-\TODO{ftp upload script}
+On avait des problèmes pour le chargement du code à notre serveur causés par le
+blockage du port FTP et inefficacité de compresser le code et le charger depuis
+l'interface web chaque fois. On a décidé d'automatiser ce tache avec un script.
+Après inspecter et étudier l'api d'interface web du serveur FTP, on a
+implémenté un script Python qui compresse les fichiers nécessaires, authentifie
+au service web du serveur FTP et charger l'archive.
 
 \subsection{Revue de cette itération}
 \subsubsection{Produit de l'itération}
@@ -475,21 +496,22 @@ individus et son état.
 \end{itemize}
 
 \begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.6\textwidth]{sprint1-dashboard-screenshot}
-  \caption{Capture écran de la page web de l'itération 1}
-  \label{fig:sprint1-dashboard-screenshot}
+    \centering
+    \includegraphics[width=0.6\textwidth]{sprint1-dashboard-screenshot}
+    \caption{Capture écran de la page web de l'itération 1}
+    \label{fig:sprint1-dashboard-screenshot}
 \end{figure}
 
 \paragraph{Application Android}
 
 La figure~\ref{fig:sprint1-android-screenshot} représente l'interface de
 l'application.
+
 \begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.4\textwidth]{sprint1-android-screenshot}
-  \caption{Capture écran d'application Android de l'itération 1}
-  \label{fig:sprint1-android-screenshot}
+    \centering
+    \includegraphics[width=0.4\textwidth]{sprint1-android-screenshot}
+    \caption{Capture écran d'application Android de l'itération 1}
+    \label{fig:sprint1-android-screenshot}
 \end{figure}
 
 \subsubsection{Avis du Product Owner}
