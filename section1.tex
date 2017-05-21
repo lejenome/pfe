@@ -7,7 +7,7 @@ modèle, de réaliser la page Web (dashboard) et développer les vues nécessair
 pour permettre à l'utilisateur de consulter la dernière position du véhicule
 selon les spécifications du Backlog.
 
-Une fois la première ébauche du Backlog est réalisée, le product owner peut
+Une fois la première ébauche du Backlog est réalisée, le Product Owner peut
 découper les spécifications de haut niveau vers des spécifications plus
 raffinées. Dès lors, nous passons à la planification d'une itération. Il est
 important de rappeler que les premières spécifications du Backlog doivent être:
@@ -20,9 +20,9 @@ important de rappeler que les premières spécifications du Backlog doivent êtr
 Ayant une bonne idée sur le produit ainsi que l'objectif à atteindre, l'équipe
 et le Product Owner peuvent passer à l'élaboration des itérations. Dans notre
 projet \textquote{Plateforme CityWatch}, la durée d'une itération est fixée à
-trois semaines. Dans cette section nous décrivons le déroulement de la première
-itération. Une itération commence par sa planification et finit par être revue
-avec \textquote{Product Owner}.
+trois semaines. Dans cette section, nous décrivons le déroulement de la
+première itération. Une itération commence par sa planification et finit par
+être revue avec le \textquote{Product Owner}.
 
 \subsection{Planification de l'itération}
 
@@ -39,19 +39,20 @@ Dans cette première itération, on a décidé de diviser cette itération en tr
 grandes parties:
 
 \begin{enumerate}
- \item Une partie consacrée pour la création de la base de donnée et la
-     génération du modèle.
+ \item Une partie consacrée pour la création de la base de donnée et les
+     services web.
  \item Une partie consacré pour la réalisation de la page d'accueil.
  \item Une partie qui répond aux besoins des autres tâches de cette itérations.
 \end{enumerate}
 
 \subsubsection{Backlog de l'Itération}
 
-Les tâches à réaliser peuvent être soient des tâches de recherche, de
-documentation, de conception, de développement ou bien d'installation, de
-tests, d'intégration, etc\ldots. Il est recommandé lors de la planification de la
-liste des tâches de bien les détailler. Une tâche ne doit pas inclure d'autres
-tâches. Ceci permet de bien cerner le travail demandé.
+Les tâches à réaliser peuvent \HTODO{être soient}{contenir?} des tâches de
+recherche, de documentation, de conception, de développement ou bien
+d'installation, de tests, d'intégration, etc\ldots. Il est recommandé lors de
+la planification de la liste des tâches de bien les détailler. Une tâche ne
+doit pas inclure d'autres tâches. Ceci permet de bien cerner le travail
+demandé.
 \begin{center}
     \footnotesize
     \begin{longtable}{| p{1cm} | p{5cm} | p{7cm} | p{1cm} |}
@@ -74,7 +75,7 @@ tâches. Ceci permet de bien cerner le travail demandé.
 3 & Implémenter service Save Position & Enregistrement les coordonnées requis dans la base de données & 2 \\ \hline
 4 & Implémenter la consommation du service Save Position & Coordonnées enregistrés instantané et continuellement dans la BD & 1 \\ \hline
 5 & Recherche sur les spécifications de la plateforme Android & Présenter le modèle de développement Android et choisir le SDK optimale & 1 \\ \hline
-6 & Création Application Template minimal & Application fonctionnel et intégration au SVN & 1 \\ \hline
+6 & Création squelette de l'application mobile & Application fonctionnel (sans les fonctions de localisation) avec l'IHM nécessaire et l'intégration au SVN & 1 \\ \hline
 7 & Implémenter service Get Last Position & Le serveur retourne les dernières coordonnées requis & 1 \\ \hline
 8 & Rectification service Save Positon & Support multiple périphériques et enregistrer la date d'envoyé & 2 \\ \hline
 9 & Rectification service Get Last Position & Retourné la position du périphérique et la date du dernier modification & 2 \\ \hline
@@ -125,7 +126,7 @@ Recherche sur les Services Web & Moez & 13 x 2 \\ \hline
 Implémenter service Save Position & Moez & 5 \\ \hline
 Implémenter la consommation du service Save Position & Rihab & 5 x 2 \\ \hline
 Recherche sur les spécifications de la plateforme Android & Rihab & 13 x 2 \\ \hline
-Création Application Template minimal & Rihab & 13 \\ \hline
+Création squelette de l'application mobile & Rihab & 13 \\ \hline
 Implémenter service Get Last Position & Moez & 5 \\ \hline
 Rectification service Save Positon & Moez & 5 \\ \hline
 Rectification service Get Last Position & Moez & 5 \\ \hline
@@ -163,13 +164,25 @@ Affiche état du périphérique & Rihab & 5 \\ \hline
 
 \subsection{Présentation des outils utilisés}
 
-Le stage chez Djagora Academy nous a permis d'acquérir de nouvelles
-compétences tant au niveau relationnel que technique.Pour bien entamer la réalisation
-de la plateforme
-\textquote{City Watch}, nous avons suivi différentes
-formations sur les outils et les technologies que nous venons de citer.
+Le stage chez Djagora Academy nous a permis d'acquérir de nouvelles compétences
+tant au niveau relationnel que technique.Pour bien entamer la réalisation de la
+plateforme \textquote{City Watch}, nous avons suivi différentes formations sur
+les outils et les technologies que nous venons de citer.
 
 \subsubsection{Apache Subversion}
+
+Les logiciels de gestion de versions nous permettent de
+conserver la chronologie des modifications du source de code, ainsi récupérer
+les version intermédiaires et les différences entre eux, et facilitent la
+collaboration au développement.
+Les deux logiciels de gestion de versions les plus répondus sont Git et SVN.
+
+\begin{description}
+    \item [Git] \TODO{pros du git}
+    \item [SVN] \TODO{pros du SVN}
+\end{description}
+
+\TODO{conclusion et pourquoi choisi SVN}
 
 Un logiciel de gestion de versions est un logiciel de gestion de configuration
 permettant de stocker des informations pour une ou plusieurs ressources
@@ -259,33 +272,33 @@ On peut différencier ces états par leur visibilité :
 
 \subparagraph{Cycle de vie d'une activité :}
 
-Une activité n'a pas de contrôle sur son état.
-Son état change suivant un cycle rythmique entre le système Android et les
-AUTres application (un système quasi dépendant sur des priorités comme expliqué
-précédemment) la figure~\ref{fig:android-activity} explique le cycle de vie
-d'une activité. (Les états sont représenter comme des méthodes parce que lors de
-la programmation ces états sont interroges par le nom de ces méthodes.\\
-la figure~\ref{fig:android-activity} représente le cycle de vie d'une activité.
+Une activité n'a pas de contrôle sur son état.  Son état change suivant un
+cycle rythmique entre le système Android et les AUTres application (un système
+quasi dépendant sur des priorités comme expliqué précédemment) la
+figure~\ref{fig:android-activity} explique le cycle de vie d'une activité. (Les
+états sont représenter comme des méthodes parce que lors de la programmation
+ces états sont interroges par le nom de ces méthodes.\\ la
+figure~\ref{fig:android-activity} représente le cycle de vie d'une activité.
 
 \input{android-activity}
 
 \subparagraph{Comment choisir le SDK optimale :}
 
-Une SDK permet l'application de marcher sur la version Android visé
-et les versions ultérieure il a noté de prendre en considération le taux des
+Une SDK permet l'application de marcher sur la version Android visé et les
+versions ultérieure il a noté de prendre en considération le taux des
 utilisateurs visé par cette application. Aussi il faut travailler avec une SDK
-digne de confidence qui n'a pas de problème ou bug qui peuvent bloquer ou arrêter
-le fonctionnement de l'application le SDK choisi doit pouvoir supporter les
-fonctionnalité offerte par l'application si on va utiliser une fonctionnalité
-qui utilise les empreinte le SDK dont on a travailler l'application doit supporter
-cette fonctionnalité lorsque le travail sur une application est en groupe il est
-mieux que tous ce groupe utilise la même SDK pour éviter tous problème de
-compatibilité et conflit entre versions de SDK donc il faut choisir une SDK
-qui est populaire en utilisation et qui est stable. Dans notre projet on va
-utiliser SDK 23 qui vise la version Android 6.0 ayant un taux d'utilisateur
-qui est 4.79 %
-des utilisateur d'Android notons que cet SDK comporte
-la fonctionnalité d'Android les plus récentes et qui est stable.
+digne de confidence qui n'a pas de problème ou bug qui peuvent bloquer ou
+arrêter le fonctionnement de l'application le SDK choisi doit pouvoir supporter
+les fonctionnalité offerte par l'application si on va utiliser une
+fonctionnalité qui utilise les empreinte le SDK dont on a travailler
+l'application doit supporter cette fonctionnalité lorsque le travail sur une
+application est en groupe il est mieux que tous ce groupe utilise la même SDK
+pour éviter tous problème de compatibilité et conflit entre versions de SDK
+donc il faut choisir une SDK qui est populaire en utilisation et qui est
+stable. Dans notre projet on va utiliser SDK 23 qui vise la version Android 6.0
+ayant un taux d'utilisateur qui est 4.79 % des utilisateur d'Android notons que
+cet SDK comporte la fonctionnalité d'Android les plus récentes et qui est
+stable.
 
 \subsubsection{Les Services Web}
 
@@ -370,9 +383,8 @@ chaque méthode du notre service web.
 \subsubsection{Multi-Utilisateurs}
 
 Les positions à enregistrer doivent contenus un id qui doit etre utiliser aussi
-pour retirer la dernière position.
-On a utilisé diffèrent identificateur pour chaque périphériques basé sur le MAC
-du phone.
+pour retirer la dernière position.  On a utilisé diffèrent identificateur pour
+chaque périphériques basé sur le MAC du phone.
 
 \subsubsection{Portabilité}
 
@@ -388,9 +400,9 @@ Pour les en-têtes du requêtes HTTP, la format de représentation des dates est
 RFC1123 \cite{RFC1123}, ex: \verb|Mon, 15 Aug 2005 15:52:01 +0000|.
 
 La format du présentation des positions géologique (latitude et longitude)
-choisi est la même représentation des nombres en JSON avec une précision jusqu'à
-14 chiffres après le virgule. Les valeurs envoyés doivent respecte l'intervalle
-des diffèrent entités géologiques ($latitude \in [-90, 90]$,
+choisi est la même représentation des nombres en JSON avec une précision
+jusqu'à 14 chiffres après le virgule. Les valeurs envoyés doivent respecte
+l'intervalle des diffèrent entités géologiques ($latitude \in [-90, 90]$,
 $longitude \in [-180, 180]$)
 
 \subsubsection{Fiabilité}
@@ -424,7 +436,8 @@ maps de notre site web.
 
 \paragraph{Page Web \textquote{Dashboard}}
 
-La figure \ref{fig:sprint1-dashboard-screenshot} affiche la position des individus et son état.
+La figure \ref{fig:sprint1-dashboard-screenshot} affiche la position des
+individus et son état.
 \begin{itemize}
  \item \textit{Marqueur en Vert}: Périphérique en ligne
  \item \textit{Marqueur en Rouge}:Périphérique en hors ligne
@@ -439,7 +452,8 @@ La figure \ref{fig:sprint1-dashboard-screenshot} affiche la position des individ
 
 \paragraph{Application Android}
 
-La figure \ref{fig:sprint1-android-screenshot} représente l'interface de l'application
+La figure \ref{fig:sprint1-android-screenshot} représente l'interface de
+l'application.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.4\textwidth]{sprint1-android-screenshot}
@@ -449,8 +463,9 @@ La figure \ref{fig:sprint1-android-screenshot} représente l'interface de l'appl
 
 \subsubsection{Avis du ProductOwner}
 
-Le Product Owner était ravi des résultats de cette première itération. Il a validé donc notre
-travail et nous a encouragé pour l'élaboration des suivantes itérations.
+Le Product Owner était ravi des résultats de cette première itération. Il a
+validé donc notre travail et nous a encouragé pour l'élaboration des suivantes
+itérations.
 
 \subsubsection{Burndown de l'itération}
 

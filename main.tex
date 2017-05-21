@@ -192,12 +192,11 @@ final,
 \pagestyle{empty}
 \pagenumbering{roman}
 
-\input{quote}
-\input{abstract}
-\input{dedicaces}
-\clearpage
-\input{merci}
-\clearpage
+\include{quote}
+\cleardoublepage
+\include{abstract}
+\include{dedicaces}
+\include{merci}
 \fancypagestyle{plain}{
     \fancyhf{}
     \rfoot{\thepage}
@@ -225,7 +224,7 @@ final,
 %\addcontentsline{toc}{section}{Liste des codes sources}
 %\listoflistings
 
-%\newpage
+%\clearpage
 
 % list of abbreviations
 %\nomenclature{$c$}{Speed of light in a vacuum inertial frame}
@@ -246,31 +245,31 @@ final,
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ \ --\ \ #1}}
 \pagenumbering{arabic}
 
+\cleardoublepage
 \part{Introduction générale}
 \input{introduction}
-\clearpage
+
+\cleardoublepage
 \part{Contexte du projet}
 \input{cadreprojet}
-\clearpage
+
+\cleardoublepage
 \part{Itérations}
 \input{section0}
-\clearpage
-\input{section1}
-\clearpage
-\input{section2}
-\clearpage
-\input{section3}
+\include{section1}
+\include{section2}
+\include{section3}
 
 %%%% INCLUDE CHAPTERS
 
-\clearpage
+\cleardoublepage
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ \ --\ \ #1}}
 %\appendix
 \begin{appendices}
 \input{appendix}
 \end{appendices}
 
-\clearpage
+\cleardoublepage
 \fancypagestyle{plain}{
     \fancyhf{}
     \rfoot{\thepage}
