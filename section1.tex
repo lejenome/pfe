@@ -139,18 +139,18 @@ Affiche état du périphérique & Rihab & 5 \\ \hline
 
 \begin{figure}[htbp]
     \centering
-    \caption{Évoluation du travail}
+    \caption{Évolution du travail}
     \begin{subfigure}{1\textwidth}
         \centering
         \includegraphics[width=0.8\textwidth]{sprint1-fig1}
-        \caption{Au début d'intération}
+        \caption{Au début d'itération}
         \label{fig:sprint1-fig1}
     \end{subfigure}
 
     \begin{subfigure}{1\textwidth}
         \centering
         \includegraphics[width=0.8\textwidth]{sprint1-fig2}
-        \caption{Au milieu d'intération}
+        \caption{Au milieu d'itération}
         \label{fig:sprint1-fig2}
     \end{subfigure}
 
@@ -182,16 +182,16 @@ SVN.
     \item [Git] Logiciel de gestion de versions distribué avec des branches
         légères. La récupération des versions précédentes et l'enregistrement
         des changements sont possibles sans besoin d'accès au dépôt distant car
-        chaque développeur à un clone complet du dépôt. Le modèle Fork
+        chaque développeur a une copie complète du dépôt. Le modèle Fork
         (Dupliquer), Commit (Modifier), Merge (Fusionner) a eu un grand succès
         dans les projets libres.
     \item [Apache SVN] Logiciel de gestion de versions centralisé. Il est connu
         pour sa simplicité comme il n'est pas un distinct entre un dépôt local
-        vs.  Dépôt distant, on faire juste une copie du dossier de travail dans
-        une version précise. Les commandes sont simples:
+        vs.  Dépôt distant, on faire juste une copie du dossier de travail
+        d'une version précise. Les commandes sont simples:
         \begin{itemize}
-            \item \verb|svn checkint| vs. \verb|git commit; git push|
-            \item \verb|svn update| vs. \verb|git fetch; git rebase|
+            \item \verb|svn checkin| \ \ vs. \ \ \verb|git commit; git push|
+            \item \verb|svn update| \ \ vs. \ \ \verb|git fetch; git rebase|
         \end{itemize}
         Le support du Windows est excellent surtout les outils graphiques.  La
         plus tard des fonctionnalités du SVN nécessitent l'accès au dépôt
@@ -199,7 +199,7 @@ SVN.
 \end{description}
 
 Apache SVN était choisi pour sa simplicité, sa bon support de Windows et pour
-des exigences de spécification. \FIXME{improve sentance}
+des exigences de spécification. \FIXME{improve sentence}
 
 L'outil serveur choisi est VisualSVN pour sa simplicité d'installer et de
 configurer et pour son support du Windows.
@@ -238,16 +238,16 @@ Les outils clients choisis sont:
 
 \subsubsection{Android}
 
-Android est un système d'exploitation conçu en 2007 par la societé Android,
-start-up racheté par Google. Android est Open Source, ca veut dire on peut lire
+Android est un système d'exploitation conçu en 2007 par la société Android,
+startup racheté par Google. Android est Open Source, ça veut dire on peut lire
 le code de ce logiciel le modifier et le redistribuer.
 
 Les bases que nous utilisons:
 \paragraph{IDE:}
 
 C'est un logiciel dont son objectif est de faciliter le développement. Il est
-toujours possible de développer une application sans IDE.
-l'IDE est constitué d'outils dont au moins un éditeur de texte.
+toujours possible de développer une application sans IDE\@.
+L'IDE est constitué d'outils dont au moins un éditeur de texte.
 On utilisera dans notre projet l'IDE Android Studio, l'IDE privilège de Google.
 Android Studio comporte l'auto-complétion la génération automatique du code des
 outils de compilation et débogage et plusieurs autres services qui permettent de
@@ -255,7 +255,7 @@ développer une application facilement et rapidement.
 
 \paragraph{SDK:}
 
-C'est une abréviation qui peut faire référence a Software Developpement Kit.
+C'est une abréviation qui peut faire référence à Software Développement Kit.
 Les applications Android sont développés en JAVA\@. Un appareil Android ne
 comprend pas le langage JAVA, il comprend une variante de JAVA adaptée pour lui.
 On a recours ici SDK, c'est ensemble des outils permettant de développer dans
@@ -276,9 +276,9 @@ seulement une interface graphique mais elle va établir les liens entre
 l'interface graphique et la logique programma tique de plus l'activité
 contient des informations sur le statut actuel de l'application qui s'appelle le
 contexte ce contexte permet de faire la liaison entre le système Android et les
-autres activities de l'application.
+autres activités de l'application.
 
-\subparagraph{États d'activities:}
+\subparagraph{États d'activités:}
 
 Le système Android met en place un système priorités entre application
 par exemple l'utilisateur est en train de naviguer sur internet et écouter
@@ -292,15 +292,15 @@ D'où l'apparition de plus d'un état qui sont centré sur l'activité.
 
 On peut différencier ces états par leur visibilité :
 \begin{itemize}
- \item État Active
- \item État Paused
- \item État Stopped
+ \item État Active.
+ \item État en Pause.
+ \item État Arrêté.
 \end{itemize}
 
 \subparagraph{Cycle de vie d'une activité :}
 
 Une activité n'a pas de contrôle sur son état.  Son état change suivant un
-cycle rythmique entre le système Android et les AUTres application (un système
+cycle rythmique entre le système Android et les autres application (un système
 quasi dépendant sur des priorités comme expliqué précédemment) la
 figure~\ref{fig:android-activity} explique le cycle de vie d'une activité. (Les
 états sont représenter comme des méthodes parce que lors de la programmation
@@ -336,37 +336,38 @@ technologies Web (HTTP dans notre cas).
 Pendant la conception de l'api du service de position, on a étudié les
 différentes variantes des architectures des services web:
 \begin{itemize}
-    \item Orienté RPC: (ex: XML-RPC, SOAP, JSON-RPC)
+    \item Orienté RPC (ex: XML-RPC, SOAP, JSON-RPC) :
         \begin{itemize}
             \item Meilleur pour présenter des actions et commandes.
         \end{itemize}
-    \item Orienté Ressources: (ex: RESTful)
+    \item Orienté Ressources (ex: RESTful) :
         \begin{itemize}
             \item Représenter les données sous formes des ressources.
-            \item Utiliser les méthodes HTTP pour modifier/creer/lire/supprimer les données.
-            \item Utiliser les paramètres query pour passer des paramètres
-            \item Sans état
-            \item Meilleur pour modeler un domaine et entités
+            \item Utiliser les méthodes HTTP pour modifier/créer/lire/supprimer
+                les données.
+            \item Utiliser les paramètres d'URL pour passer des paramètres.
+            \item Sans état.
+            \item Meilleur pour modéliser un domaine et entités.
         \end{itemize}
 \end{itemize}
 
 On a choisi d'utiliser l'architecture RESTful comme notre API est mieux décri
-comme ensemble des collections des données dont on peut performer avec des
+comme ensemble des collections des données dont on peut effectuer avec des
 actions CRUD.
 
 \subsection{Mises des normes}
 
-L'exigence de l'api RESTful est:
-\begin{itemize}
-    \item Performance: Le temps de réponse doit être en une durée raisonnable.
-    \item Multi-Utilisateurs: Les positions des différents utilisateurs sont
-        distinguables.
-    \item Fiabilité: L'implémentation doit vérifier la structure des données
+Les exigence de l'api RESTful sont:
+\begin{description}
+    \item [Performance] Le temps de réponse doit être en une durée raisonnable.
+    \item [Multi-Utilisateurs] On doit avoir la possibilité de stocker et
+        récupérer les positions des différents utilisateurs.
+    \item [Stabilité] L'implémentation doit vérifier la structure des données
         reçus, la disponibilité des champs obligatoires et leurs formats.
-    \item Portabilité: Le système doit support la différence en zone du temps
+    \item [Portabilité] Le système doit support la différence en zone du temps
         et en internalisation, format de présentation des données géologique et
         sa précision.
-\end{itemize}
+\end{description}
 
 
 \subsection{Modélisation UML}
@@ -387,14 +388,14 @@ L'exigence de l'api RESTful est:
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=1\textwidth]{sprint1-webservices-post-sequence}
-  \caption{Diagramme de sequence du service Post Postion en itération 1}
+  \caption{Diagramme de séquence du service Post Position en itération 1}
   \label{fig:sprint1-webservices-post-sequence}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=1\textwidth]{sprint1-webservices-get-sequence}
-  \caption{Diagramme de sequence du service Get Postion en itération 1}
+  \caption{Diagramme de séquence du service Get Position en itération 1}
   \label{fig:sprint1-webservices-get-sequence}
 \end{figure}
 
@@ -403,38 +404,41 @@ Ces caractéristique ont étés adressés pendant l'implémentation du service w
 
 \subsubsection{Performance}
 
-On a minimisé la dépendance en bibliothèques externes et extensions PHP\@.
-De plus, Le nombre des requêtes SQL ont étés minimisés à une seule requêtes pour
+On a minimisé la dépendance en bibliothèques externes et extensions PHP\@. De
+plus, Le nombre des requêtes SQL ont étés minimisés à une seule requêtes pour
 chaque méthode du notre service web.
 
 \subsubsection{Multi-Utilisateurs}
 
-Les positions à enregistrer doivent contenus un id qui doit etre utiliser aussi
+Les positions à enregistrer doivent contenus un id qui doit être utilisé aussi
 pour retirer la dernière position.  On a utilisé diffèrent identificateur pour
 chaque périphériques basé sur le MAC du phone.
 
 \subsubsection{Portabilité}
 
 On a utilisé la format standardisée JSON pour le transfert de données ce qui
-assure que la portabilité des représentations des différents types des données
-(nombres, booléens, strings, $\dotsc$) indépendant du localisation.
+assure la portabilité des représentations des différents types des données
+(nombres, booléens, strings, \ldots) indépendant du l'internationalisation
+(séparateur décimal, \verb|true| vs. \verb|True| vs. \verb|vrai| vs. \verb|yes|
+vs. \verb|y|, \ldots).
 
 Pour le représentation des dates dans le content du requêtes HTTP, on a utilisé
-la format RFC3339 \cite{RFC3339} avec UTC comme la défaut zone du temps, ex:
-\verb|2005-08-15T15:52:01|.
+la format RFC3339 \cite{RFC3339} (basé sur ISO8601 \cite{ISO8601} pour
+l'utilisation dans les protocols du Web) avec UTC comme la défaut zone du
+temps, ex: \verb|2005-08-15T15:52:01Z|.
 
 Pour les en-têtes du requêtes HTTP, la format de représentation des dates est
 RFC1123 \cite{RFC1123}, ex: \verb|Mon, 15 Aug 2005 15:52:01 +0000|.
 
 La format du présentation des positions géologique (latitude et longitude)
-choisi est la même représentation des nombres en JSON avec une précision
-jusqu'à 14 chiffres après le virgule. Les valeurs envoyés doivent respecte
-l'intervalle des diffèrent entités géologiques ($latitude \in [-90, 90]$,
-$longitude \in [-180, 180]$)
+choisie est la même représentation des nombres en JSON avec une précision
+jusqu'à 14 chiffres après le séparateur décimal. Les valeurs envoyés doivent
+respecte l'intervalle des diffèrent entités géologiques ($latitude \in [-90,
+90]$, $longitude \in [-180, 180]$)
 
-\subsubsection{Fiabilité}
+\subsubsection{Stabilité}
 
-Pour assuré la fiabilité d'un service web, on doit vérifier la validité de
+Pour assuré la stabilité d'un service web, on doit vérifier la validité de
 contenu reçu même si envoyé depuis un source de confiance avant de les
 utiliser. La vérification inclue le test de disponibilité des entités
 obligatoires et le test de leurs formats.
@@ -442,11 +446,11 @@ obligatoires et le test de leurs formats.
 \subsubsection{Implémenté la méthode POST}
 
 Dans 1\ier{} phase, on a implémenté la méthode POST du ressource Position.
-La documentation de l'api est dans l'annex~\ref{appendix:sprint1-position-post-doc}.
+La documentation de l'api est dans l'annexe~\ref{appendix:sprint1-position-post-doc}.
 
-\subsubsection{Implementé la Méthod Get}
+\subsubsection{Implémenté la Méthode Get}
 
-La documentation de l'api est dans l'annex~\ref{appendix:sprint1-position-get-doc}.
+La documentation de l'api est dans l'annexe~\ref{appendix:sprint1-position-get-doc}.
 
 \TODO{RESTful API design describtion as http-api-design-en.pdf}
 
@@ -458,8 +462,8 @@ La documentation de l'api est dans l'annex~\ref{appendix:sprint1-position-get-do
 \subsubsection{Produit de l'itération}
 
 A la fin de l'itération 1, nous avons un première produit partiel permettant de
-suivre la position des multiple smartphone et les afficher dans la carte
-maps de notre site web.
+suivre la position des multiple smartphones et les afficher dans la carte de
+notre site web.
 
 \paragraph{Page Web \textquote{Dashboard}}
 
@@ -488,7 +492,7 @@ l'application.
   \label{fig:sprint1-android-screenshot}
 \end{figure}
 
-\subsubsection{Avis du ProductOwner}
+\subsubsection{Avis du Product Owner}
 
 Le Product Owner était ravi des résultats de cette première itération. Il a
 validé donc notre travail et nous a encouragé pour l'élaboration des suivantes
