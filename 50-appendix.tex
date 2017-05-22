@@ -1,9 +1,9 @@
-\section{Annexe}
+\chapter{Annexe}
 \pagebreak
 
-\subsection{Documentation des Services Web d'itération 1}
+\section{Documentation des Services Web d'itération 1}
 
-\subsubsection{Service Post Position}
+\subsection{Service Post Position}
 \label{appendix:sprint1-position-post-doc}
 
 \textbf{POST} \ \texttt{/positions/\textit{:id}}
@@ -26,14 +26,14 @@
     \end{tabular}
 \end{table}
 
-\subparagraph*{Réponse Codes}
+\subsubsection*{Réponse Codes}
 \begin{description}
     \item[\texttt{204 No Content}] Position était crée ou mette à jour avec succès.
     \item[\texttt{400 Bad Request}] Le contenu JSON n'est pas valide.
     \item[\texttt{422 Unprocessable Entity}] Entité obligatoire absente ou format d'une entité est invalide.
 \end{description}
 
-\subparagraph*{Entités de réponse}
+\subsubsection*{Entités de réponse}
 
 n/a
 
@@ -57,7 +57,7 @@ Content-Type: application/json
 \end{listing}
 
 \clearpage
-\subsubsection{Service Get Position}
+\subsection{Service Get Position}
 \label{appendix:sprint1-position-get-doc}
 
 \textbf{GET} \ \texttt{/positions/\textit{:id}}
@@ -106,7 +106,7 @@ Content-Type: application/json
     \end{tabular}
 \end{table}
 
-\subparagraph*{Réponse Codes}
+\subsubsection*{Réponse Codes}
 \begin{description}
     \item[\texttt{200 Success}] Dernière position du périphérique spécifié retournée.
     \item[\texttt{404 Not Found}] Aucune position trouvée pour le périphérique spécifié.
@@ -130,18 +130,18 @@ Last-Modified: Wed, 17 May 2017 14:51:00 GMT
 \end{listing}
 
 \clearpage
-\subsection{Documentation des Services Web d'itération 2}
+\section{Documentation des Services Web d'itération 2}
 
 \TODO{doc}
 
 \clearpage
-\subsection{Documentation des Services Web d'itération 3}
+\section{Documentation des Services Web d'itération 3}
 
 \TODO{doc}
 
 \clearpage
-\section{Annexe}
+\chapter{Annexe}
 
-\subsection{Evolution du qualité du code}
+\section{Evolution du qualité du code}
 
 \TODO{use Hits by Response Code chart from server state to show code quality improvement}
