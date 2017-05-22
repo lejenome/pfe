@@ -39,17 +39,17 @@ Owner}.
         \endlastfoot
 
         \hline
-1 & Recherche trajectoire & Notion de trajectoire & 1 \\ \hline
-2 & Affichage du trajet sur la carte & Trajectoire affichée sur la carte d'un ID & 1 \\ \hline
-3 & Réception des données des ralentisseur &Table qui contient les informations des ralentisseur & 1 \\ \hline
-4 & Responsive design & IHM adaptable & 2 \\ \hline
-5 & Ajout un bouton ralentisseur & Enable, Disabled respecte l'IHM & 2 \\ \hline
-6 & Filtrage des marqueurs dans la carte & légende simplifier & 1 \\ \hline
-7 & chargement de l'image & Image temporaire dans le serveur jusqu'à la validation & 1 \\ \hline
-8 & Enregistrement des informations du rapport dans la BD rapport & Enregistrer les données lors de la validation ou suppression après time-out & 1 \\ \hline
-9 & Recherche test unitaires & Comment simplifier le travail en utilisant le test unitaire cote serveur & 1 \\ \hline
-10 & Recherche framework PHP & & 2 \\ \hline
-11 & Groupement des secousse sur la carte & Regrouper les secousses lors d'un zoom out sur la carte & 3 \\ \hline
+1 & Recherche sur les trajectoires & Comment présenter et enregistrer les trajectoire & 1 \\ \hline
+2 & Affichage du trajet sur la carte & Visualizer le trajectoire d'un périphérique comme un ligne & 1 \\ \hline
+3 & Implementer service d'enregsitrement des ralentisseurs & Enregistrer les données nécessaires pour représenter un ralentisseur & 1 \\ \hline
+4 & Responsive design & IHM de l'applicaiont Android adaptable aux differents résolutions et rotations & 2 \\ \hline
+5 & Implementer l'interface de déclaration un ralentisseur & Boutton rapport activé seulement si la localisation est active & 2 \\ \hline
+6 & Filtrage des marqueurs dans la carte & Légende simplifiée permettant de choisir les types de données affichés dans la carte & 1 \\ \hline
+7 & Implementer service de chargement de l'image & Charger, valider et enregistrer les images dans le serveur & 1 \\ \hline
+8 & Implementer la fonctionnalité de déclaration des rapports & Formulaire avec validation et service d'enregistrement dans le serveur & 1 \\ \hline
+9 & Recherche test unitaires & Comment améliorer la qualité du code et installation d'une solution des tests unitaires & 1 \\ \hline
+10 & Recherche sur les frameworks PHP & Choisir le framework optimal pour notre platform et faire la migration & 2 \\ \hline
+11 & Groupement de secousse sur la carte & Les marquers de secousses regroupés lors d'un zoom out sur la carte et séparer lors d'un zoom in & 3 \\ \hline
     \end{longtable}
 \end{center}
 
@@ -90,40 +90,61 @@ Rihab & 8 & 18 & 144 \\ \hline
         \endlastfoot
 
         \hline
-Recherche trajectoire & Rihab & 5 x 2 \\ \hline
-Affichage du trajet sur la carte& Moez & 13 x 2 \\ \hline
-Réception des données des ralentisseur& Moez & 5 \\ \hline
+Recherche sur les trajectoires & Rihab & 5 x 2 \\ \hline
+Affichage du trajet sur la carte & Moez & 13 x 2 \\ \hline
+Implementer service d’enregsitrement des ralentisseurs & Moez & 5 \\ \hline
 Responsive design & Rihab & 5 x 2 \\ \hline
-Ajout un bouton ralentisseur& Rihab & 13 x 2 \\ \hline
+Implementer l’interface de déclaration d'un ralentisseur & Rihab & 13 x 2 \\ \hline
 Filtrage des marqueurs dans la carte & Rihab & 13 \\ \hline
-chargement de l'image & Moez & 5 \\ \hline
-Enregistrement des informations du rapport dans la BD rapport & Moez & 5 \\ \hline
+Implementer service de chargement de l'image & Moez & 5 \\ \hline
+Implementer la fonctionnalité de déclaration des rapports & Moez & 5 \\ \hline
 Recherche test unitaires & Moez & 5 \\ \hline
-Recherche framework PHP & Moez & 5 \\ \hline
-Groupement des secousse sur la carte & Rihab & 5 \\ \hline
+Recherche sur les frameworks PHP & Moez & 5 \\ \hline
+Groupement de secousse sur la carte & Rihab & 5 \\ \hline
     \end{longtable}
 \end{center}
 
-\subsubsection{Évolution du travail}
+%\subsubsection{Évolution du travail}
 
 \subsection{Présentation des outils utilisés}
 
 \subsubsection{Lumen}
 
-Pour le développement de backend du notre plateforme, la langue du
-programmation PHP a été pré choisi. Mais, on avait la responsabilité de choisir
-les bibliothèques et les frameworks. Pendant la 1\iere{} itération, le but
-était de se familiariser avec la langue PHP\@. Donc, on a utilisé seulement les
-extensions officiel du PHP incluant PDO, \ldots. Dans l'itération suivante, on
-a étudié les frameworks disponibles. A la fin, on a choisi le framework Lumen
-qui est une version simplifié du Laravel pour le développement des API
-\acrshort{RESTful}.
+On a décidé de migrer vers un framework pour le développement du backend du
+notre plateforme dans le but de simplifier et améliorer nos services web. Les
+critères de choisir le framework étaient sa performance, sa stabilité et son
+support de développement des api RESTful. Les 3 frameworks principales:
+\begin{description}
+    \item [Slim] Un macro framework performant avec support de développement
+        des services web de premiere classe. Il manque le support pour
+        développer des sites web classiques.
+    \item [Symfony] Le framework PHP de référence. Il suivre une architecture
+        modulaire et fournit une haute performance. Pour ajouter le support des
+        services web, il nécessite l'ajoute et configurations des multiples des
+        extensions.
+    \item [Lumen] Une version minimal du framework Laravel pour le
+        développement des services web. Étant basé sur Laravel, il profile d'un
+        excellent support des extensions du troisième partie.
+\end{description}
 
-\TODO{Laravel, Symfony, Slim comp}
+Lumen était choisi pour sa simplicité de configurer et de lancer et pour son
+support de migrer vers Laravel en cas ou on aura besoin de supporter le
+développement du site web classique ou autres types de développement.
+
+
+%Pour le développement de backend du notre plateforme, la langue du
+%programmation PHP a été pré choisi. Mais, on avait la responsabilité de choisir
+%les bibliothèques et les frameworks. Pendant la 1\iere{} itération, le but
+%était de se familiariser avec la langue PHP\@. Donc, on a utilisé seulement les
+%extensions officiel du PHP incluant PDO, \ldots. Dans l'itération suivante, on
+%a étudié les frameworks disponibles. A la fin, on a choisi le framework Lumen
+%qui est une version simplifié du Laravel pour le développement des API
+%\acrshort{RESTful}.
 
 \subsection{Mises des normes}
 
-Les critères à respecter pour cette itération sont:
+Outres que les critères de la premiere itération, les nouveaux critères à
+respecter pour cette itération sont:
 
 \paragraph{Qualité d trajectoire}
 Le trajectoire doit être aligné sur le trajet avec bonne précision. Et le
@@ -171,7 +192,36 @@ très élevé.
 
 \subsection{Contributions}
 
-\TODO{Rewrite Frontend js}
+Au cours de l'itération avec l'augment des fonctionnalités ajoutées au
+Dashboard, le code JavaScript devenu complexe, dupliqué et difficile à détecter
+les bugs. On a décidé de réécrire le code avec une architecture modulaire et
+plus moderne.
+
+L'utilisation de la version ECMAScript 6 du JavaScript nous a fourni les
+techniques de base nécessaires comme POO, Template Strings, paramètres par
+défaut, nouvelles variantes de la boucle For et support de la programmation
+asynchrone.
+
+\TODO{add class diagram}
+
+La nouvelle architecture a consisté de:
+\begin{itemize}
+    \item Une classe \verb|Map| contenu tout le logique métier d'initialiser et
+        afficher la carte, registre et filtrer des différents types de données
+        et traiter les différents évènements d'interaction humaine machine.
+    \item Une classe abstract \verb|Layer| contenu tout le logique relié à
+        chaque types des données à visualiser dans la map (téléchargement
+        continuellement les données, génération les marqueurs ou zones, mise à
+        jour des données, définition des filtrages supportés et les
+        informations additionnelles à afficher). Le code commun entre différents
+        layers est implémenté dans cette classe abstract.
+    \item Une classe pour chaque type de données à visualiser (trajectoire,
+        ralentisseurs, secousses, \ldots) qui hérite du class \verb|Layer|. La
+        plupart du temps, on a juste besoin de définir l'URL du resource, la
+        listes des icons et des filtrages possibles.
+    \item Un espace de noms \verb|Config| contenu les variables de
+        configuration.
+\end{itemize}
 
 \subsection{Revue de cette itération}
 
@@ -183,13 +233,12 @@ caractérisent et implémenté le système de gestion des rapport.
 \paragraph{Page \textquote{Rapport}}
 
 Dans cette page, nous donne la main à l'utilisateur pour faire un petit rapport
-comme expliqué dans la figure~\ref{fig:sprint2-rapport-screenshot1}. Cette
-page permet à l'utilisateur d'envoyer son rapport au serveur pour
-l'enregistrer.
+comme expliqué dans la figure~\ref{fig:sprint2-rapport-screenshot1}. Cette page
+permet à l'utilisateur d'envoyer son rapport au serveur pour l'enregistrer.
 La position du rapport est détecté automatique à travers l'api JavaScript
 standard Location. On donne la main à l'utilisateur pour changer la location
-manuellement en glissant le marqueur ou en changer les inputs. Le chargement
-de l'image est obligatoire.
+manuellement en glissant le marqueur ou en changer les inputs. Le chargement de
+l'image est obligatoire.
 
 \TODO{Cette obligation était éliminer en review}
 
@@ -240,8 +289,8 @@ pour faciliter la consultation de la carte.
 
 \paragraph{Application Mobile \textquote{CityWatch}}
 
-Dans notre application, l'utilisateur doit s'inscrit pour accéder à 
-l'application 
+Dans notre application, l'utilisateur doit s'inscrit pour accéder à
+l'application.
 
 \TODO{Description}
 
@@ -263,12 +312,12 @@ l'application
 \caption{Interface de l'application au deuxième itération}
 \end{figure}
 
-\subsubsection{Avis du ProductOwner}
-A la fin de cette première itération, nous avons présenté au ”Product Owner” le produit
-obtenu. Le ”Product-Owner” a exprimé sa satisfaction du travail.
+\subsubsection{Avis du Product Owner}
 
-\subsubsection{Burndown de l’itération}
+A la fin de cette première itération, nous avons présenté au \textquote{Product
+Owner} le produit obtenu. Le \textquote{Product Owner} a exprimé sa
+satisfaction du travail.
 
-\subsubsection*{}
+\subsubsection{Graphique d'avancement de l'itération}
+
 \input{figures/sprint2-burndown}
-\clearpage
