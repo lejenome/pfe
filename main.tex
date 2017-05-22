@@ -56,6 +56,7 @@ final,
 \usepackage{graphicx}
 \graphicspath{{figures/}, {diagrams/}}
 \usepackage[update,prepend]{epstopdf}
+\usepackage{background}
 \usepackage{subcaption}
 %\usepackage{svg}
 \usepackage{array}
@@ -189,6 +190,7 @@ final,
 \newcommand{\HDONE}[2]{\setlength{\marginparwidth}{3cm}\colorbox{green}{#1}\todo[done,backgroundcolor=green]{#2}}
 
 \begin{document}
+\SetBgContents{}
 
 \input{title}
 
@@ -250,9 +252,11 @@ final,
 
 \cleardoublepage
 \part{Introduction Générale}
+\backgroundsetup{contents=WIP,scale=8,position={0.9,-1.5},opacity=0.6}
 \input{introduction}
 
 \cleardoublepage
+\SetBgContents{}
 \part{Contexte du Projet}
 \input{cadreprojet}
 
@@ -261,7 +265,9 @@ final,
 \input{section0}
 \include{section1}
 \include{section2}
+\backgroundsetup{contents=WIP,scale=8,position={0.9,-1.5},opacity=0.6}
 \include{section3}
+\SetBgContents{}
 
 %%%% INCLUDE CHAPTERS
 
