@@ -7,7 +7,7 @@ a4paper,
 onecolumn,
 titlepage,
 final,
-]{article} % {scrartcl}
+]{report} % {scrartcl}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -126,9 +126,9 @@ final,
     left=3.5cm,
     right=2.5cm,
     paper=a4paper, % Change to letterpaper for US letter
-    inner=2.5cm, % Inner margin
-    outer=3.8cm, % Outer margin
-    bindingoffset=.5cm, % Binding offset
+    %inner=2.5cm, % Inner margin
+    %outer=3.8cm, % Outer margin
+    %bindingoffset=.5cm, % Binding offset
     top=3cm, % Top margin
     bottom=2.5cm, % Bottom margin
     %showframe, % Uncomment to show how the type block is set on the page
@@ -141,7 +141,7 @@ final,
 \usepackage{titlesec}
 \newcommand{\hsp}{\hspace{20pt}}
 \definecolor{gray75}{gray}{0.75}
-\titleformat{\part}[hang]{\Huge\bfseries}{\thepart\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries\scshape}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries\scshape}
 \titleformat{\section}[block]{\LARGE\bfseries}{\thesection \hsp {---}\hsp}{0pt}{\LARGE\bfseries}
 \titleformat{\subsection}[block]{\Large\bfseries}{\thesubsection \ }{0pt}{\Large \bfseries}
 \titleformat{\subsubsection}[block]{\large\bfseries}{\thesubsubsection \ }{0pt}{\large \bfseries}
@@ -182,12 +182,12 @@ final,
 }
 
 \usepackage{todonotes}
-\newcommand{\TODO}[1]{\setlength{\marginparwidth}{3cm}\todo{#1}}
-\newcommand{\HTODO}[2]{\setlength{\marginparwidth}{3cm}\colorbox{yellow}{#1}\todo{#2}}
-\newcommand{\FIXME}[1]{\setlength{\marginparwidth}{3cm}\todo[backgroundcolor=red]{#1}}
-\newcommand{\HFIXME}[2]{\setlength{\marginparwidth}{3cm}\colorbox{pink}{#1}\todo[backgroundcolor=red]{#2}}
-\newcommand{\DONE}[1]{\setlength{\marginparwidth}{3cm}\todo[done]{#1}}
-\newcommand{\HDONE}[2]{\setlength{\marginparwidth}{3cm}\colorbox{green}{#1}\todo[done,backgroundcolor=green]{#2}}
+\newcommand{\TODO}[1]{\setlength{\marginparwidth}{2cm}\todo{#1}}
+\newcommand{\HTODO}[2]{\setlength{\marginparwidth}{2cm}\colorbox{yellow}{#1}\todo{#2}}
+\newcommand{\FIXME}[1]{\setlength{\marginparwidth}{2cm}\todo[backgroundcolor=red]{#1}}
+\newcommand{\HFIXME}[2]{\setlength{\marginparwidth}{2cm}\colorbox{pink}{#1}\todo[backgroundcolor=red]{#2}}
+\newcommand{\DONE}[1]{\setlength{\marginparwidth}{2cm}\todo[done]{#1}}
+\newcommand{\HDONE}[2]{\setlength{\marginparwidth}{2cm}\colorbox{green}{#1}\todo[done,backgroundcolor=green]{#2}}
 
 \begin{document}
 \SetBgContents{}
@@ -251,17 +251,17 @@ final,
 \pagenumbering{arabic}
 
 \cleardoublepage
-\part{Introduction Générale}
+\chapter{Introduction Générale}
 \backgroundsetup{contents=WIP,scale=8,position={0.9,-1.5},opacity=0.6}
 \input{10-introduction}
 
 \cleardoublepage
 \SetBgContents{}
-\part{Contexte du Projet}
+\chapter{Contexte du Projet}
 \input{20-cadreprojet}
 
 \cleardoublepage
-\part{Itérations}
+\chapter{Itérations}
 \input{30-sprint0}
 \include{31-sprint1}
 \include{32-sprint2}
@@ -289,7 +289,7 @@ final,
 
 % \printglossary[type=\acronymtype]
 %\addcontentsline{toc}{section}{Glossaire des Acronymes}
-\glossarystyle{altlistgroup}
+\glossarystyle{listgroup}
 \glsaddall
 \printglossaries
 
