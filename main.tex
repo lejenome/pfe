@@ -160,7 +160,7 @@ final,
 %\numberwithin{table}{section}      % Tablenumbering: section.tab#
 
 \makeglossaries
-\input{glossary}
+\input{51-glossary}
 
 \title{La Platforme CityWatch - Memoire de Projet de Fin d'Etudes}
 \author{Moez Bouhlel}
@@ -192,16 +192,16 @@ final,
 \begin{document}
 \SetBgContents{}
 
-\input{title}
+\input{00-title}
 
 \pagestyle{empty}
 \pagenumbering{roman}
 
-\include{quote}
+\include{01-quote}
 \cleardoublepage
-\include{abstract}
-\include{dedicaces}
-\include{merci}
+\include{02-abstract}
+\include{03-dedicaces}
+\include{04-merci}
 \fancypagestyle{plain}{%
     \fancyhf{}
     \rfoot{\thepage}
@@ -253,20 +253,20 @@ final,
 \cleardoublepage
 \part{Introduction Générale}
 \backgroundsetup{contents=WIP,scale=8,position={0.9,-1.5},opacity=0.6}
-\input{introduction}
+\input{10-introduction}
 
 \cleardoublepage
 \SetBgContents{}
 \part{Contexte du Projet}
-\input{cadreprojet}
+\input{20-cadreprojet}
 
 \cleardoublepage
 \part{Itérations}
-\input{section0}
-\include{section1}
-\include{section2}
+\input{30-sprint0}
+\include{31-sprint1}
+\include{32-sprint2}
 \backgroundsetup{contents=WIP,scale=8,position={0.9,-1.5},opacity=0.6}
-\include{section3}
+\include{33-sprint3}
 \SetBgContents{}
 
 %%%% INCLUDE CHAPTERS
@@ -275,7 +275,7 @@ final,
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ \ --\ \ #1}}
 %\appendix
 \begin{appendices}
-\input{appendix}
+\input{50-appendix}
 \end{appendices}
 
 \cleardoublepage
