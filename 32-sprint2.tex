@@ -1,5 +1,5 @@
 \section{Itération~2:~(~3/8/2017~-~3/28/2017~)}
-
+\subsection{Introduction}
 \subsection{L'objectif du sprint}
 
 La méthodologie Scrum a eu un impact positif sur les développeurs, du point de
@@ -296,26 +296,28 @@ pour faciliter la consultation de la carte.
 \paragraph{Application Mobile \textquote{CityWatch}}
 
 Dans notre application, l'utilisateur doit s'inscrit pour accéder à
-l'application.
+l'application.les données saisies dans le formulaire d'inscription (nom d'utilisation,mot de passe) seront
+envoyées et stockées en toute sécurité et confidentialité .Lorsqu'un utilisateur tend à se connecter ,il 
+tape son mot de passe déjà saisies dans le formulaire d'inscription,alors une vérification avec le serveur 
+doit avoir lieu.
 
-\TODO{Description}
-
+NB:Pour chaque nom d'utilisateur ajouté, le serveur vérifie l'unicité de ce dernier.\\
 \begin{figure}[htbp]
     \begin{subfigure}{.5\textwidth}
     \centering
   \centering
   \includegraphics[width=.7\linewidth]{sprint2-android-screenshot1}
-  \caption{Activity login}
+  \caption{Activité du confection}
   \label{fig:sprint2-android-screenshot1}
 \end{subfigure}
 \begin{subfigure}{.5\textwidth}
     \centering
   \centering
   \includegraphics[width=.7\linewidth]{sprint2-android-screenshot2}
-  \caption{Activity sing up}
+  \caption{Activité d'inscription}
   \label{fig:sprint2-android-screenshot2}
 \end{subfigure}
-\caption{Interface de l'application au deuxième itération}
+\caption{Formulaire d'inscription}
 \end{figure}
 
 \subsubsection{Avis du Product Owner}
@@ -327,3 +329,33 @@ satisfaction du travail.
 \subsubsection{Graphique d'avancement de l'itération}
 
 \input{figures/sprint2-burndown}
+\subsection{Conclusion}
+\begin{center}
+    \begin{longtable}{| l | l |}
+        \caption{Liste des tâches réalisées de deuxième itération }
+        \label{tab:sprint2-estimation} \\
+
+        \hline
+        \textbf{Les tâches} & \textbf{Taux de réalisation} \\ \hline
+        \endhead
+
+        \hline \multicolumn{2}{|r|}{{Continué en page suivante$\dotsc$}} \\ \hline
+        \endfoot
+
+        \hline \hline
+        \endlastfoot
+
+        \hline
+Recherche sur les trajectoires & Effectué 100\% \\ \hline
+Affichage du trajet sur la carte & Effectué 100\% \\ \hline
+Implementer service d’enregsitrement des ralentisseurs & Effectué 100\% \\ \hline
+Responsive design & Effectué 80\% \\ \hline
+Implementer l’interface de déclaration d'un ralentisseur & Effectué 100\% \\ \hline
+Filtrage des marqueurs dans la carte & Effectué 100\% \\ \hline
+Implementer service de chargement de l'image & Effectué 80\% \\ \hline
+Implementer la fonctionnalité de déclaration des rapports & Effectué 100\% \\ \hline
+Recherche test unitaires & Effectué 80\% \\ \hline
+Recherche sur les frameworks PHP & Effectué 100\% \\ \hline
+Groupement de secousse sur la carte & Effectué 100\% \\ \hline
+    \end{longtable}
+\end{center}
