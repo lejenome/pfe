@@ -1,45 +1,35 @@
-\section{Itération~0:~(~2/20/2017~-~2/22/2017~)}
+\section[Itération 0: ( 2/20/2017 - 2/22/2017 )]{Itération~0:~\textup{\textto{(~2/20/2017~-~2/22/2017~)}}}
 
 \subsection*{Introduction}
+
 Avant de commencer la première itération du Scrum, une période de temps à été
-consacrée pour préparer ce qui est nécessaire pour le lancement du projet dans des
-bonnes conditions. 
-Cette période est souvent nommée l'itération 0 du projet.
-Elle est dédiée généralement à la recherche bibliographique, aux choix
-technologiques et à la mise en place de l'environnement de développement.
-Dans cette itération nous définissons le Backlog général 
-de notre projet, ainsi que l'environnement du travail que nous avons besoin.
+consacrée pour préparer ce qui est nécessaire pour le lancement du projet dans
+des bonnes conditions. Cette période est souvent nommée l'itération 0 du
+projet. Elle est dédiée généralement à la recherche bibliographique, aux choix
+technologiques et à la mise en place de l'environnement de développement. Dans
+cette itération nous définissons le Backlog général de notre projet, ainsi que
+l'environnement du travail que nous avons besoin.
 
 \subsection{Backlog général}
 
 La première étape de la méthode Scrum consiste à préparer un carnet du produit
 (Product Backlog) qui présente la liste des tâches à effectuer durant le
-développement du projet qui sera répartie en des itérations. Le rôle du
-Product Owner est important dans cette phase de développement parce qu'il devra
-faire l'exercice de prioriser ses demandes selon des critères respectant la
-mission et les objectifs de son produit. En précisant la valeur de priorité, il
-estime l'impact et le retour sur investissement qu'aura chacun des items dans
-le carnet du produit. Il y a donc effectivement eu un gros travail d'échanges
-et discussions avec le client pour comprendre tout le cahier des charge
-initial, C'est comme ça que le Backlog a été défini.
+développement du projet qui sera répartie en des itérations. Le rôle du Product
+Owner est important dans cette phase de développement parce qu'il devra faire
+l'exercice de prioriser ses demandes selon des critères respectant la mission
+et les objectifs de son produit. En précisant la valeur de priorité, il estime
+l'impact et le retour sur investissement qu'aura chacun des items dans le
+carnet du produit. Il y a donc effectivement eu un gros travail d'échanges et
+discussions avec le client pour comprendre tout le cahier des charge initial,
+C'est comme ça que le Backlog a été défini.
 
-Les valeurs d'affaires sont définies comme suit :
+Les valeurs d'affaires sont définies comme suit:
+
 \begin{description}[align=right,labelwidth=1cm]
-    \item [1] 
-    \begin{itemize}
-     \item  Définie une haute priorité, affectée pour les spécifications
+    \item [1:] Définie une haute priorité, affectée pour les spécifications
         importantes, exigées pour le produit.
-    \end{itemize}
-
-    \item [2] 
-    \begin{itemize}
-     \item Définie une priorité importante mais pas exigée.
-    \end{itemize}
-    \item [3]
-      \begin{itemize}
-     \item  Définie une priorité moyenne ou parfois faible.
-    \end{itemize}
-   
+    \item [2:] Définie une priorité importante mais pas exigée.
+    \item [3:] Définie une priorité moyenne ou parfois faible.
 \end{description}
 
 La figure~\ref{fig:product-backlog} présente une version simplifiée du Product
@@ -51,10 +41,13 @@ participation par les cercles du texte souligné.
 Le tableau~\ref{tab:product-backlog} représente la liste plus détaillé des cas
 d'utilisations que nous allons implémentés pendant les 3 premières itérations.
 Ils suivent la forme:
+
 \begin{displayquote}
     En tant que \textbf{X}, je peux \textbf{Y} Afin d'\textbf{Z}.
 \end{displayquote}
+
 ou aussi la forme:
+
 \begin{displayquote}
     En tant que \textbf{X}, je veux qu'il soit possible de \textbf{Y} pour
     \textbf{Z}.
@@ -68,20 +61,20 @@ toujours l'utilisateur.
     \footnotesize
     \setlength\LTleft{-20pt}
     \begin{longtable}{| l | p{3.5cm} | p{5.5cm} | p{5cm} | l |}
- \caption{Backlog du Produit}
- \label{tab:product-backlog} \\
+        \caption{Backlog du Produit}
+        \label{tab:product-backlog} \\
 
- \hline
- \textbf{ID} & \textbf{Cas d'utilisation} & \textbf{Je veux qu'il soit possible de} & \textbf{Pour} & \textbf{Priorité} \\ \hline
- \endhead
+        \hline
+        \textbf{ID} & \textbf{Cas d'utilisation} & \textbf{Je veux qu'il soit possible de} & \textbf{Pour} & \textbf{Priorité} \\ \hline
+        \endhead
 
- \hline \multicolumn{5}{|r|}{{Continué en page suivante$\dotsc$}} \\ \hline
- \endfoot
+        \hline \multicolumn{5}{|r|}{{Continué en page suivante$\dotsc$}} \\ \hline
+        \endfoot
 
- \hline \hline
- \endlastfoot
+        \hline \hline
+        \endlastfoot
 
-\hline
+        \hline
 %1 & Gestion du Trajectoire & démarrer le localisation & Avoir un feedback dans l'application et sur le site web & 1 \\ \cline{3-5}
 %  &                        & arrêter le localisation & Avoir un feedback dans l'application & 1 \\ \hline
 %2 & Gestion de Rapports    & choisir entre une variété de problèmes à déclarer depuis l'application & Avoir un feedback sur le site web & 1 \\ \cline{3-5}
@@ -104,12 +97,12 @@ toujours l'utilisateur.
 &                          & Accéder à formulaire depuis l'application mobile & rapporter instantané et facilement & 2 \\ \cline{3-5}
 &                          & Activer/Désactiver le groupement des marqueurs & Avoir une vision sur le nombre des rapports plus claire & 3 \\ \hline
 3 & Tableau de bord (Dashboard) & Consulter le dashboard & Visualiser diffèrent type de données comme marqueurs et zones & 1 \\ \cline{3-5}
-&                               & Manipuler la légende    & Filtrer les données affichés & 1 \\ \hline
+&                               & Manipuler la légende   & Filtrer les données affichés & 1 \\ \hline
 4 & Comptes                & Créer un compte & Pouvoir enregistrer des données personnels (trajectoire) & 3 \\ \cline{3-5}
 &                          & Se connecter & Accéder au données routières privées (trajectoire) & 3 \\ \cline{3-5}
 &                          & Visiter le dashboard sans compte & Consulter une version minimale des fonctionnalités & 3 \\
-\hline
-\end{longtable}
+        \hline
+    \end{longtable}
 \end{center}
 
 \subsection{Préparation de l'environnement du travail}
@@ -117,12 +110,13 @@ toujours l'utilisateur.
 \subsubsection{Environnement logiciel}
 
 La réalisation de ce projet nécessite l'ensemble de ces logiciels et
-bibliothèques que nous allons sites :
+bibliothèques que nous allons sites:
 
 \paragraph{Android}
 
 On a choisi du supporter le système Android comme notre première plateforme. Ce
 choix était basé sur différents aspects:
+
 \begin{itemize}
     \item La part de marché des smartphones et tablettes Android.
     \item L'ouverture de la plateforme, et l'accessibilité aux différentes
@@ -134,7 +128,7 @@ Android Studio\footnote{Android Studio v2.3} était le choix naturel pour le
 développement d'application grâce au support officiel du Google et les
 fonctionnalités héritées de l'ide IntelliJ IDEA de JetBrains comme un
 concepteur d’interface utilisateur pour des résolutions variées simultanément,
-débogueur, \ldots
+débogueur, \ldots.
 
 %\subparagraph{Android studio}
 %est un environnement de développement pour développer des applications Android.
@@ -148,7 +142,9 @@ débogueur, \ldots
 En se basant sur les conseils du Product Owner et aux limites d'environnement
 de développement dont le serveur supporte seulement PHP, on a choisi la langue
 de programmation PHP\footnote{PHP 7.0}.
+
 Les points fort de la langue PHP:
+
 \begin{itemize}
     \item Une langue très répondu dans le développement Web, Elle a une
         grande communauté des développeurs.
@@ -162,6 +158,7 @@ Les points fort de la langue PHP:
 \end{itemize}
 
 Les points faibles de la langue PHP:
+
 \begin{itemize}
     \item Gestion d'erreurs très souple par défaut même si les erreurs sont
         fatales.
@@ -172,7 +169,7 @@ Les points faibles de la langue PHP:
 L'ide choisie pour le développement PHP est PHPStorm\footnote{PHPStorm 2017.1},
 un IDE multiplatforme de JetBrains. Il regroupe sous une interface conviviale
 un éditeur de texte avancé et intelligent, un interpréteur et un
-débogueur\ldots.  Vim a été aussi utilisé avec un ensemble des extensions pour
+débogueur\ldots. Vim a été aussi utilisé avec un ensemble des extensions pour
 enrichir ses fonctionnalités.
 
 %\paragraph{Composer}
@@ -184,8 +181,8 @@ enrichir ses fonctionnalités.
 \paragraph{Technologies du Web}
 
 Les technologies Web modernes nous ont permis de créer une application web
-interactive et dynamique rapidement et aisément sans besoin d'un backend
-pour générer le contenu.
+interactive et dynamique rapidement et aisément sans besoin d'un backend pour
+générer le contenu.
 
 \begin{description}
     \item [HTML 5.1] On a utilisé les tags sémantique, les nouveaux types et
@@ -206,49 +203,59 @@ date), Google Chrome v50+, Edge v14+, Sfari 10+ (sans support d'input de type
 date), Opera 37}. Le support des autres anciennes versions et des autres
 navigateurs était possible en demande à travers les transcompilateurs du
 ECMAScript 2016+ à ECMAScript 5.1 comme Babel ou Traceur même si il n'était pas
-une priorité pendant notre phase de développement.  Quelques fonctionnalités de
+une priorité pendant notre phase de développement. Quelques fonctionnalités de
 ECMAScript 2016 n'étaient pas utilisées car elles ne sont pas encore
 implémentées par aucun des navigateurs principales comme les Modules.
 
 \subsubsection{environnements matériels}
 
-Pour le développement de ce projet, il était demandé d'avoir :
+Pour le développement de ce projet, il était demandé d'avoir:
+
 \begin{itemize}
- \item Serveur Local pour les tests
-     \begin{itemize}
-         \item Windows 10
-         \item Wamp 3.0
-         \item Apache 2.4
-         \item PHP 7.0
-         \item MySQL 5.7
-     \end{itemize}
- \item Serveur de production:
-     \begin{itemize}
-      \item Linux
-      \item Accès FTP
-      \item Apache 2.4
-      \item PHP 7.0
-      \item MySQL 5.5
-     \end{itemize}
+    \item Serveur Local pour les tests
+        \begin{itemize}
+            \item Windows 10
+            \item Wamp 3.0
+            \item Apache 2.4
+            \item PHP 7.0
+            \item MySQL 5.7
+        \end{itemize}
+    \item Serveur de production:
+        \begin{itemize}
+            \item Linux
+            \item Accès FTP
+            \item Apache 2.4
+            \item PHP 7.0
+            \item MySQL 5.5
+        \end{itemize}
 \end{itemize}
+
 \subsection{Étude de l'existence de notre projet}
-L'idée de notre projet n'est pas comme les autres, tout simplement c'est une idée de startup que
-nous allons l'exploiter dans le marché .C'est pour ce là que nous avons étudié les applications similaires
-qui captent les positions des utilisateurs.
+
+L'idée de notre projet n'est pas comme les autres, tout simplement c'est une
+idée de startup que nous allons l'exploiter dans le marché. C'est pour ce là
+que nous avons étudié les applications similaires qui captent les positions des
+utilisateurs.
+
 \subsubsection{Waze}
+
 \paragraph{Caractéristiques communes}
+
 \begin{itemize}
- \item Détection de l'embouteillage.
- \item Les utilisateurs peuvent utiliser leur téléphone pour contourner passivement le trafic 
- et d'autres données routières. Ils peuvent également jouer un rôle plus actif en partageant 
- les rapports routiers sur les accidents, les pièges policiers ou tout autre danger en cours dans la route.
- \item Informer l'utilisateur en avance des incidents trouvé dans la route suivi.
+    \item Détection de l'embouteillage.
+    \item Les utilisateurs peuvent utiliser leur téléphone pour contourner
+        passivement le trafic et d'autres données routières. Ils peuvent
+        également jouer un rôle plus actif en partageant les rapports routiers
+        sur les accidents, les pièges policiers ou tout autre danger en cours
+        dans la route.
+    \item Informer l'utilisateur en avance des incidents trouvé dans la route
+        suivi.
 \end{itemize}
 
 \subsection{Conclusion}
 
 L'itération 0 nous à permis de préparer le terrain pour une bonne entame de
-développement. Indépendamment la mise en place des environnement de travail et les
-formations que nous avons suivi sur les technologies.
-Pendant cette itération nous avons élaboré le carnet de notre projet avec la collaboration du Product
-Owner.
+développement. Indépendamment la mise en place des environnement de travail et
+les formations que nous avons suivi sur les technologies. Pendant cette
+itération nous avons élaboré le carnet de notre projet avec la collaboration du
+Product Owner.
