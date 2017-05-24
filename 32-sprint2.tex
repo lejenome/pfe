@@ -4,35 +4,33 @@
 
 \subsection{L'objectif du sprint}
 
-L'objectif de cette itération vise trois environnements.Nous allons ajouter une nouvelle
-vision par rapport à l'itération précédentes.
+L'objectif de cette itération vise trois environnements. Nous allons ajouter
+une nouvelle vision par rapport à l'itération précédentes.
 
 Ils sont comme suit:
 
-\begin{itemize}
- \item \textbf{Smart phone :} L'ajout de nouvelles fonctionnalités comme :
-	\begin{itemize}
-	 \item La capture de l'embouteillage
-	 \item La détection des secousses
-	 \item La déclaration des ralentisseurs
-	\end{itemize}
-\item \textbf{Dashboard :} Enrichir la carte par :
-	\begin{itemize}
-	 \item Des nouveaux marqueurs qui spécifient chaque type de rapport ajouté.
-	 \item Une légende pour le filtrage des marqueurs. 
-	\end{itemize}
-\item \textbf{Rapport :} La création d'une page rapport qui permet à l'utilisateur de:
-	\begin{itemize}
-	 \item  Faire une description sur le type du rapport(violence, accident, déchet...) 
-	 \item  Charger une image 
-	 \item  Choisir sa position automatiquement ou manuellement
-	\end{itemize}
-\end{itemize}
-
-
-
-
-
+\begin{description}
+    \item [Smartphone] L'ajout de nouvelles fonctionnalités comme:
+        \begin{itemize}
+            \item La capture de l'embouteillage.
+            \item La détection des secousses.
+            \item La déclaration des ralentisseurs.
+        \end{itemize}
+    \item [Dashboard] Enrichir la carte par:
+        \begin{itemize}
+            \item Des nouveaux marqueurs qui spécifient chaque type de rapport
+                ajouté.
+            \item Une légende pour le filtrage des marqueurs.
+        \end{itemize}
+    \item [Rapport] La création d'une page rapport qui permet à l'utilisateur
+        de:
+        \begin{itemize}
+            \item Faire une description sur le type du rapport(violence,
+                accident, déchet, \ldots)
+            \item Charger une image.
+            \item Choisir sa position automatiquement ou manuellement.
+        \end{itemize}
+\end{description}
 
 %La méthodologie Scrum a eu un impact positif sur les développeurs, du point de
 %vue social, elle a valorisé le travail en équipe, la solidarité, le respect et
@@ -146,6 +144,7 @@ On a décidé de migrer vers un framework pour le développement du backend du
 notre plateforme dans le but de simplifier et améliorer nos services web. Les
 critères de choisir le framework étaient sa performance, sa stabilité et son
 support de développement des api RESTful. Les 3 frameworks principales étudiés:
+
 \begin{description}
     \item [Slim] Un macro framework performant avec support de développement
         des services web de premiere classe. Il manque le support pour
@@ -243,6 +242,7 @@ asynchrone.
 
 La nouvelle architecture est décrite dans le
 diagram~\ref{fig:sprint2-dashboard-class}. Elle consiste de:
+
 \begin{itemize}
     \item Une classe \verb|Map| contenu tout le logique métier d'initialiser et
         afficher la carte, registre et filtrer des différents types de données
@@ -265,22 +265,23 @@ diagram~\ref{fig:sprint2-dashboard-class}. Elle consiste de:
 
 \subsubsection{Produit de l'itération}
 
-A la fin de l'itération 2,nous détaillons les différentes spécifications qui
+A la fin de l'itération 2, nous détaillons les différentes spécifications qui
 caractérisent et implémenté le système de gestion des rapport.
 
 \paragraph{Page \textquote{Rapport}}
 
 Dans cette page, nous donne la main à l'utilisateur pour faire un petit rapport
 comme expliqué dans la figure~\ref{fig:sprint2-rapport-screenshot1}. Cette page
-permet à l'utilisateur d'envoyer son rapport au serveur pour l'enregistrer.
-La position du rapport est détecté automatique à travers l'api JavaScript
-standard Location. On donne la main à l'utilisateur pour changer la location
+permet à l'utilisateur d'envoyer son rapport au serveur pour l'enregistrer. La
+position du rapport est détecté automatique à travers l'api JavaScript standard
+Location. On donne la main à l'utilisateur pour changer la location
 manuellement en glissant le marqueur ou en changer les inputs. Le chargement de
 l'image est obligatoire.
 
 \TODO{Cette obligation était éliminer en review}
 
 L'envoie du rapport est éxecuté en deux phases:
+
 \begin{enumerate}
     \item Chargement de l'image au serveur. Si le type et le taille de l'image
         est valide, le serveur retourne un id unique (UUID) de l'image.
@@ -327,28 +328,32 @@ pour faciliter la consultation de la carte.
 \paragraph{Application Mobile \textquote{CityWatch}}
 
 Dans notre application, l'utilisateur doit s'inscrit pour accéder à
-l'application.les données saisies dans le formulaire d'inscription (nom d'utilisation,mot de passe) seront
-envoyées et stockées en toute sécurité et confidentialité. Lorsqu'un utilisateur tend à se connecter ,il
-tape son mot de passe déjà saisies dans le formulaire d'inscription,alors une vérification avec le serveur
-doit avoir lieu.
+l'application. Les données saisies dans le formulaire d'inscription (nom
+d'utilisation, mot de passe) seront envoyées et stockées en toute sécurité et
+confidentialité. Lorsqu'un utilisateur tend à se connecter, il tape son mot de
+passe déjà saisies dans le formulaire d'inscription, alors une vérification
+avec le serveur doit avoir lieu.
 
-NB:Pour chaque nom d'utilisateur ajouté, le serveur vérifie l'unicité de ce dernier.\\
+\textbf{Note:} Pour chaque nom d'utilisateur ajouté, le serveur vérifie
+l'unicité de ce dernier.
+
 \begin{figure}[htbp]
     \begin{subfigure}{.5\textwidth}
-    \centering
-  \centering
-  \includegraphics[width=.7\linewidth]{sprint2-android-screenshot1}
-  \caption{Activité du confection}
-  \label{fig:sprint2-android-screenshot1}
-\end{subfigure}
-\begin{subfigure}{.5\textwidth}
-    \centering
-  \centering
-  \includegraphics[width=.7\linewidth]{sprint2-android-screenshot2}
-  \caption{Activité d'inscription}
-  \label{fig:sprint2-android-screenshot2}
-\end{subfigure}
-\caption{Formulaire d'inscription}
+        \centering
+        \centering
+        \includegraphics[width=.7\linewidth]{sprint2-android-screenshot1}
+        \caption{Activité du confection}
+        \label{fig:sprint2-android-screenshot1}
+    \end{subfigure}
+
+    \begin{subfigure}{.5\textwidth}
+        \centering
+        \centering
+        \includegraphics[width=.7\linewidth]{sprint2-android-screenshot2}
+        \caption{Activité d'inscription}
+        \label{fig:sprint2-android-screenshot2}
+    \end{subfigure}
+    \caption{Formulaire d'inscription}
 \end{figure}
 
 \subsubsection{Avis du Product Owner}
