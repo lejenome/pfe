@@ -9,61 +9,55 @@ ylabel=$Heures\ restantes$,
 grid=both,
 grid style={line width=.1pt, draw=gray!10},
 width=0.9\textwidth,
-height=10cm,
+height=8cm,
 %major grid style={line width=.2pt,draw=gray!50},
 ]
-\addplot[color=black,mark=*] coordinates {
-        (0,144)
-        (18,0)
+      \addplot[mark=*,cyan] plot coordinates {%
+
+              (0, 447)
+              (1, 421)
+              (2, 395)
+              (3, 369)
+              (4, 343)
+              (5, 317)
+              (6, 291)
+              (7, 265)
+              (8, 239)
+              (9, 213)
+              (10, 187)
+              (11, 161)
+              (12, 135)
+              (13, 109)
+              (14, 83)
+              (15, 57)
+              (16, 31)
+              (17, 5)
+              (18, 0)
     };
     \addlegendentry{Temps Idéal}
 
-    \addplot[mark=*,red] plot coordinates {
-        (0, 144)
-        (1, 138)
-        (2, 130)
-        (3, 122)
-        (4, 111)
-        (5, 104)
-        (6, 95)
-        (7, 85)
-        (8, 55)
-        (9, 55)
-        (10, 42)
-        (11, 33)
-        (12, 33)
-        (13, 33)
-        (14, 21)
-        (15, 15)
-        (16, 13)
-        (17, 2)
-        (18, 0)
-       
+    \addplot[mark=*,red] plot coordinates {%
+        (0, 461)
+        (1, 397)
+        (2, 344)
+        (3, 316)
+        (4, 271)
+        (5, 247.5)
+        (6, 227.5)
+        (7, 216.5)
+        (8, 208.5)
+        (9, 185.5)
+        (10, 170.5)
+        (11, 152.5)
+        (12, 119.5)
+        (13, 87.5)
+        (14, 62.5)
+        (15, 38.5)
+        (16, 38.5)
+        (17, 38.5)
+        (18, 38.5)
     };
-    \addlegendentry{Rihab}
-      \addplot[mark=*,cyan] plot coordinates {
-       (0, 144)
-        (1, 138)
-        (2, 130)
-        (3, 125)
-        (4, 122)
-        (5, 115)
-        (6, 111)
-        (7, 108)
-        (8, 100)
-        (9, 92)
-        (10, 88)
-        (11, 88)
-        (12, 88)
-        (13, 80)
-        (14, 68)
-        (15, 55)
-        (16, 42)
-        (17, 30)
-        (18, 0)
-       
-    };
-    \addlegendentry{Moez}
+    \addlegendentry{Temps Réel}
 \end{axis}
 \end{tikzpicture}
 \caption{Graphique d'avancement - Itération 3}
