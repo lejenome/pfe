@@ -152,6 +152,7 @@ final,
 \usepackage{titlesec}
 \newcommand{\hsp}{\hspace{20pt}}
 \definecolor{gray75}{gray}{0.75}
+\titleformat{\part}[block]{\Huge\bfseries}{\thepart\\}{0pt}{\centering\Huge\bfseries\scshape}
 \titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries\scshape}
 \titleformat{\section}[block]{\LARGE\bfseries}{\thesection \hsp {---}\hsp}{0pt}{\LARGE\bfseries}
 \titleformat{\subsection}[block]{\Large\bfseries}{\thesubsection \ }{0pt}{\Large \bfseries}
@@ -255,14 +256,17 @@ final,
 \fancyhf{}
 \renewcommand{\headrulewidth}{1pt}
 %\fancyhead[LE,RO]{\itshape CityWatch}
-\rhead{\rightmark}
+%\rhead{\leftmark}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\rhead{\thechapter  \ -- \ \nouppercase\leftmark}
 \rfoot{\thepage}
 %\setlength{\headheight}{13.6pt}
-\renewcommand{\sectionmark}[1]{\markright{\thesection\ \ --\ \ #1}}
+%\renewcommand{\sectionmark}[1]{\markright{\thesection\ \ --\ \ #1}}
+%\renewcommand{\chaptermark}[1]{\markright{\thechapter\ \ --\ \ #1}}
 \pagenumbering{arabic}
 
 \cleardoublepage
-\part{Introduction}
+%\part{Introduction}
 \chapter*{Introduction Générale}
 \addcontentsline{toc}{chapter}{Introduction Générale}
 \backgroundsetup{contents=WIP,scale=8,position={0.9,-1.5},opacity=0.6}
@@ -274,7 +278,7 @@ final,
 \input{20-cadreprojet}
 
 \cleardoublepage
-\part{Itérations}
+\part*{Itérations}
 \let\subparagraph\paragraph
 \let\paragraph\subsubsection
 \let\subsubsection\subsection
