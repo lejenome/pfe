@@ -50,11 +50,12 @@
   \draw[->]     (ActivityEnds)  |- node [yshift=-2cm, text width=3.1cm]
                                     {L'utilisateur retourne vers l'activité}
                                     (onCreateBlock);
-  \draw[->] (onPauseBlock.east) -- ++(2.6,0) -- ++(0,2) -- ++(0,2) --                
+  \draw[->] (onPauseBlock.east) -- ++(2.6,0) -- ++(0,2) -- ++(0,2) --
      node[xshift=1.2cm,yshift=-1.5cm, text width=2.5cm]
      {L'activité revient sur le devant de la scéne}(onResumeBlock.east);
-     
+
   \end{tikzpicture}
   \caption{Diagramme de cycle de vie d'activite Android}
+  \captionsource{Pavel Seda, \TeX example.net [Modifié]}{http://www.texample.net/tikz/examples/android/}
   \label{fig:android-activity}
 \end{figure}

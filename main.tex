@@ -29,6 +29,7 @@ final,
 \addbibresource{bibliography.bib}
 
 \usepackage{ifxetex,ifluatex}
+\usepackage{ifthen}
 
 %\usepackage{mathspec}
 \usepackage{amssymb,amsmath}
@@ -63,6 +64,15 @@ final,
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{needspace}
+
+\usepackage{caption}
+\captionsetup{justification=centering}
+\newcommand{\captionsource}[2][]{%
+    \ifthenelse{\equal{#1}{}}
+        {\small\textit{Source: #2}} % if empty
+        {\small\textit{Source: #2, \href{#1}{#1}} % else
+    }
+}
 
 \usepackage[intoc]{nomencl}
 \makenomenclature

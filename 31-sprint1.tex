@@ -11,12 +11,13 @@ des utilisateurs selon leur position actuelle.
 \item \textbf{Web :} projeter instantanément la localisation d'individu sur une carte map avec son état
 (activé ou désactivé)
 \end{itemize}
-\subsubsection*{}
+\subsection*{}
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{citywatch-architecture}
   \caption[Flux des information Géographiques en CityWatch]
   {Flux des informations Géographiques dans le système de localisation}
+  \captionsource{}{http://masterhaniff.blogspot.com/2014/11/vehicle-tracking-system.html}
   \label{fig:citywatch-architecture}
 \end{figure}
 
@@ -107,9 +108,9 @@ demandé.
 
 \subsubsection{Estimation de la Première Itération}
 
-Nous avons fixé la période d'une itération à 3 semaine. Dans cette section,
-nous présentons une estimation du nombre d'heures pendant lesquelles nous nous
-engageons à travailler.
+Nous avons fixé la période d'une itération à 3 semaine. Dans le
+tableau~\ref{tab:sprint1-capacity}, nous présentons une estimation du nombre
+d'heures pendant lesquelles nous nous engageons à travailler.
 
 \begin{table}[htbp]
     \centering
@@ -125,6 +126,15 @@ Rihab & 6 & 10 & 60 \\ \hline
     \caption{Nombre d'heures de travail estimé de l'itération 1}
     \label{tab:sprint1-capacity}
 \end{table}
+
+Tout les membres de l'équipe font ensuite l'estimation de temps (en point
+d'histoire d'utilisateur) de chaque tache avec le poker de planning. Les
+estimmations utilisés sont 0.5, 1, 2, 3, 5, 8, 13. Les taches peuvent aussi
+étre assignées aux plus que 1 seul membres.
+
+Le tableau~\ref{tab:sprint1-estimation} représente les éstimations de nos
+taches en heures (x2 signifie que la tache était assigné à deux membres) et
+le membre à qui étati assigné la tache.
 
 \begin{center}
     \begin{longtable}{| l | l | l |}
@@ -158,7 +168,34 @@ Affiche état du périphérique & Rihab & 5 \\ \hline
 
 \subsubsection{Évolution du travail}
 
-\TODO{add description}
+Au cours de l'itération, on a utilisé Excel et un tableau physique pour suivre
+l'évolution des taches de chaque membre.
+
+Dans les figures~\ref{fig:sprint1-fig1},~\ref{fig:sprint1-fig2}
+et~\ref{fig:sprint1-fig2}, on représente l'état du tableau des taches du taches
+au début, milieu et fin de l'itération respectivement. Les colonnes du tableau
+sont:
+
+\begin{description}
+    \item [Qui (Who)] L'alias du membre.
+    \item [À faire (Todo)] Les taches assignés au membres pour cette itération.
+        L'échange des taches entre les membres est possible sur le supervision
+        du Scrum Master.
+    \item [Implémentation] La pourcentage de l'implémentation du tache de 0\%
+        jusqu'à 100\%. Si le développeur a commencé l'implémentation d'une
+        tache, il la déplace dans cette colonne et faire le mise à jour du
+        pourcentage de l'implémentation à chaque jour pendant un court réunion
+        nommée \textquote{Daily Scrum} pendant le, on discute l'évolution du
+        travail et le plan du jour prochain.
+    \item [Test/Intégration/Review] L'implémentation du tache est complete,
+        elle est donc en phase d'évaluation et vérification de son
+        fonctionnement si intégré dans le reste du système. Depuis la deuxième
+        itération, au moins un autre membre doit revue le code pour à fin
+        d'assurer la qualité du code, détecter et corriger les défauts le plus
+        tôt possible.
+    \item [Complete (Done)] La tache était implémentée, validée et intégrée
+        dans le code du production.
+\end{description}
 
 \begin{figure}[htbp]
     \centering
