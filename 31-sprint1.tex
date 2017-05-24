@@ -1,29 +1,49 @@
 \section{Itération~1:~(~2/22/2017~-~3/5/2017~)}
 \subsection{Introduction}
 \TODO{la méthodologie Scrum consiste à développer chaque fonctionnalité en parallèle avec d'autre fonctionnalité}
+'
 \subsection{Objectif de l'itération}
 
-L'objectif de cette itération est d'étudier notre Serveur, de générer notre
-modèle, de réaliser la page Web (dashboard) et développer les vues nécessaires
-pour permettre à l'utilisateur de consulter la dernière position du véhicule
-selon les spécifications du Backlog.
-
-Une fois la première ébauche du Backlog est réalisée, le Product Owner peut
-découper les spécifications de haut niveau vers des spécifications plus
-raffinées. Dès lors, nous passons à la planification d'une itération. Il est
-important de rappeler que les premières spécifications du Backlog doivent être:
-
+L'objectif de cette itération vise deux environnement :
 \begin{itemize}
-    \item assez précise pour être estimée par l'équipe.
-    \item assez petite pour être développée et testée durant une itération.
+ \item \textbf{Mobile :} créer une premier version d'application mobile permettant de localiser 
+des utilisateurs selon leur position actuelle.
+\item \textbf{Web :} projeter instantanément la localisation d'individu sur une carte map avec son état
+(activé ou désactivé)
 \end{itemize}
+\subsubsection*{}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{citywatch-architecture}
+  \caption[Flux des information Géographiques en CityWatch]
+  {Flux des informations Géographiques dans le système de localisation}
+  \label{fig:citywatch-architecture}
+\end{figure}
 
-Ayant une bonne idée sur le produit ainsi que l'objectif à atteindre, l'équipe
-et le Product Owner peuvent passer à l'élaboration des itérations. Dans notre
-projet \textquote{Plateforme CityWatch}, la durée d'une itération est fixée à
-trois semaines. Dans cette section, nous décrivons le déroulement de la
-première itération. Une itération commence par sa planification et finit par
-être revue avec le \textquote{Product Owner}.
+
+
+
+%L'objectif de cette itération est d'étudier notre Serveur, de générer notre
+%modèle, de réaliser la page Web (dashboard) et développer les vues nécessaires
+%pour permettre à l'utilisateur de consulter la dernière position du véhicule
+%selon les spécifications du Backlog.
+
+%Une fois la première ébauche du Backlog est réalisée, le Product Owner peut
+%découper les spécifications de haut niveau vers des spécifications plus
+%raffinées. Dès lors, nous passons à la planification d'une itération. Il est
+%important de rappeler que les premières spécifications du Backlog doivent être:
+
+%\begin{itemize}
+ %   \item assez précise pour être estimée par l'équipe.
+  %  \item assez petite pour être développée et testée durant une itération.
+%\end{itemize}
+
+%Ayant une bonne idée sur le produit ainsi que l'objectif à atteindre, l'équipe
+%et le Product Owner peuvent passer à l'élaboration des itérations. Dans notre
+%projet \textquote{Plateforme CityWatch}, la durée d'une itération est fixée à
+%trois semaines. Dans cette section, nous décrivons le déroulement de la
+%première itération. Une itération commence par sa planification et finit par
+%être revue avec le \textquote{Product Owner}.
 
 \subsection{Planification de l'itération}
 
@@ -241,29 +261,9 @@ Les outils clients choisis sont:
 
 \subsubsection{Android}
 
-Android est un système d'exploitation conçu en 2007 par la société Android,
+Android est un système d'exploitation conçu en 2007 \TODO{référence} par la société Android,
 startup racheté par Google. Android est Open Source, ça veut dire on peut lire
 le code de ce logiciel le modifier et le redistribuer.
-
-Les bases que nous utilisons:
-\paragraph{IDE:}
-
-C'est un logiciel dont son objectif est de faciliter le développement. Il est
-toujours possible de développer une application sans IDE\@.
-L'IDE est constitué d'outils dont au moins un éditeur de texte.
-On utilisera dans notre projet l'IDE Android Studio, l'IDE privilège de Google.
-Android Studio comporte l'auto-complétion la génération automatique du code des
-outils de compilation et débogage et plusieurs autres services qui permettent de
-développer une application facilement et rapidement.
-
-\paragraph{SDK:}
-
-C'est une abréviation qui peut faire référence à Software Développement Kit.
-Les applications Android sont développés en JAVA\@. Un appareil Android ne
-comprend pas le langage JAVA, il comprend une variante de JAVA adaptée pour lui.
-On a recours ici SDK, c'est ensemble des outils permettant de développer dans
-une cible particulière. Un SDK Android est alors un ensemble des outils qui
-permettent de développer des application pour Android.
 
 \paragraph{Activity:}
 
