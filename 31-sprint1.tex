@@ -1,4 +1,5 @@
-\section{Itération~1:~(~2/22/2017~-~3/5/2017~)}
+\section[Itération 1: ( 2/22/2017 - 3/5/2017 )]{Itération~1:~\textup{\textto{(~2/22/2017~-~3/5/2017~)}}}
+
 \subsection{Introduction}
 \TODO{la méthodologie Scrum consiste à développer chaque fonctionnalité en parallèle avec d'autre fonctionnalité}
 '
@@ -6,7 +7,7 @@
 
 L'objectif de cette itération vise deux environnement :
 \begin{itemize}
- \item \textbf{Mobile :} créer une premier version d'application mobile permettant de localiser 
+ \item \textbf{Mobile :} créer une premier version d'application mobile permettant de localiser
 des utilisateurs selon leur position actuelle.
 \item \textbf{Web :} projeter instantanément la localisation d'individu sur une carte map avec son état
 (activé ou désactivé)
@@ -92,7 +93,7 @@ demandé.
         \endlastfoot
 
         \hline
-1 & Présentation et Configuration SVN & Présenter SVN, installer le serveur SVN et créer les répertoires  & 1 \\ \hline
+1 & Présentation et Configuration SVN & Présenter SVN, installer le serveur SVN et créer les répertoires & 1 \\ \hline
 2 & Recherche sur les Services Web & Présenter les différentes Solutions des services web et choisir la meilleur solution & 1 \\ \hline
 3 & Implémenter service Save Position & Enregistrement les coordonnées requis dans la base de données & 2 \\ \hline
 4 & Implémenter la consommation du service Save Position & Coordonnées enregistrés instantané et continuellement dans la BD & 1 \\ \hline
@@ -129,8 +130,8 @@ Rihab & 6 & 10 & 60 \\ \hline
 
 Tout les membres de l'équipe font ensuite l'estimation de temps (en point
 d'histoire d'utilisateur) de chaque tache avec le poker de planning. Les
-estimmations utilisés sont 0.5, 1, 2, 3, 5, 8, 13. Les taches peuvent aussi
-étre assignées aux plus que 1 seul membres.
+estimmations utilisés sont $\frac{1}{2}$, $1$, $2$, $3$, $5$, $8$, $13$. Les
+taches peuvent aussi étre assignées aux plus qu'un seul membres.
 
 Le tableau~\ref{tab:sprint1-estimation} représente les éstimations de nos
 taches en heures (x2 signifie que la tache était assigné à deux membres) et
@@ -235,7 +236,7 @@ les outils et les technologies que nous venons de citer.
 Les logiciels de gestion de versions \acrshort{VCS} nous permettent de conserver la
 chronologie des modifications du source de code, ainsi récupérer les version
 intermédiaires et les différences entre eux, et facilitent la collaboration au
-développement.  Les deux logiciels de gestion de versions les plus répondus
+développement. Les deux logiciels de gestion de versions les plus répondus
 sont Git et Apache SVN.
 
 \begin{description}
@@ -253,7 +254,7 @@ sont Git et Apache SVN.
             \item \verb|svn checkin| \ \ vs. \ \ \verb|git commit; git push|
             \item \verb|svn update| \ \ vs. \ \ \verb|git fetch; git rebase|
         \end{itemize}
-        Le support du Windows est excellent surtout les outils graphiques.  La
+        Le support du Windows est excellent surtout les outils graphiques. La
         plus tard des fonctionnalités du SVN nécessitent l'accès au dépôt
         (distant).
 \end{description}
@@ -348,7 +349,6 @@ ces états sont interroges par le nom de ces méthodes.\\ la
 figure~\ref{fig:android-activity} représente le cycle de vie d'une activité.
 
 \input{figures/android-activity}
-\clearpage
 
 \subparagraph{Comment choisir le SDK optimale :}
 
@@ -420,11 +420,11 @@ Les exigence de l'api RESTful sont:
     \label{fig:sprint1-webservices-usecase}
 \end{figure}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.45\textwidth]{sprint1-webservices-database}
-    \caption{Diagramme entité-association du service Position en itération 1}
-\end{figure}
+%\begin{figure}[htbp]
+%    \centering
+%    \includegraphics[width=0.45\textwidth]{sprint1-webservices-database}
+%    \caption{Diagramme entité-association du service Position en itération 1}
+%\end{figure}
 
 \begin{figure}[htbp]
     \centering
@@ -527,7 +527,7 @@ se réunissent pour effectuer la revue de sprint, qui dure au maximum quatre
 heures.
 
 L'objectif de la revue de l'itération est de valider l'incrément de produit qui
-a été réalisé pendant cette itération.  L'équipe énonce les éléments du backlog
+a été réalisé pendant cette itération. L'équipe énonce les éléments du backlog
 en début de sprint,et présente les taches finis\footnote{complètement
 réalisés}.
 
@@ -604,11 +604,11 @@ Implémenter service Save Position & Effectué 100\% \\ \hline
 Implémenter la consommation du service Save Position & Effectué 100\% \\ \hline
 Recherche sur les spécifications de la plateforme Android & Effectué 100\% \\ \hline
 Création squelette de l'application mobile & Effectué 100\% \\ \hline
-Implémenter service Get Last Position &  Effectué 100\% \\ \hline
-Rectification service Save Positon &  Effectué 100\% \\ \hline
-Rectification service Get Last Position &  Effectué 100\% \\ \hline
+Implémenter service Get Last Position & Effectué 100\% \\ \hline
+Rectification service Save Positon & Effectué 100\% \\ \hline
+Rectification service Get Last Position & Effectué 100\% \\ \hline
 Affiche Multiple marqueurs & Effectué 100\% \\ \hline
-Affiche état du périphérique &  Effectué 100\% \\ \hline
+Affiche état du périphérique & Effectué 100\% \\ \hline
     \end{longtable}
 \end{center}
 
