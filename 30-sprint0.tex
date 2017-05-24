@@ -185,8 +185,32 @@ enrichir ses fonctionnalités.
 
 \paragraph{Technologies du Web}
 
-\TODO{Wht HTML5, CSS3, JS}
+Les technologies Web modernes nous ont permis de créer une application web
+interactive et dynamique rapidement et aisément sans besoin d'un backend
+pour générer le contenu.
 
+\begin{description}
+    \item [HTML 5.1] On a utilisé les tags sémantique, les nouveaux types et
+        attributes de validations des entrés du formulaire et les nouveautés
+        des api Web comme l'api DOM et l'api de localisation.
+    \item [CSS 3] Ou plus précisément les modules stabilisés du CSS niveau 3.
+        \TODO{used indirectly throw Bootstrap 3/4}
+    \item [ECMAScript 2016\textregistered] Ou encore JavaScript edition 7
+        définit définit dans la spécification ECMA-262 \cite{ECMA262}. On a
+        utilisé le programmation POO, la programmation asynchrone (Promise) et
+        des autres nouveautés de syntaxe.
+\end{description}
+
+L'utilisation de ces dernières mise à jours des standards du web a causé que
+notre application web est supporté par seulement les dernières versions des
+navigateurs principales\footnote{Firefox v45+ (sans support d'input de type
+date), Google Chrome v50+, Edge v14+, Sfari 10+ (sans support d'input de type
+date), Opera 37}. Le support des autres anciennes versions et des autres
+navigateurs était possible en demande à travers les transcompilateurs du
+ECMAScript 2016+ à ECMAScript 5.1 comme Babel ou Traceur même si il n'était pas
+une priorité pendant notre phase de développement.  Quelques fonctionnalités de
+ECMAScript 2016 n'étaient pas utilisées car elles ne sont pas encore
+implémentées par aucun des navigateurs principales comme les Modules.
 
 \subsubsection{environnements matériels}
 
