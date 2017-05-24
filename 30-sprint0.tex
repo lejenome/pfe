@@ -1,20 +1,23 @@
 \section{Itération~0:~(~2/20/2017~-~2/22/2017~)}
 
 \subsection*{Introduction}
-
-\subsection{Objectif de l'itération}
-
 Avant de commencer la première itération du Scrum, une période de temps à été
-consacrée pour préparer ce qui est nécessaire au lancement du projet dans de
-bonnes conditions. Cette période est souvent nommé l'itération 0 du projet.
-Elle est consacrée généralement à la recherche bibliographique, aux choix
-technologiques et à la mise en place de l'environnement de développement. Autre
-que ces préparatifs, c'est dans cette itération que nous définissons le Backlog
-de la plateforme, ainsi que le nombre d'itérations nécessaires et la durée de
-l'itération. Il s'agit aussi d'une période de formation pour les membres de
-l'équipe sur tous les environnements et les technologie à utiliser le long 
-du projet.
-
+consacrée pour préparer ce qui est nécessaire pour le lancement du projet dans des
+bonnes conditions. 
+Cette période est souvent nommée l'itération 0 du projet.
+Elle est dédiée généralement à la recherche bibliographique, aux choix
+technologiques et à la mise en place de l'environnement de développement.
+Dans cette itération nous définissons le Backlog général 
+de notre projet, ainsi que l'environnement du travail que nous avons besoin.
+\subsection{Objectif de l'itération}
+L'objectif de cette itération vise deux environnement :
+\begin{itemize}
+ \item \textbf{Mobile :} créer une premier version d'application mobile permettant de localiser 
+des utilisateurs selon leur position actuelle.
+\item \textbf{Web :} projeter instantanément la localisation d'individu sur une carte map avec son état
+(activé ou désactivé)
+\end{itemize}
+\subsubsection*{}
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{citywatch-architecture}
@@ -23,7 +26,7 @@ du projet.
   \label{fig:citywatch-architecture}
 \end{figure}
 
-\subsection{Backlog générale}
+\subsection{Backlog général}
 
 La première étape de la méthode Scrum consiste à préparer un carnet du produit
 (Product Backlog) qui présente la liste des tâches à effectuer durant le
@@ -38,10 +41,21 @@ initial, C'est comme ça que le Backlog a été défini.
 
 Les valeurs d'affaires sont définies comme suit :
 \begin{description}[align=right,labelwidth=1cm]
-    \item [1] Définie une haute priorité, affectée pour les spécifications
+    \item [1] 
+    \begin{itemize}
+     \item  Définie une haute priorité, affectée pour les spécifications
         importantes, exigées pour le produit.
-    \item [2] Définie une priorité importante mais pas exigée.
-    \item [3] Définie une priorité moyenne ou parfois faible.
+    \end{itemize}
+
+    \item [2] 
+    \begin{itemize}
+     \item Définie une priorité importante mais pas exigée.
+    \end{itemize}
+    \item [3]
+      \begin{itemize}
+     \item  Définie une priorité moyenne ou parfois faible.
+    \end{itemize}
+   
 \end{description}
 
 La figure~\ref{fig:product-backlog} présente une version simplifiée du Product
@@ -119,7 +133,7 @@ toujours l'utilisateur.
 \subsubsection{Environnement logiciel}
 
 La réalisation de ce projet nécessite l'ensemble de ces logiciels et
-bibliothèques:
+bibliothèques que nous allons sites :
 
 \paragraph{Android}
 
@@ -233,13 +247,24 @@ Pour le développement de ce projet, il était demandé d'avoir :
       \item MySQL 5.5
      \end{itemize}
 \end{itemize}
+\subsection{Étude de l'existence de notre projet}
+L'idée de notre projet n'est pas usuelle comme les autres, tout simplement est une idée de startup que 
+nous allons l'exploité dans le marché .C'est pour ce là que nous étudions les applications similaires 
+pour avoir notre position.
+\subsubsection{Waze}
+\paragraph{Caractéristiques communes}
+\begin{itemize}
+ \item Détection de d'embouteillages.
+ \item Les utilisateurs peuvent utiliser leur téléphone pour contourner passivement le trafic 
+ et d'autres données routières. Ils peuvent également jouer un rôle plus actif en partageant 
+ les rapports routiers sur les accidents, les pièges policiers ou tout autre danger en cours de route.
+ \item Informé l'utilisateur en avance des incidents trouvé dans la route suivi
+\end{itemize}
 
 \subsection{Conclusion}
 
 L'itération 0 nous à permis de préparer le terrain pour une bonne entame de
-développement. Mis à part la mise en place des environnement de travail et les
+développement. Indépendamment la mise en place des environnement de travail et les
 formations que nous avons suivi sur les technologies.
-pendant cette itération nous avons élaborer le carnet de Plateforme CityWatch
-avec la collaboration du Product
-Owner et de fixer le nombre des itérations nécessaire et leur durée. Rappelons que
-l'itération 0 à durée trois jours, du 20 février 2017 au 22 février 2017.
+Pendant cette itération nous avons élaborer le carnet de notre projet avec la collaboration du Product
+Owner.
