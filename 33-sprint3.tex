@@ -54,22 +54,22 @@ la qualité.
  \endlastfoot
 
 \hline
-1 & Integration Dashboard et Rapport dans l'application android & Implémenté la méthode qui affiche les pages ``Dashboard et Rapport'' chacun a un bouton spécifié   & 1 \\ \hline
-2 & Authentification Restful  & Ajouter l'authentification dans le serveur pour assurer la sécurité   & 1 \\ \hline
-3 & landing page & créer une nouvel page Web  & 3\\ \hline
-4 & Compte utilisateur & Base de données accecible depuis l'application et le web& 2 \\ \hline
-5 & Post réseau & Methode POST Restful & 1 \\ \hline
-6 & GET réseau & Methode GET Restful & 1 \\ \hline
-7 & Post vitesse & Methode POST vitesse & 1 \\ \hline
-8 & Get vitesse & Methode GET & 1 \\ \hline
-9 & Appplication Android Responsive & Responsive design coter android & 3 \\ \hline
-10 & IHM & l'ajout des boutons radio pour distinguer (pieton / voiture)(android) & 3 \\ \hline
-11 & Recherche Business intelligence & BI & 2 \\ \hline
-12 & Implantation des BD au BI & données accessible en BI & 2\\ \hline
-13 & création Logo &Ajouter Logo dans l'application & 3 \\ \hline
-14 & étude scénario commercial embouteillage & scénario de marketing& 2\\ \hline
-15 & Rectification chargement image & \ldots & 1 \\ \hline
-16 & étude scénario commercial secousses & scénario de marketing& 2\\ \hline
+3.1 & Integration Dashboard et Rapport dans l'application android & Implémenté la méthode qui affiche les pages ``Dashboard et Rapport'' chacun a un bouton spécifié   & 1 \\ \hline
+3.2 & Authentification Restful  & Ajouter l'authentification dans le serveur pour assurer la sécurité   & 1 \\ \hline
+3.3 & landing page & créer une nouvel page Web  & 3\\ \hline
+3.4 & Compte utilisateur & Base de données accecible depuis l'application et le web& 2 \\ \hline
+3.5 & Post réseau & Methode POST Restful & 1 \\ \hline
+3.6 & GET réseau & Methode GET Restful & 1 \\ \hline
+3.7 & Post vitesse & Methode POST vitesse & 1 \\ \hline
+3.8 & Get vitesse & Methode GET & 1 \\ \hline
+3.9 & Appplication Android Responsive & Responsive design coter android & 3 \\ \hline
+3.10 & IHM & l'ajout des boutons radio pour distinguer (pieton / voiture)(android) & 3 \\ \hline
+3.11 & Recherche Business intelligence & BI & 2 \\ \hline
+3.12 & Implantation des BD au BI & données accessible en BI & 2\\ \hline
+3.13 & création Logo &Ajouter Logo dans l'application & 3 \\ \hline
+3.14 & étude scénario commercial embouteillage & scénario de marketing& 2\\ \hline
+3.15 & Rectification chargement image & \ldots & 1 \\ \hline
+3.16 & étude scénario commercial secousses & scénario de marketing& 2\\ \hline
 \end{longtable}
 \end{center}
 
@@ -185,15 +185,27 @@ Dans cette page nous travaillons alors sur deux parties:
  \item la deuxième : gérés la communication interne entre serveur et la page.
  \end{itemize}
 Aussi,nous participons 80\% à l'ajout de légende a notre carte
-et afficher le filtrage des marqueurs.\\
+et affiche le filtrage des marqueurs.\\
 
 \begin{figure}[htbp]
+    \begin{subfigure}{.5\textwidth}
+    \centering
   \centering
-  \includegraphics[width=0.8\textwidth]{sprint3-dashboard-screenshot1}
-  \caption{Dashboard CityWatch au troisième itération}
+  \includegraphics[width=0.9\linewidth]{sprint3-dashboard-screenshot1}
+  \caption{Marqueurs activé}
   \label{fig:sprint3-dashboard-screenshot1}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+    \centering
+  \centering
+  \includegraphics[width=0.9\linewidth]{sprint3-dashboard-screenshot2}
+  \caption{Quelques marqueurs désactivé}
+  \label{sprint3-dashboard-screenshot2}
+\end{subfigure}
+\caption{Dashboard CityWatch au troisième itération}
 \end{figure}
 \clearpage
+
 \paragraph{Android}
 \paragraph*{}
 Les données captées par l'application mobile (Position , Secousses , Ralentisseur , Réseaux , force du 
@@ -201,17 +213,18 @@ signal et vitesse ) sont Récupérées par le serveur pour assurer la sauvegarde
 base données.\\
 
 \begin{figure}[htbp]
-    \begin{subfigure}{.5\textwidth}
+\centering
+    \begin{subfigure}{.3\textwidth}
     \centering
   \centering
-  \includegraphics[width=.8\linewidth]{sprint3-android-screenshot1}
+  \includegraphics[width=.9\linewidth]{sprint3-android-screenshot1}
   \caption{État désactivé}
   \label{fig:sprint3-android-screenshot1}
 \end{subfigure}
-\begin{subfigure}{.5\textwidth}
+\begin{subfigure}{.3\textwidth}
     \centering
   \centering
-  \includegraphics[width=.8\linewidth]{sprint3-android-screenshot2}
+  \includegraphics[width=.9\linewidth]{sprint3-android-screenshot2}
   \caption{État activé}
   \label{fig:sprint3-android-screenshot2}
 \end{subfigure}
@@ -225,7 +238,8 @@ Après la présentation du produit final, le \textquote{Product Owner} était tr
 a notre travail.
 
 \subsubsection{Burndown chart}
-
+La figure~\ref{fig:sprint3-burndown} présente une vue d'ensemble sur le progrès
+de notre travail au cours de l'itération par rapport au progrès idéal.
 \input{figures/sprint3-burndown}
 \subsection{Conclusion}
 
@@ -256,8 +270,8 @@ Get vitesse& Effectué 100\% \\ \hline
 Appplication Android Responsive & Effectué 100\% \\ \hline
 IHM & Effectué 100\% \\ \hline
 Recherche Business intelligence& Effectué 100\% \\ \hline
-Implantation des BD au BI & Effectué 100\% \\ \hline
-création Logo&  Effectué 100\% \\ \hline
+Implantation des BD au BI & Effectué 30\% \\ \hline
+création Logo&  Effectué 80\% \\ \hline
 Étude scénario commercial embouteillage& Effectué 100\% \\ \hline
 Rectification chargement image & Effectué 100\% \\ \hline
 Étude scénario commercial secousses &  Effectué 100\% \\ \hline
