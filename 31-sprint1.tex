@@ -1,4 +1,4 @@
-\section[Itération 1: ( 2/22/2017 - 3/5/2017 )]{Itération~1:~\textup{\textto{(~2/22/2017~-~3/5/2017~)}}}
+\section[Itération~1:~(~2/22/2017~-~3/5/2017~)]{Itération~1:~\textup{\textto{(~2/22/2017~-~3/5/2017~)}}}
 
 \subsection{Introduction}
 
@@ -177,9 +177,10 @@ Au cours de l'itération, on a utilisé Excel et un tableau physique pour suivre
 l'évolution des taches de chaque membre.
 
 Dans les figures~\ref{fig:sprint1-fig1},~\ref{fig:sprint1-fig2}
-et~\ref{fig:sprint1-fig2}, on représente l'état du tableau des taches du taches
-au début, milieu et fin de l'itération respectivement. Les colonnes du tableau
-sont:
+et~\ref{fig:sprint1-fig2}, on représente l'état du tableau des taches en jour
+de distribution les taches, au milieu et à la fin de l'itération
+respectivement. Les lignes colorés représentent nos taches. Les colonnes du
+tableau sont:
 
 \begin{description}
     \item [Who] L'alias du nom du membre.
@@ -202,13 +203,34 @@ sont:
         dans le code du production.
 \end{description}
 
+On a utilisé des différents couleurs pour différents types des taches:
+
+\begin{description}
+    \item [Rose] Les taches du développement d'interface web (Dashboard).
+    \item [Verte] Les taches du développement mobile (l'application Android).
+    \item [Jaune] Les taches du développement des services web et d'administration.
+\end{description}
+
+La liste des prochaines réunions est écrite dans le tableau aussi:
+
+\begin{itemize}
+    \item Présentations des recherches si la taches inclue une partie du
+        recherche et présentation.
+    \item Rendez-Vous avec des autres personnes concernés par le projet.
+    \item Si un développeur est besoin d'aide ou de discusser un probleme
+        recontré.
+    \item Code Revue à la fin d'itération fait par tous les membres pour
+        évaluer la qualité du code et détecter les défaults du conception et
+        d'implementation.
+\end{itemize}
+
 \begin{figure}[htbp]
     \centering
     \caption{Évolution du travail}
     \begin{subfigure}{1\textwidth}
         \centering
         \includegraphics[width=0.8\textwidth]{sprint1-fig1}
-        \caption{Au début d'itération}
+        \caption{Distribution des taches de l'itération}
         \label{fig:sprint1-fig1}
     \end{subfigure}
 
@@ -241,7 +263,7 @@ Les logiciels de gestion de versions \acrshort{VCS} nous permettent de
 conserver la chronologie des modifications du source de code, ainsi récupérer
 les version intermédiaires et les différences entre eux, et facilitent la
 collaboration au développement. Les deux logiciels de gestion de versions les
-plus répondus sont Git et Apache SVN.
+plus répondus sont Git et Apache SVN\@.
 
 \begin{description}
     \item [Git] Logiciel de gestion de versions distribué avec des branches
@@ -348,12 +370,10 @@ On peut différencier ces états par leur visibilité:
 
 Une activité n'a pas de contrôle sur son état. Son état change suivant un cycle
 rythmique entre le système Android et les autres application (un système quasi
-dépendant sur des priorités comme expliqué précédemment) la
-figure~\ref{fig:android-activity} explique le cycle de vie d'une activité. (Les
-états sont représenter comme des méthodes parce que lors de la programmation
+dépendant sur des priorités comme expliqué précédemment). La
+figure~\ref{fig:android-activity} explique le cycle de vie d'une activité. Les
+états sont représentés comme des méthodes parce que lors de la programmation,
 ces états sont interroges par le nom de ces méthodes.
-
-La figure~\ref{fig:android-activity} représente le cycle de vie d'une activité.
 
 \input{figures/android-activity}
 
@@ -402,7 +422,7 @@ différentes variantes des architectures des services web:
 
 On a choisi d'utiliser l'architecture RESTful comme notre API est mieux décri
 comme ensemble des collections des données dont on peut effectuer avec des
-actions CRUD.
+actions CRUD\@.
 
 \subsection{Mises des normes}
 
@@ -498,12 +518,12 @@ assure la portabilité des représentations des différents types des données
 vs. \verb|y|, \ldots).
 
 Pour le représentation des dates dans le content du requêtes HTTP, on a utilisé
-la format RFC3339 \cite{RFC3339} (basé sur ISO8601 \cite{ISO8601} pour
+la format RFC3339~\cite{RFC3339} (basé sur ISO8601~\cite{ISO8601} pour
 l'utilisation dans les protocols du Web) avec UTC comme la défaut zone du
 temps, ex: \verb|2005-08-15T15:52:01Z|.
 
 Pour les en-têtes du requêtes HTTP, la format de représentation des dates est
-RFC1123 \cite{RFC1123}, ex: \verb|Mon, 15 Aug 2005 15:52:01 +0000|.
+RFC1123~\cite{RFC1123}, ex: \verb|Mon, 15 Aug 2005 15:52:01 +0000|.
 
 La format du présentation des positions géologique (latitude et longitude)
 choisie est la même représentation des nombres en JSON avec une précision
