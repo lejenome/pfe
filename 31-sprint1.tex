@@ -176,6 +176,8 @@ Affiche état du périphérique & Rihab & 5 \\ \hline
 Au cours de l'itération, on a utilisé Excel et un tableau physique pour suivre
 l'évolution des taches de chaque membre.
 
+\clearpage % FIXME
+
 Dans les figures~\ref{fig:sprint1-fig1},~\ref{fig:sprint1-fig2}
 et~\ref{fig:sprint1-fig2}, on représente l'état du tableau des taches en jour
 de distribution les taches, au milieu et à la fin de l'itération
@@ -199,8 +201,7 @@ tableau sont:
         itération, au moins un autre membre doit revue le code pour à fin
         d'assurer la qualité du code, détecter et corriger les défauts le plus
         tôt possible.
-    \item [Complete (Done)] La tache était implémentée, validée et intégrée
-        dans le code du production.
+    \item [Complete (Done)] La tache était implémentée et validée.
 \end{description}
 
 On a utilisé des différents couleurs pour différents types des taches:
@@ -511,11 +512,11 @@ chaque périphériques basé sur le MAC du phone.
 
 \subsubsection{Portabilité}
 
-On a utilisé la format standardisée JSON pour le transfert de données ce qui
-assure la portabilité des représentations des différents types des données
-(nombres, booléens, strings, \ldots) indépendant du l'internationalisation
-(séparateur décimal, \verb|true| vs. \verb|True| vs. \verb|vrai| vs. \verb|yes|
-vs. \verb|y|, \ldots).
+On a utilisé la format standardisée JSON~\cite{ECMA-404} pour le transfert de
+données ce qui assure la portabilité des représentations des différents types
+des données (nombres, booléens, strings, \ldots) indépendant du
+l'internationalisation (séparateur décimal, \verb|true| vs. \verb|True| vs.
+\verb|vrai| vs. \verb|yes| vs. \verb|y|, \ldots).
 
 Pour le représentation des dates dans le content du requêtes HTTP, on a utilisé
 la format RFC3339~\cite{RFC3339} (basé sur ISO8601~\cite{ISO8601} pour
