@@ -2,9 +2,10 @@
 
 \subsection{Introduction}
 
-Dans la dernière itération, nous avons collecté un grand ensemble de donnés des différents types.
-Malgré tout, ces donnés n'ont pas de valeur tel que on les explore pas. C'est le rôle du
-Business Intelligence que nous allons étudier dans cette itération.
+Dans la dernière itération, nous avons collecté un grand ensemble de donnés des
+différents types.  Malgré tout, ces donnés n'ont pas de valeur tel que on les
+explore pas. C'est le rôle du Business Intelligence que nous allons étudier
+dans cette itération.
 
 \subsection{L'objectif du sprint}
 
@@ -36,8 +37,8 @@ En accord avec le product owner,le but de cette itération est:
 
 \subsubsection{Backlog de l'itération}
 
-
-On définit dans le tableau~\ref{tab:sprint3-backlog} la liste de nos taches dans cette itération.
+On définit dans le tableau~\ref{tab:sprint3-backlog} la liste de nos taches
+dans cette itération.
 
 \begin{center}
     \footnotesize
@@ -80,6 +81,10 @@ On définit dans le tableau~\ref{tab:sprint3-backlog} la liste de nos taches dan
 
 \subsubsection{Estimation de la deuxième itération}
 
+Le tableau~\ref{tab:sprint3-capacity} représente l'estimation du nombre
+d'heures pendant lesquelles nous nous engageons à travailler dans une période
+de 3 semaines.
+
 \begin{table}[htbp]
     \centering
     \begin{tabular}{| c | c | c | c |}
@@ -94,6 +99,9 @@ Rihab & 8 & 48 & 144 \\ \hline
     \caption{Nombre d'heures de travail estimé de l'itération 3}
     \label{tab:sprint3-capacity}
 \end{table}
+
+Le tableau~\ref{tab:sprint3-estimation} représente les estimations de nos taches
+en heures pour cette itération.
 
 \begin{center}
     \begin{longtable}{| l | l | l |}
@@ -134,62 +142,86 @@ Rectification chargement image & Rihab & 13 x 2 \\ \hline
 
 \subsection{Présentation des outils utilisés}
 
-\subsubsection{API REST}
+\subsubsection{OAuth2}
 
-Les API REST sont basées sur le protocole HTTP, qui signifie Hypertext Transfer Protocol.
-C’est ce qui est au cœur du web! C’est un protocole qui définit la communication
-entre les différentes parties du web. L’échange est basé sur des requêtes client et serveur.
-Un client lance une requête HTTP, et le serveur renvoie une réponse.
-Ce sont des méthodes qui définissent les requêtes que le client peut effectuer,
-dont GET\footnote{Récupérer une ressource (ne modifie pas la ressource).}, PUT\footnote{Modifier une ressource.},
-POST\footnote{Créer une ressource.}, DELETE\footnote{Supprimer une ressource.} encore plus.
+\TODO{what is it, alternatives, why}
+
+% Les API REST sont basées sur le protocole HTTP, qui signifie Hypertext Transfer Protocol.
+% C’est ce qui est au cœur du web! C’est un protocole qui définit la communication
+% entre les différentes parties du web. L’échange est basé sur des requêtes client et serveur.
+% Un client lance une requête HTTP, et le serveur renvoie une réponse.
+% Ce sont des méthodes qui définissent les requêtes que le client peut effectuer,
+% dont GET\footnote{Récupérer une ressource (ne modifie pas la ressource).}, PUT\footnote{Modifier une ressource.},
+% POST\footnote{Créer une ressource.}, DELETE\footnote{Supprimer une ressource.} encore plus.
 
 \subsubsection{Business Intelligence}
 
-la Business intelligence\footnote{Informatique décisionnelle} propose d'utiliser
-les données transitant par le Système
-d'information, données de production le plus souvent, en informations susceptibles
-d'être exploitées à des fins décisionnelles.
+La Business intelligence\footnote{Informatique décisionnelle} propose
+d'utiliser les données transitant par le Système d'information en informations
+susceptibles d'être exploitées à des fins décisionnelles.
 
-Sur le plan pratique et technique, la Business Intelligence se compose d'une famille
-d'outils informatiques et
-de progiciels assurant le fonctionnement de la chaîne de traitement de l'information.
+% Sur le plan pratique et technique, la Business Intelligence se compose d'une
+% famille d'outils informatiques et de progiciels assurant le fonctionnement de
+% la chaîne de traitement de l'information.
 
-Les 4 fonctions de la chaîne décisionnelle comment s'explique la figure~\ref{fig:sprint3-businessintelligence} sont:
+Les 4 fonctions de la chaîne décisionnelle:
 
-\begin{description}[align=right,labelwidth=1cm]
- \item [1] Collecter, nettoyer et consolider les données Extraire les données
- des systèmes de production et les adapter à un usage décisionnel.
- \item [2] Stocker Centraliser les données structurées et traitées afin qu'elles
- soient disponibles pour un usage décisionnel.
- \item [3] Distribuer Ou plutôt faciliter l'accessibilité des informations selon
- les fonctions et les types d'utilisation.
- \item [4] Exploiter ou comment assister du mieux possible l'utilisateur afin qu'il puisse extraire
- la substance de l'information des données stockées à cet usage.
+% comment s'explique la
+% figure~\ref{fig:sprint3-businessintelligence} sont:
+
+\begin{description}
+    \item [\acrfull{ETL}] Collecter, nettoyer et consolider les données
+        Extraire les données des systèmes de production et les adapter à un
+        usage décisionnel.
+    \item [\acrfull{DW}] Stocker Centraliser les données structurées et
+        traitées afin qu'elles soient disponibles pour un usage décisionnel.
+    \item [??] Distribuer Ou plutôt faciliter l'accessibilité des informations
+        selon les fonctions et les types d'utilisation.
+    \item [\acrfull{OLAP}] Exploiter ou comment assister du mieux possible
+        l'utilisateur afin qu'il puisse extraire la substance de l'information
+        des données stockées à cet usage.
+    \item [Visualisation] Afficher des diagrammes visualisations différents
+        aspects des données traitées.
 \end{description}
-\clearpage
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.8\textwidth]{sprint3-businessintelligence}
-  \caption{Les 4 phases du processus de Business Intelligence}
-  \label{fig:sprint3-businessintelligence}
-\end{figure}
+\TODO{MS BI, Power BI, SSIS}
+%\clearpage
+
+%\begin{figure}[htbp]
+%  \centering
+%  \includegraphics[width=0.8\textwidth]{sprint3-businessintelligence}
+%  \caption{Les 4 phases du processus de Business Intelligence}
+%  \label{fig:sprint3-businessintelligence}
+%\end{figure}
 
 \subsection{Mises des normes}
+
+Les critères à respecter pendant cette itération incluent les même critères de
+l'itération 1 et de plus:
+
+\begin{description}
+    \item [Sécurité] L'implémentation de l'authentification doit être sécurisée
+        de tel façon, on ne peut pas accéder au contenu protégé sans
+        authentification.
+    \item [Permissions] Un utilisateur n'a la permission que de changer ses
+        donnés personnelles et n'a pas l'autorisation d'accès au donnés privé de
+        les autres (trajet, détails de contact, \ldots).
+    \item [Visualisation Instantané des Statistiques] Les diagrammes de
+        statistiques doivent mets à jour instantanément et continuellement.
+\end{description}
 
 \subsection{Modélisation UML}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=1\textwidth]{sprint3-webservices-oauth-usecase}
-    \caption{Diagramme de case d'utilisation du service d'Authentification en itération 3}
+    \caption{Diagramme de case d'utilisation du service d'authentification en itération 3}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=1\textwidth]{sprint3-webservices-oauth-sequence}
-    \caption{Diagramme de sequence du services d'Authentification en itération 3}
+    \caption{Diagramme de sequence du services d'authentification en itération 3}
 \end{figure}
 
 \begin{figure}[htbp]
@@ -205,7 +237,8 @@ Les 4 fonctions de la chaîne décisionnelle comment s'explique la figure~\ref{f
 \end{figure}
 
 \subsection{Évaluation suivant les normes mise}
-\clearpage
+
+\TODO{}
 
 \subsection{Revue de cette itération}
 
@@ -218,12 +251,13 @@ Les 4 fonctions de la chaîne décisionnelle comment s'explique la figure~\ref{f
 Dans cette page nous travaillons alors sur deux parties:
 
 \begin{itemize}
- \item la première : active/désactive les boutons de filtrage de chaque marqueur.
- \item la deuxième : gérés la communication interne entre serveur et la page.
- \end{itemize}
+    \item la première: active/désactive les boutons de filtrage de chaque
+        marqueur.
+    \item la deuxième: gérés la communication interne entre serveur et la page.
+\end{itemize}
 
-Aussi,nous participons 80\% à l'ajout de légende a notre carte
-et affiche le filtrage des marqueurs.
+Aussi, nous participons 80\% à l'ajout de légende a notre carte et affiche le
+filtrage des marqueurs.
 
 \begin{figure}[htbp]
 \centering
