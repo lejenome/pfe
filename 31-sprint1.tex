@@ -1,14 +1,14 @@
-\section[Itération~1:~(~2/22/2017~-~3/5/2017~)]{Itération~1:~\textup{\textto{(~2/22/2017~-~3/5/2017~)}}}
+\chapter[Itération~1:~(~2/22/2017~-~3/5/2017~)]{Itération~1:~\textup{\textto{(~2/22/2017~-~3/5/2017~)}}}
 
-\subsection*{Introduction}
-\addcontentsline{toc}{subsection}{Introduction}
+\section*{Introduction}
+\addcontentsline{toc}{section}{Introduction}
 
 La méthodologie Scrum consiste à développer le produit incrémentalement, en
 effet chaque itération résulte un prototype ayant des fonctionnalité du produit
 demandé livrable. Le développement de ces fonctionnalité est en parallèle avec
 d'autre fonctionnalité puisque l'équipe avance dans le même niveaux.
 
-\subsection{Objectif de l'itération}
+\section{Objectif de l'itération}
 
 L'objectif de cette itération vise deux environnement:
 
@@ -50,7 +50,7 @@ L'objectif de cette itération vise deux environnement:
 %première itération. Une itération commence par sa planification et finit par
 %être revue avec le \textquote{Product Owner}.
 
-\subsection{Planification de l'itération}
+\section{Planification de l'itération}
 
 Dans le but de définir le périmètre fonctionnel de l'itération 1 et faire sa
 planification, tous les membres de l'équipe ont participé à un réunion avec le
@@ -72,7 +72,7 @@ grandes parties:
         itérations.
 \end{enumerate}
 
-\subsubsection{Backlog de l'Itération}
+\subsection{Backlog de l'Itération}
 
 Les tâches à réaliser peuvent \HTODO{être soient}{contenir?} des tâches de
 recherche, de documentation, de conception, de développement ou bien
@@ -112,7 +112,7 @@ demandé.
     \end{longtable}
 \end{center}
 
-\subsubsection{Estimation de la Première Itération}
+\subsection{Estimation de la Première Itération}
 
 Nous avons fixé la période d'une itération à 3 semaine. Dans le
 tableau~\ref{tab:sprint1-capacity}, nous présentons une estimation du nombre
@@ -172,7 +172,7 @@ Affiche état du périphérique & Rihab & 5 \\ \hline
     \end{longtable}
 \end{center}
 
-\subsubsection{Évolution du travail}
+\subsection{Évolution du travail}
 
 Au cours de l'itération, on a utilisé Excel et un tableau physique pour suivre
 l'évolution des taches de chaque membre.
@@ -255,14 +255,14 @@ La liste des prochaines réunions est écrite dans le tableau aussi:
 \end{figure}
 \clearpage
 
-\subsection{Présentation des outils utilisés}
+\section{Présentation des outils utilisés}
 
 Le stage chez Djagora Academy nous a permis d'acquérir de nouvelles compétences
 tant au niveau relationnel que technique. Pour bien entamer la réalisation de
 la plateforme \textquote{City Watch}, nous avons suivi différentes formations
 sur les outils et les technologies que nous venons de citer.
 
-\subsubsection{Apache Subversion}
+\subsection{Apache Subversion}
 
 Les logiciels de gestion de versions \acrshort{VCS} nous permettent de
 conserver la chronologie des modifications du source de code, ainsi récupérer
@@ -329,13 +329,13 @@ Les outils clients choisis sont:
 %Subversion entièrement fonctionnel sur la plateforme Windows. Il est utile tant
 %pour les petites entreprises que pour les entreprises.
 
-\subsubsection{Android}
+\subsection{Android}
 
 Android est un système d'exploitation conçu en 2007 \TODO{référence} par la
 société Android, startup racheté par Google. Android est Open Source, ça veut
 dire on peut lire le code de ce logiciel le modifier et le redistribuer.
 
-\paragraph{Activity:}
+\subsubsection{Activity}
 
 Un utilisateur habile d'Android remarque que lors de l'exploitation d'une
 application Android qu'il est en train de naviguer entre des fenêtres et
@@ -351,7 +351,7 @@ des informations sur le statut actuel de l'application qui s'appelle le
 contexte ce contexte permet de faire la liaison entre le système Android et les
 autres activités de l'application.
 
-\subparagraph{États d'activités:}
+\subsubsection{États d'activités}
 
 Le système Android met en place un système priorités entre application par
 exemple l'utilisateur est en train de naviguer sur internet et écouter de la
@@ -371,7 +371,7 @@ On peut différencier ces états par leur visibilité:
     \item État Arrêté.
 \end{itemize}
 
-\subparagraph{Cycle de vie d'une activité:}
+\subsubsection{Cycle de vie d'une activité}
 
 Une activité n'a pas de contrôle sur son état. Son état change suivant un cycle
 rythmique entre le système Android et les autres application (un système quasi
@@ -382,7 +382,7 @@ ces états sont interroges par le nom de ces méthodes.
 
 \input{figures/android-activity}
 
-\subparagraph{Comment choisir le SDK optimale:}
+\subsubsection{Comment choisir le SDK optimale}
 
 Une SDK permet l'application de marcher sur la version Android visé et les
 versions ultérieure il a noté de prendre en considération le taux des
@@ -400,7 +400,7 @@ ayant un taux d'utilisateur qui est 4.79 % des utilisateur d'Android notons que
 cet SDK comporte la fonctionnalité d'Android les plus récentes et qui est
 stable.
 
-\subsubsection{Les Services Web}
+\subsection{Les Services Web}
 
 Un service web est un protocole d'interface de communication et l'échange de
 données entre applications et systèmes hétérogènes à distance en utilisant les
@@ -429,7 +429,7 @@ On a choisi d'utiliser l'architecture RESTful comme notre API est mieux décri
 comme ensemble des collections des données dont on peut effectuer avec des
 actions CRUD\@.
 
-\subsection{Mises des normes}
+\section{Mises des normes}
 
 Les exigence de l'api RESTful sont:
 
@@ -445,7 +445,7 @@ Les exigence de l'api RESTful sont:
 \end{description}
 
 
-\subsection{Conception}
+\section{Conception}
 la figure~\ref{fig:sprint1-webservices-usecase}  ci dessus décrit
 le diagramme de cas
 d'utilisation qui regroupe les scénarios de localisation d'individu.
@@ -484,7 +484,7 @@ récupère la position.
     \label{fig:sprint1-webservices-get-sequence}
 \end{figure}
 
-\subsection{Évaluation suivant les normes mise}
+\section{Évaluation suivant les normes mise}
 
 Avant de commencer le développement, on a fixé quelques règles à respecter pour
 assurer la qualité du code.
@@ -512,19 +512,19 @@ et~\ref{appendix:sprint1-position-get-doc}.
 
 On a essayé d'adresser les différents les mises des normes spécifiés;
 
-\subsubsection{Performance}
+\subsection{Performance}
 
 On a minimisé la dépendance en bibliothèques externes et extensions PHP\@. De
 plus, Le nombre des requêtes SQL ont étés minimisés à une seule requêtes pour
 chaque méthode du notre service web.
 
-\subsubsection{Multi-Utilisateurs}
+\subsection{Multi-Utilisateurs}
 
 Les positions à enregistrer doivent contenus un id qui doit être utilisé aussi
 pour retirer la dernière position. On a utilisé diffèrent identificateur pour
 chaque périphériques basé sur le MAC du phone.
 
-\subsubsection{Portabilité}
+\subsection{Portabilité}
 
 On a utilisé la format standardisée JSON~\cite{ECMA-404} pour le transfert de
 données ce qui assure la portabilité des représentations des différents types
@@ -546,7 +546,7 @@ jusqu'à 14 chiffres après le séparateur décimal. Les valeurs envoyés doiven
 respecte l'intervalle des diffèrent entités géologiques ($latitude \in [-90,
 90]$, $longitude \in [-180, 180]$)
 
-\subsubsection{Stabilité}
+\subsection{Stabilité}
 
 Pour assuré la stabilité d'un service web, on doit vérifier la validité de
 contenu reçu même si envoyé depuis un source de confiance avant de les
@@ -555,7 +555,7 @@ obligatoires et le test de leurs formats.
 
 \TODO{tips from Heroku HTTP API design guide}
 
-\subsection{Contributions}
+\section{Contributions}
 
 On avait des problèmes pour le chargement du code à notre serveur causés par le
 blockage du port FTP et inefficacité de compresser le code et le charger depuis
@@ -564,7 +564,7 @@ Après inspecter et étudier l'api d'interface web du serveur FTP, on a
 implémenté un script Python qui compresse les fichiers nécessaires, authentifie
 au service web du serveur FTP et charger l'archive.
 
-\subsection{Revue de cette itération}
+\section{Revue de cette itération}
 
 À la fin de l'itération, notre équipe et le \textquote{Product Owner} invitées
 se réunissent pour effectuer la revue de sprint, qui dure au maximum quatre
@@ -579,13 +579,13 @@ Une fois le bilan du sprint réalisé, l'équipe de développement et le
 \textquote{Product Owner} mettent à jour le carnet du produit en fonction de ce
 qui a été réalisé (fini).
 
-\subsubsection{Produit de l'itération}
+\subsection{Produit de l'itération}
 
 A la fin de l'itération 1, nous avons un première produit partiel permettant de
 suivre la position des multiple smartphones et les afficher dans la carte de
 notre site web.
 
-\paragraph{Page Web \textquote{Dashboard}}
+\subsubsection{Page Web \textquote{Dashboard}}
 
 La figure~\ref{fig:sprint1-dashboard-screenshot} affiche la position des
 individus et son état.
@@ -602,7 +602,7 @@ individus et son état.
     \label{fig:sprint1-dashboard-screenshot}
 \end{figure}
 
-\paragraph{Application Android}
+\subsubsection{Application Android}
 
 La figure~\ref{fig:sprint1-android-screenshot} représente l'interface de
 l'application.
@@ -614,21 +614,21 @@ l'application.
     \label{fig:sprint1-android-screenshot}
 \end{figure}
 
-\subsubsection{Avis du Product Owner}
+\subsection{Avis du Product Owner}
 
 Le Product Owner était ravi des résultats de cette première itération. Il a
 validé donc notre travail et nous a encouragé pour l'élaboration des suivantes
 itérations.
 
-\subsubsection{Burndown chart}
+\subsection{Burndown chart}
 
 La figure~\ref{fig:sprint1-burndown} présente une vue d'ensemble sur le progrès
 de notre travail au cours de l'itération par rapport au progrès idéal.
 
 \input{figures/sprint1-burndown}
 
-\subsection*{Conclusion}
-\addcontentsline{toc}{subsection}{Conclusion}
+\section*{Conclusion}
+\addcontentsline{toc}{section}{Conclusion}
 
 A la fin de cette itération, on avait un prototype minimale fonctionnel
 dont on peut baser notre future travail.
