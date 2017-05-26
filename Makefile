@@ -9,7 +9,7 @@ report: main.tex
 diff:
 	mkdir -p build
 	+latexdiff-vc --git -r $(DIFF_REV) main.tex -d build/old-$(DIFF_REV) --flatten --force
-	+latexmk -jobname=build/diff build/old-$(DIFF_REV)/main.tex
+	+latexmk -jobname=build/diff build/old-$(DIFF_REV)/main.tex -f
 
 watch: main.tex
 	mkdir -p build
