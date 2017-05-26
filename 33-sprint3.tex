@@ -156,7 +156,7 @@ Rectification chargement image & Rihab & 13 x 2 \\ \hline
 
 \subsubsection{Business Intelligence}
 
-La Business intelligence\footnote{Informatique décisionnelle} propose
+La \acrfull{BI}\footnote{Informatique décisionnelle} propose
 d'utiliser les données transitant par le Système d'information en informations
 susceptibles d'être exploitées à des fins décisionnelles.
 
@@ -175,16 +175,32 @@ Les 4 fonctions de la chaîne décisionnelle:
         usage décisionnel.
     \item [\acrfull{DW}] Stocker Centraliser les données structurées et
         traitées afin qu'elles soient disponibles pour un usage décisionnel.
-    \item [??] Distribuer Ou plutôt faciliter l'accessibilité des informations
-        selon les fonctions et les types d'utilisation.
+%    \item [??] Distribuer Ou plutôt faciliter l'accessibilité des informations
+%        selon les fonctions et les types d'utilisation.
     \item [\acrfull{OLAP}] Exploiter ou comment assister du mieux possible
         l'utilisateur afin qu'il puisse extraire la substance de l'information
         des données stockées à cet usage.
-    \item [Visualisation] Afficher des diagrammes visualisations différents
-        aspects des données traitées.
+    \item [Rapports] Des rapports sont générés sur ces différents données
+        traitées. Les rapports peuvent être des rapports traditionnels composés
+        des tableaux ou des rapport visuels composés des diagrammes et cartes
+        dynamiques ou statiques d’une manière synthétique ou détaillée. Ces
+        rapports sont ensuite utilisé par les décideurs et les dirigeants pour
+        prendre des décisions.
 \end{description}
 
-\TODO{MS BI, Power BI, SSIS}
+Dans notre projet, le Product Owner et les participants au projet nous avons
+recommandé d'explorer la solution du Microsoft du BI grâce aux compétences du
+nos encadreurs dans cette technologie. Les outils du Microsoft BI qu'on avait
+utilisés au cours de cette itération sont:
+
+\begin{description}
+    \item [\acrfull{SSIS}] La solution du Microsoft pour l'\acrshort{ETL}. Elle
+        permet d'extraire et d'importer aisément les donnée à un ou des bases
+        de données du serveur SQL Server.
+    \item [MS Power BI] Permettre de générer des tableaux du bord des rapports
+        visuels et dynamiques accessible en ligne facilement et sans besoin du
+        codage. C'est une solution alternative de \acrfull{SSRS}.
+\end{description}
 %\clearpage
 
 %\begin{figure}[htbp]
