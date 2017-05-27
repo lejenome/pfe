@@ -61,6 +61,7 @@ final,
 \usepackage{subcaption}
 %\usepackage{svg}
 \usepackage{array}
+\usepackage{tabularx}
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{needspace}
@@ -270,25 +271,25 @@ final,
 %\part{Introduction}
 \chapter*{Introduction Générale}
 \addcontentsline{toc}{chapter}{Introduction Générale}
-\backgroundsetup{contents=WIP,scale=8,position={0.9,-1.5},opacity=0.6}
 \input{10-introduction}
 
 \cleardoublepage
-\SetBgContents{}
 \chapter{Positionnement et Méthode du Travail}
 \input{20-cadreprojet}
 
 \cleardoublepage
 \part*{Itérations}
-\let\subparagraph\paragraph
-\let\paragraph\subsubsection
-\let\subsubsection\subsection
-\let\subsection\section
-\let\section\chapter
 \input{30-sprint0}
 \include{31-sprint1}
 \include{32-sprint2}
 \include{33-sprint3}
+
+\cleardoublepage
+\chapter*{Conclusion Générale}
+\addcontentsline{toc}{chapter}{Conclusion Générale}
+\backgroundsetup{contents=WIP,scale=8,position={0.9,-1.5},opacity=0.6}
+\input{40-conclusion}
+\SetBgContents{}
 
 %%%% INCLUDE CHAPTERS
 

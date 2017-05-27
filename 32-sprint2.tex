@@ -1,13 +1,14 @@
-\section[Itération~2:~(~3/8/2017~-~3/28/2017~)]{Itération~2:~\textup{\textto{(~3/8/2017~-~3/28/2017~)}}}
+\chapter[Itération~2:~(~3/8/2017~-~3/28/2017~)]{Itération~2:~\textup{\textto{(~3/8/2017~-~3/28/2017~)}}}
 
-\subsection{Introduction}
+\section*{Introduction}
+\addcontentsline{toc}{section}{Introduction}
 
 Une caractéristique du Scrum est l'extension continue des spécifications du produit élaboré
 dans l'itération précédente.
 En effet Scrum permet à s'adapter au changement seulement entre les itérations.
 Dans ce contexte, les fonctionnalités développées ont été étendues.
 
-\subsection{L'objectif du sprint}
+\section{L'objectif du sprint}
 
 L'objectif de cette itération vise trois environnements. Nous allons ajouter
 une nouvelle vision par rapport à l'itération précédentes.
@@ -46,13 +47,13 @@ Ils sont comme suit:
 %d'améliorer la qualité de service web de location et d'enrichir des
 %fonctionnalités du \textquote{Dashboard}.
 
-\subsection{Planification de l'itération 2}
+\section{Planification de l'itération 2}
 
 Au sein de la réunion de planification nous avons sélectionné les tâches à
 réaliser au cours de cette itération tout en accord avec le \textquote{Product
 Owner}.
 
-\subsubsection{Backlog de l'itération}
+\subsection{Backlog de l'itération}
 Le but de cette itération est d’ajouter un système de gestion des rapport, d’améliorer la qualité et d'explorer des niveau type des donnes.
 
 le tableau~\ref{tab:sprint2-backlog} représente nos taches dans cette itération.
@@ -91,7 +92,7 @@ le tableau~\ref{tab:sprint2-backlog} représente nos taches dans cette itératio
     \end{longtable}
 \end{center}
 
-\subsubsection{Estimation de la deuxième itération}
+\subsection{Estimation de la deuxième itération}
 
 Comme l'itération précédant, Nous avons fixé la période de cette itération à 3
 semaine. Les estimations d'heures de nos engagements sont présentés dans le
@@ -112,7 +113,7 @@ Rihab & 8 & 18 & 144 \\ \hline
 \end{table}
 
 Les estimations de nos taches en heures sont disponibles dans le
-tableau~\ref{sprint2-estimsation}.
+tableau~\ref{tab:sprint2-estimation}.
 
 \begin{center}
     \begin{longtable}{| l | l | l |}
@@ -148,9 +149,9 @@ Groupement de secousse sur la carte & Rihab & 5 \\ \hline
 
 %\subsubsection{Évolution du travail}
 
-\subsection{Présentation des outils utilisés}
+\section{Présentation des outils utilisés}
 
-\subsubsection{Lumen}
+\subsection{Lumen}
 
 On a décidé de migrer vers un framework pour le développement du backend du
 notre plateforme dans le but de simplifier et améliorer nos services web. Les
@@ -184,26 +185,26 @@ développement du site web classique ou autres types de développement.
 %qui est une version simplifié du Laravel pour le développement des API
 %\acrshort{RESTful}.
 
-\subsection{Mises des normes}
+\section{Mises des normes}
 
 Outres que les critères de la premiere itération, les nouveaux critères à
 respecter pour cette itération sont:
 
-\paragraph{Qualité du trajectoire}
+\subsection{Qualité du trajectoire}
 Le trajectoire doit être aligné sur le trajet avec bonne précision. Et le
 nombre des positions nécessaire pour tracer le trajectoire doivent être le
 minimum le plus possible.
 
-\paragraph{Architecture modulaire}
+\subsection{Architecture modulaire}
 Architecture de backend doit être modulaire: On doit changer notre code
 procédurale par un code orienté objet et minimiser la duplication du code et
 séparer le code des models et le code des contrôleurs.
 
-\paragraph{IHM de la page Dashboard Responsive}
+\subsection{IHM de la page Dashboard Responsive}
 Affiche claire et responsive des marqueurs dans la carte meme si le nombre est
 très élevé.
 
-\subsection{Conception}
+\section{Conception}
 la figure~\ref{fig:sprint2-webservices-report-usecase} synthétise le cas d'utilisation
 du services \textquote{Rapport} de la deuxième itération.
 
@@ -250,11 +251,11 @@ mise à jour de la position dans la deuxième itération.
     \label{fig:sprint2-dashboard-class}
 \end{figure}
 
-\subsection{Évaluation suivant les normes mise}
+\section{Évaluation suivant les normes mise}
 
 \TODO{EVALUATION}
 
-\subsection{Contributions}
+\section{Contributions}
 
 Au cours de l'itération avec l'augment des fonctionnalités ajoutées au
 Dashboard, le code JavaScript devenu complexe, dupliqué et difficile à détecter
@@ -283,18 +284,18 @@ diagram~\ref{fig:sprint2-dashboard-class}. Elle consiste de:
         ralentisseurs, secousses, \ldots) qui hérite du classe \verb|Layer|. La
         plupart du temps, on a juste besoin de définir l'URL du resource, la
         listes des icons et des filtrages possibles.
-    \item Un espace de noms \verb|Config| contenu les variables de
+    \item Un espace de noms \verb|Config| contenu les constantes de
         configuration.
 \end{itemize}
 
-\subsection{Revue de cette itération}
+\section{Revue de cette itération}
 
-\subsubsection{Produit de l'itération}
+\subsection{Produit de l'itération}
 
 A la fin de l'itération 2, nous détaillons les différentes spécifications qui
 caractérisent et implémenté le système de gestion des rapport.
 
-\paragraph{Page \textquote{Rapport}}
+\subsubsection{Page \textquote{Rapport}}
 
 Dans cette page, nous donne la main à l'utilisateur pour faire un petit rapport
 comme expliqué dans la figure~\ref{fig:sprint2-rapport-screenshot1}. Cette page
@@ -322,7 +323,7 @@ L'envoie du rapport est éxecuté en deux phases:
     \label{fig:sprint2-rapport-screenshot1}
 \end{figure}
 
-\paragraph{Page \textquote{Dashboard}}
+\subsubsection{Page \textquote{Dashboard}}
 L'utilitaire de regroupement de marqueurs vous aide à gérer plusieurs marqueurs
 à différents niveaux de zoom. Précisément, les marqueurs sont en fait des
 éléments à ce stade et ne deviennent réellement des marqueurs qu'après leur
@@ -351,7 +352,7 @@ pour faciliter la consultation de la carte.
     \caption{Groupement des marqueurs des secousses en différents niveaux du zoom}
 \end{figure}
 
-\paragraph{Application Mobile \textquote{CityWatch}}
+\subsubsection{Application Mobile \textquote{CityWatch}}
 
 Dans notre application, l'utilisateur doit s'inscrit pour accéder à
 l'application. Les données saisies dans le formulaire d'inscription (nom
@@ -382,21 +383,23 @@ l'unicité de ce dernier.
     \caption{Formulaire d'inscription}
 \end{figure}
 
-\subsubsection{Avis du Product Owner}
+\subsection{Avis du Product Owner}
 
 A la fin de cette deuxième itération, nous avons présenté au \textquote{Product
 Owner} le produit obtenu. Le \textquote{Product Owner} a exprimé sa
 satisfaction du travail réalisé et nous a conseillé par la suite de simplifier
 le formulaire du rapport.
 
-\subsubsection{Burndown chart}
+\subsection{Burndown chart}
 
 La figure~\ref{fig:sprint2-burndown} présente une vue d'ensemble sur le progrès
 de notre travail au cours de l'itération par rapport au progrès idéal.
 
 \input{figures/sprint2-burndown}
 
-\subsection{Conclusion}
+\section*{Conclusion}
+\addcontentsline{toc}{section}{Conclusion}
+
 Dans cette itération, la qualité de notre code a été bien améliorée grâce aux testes unitaires
 que nous avons pris et le revue collaboré du code à chaque changement.
 De plus l'utilisation d'un framework dans le développement de notre service web

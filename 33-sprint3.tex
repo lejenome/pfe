@@ -1,13 +1,14 @@
-\section[Itération~3:~(~4/3/2017~-~4/28/2017~)]{Itération~3:~\textup{\textto{(~4/3/2017~-~4/28/2017~)}}}
+\chapter[Itération~3:~(~4/3/2017~-~4/28/2017~)]{Itération~3:~\textup{\textto{(~4/3/2017~-~4/28/2017~)}}}
 
-\subsection{Introduction}
+\section*{Introduction}
+\addcontentsline{toc}{section}{Introduction}
 
 Dans la dernière itération, nous avons collecté un grand ensemble de donnés des
 différents types.  Malgré tout, ces donnés n'ont pas de valeur tel que on les
 explore pas. C'est le rôle du Business Intelligence que nous allons étudier
 dans cette itération.
 
-\subsection{L'objectif du sprint}
+\section{L'objectif du sprint}
 
 En accord avec le product owner,le but de cette itération est:
 
@@ -33,9 +34,9 @@ En accord avec le product owner,le but de cette itération est:
 %modifier le critère de chargement, En plus nous allons implémenter une méthode
 %permettant de maintenir la qualité.
 
-\subsection{Planification de l'itération 3}
+\section{Planification de l'itération 3}
 
-\subsubsection{Backlog de l'itération}
+\subsection{Backlog de l'itération}
 
 On définit dans le tableau~\ref{tab:sprint3-backlog} la liste de nos taches
 dans cette itération.
@@ -79,7 +80,7 @@ dans cette itération.
 \end{longtable}
 \end{center}
 
-\subsubsection{Estimation de la deuxième itération}
+\subsection{Estimation de la deuxième itération}
 
 Le tableau~\ref{tab:sprint3-capacity} représente l'estimation du nombre
 d'heures pendant lesquelles nous nous engageons à travailler dans une période
@@ -140,11 +141,17 @@ Rectification chargement image & Rihab & 13 x 2 \\ \hline
 \end{longtable}
 \end{center}
 
-\subsection{Présentation des outils utilisés}
+\section{Présentation des outils utilisés}
 
-\subsubsection{OAuth2}
+\subsection{OAuth2}
 
-\TODO{what is it, alternatives, why}
+Pour sécuriser et limiter l'accès à nos services web, on a décide d'implémenter des différentes techniques dont la première est l'authentification.
+
+Le choix naturel est OAuth2~\cite{RFC6749}. Il est un protocale de délégation
+d'autorisation. Il permet aux applications \textquote{consommateurs} d'avoir un
+le permission d'utiliser un service web \textquote{fournisseur}.
+
+\TODO{alternatives + why}
 
 % Les API REST sont basées sur le protocole HTTP, qui signifie Hypertext Transfer Protocol.
 % C’est ce qui est au cœur du web! C’est un protocole qui définit la communication
@@ -154,7 +161,7 @@ Rectification chargement image & Rihab & 13 x 2 \\ \hline
 % dont GET\footnote{Récupérer une ressource (ne modifie pas la ressource).}, PUT\footnote{Modifier une ressource.},
 % POST\footnote{Créer une ressource.}, DELETE\footnote{Supprimer une ressource.} encore plus.
 
-\subsubsection{Business Intelligence}
+\subsection{Business Intelligence}
 
 La \acrfull{BI}\footnote{Informatique décisionnelle} propose d'utiliser les
 données transitant par le Système d'information en informations susceptibles
@@ -210,7 +217,7 @@ utilisés au cours de cette itération sont:
 %  \label{fig:sprint3-businessintelligence}
 %\end{figure}
 
-\subsection{Mises des normes}
+\section{Mises des normes}
 
 Les critères à respecter pendant cette itération incluent les même critères de
 l'itération 1 et de plus:
@@ -226,7 +233,7 @@ l'itération 1 et de plus:
         statistiques doivent mets à jour instantanément et continuellement.
 \end{description}
 
-\subsection{Conception}
+\section{Conception}
 
 la figure~\ref{fig:sprint3-webservices-oauth-usecase} décrit le diagramme
 de cas d'utilisation de service d'authentification.
@@ -268,18 +275,18 @@ page \textquote{Dashboard} dans la troisième itération.
     \label{fig:sprint3-dashboard-classs}
 \end{figure}
 
-\subsection{Évaluation suivant les normes mise}
+\section{Évaluation suivant les normes mise}
 
 \TODO{}
 
-\subsection{Revue de cette itération}
+\section{Revue de cette itération}
 
 % On rappelons que nous travaillons dans un équipe Scrum qui nécessite
 % l'intégration de notre travail dans le projet pour attendre le but.
 
-\subsubsection{Produit de l'itération}
+\subsection{Produit de l'itération}
 
-\paragraph{Légende du Dashboard}
+\subsubsection{Légende du Dashboard}
 Dans cette page nous travaillons alors sur deux parties:
 
 \begin{itemize}
@@ -311,9 +318,9 @@ filtrage des marqueurs.
 \end{figure}
 \clearpage
 
-\paragraph{Android}
+\subsubsection{Android}
 
-\paragraph*{}
+\subsubsection*{}
 Les données captées par l'application mobile (Position , Secousses , Ralentisseur , Réseaux , force du 
 signal et vitesse ) sont Récupérées par le serveur pour assurer la sauvegarde et la transmission vers une 
 base données.\\
@@ -338,19 +345,20 @@ base données.\\
 \end{figure}
 \clearpage
 
-\subsubsection{Avis du Product Owner}
+\subsection{Avis du Product Owner}
 
 Après la présentation du produit final, le \textquote{Product Owner} était très satisfait
 a notre travail.
 
-\subsubsection{Burndown chart}
+\subsection{Burndown chart}
 
 La figure~\ref{fig:sprint3-burndown} présente une vue d'ensemble sur le progrès
 de notre travail au cours de l'itération par rapport au progrès idéal.
 
 \input{figures/sprint3-burndown}
 
-\subsection{Conclusion}
+\section*{Conclusion}
+\addcontentsline{toc}{section}{Conclusion}
 
 A fin de cette itération, nous avons découvert des nouveaux aspects intéressants dans notre projet
 qui nécessitent l'intervention des technologies (big-data, data mining, \ldots).
