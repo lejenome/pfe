@@ -4,26 +4,34 @@
 %\section*{Introduction}
 %\addcontentsline{toc}{section}{Introduction}
 
-Avant de commencer la première itération du Scrum, une période de temps à été
-consacrée pour préparer ce qui est nécessaire pour le lancement du projet dans
-des bonnes conditions. Cette période est souvent nommée l'itération 0 du
-projet. Elle est dédiée généralement à la recherche bibliographique, aux choix
-technologiques et à la mise en place de l'environnement de développement. Dans
-cette itération nous définissons le Backlog général de notre projet, ainsi que
-l'environnement du travail que nous avons besoin.
+L'itération 0 était dédiée à la présentation du projet aux membres de l'équipe,
+à la recherche des choix technologiques, à la mise en place et au test de
+l'environnement de développement. L'itération 0 a inclue des multiple des
+réunions avec le directeur du produit (Product Owner) et des multiples
+intervenants impliqués dans le produit pour la pré-planification du projet et
+la préparation du carnet du produit nommé Backlog Général.
+
+%Avant de commencer la première itération du Scrum, une période de temps à été
+%consacrée pour préparer ce qui est nécessaire pour le lancement du projet dans
+%des bonnes conditions. Cette période est souvent nommée l'itération 0 du
+%projet. Elle est dédiée généralement à la recherche bibliographique, aux choix
+%technologiques et à la mise en place de l'environnement de développement. Dans
+%cette itération nous définissons le Backlog général de notre projet, ainsi que
+%l'environnement du travail que nous avons besoin.
 
 \section{Backlog général}
 
 La première étape de la méthode Scrum consiste à préparer un carnet du produit
 (Product Backlog) qui présente la liste des tâches à effectuer durant le
-développement du projet qui sera répartie en des itérations. Le rôle du Product
-Owner est important dans cette phase de développement parce qu'il devra faire
-l'exercice de prioriser ses demandes selon des critères respectant la mission
-et les objectifs de son produit. En précisant la valeur de priorité, il estime
-l'impact et le retour sur investissement qu'aura chacun des items dans le
-carnet du produit. Il y a donc effectivement eu un gros travail d'échanges et
-discussions avec le client pour comprendre tout le cahier des charge initial,
-C'est comme ça que le Backlog a été défini.
+développement du projet qui sera répartie en des itérations. Le Product Owner
+prend en charge de communiquer la vision globale du produit à l'équipe. Il se
+voit représenter le client final, se met à sa place et priorise ses besoins
+selon des critères respectant la mission et les objectifs de son produit. En
+précisant la valeur de priorité, il estime l'impact et le retour sur
+investissement qu'aura chacun des items dans le carnet du produit. Il y a donc
+effectivement eu un gros travail d'échanges et discussions avec le client pour
+comprendre tout le cahier des charge initial, C'est comme ça que le Backlog a
+été défini.
 
 Les valeurs d'affaires sont définies comme suit:
 
@@ -36,13 +44,13 @@ Les valeurs d'affaires sont définies comme suit:
 
 La figure~\ref{fig:product-backlog} présente une version simplifiée du Product
 Backlog complète des 3 premières itérations. Nous représentons notre
-participation par les cercles du texte souligné.
+participation de binôme par les cercles du texte souligné.
 
 \input{figures/product-backlog}
 
-Le tableau~\ref{tab:product-backlog} représente la liste plus détaillé des cas
+Le tableau~\ref{tab:product-backlog} représente une liste plus détaillé des cas
 d'utilisations que nous allons implémentés pendant les 3 premières itérations.
-Ils suivent la forme:
+La définition des ces cas d'utilisation suivre la forme:
 
 \begin{displayquote}
     En tant que \textbf{X}, je peux \textbf{Y} Afin d'\textbf{Z}.
@@ -55,8 +63,9 @@ Ou aussi la forme:
     \textbf{Z}.
 \end{displayquote}
 
-Dans notre liste des cas d'utilisation, l'acteur initiateur (\textbf{X}) est
-toujours l'utilisateur.
+Ou \textbf{X} est l'acteur initiateur, \textbf{Y} est le service rendu par le
+système et \textbf{Z} est le but du cas. Dans notre liste des cas
+d'utilisation, l'acteur initiateur (\textbf{X}) est toujours l'utilisateur.
 
 \Needspace{5\baselineskip}
 \begin{center}
@@ -77,19 +86,6 @@ toujours l'utilisateur.
         \endlastfoot
 
         \hline
-%1 & Gestion du Trajectoire & démarrer le localisation & Avoir un feedback dans l'application et sur le site web & 1 \\ \cline{3-5}
-%  &                        & arrêter le localisation & Avoir un feedback dans l'application & 1 \\ \hline
-%2 & Gestion de Rapports    & choisir entre une variété de problèmes à déclarer depuis l'application & Avoir un feedback sur le site web & 1 \\ \cline{3-5}
-%  &                        & choisir l'emplacement du problème à déclarer dans une carte & Avoir un feedback sur le site web & 1 \\ \cline{3-5}
-%  &                        & ajouter une description ou une image au problème & Avoir un feedback sur le site web & 2 \\ \hline
-%3 & Consulter la carte     & consulter la carte depuis l'application & Voir la carte dans l'application & 2 \\ \hline
-%4 & Compte                 & consulter le site web sans avoir un compte & Consulter le site web avec un minimum d'informations & 1 \\ \cline{3-5}
-%  &                        & créer un compte & Avoir un compte personnel & 2 \\ \hline
-%5 & Groupement des rapports& voir les rapports en groupe lors d'un zoom out & Avoir une vision globale sur le nombre des rapports & 1 \\ \hline
-%6 & Déclarer un rapport    & déclarer un rapport à partir du site web & Avoir accès à une page rapport comme celle de l'application & 1 \\ \hline
-% \hline \ldots & \ldots & \ldots & \ldots & \ldots \\ \hline
-
-%
 1 & Gestion du Trajectoire & Activer le localisation & Enregistrer le trajectoire & 1 \\ \cline{3-5}
 &                          & Consulter le dashboard  & Afficher le trajectoire instantané & 1 \\ \cline{3-5}
 &                          & Filtrer le trajectoire  & Consulter l'histoire des trajectoires & 2 \\ \hline
@@ -109,10 +105,16 @@ toujours l'utilisateur.
 
 \section{Préparation de l'environnement du travail}
 
+Pendant l'itération 0, on a fait un recherche sur les choix techniques à fin de
+mettre en place l'environnemennt de développement. Ces choix concernent
+l'environnement logiciel à utiliser telque les langues de programmations, les
+frameworks et les outils de développement, ainsi, la listes des besoins
+matériels.
+
 \subsection{Environnement logiciel}
 
-La réalisation de ce projet nécessite l'ensemble de ces logiciels et
-bibliothèques que nous allons sites:
+La réalisation de ce projet nécessite l'ensemble de ces plateformes et
+frameworks que nous allons cités:
 
 \subsubsection{Android}
 
@@ -131,14 +133,6 @@ développement d'application grâce au support officiel du Google et les
 fonctionnalités héritées de l'ide IntelliJ IDEA de JetBrains comme un
 concepteur d’interface utilisateur pour des résolutions variées simultanément,
 débogueur, \ldots.
-
-%\subparagraph{Android studio}
-%est un environnement de développement pour développer des applications Android.
-%Il est basé sur IntelliJ IDEA.\\ Android studio permet principalement d'éditer
-%les fichiers Java et les fichiers de configuration d'une application Android.Il
-%propose entre autres des outils pour gérer le développement d'applications
-%multilingues et permet de visualiser la mise en page des écrans sur des écrans
-%de résolutions variées simultanément
 
 \subsubsection{PHP}
 En se basant sur les conseils du Product Owner et aux limites d'environnement
@@ -174,12 +168,6 @@ un éditeur de texte avancé et intelligent, un interpréteur et un
 débogueur\ldots. Vim a été aussi utilisé avec un ensemble des extensions pour
 enrichir ses fonctionnalités.
 
-%\paragraph{Composer}
-%
-%Le logiciel Composer est un gestionnaire de dépendances sous licence libre
-%écrit en PHP\@. Il permet à ses utilisateurs de déclarer et d'installer les
-%bibliothèques dont le projet principal a besoin.
-
 \subsubsection{Technologies du Web}
 
 Les technologies Web modernes nous ont permis de créer une application web
@@ -209,7 +197,7 @@ une priorité pendant notre phase de développement. Quelques fonctionnalités d
 ECMAScript 2016 n'étaient pas utilisées car elles ne sont pas encore
 implémentées par aucun des navigateurs principales comme les Modules.
 
-\subsection{environnements matériels}
+\subsection{Environnement matériel}
 
 Pour le développement de ce projet, il était demandé d'avoir:
 
@@ -277,8 +265,7 @@ utiliser.
 \section*{Conclusion}
 \addcontentsline{toc}{section}{Conclusion}
 
-L'itération 0 nous à permis de préparer le terrain pour une bonne entame de
-développement. Indépendamment la mise en place des environnement de travail et
-les formations que nous avons suivi sur les technologies. Pendant cette
-itération nous avons élaboré le carnet de notre projet avec la collaboration du
-Product Owner.
+L'itération 0 nous a permis de bien comprendre le produit à développer et de
+préparer le terrain pour une bonne entame de développement. Pendant cette
+itération, nous avons élaboré le carnet de notre projet avec la collaboration
+du Product Owner.
