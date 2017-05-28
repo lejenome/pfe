@@ -8,15 +8,11 @@ a4paper,
 onecolumn,
 titlepage,
 final,
-]{report} % {scrartcl}
+]{report}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[shorthands=off,english,french]{babel}
-%\usepackage[fixlanguage]{babelbib}
-%\usepackage{polyglossia}
-%\setmainlanguage{french}
-%\setotherlanguages{english}
 \usepackage{csquotes}
 
 \usepackage{abstract}
@@ -169,11 +165,6 @@ final,
 \usepackage{fancyvrb}
 \VerbatimFootnotes
 
-%%% Equation and float numbering
-%\numberwithin{equation}{section}   % Equationnumbering: section.eq#
-%\numberwithin{figure}{section}     % Figurenumbering: section.fig#
-%\numberwithin{table}{section}      % Tablenumbering: section.tab#
-
 \makeglossaries
 \input{60-glossary}
 
@@ -233,24 +224,14 @@ final,
 \tableofcontents
 
 \clearpage
-%\addcontentsline{toc}{section}{Table des figures}
 \listoffigures
 
 \clearpage
-%\addcontentsline{toc}{section}{Liste des tableaux}
 \listoftables
-
-%\clearpage
-%\renewcommand\listoflistingscaption{Liste des codes sources}
-%\addcontentsline{toc}{section}{Liste des codes sources}
-%\listoflistings
-
-%\clearpage
 
 % list of abbreviations
 %\nomenclature{$c$}{Speed of light in a vacuum inertial frame}
 %\nomenclature{$h$}{Planck constant}
-
 %\printnomenclature
 
 \cleardoublepage
