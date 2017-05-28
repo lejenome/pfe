@@ -26,8 +26,6 @@
 - [ ] unit testing / phpunit
 - [ ] dotfiles/setup/automatization files, phpdoc/apidoc
 
-- [ ] Data reducing  & Optimization
-- [ ] Map pos to road
 
 - [ ] data size estimation to n TB on 1 mill users and x roads
 
@@ -69,10 +67,11 @@
 - [ ] Trace API
   - [ ] GeoJSON, KML
   - [ ] Gestion du Trace History
-- [ ] Traffic Path Reduction Algos
-- [ ] Mapping positions to road
+  - [ ] Traffic Path Reduction Algos
+  - [ ] Mapping positions to road
 - [ ] Dynamic Server Configuration API
 - [ ] Delete Image on delay
+- [ ] Code Review
 
 ### Sprint 3 ###
 
@@ -82,11 +81,12 @@
 - [ ] PhoneSignal API
 - [ ] User API
 - [ ] OAuth2
-- [ ] User Permissions
-- [ ] Scopes
+  - [ ] User Permissions
+  - [ ] Scopes
 - [ ] Traffic API ?
 - [ ] BI integration ?
   - [ ] Export to Bi
   - [ ] Traffic API using BI results
 - [ ] User Ranking
 - [ ] Data Mining
+- [ ] Rate Limit
