@@ -54,15 +54,17 @@ réaliser au cours de cette itération tout en accord avec le \textquote{Product
 Owner}.
 
 \subsection{Backlog de l'itération}
-Le but de cette itération est d’ajouter un système de gestion des rapport, d’améliorer la qualité et d'explorer des niveau type des donnes.
 
-le tableau~\ref{tab:sprint2-backlog} représente nos taches dans cette itération.
+Le but de cette itération est d'ajouter un système de gestion des rapport,
+d'améliorer la qualité et d'explorer des niveau type des donnes.
+
+Le tableau~\ref{tab:sprint2-backlog} représente nos taches dans cette itération.
 
 \begin{center}
     \footnotesize
     \begin{longtable}{| p{1cm} | p{5cm} | p{7cm} | p{1cm} |}
         \caption{backlog de l'itération 2}
-        \label{tab:sprint2-backlog} \\
+\label{tab:sprint2-backlog} \\
 
         \hline
         \multicolumn{1}{|c}{\textbf{Réf}} &
@@ -80,15 +82,15 @@ le tableau~\ref{tab:sprint2-backlog} représente nos taches dans cette itératio
         \hline
 2.1 & Recherche sur les trajectoires & Comment présenter et enregistrer les trajectoire & 1 \\ \hline
 2.2 & Affichage du trajet sur la carte & Visualizer le trajectoire d'un périphérique comme un ligne & 1 \\ \hline
-2.3 & Implementer service d'enregsitrement des ralentisseurs & Enregistrer les données nécessaires pour représenter un ralentisseur & 1 \\ \hline
-2.4 & Responsive design & IHM de l'applicaiont Android adaptable aux differents résolutions et rotations & 2 \\ \hline
-2.5 & Implementer l'interface de déclaration un ralentisseur & Boutton rapport activé seulement si la localisation est active & 2 \\ \hline
+2.3 & Implementer service d'enregistrement des ralentisseurs & Enregistrer les données nécessaires pour représenter un ralentisseur & 1 \\ \hline
+2.4 & Responsive design & IHM de l'application Android adaptable aux différentes résolutions et rotations & 2 \\ \hline
+2.5 & Implementer l'interface de déclaration un ralentisseur & Bouton rapport activé seulement si la localisation est active & 2 \\ \hline
 2.6 & Filtrage des marqueurs dans la carte & Légende simplifiée permettant de choisir les types de données affichés dans la carte & 1 \\ \hline
 2.7 & Implementer service de chargement de l'image & Charger, valider et enregistrer les images dans le serveur & 1 \\ \hline
 2.8 & Implementer la fonctionnalité de déclaration des rapports & Formulaire avec validation et service d'enregistrement dans le serveur & 1 \\ \hline
 2.9 & Recherche test unitaires & Comment améliorer la qualité du code et installation d'une solution des tests unitaires & 1 \\ \hline
 2.10 & Recherche sur les frameworks PHP & Choisir le framework optimal pour notre platform et faire la migration & 2 \\ \hline
-2.11 & Groupement de secousse sur la carte & Les marquers de secousses regroupés lors d'un zoom out sur la carte et séparer lors d'un zoom in & 3 \\ \hline
+2.11 & Groupement de secousse sur la carte & Les marqueurs de secousses regroupés lors d'un zoom out sur la carte et séparer lors d'un zoom in & 3 \\ \hline
     \end{longtable}
 \end{center}
 
@@ -104,12 +106,12 @@ tableau~\ref{tab:sprint2-capacity}.
         \hline
         \textbf{Membre} & \textbf{Nombre d'heures par jour} & \textbf{Nombre de jours présent} & \textbf{Total en heures} \\ \hline
         \hline
-Moez & 8 & 18& 144\\ \hline
+Moez & 8 & 18 & 144 \\ \hline
 Rihab & 8 & 18 & 144 \\ \hline
 \multicolumn{2}{c|}{} & \textbf{Total} & 288 \\ \cline{3-4}
     \end{tabular}
     \caption{Nombre d'heures de travail estimé de l'itération 2}
-    \label{tab:sprint2-capacity}
+\label{tab:sprint2-capacity}
 \end{table}
 
 Les estimations de nos taches en heures sont disponibles dans le
@@ -118,7 +120,7 @@ tableau~\ref{tab:sprint2-estimation}.
 \begin{center}
     \begin{longtable}{| l | l | l |}
         \caption{Nombre d'heures estimé pour la réalisation des taches}
-        \label{tab:sprint2-estimation} \\
+\label{tab:sprint2-estimation} \\
 
         \hline
         \multicolumn{1}{|c}{\textbf{Spécification}} &
@@ -135,9 +137,9 @@ tableau~\ref{tab:sprint2-estimation}.
         \hline
 Recherche sur les trajectoires & Rihab & 5 x 2 \\ \hline
 Affichage du trajet sur la carte & Moez & 13 x 2 \\ \hline
-Implementer service d’enregsitrement des ralentisseurs & Moez & 5 \\ \hline
+Implementer service d'enregistrement des ralentisseurs & Moez & 5 \\ \hline
 Responsive design & Rihab & 5 x 2 \\ \hline
-Implementer l’interface de déclaration d'un ralentisseur & Rihab & 13 x 2 \\ \hline
+Implementer l'interface de déclaration d'un ralentisseur & Rihab & 13 x 2 \\ \hline
 Filtrage des marqueurs dans la carte & Rihab & 13 \\ \hline
 Implementer service de chargement de l'image & Moez & 5 \\ \hline
 Implementer la fonctionnalité de déclaration des rapports & Moez & 5 \\ \hline
@@ -191,64 +193,71 @@ Outres que les critères de la premiere itération, les nouveaux critères à
 respecter pour cette itération sont:
 
 \subsection{Qualité du trajectoire}
+
 Le trajectoire doit être aligné sur le trajet avec bonne précision. Et le
 nombre des positions nécessaire pour tracer le trajectoire doivent être le
 minimum le plus possible.
 
 \subsection{Architecture modulaire}
+
 Architecture de backend doit être modulaire: On doit changer notre code
 procédurale par un code orienté objet et minimiser la duplication du code et
 séparer le code des models et le code des contrôleurs.
 
 \subsection{IHM de la page Dashboard Responsive}
+
 Affiche claire et responsive des marqueurs dans la carte meme si le nombre est
 très élevé.
 
 \section{Conception}
-la figure~\ref{fig:sprint2-webservices-report-usecase} synthétise le cas d'utilisation
-du services \textquote{Rapport} de la deuxième itération.
+
+La figure~\ref{fig:sprint2-webservices-report-usecase} synthétise le cas
+d'utilisation du services \textquote{Rapport} de la deuxième itération.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=1\textwidth]{sprint2-webservices-report-usecase}
     \caption{Diagramme de case d'utilisation du services Rapports en itération 2}
-    \label{fig:sprint2-webservices-report-usecase}
+\label{fig:sprint2-webservices-report-usecase}
 \end{figure}
 
-le schéma~\ref{fig:sprint2-webservices-database} présente
-notre base de donnes dans cette itération.
+Le schéma~\ref{fig:sprint2-webservices-database} présente notre base de donnes
+dans cette itération.
+
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=1\textwidth]{sprint2-webservices-database}
     \caption{Diagramme entité-association du service Position en itération 2}
-    \label{fig:sprint2-webservices-database}
+\label{fig:sprint2-webservices-database}
 \end{figure}
 
-les deux
-figures~\ref{fig:sprint2-webservices-report-post-sequence}
-,~\ref{fig:sprint2-webservices-report-get-sequence} décrit les scénarios de la
-mise à jour de la position dans la deuxième itération.
+Les deux
+figures~\ref{fig:sprint2-webservices-report-post-sequence},~\ref{fig:sprint2-webservices-report-get-sequence}
+décrit les scénarios de la mise à jour de la position dans la deuxième
+itération.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=1\textwidth]{sprint2-webservices-report-post-sequence}
     \caption{Diagramme de séquence du services Post Rapports en itération 2}
-    \label{fig:sprint2-webservices-report-post-sequence}
+\label{fig:sprint2-webservices-report-post-sequence}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=1\textwidth]{sprint2-webservices-report-get-sequence}
     \caption{Diagramme de séquence du services Get Rapports en itération 2}
-    \label{fig:sprint2-webservices-report-get-sequence}
+\label{fig:sprint2-webservices-report-get-sequence}
 \end{figure}
- la figure~\ref{fig:sprint2-dashboard-class} représente la nouvelle architecture
- orienté objet de la page \textquote{Dashboard}.
+
+La figure~\ref{fig:sprint2-dashboard-class} représente la nouvelle architecture
+orienté objet de la page \textquote{Dashboard}.
+
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\textwidth]{sprint2-dashboard-class}
     \caption{Diagramme des classes du Dashboard}
-    \label{fig:sprint2-dashboard-class}
+\label{fig:sprint2-dashboard-class}
 \end{figure}
 
 \section{Évaluation suivant les normes mise}
@@ -320,10 +329,11 @@ L'envoie du rapport est éxecuté en deux phases:
     \centering
     \includegraphics[width=0.7\textwidth]{sprint2-rapport-screenshot1}
     \caption{Page Rapport}
-    \label{fig:sprint2-rapport-screenshot1}
+\label{fig:sprint2-rapport-screenshot1}
 \end{figure}
 
 \subsubsection{Page \textquote{Dashboard}}
+
 L'utilitaire de regroupement de marqueurs vous aide à gérer plusieurs marqueurs
 à différents niveaux de zoom. Précisément, les marqueurs sont en fait des
 éléments à ce stade et ne deviennent réellement des marqueurs qu'après leur
@@ -341,13 +351,13 @@ pour faciliter la consultation de la carte.
         \centering
         \includegraphics[width=.9\linewidth]{sprint2-dashboard-screenshot1}
         \caption{Groupement activé en un zoom bas}
-        \label{fig:sprint2-dashboard-screenshot1}
+\label{fig:sprint2-dashboard-screenshot1}
     \end{subfigure}
     \begin{subfigure}{.5\textwidth}
         \centering
         \includegraphics[width=.9\linewidth]{sprint2-dashboard-screenshot2}
         \caption{Groupement désactivé en zoom haut}
-        \label{fig:sprint2-dashboard-screenshot2}
+\label{fig:sprint2-dashboard-screenshot2}
     \end{subfigure}
     \caption{Groupement des marqueurs des secousses en différents niveaux du zoom}
 \end{figure}
@@ -371,14 +381,14 @@ l'unicité de ce dernier.
         \centering
         \includegraphics[width=1.0\linewidth]{sprint2-android-screenshot1}
         \caption{Activité du confection}
-        \label{fig:sprint2-android-screenshot1}
+\label{fig:sprint2-android-screenshot1}
     \end{subfigure}
     \begin{subfigure}{.45\textwidth}
         \centering
         \centering
         \includegraphics[width=1.0\linewidth]{sprint2-android-screenshot2}
         \caption{Activité d'inscription}
-        \label{fig:sprint2-android-screenshot2}
+\label{fig:sprint2-android-screenshot2}
     \end{subfigure}
     \caption{Formulaire d'inscription}
 \end{figure}
@@ -400,17 +410,17 @@ de notre travail au cours de l'itération par rapport au progrès idéal.
 \section*{Conclusion}
 \addcontentsline{toc}{section}{Conclusion}
 
-Dans cette itération, la qualité de notre code a été bien améliorée grâce aux testes unitaires
-que nous avons pris et le revue collaboré du code à chaque changement.
-De plus l'utilisation d'un framework dans le développement de notre service web
-a facilité et organisé notre code.
+Dans cette itération, la qualité de notre code a été bien améliorée grâce aux
+testes unitaires que nous avons pris et le revue collaboré du code à chaque
+changement. De plus l'utilisation d'un framework dans le développement de
+notre service web a facilité et organisé notre code.
 
 Le tableau~\ref{tab:sprint2-evaluation} présente le pourcentage de
 réalisation de nos taches de cette itération.
 \begin{center}
     \begin{longtable}{| l | l |}
         \caption{Liste des tâches réalisées de deuxième itération }
-        \label{tab:sprint2-evaluation} \\
+\label{tab:sprint2-evaluation} \\
 
         \hline
         \textbf{Les tâches} & \textbf{Taux de réalisation} \\ \hline
@@ -425,9 +435,9 @@ réalisation de nos taches de cette itération.
         \hline
 Recherche sur les trajectoires & Effectué 100\% \\ \hline
 Affichage du trajet sur la carte & Effectué 100\% \\ \hline
-Implementer service d’enregsitrement des ralentisseurs & Effectué 100\% \\ \hline
+Implementer service d'enregistrement des ralentisseurs & Effectué 100\% \\ \hline
 Responsive design & Effectué 80\% \\ \hline
-Implementer l’interface de déclaration d'un ralentisseur & Effectué 100\% \\ \hline
+Implementer l'interface de déclaration d'un ralentisseur & Effectué 100\% \\ \hline
 Filtrage des marqueurs dans la carte & Effectué 100\% \\ \hline
 Implementer service de chargement de l'image & Effectué 70\% \\ \hline
 Implementer la fonctionnalité de déclaration des rapports & Effectué 100\% \\ \hline
