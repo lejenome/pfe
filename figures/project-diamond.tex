@@ -1,0 +1,25 @@
+\begin{figure}[htbp]
+\tikzset{nodes={font=\ttfamily,fill=white}}
+\begin{tikzpicture}[
+        declare function={%
+            f(\t)=90-\t*90;
+            g(\t)=\t/2.5+1*\t/(0.1+\t);
+            f2(\t)=-90-\t*90;
+            g2(\t)=\t/2.5+0.8;
+        },
+        pos par/.style={%
+            shift={({f2(#1)}:{g2(#1)})}
+        }
+    ]
+    \draw[thick,->] (0,0) -- (0,4.7) node[above]{Fonctionnalités};
+    \draw[thick,->] (0,0) -- (4.5,0) node[right]{Resources};
+    \draw[thick,->] (0,0) -- (0,-4.5) node[below]{Qualité};
+    \draw[thick,->] (0,0) -- (-4.5,0) node[left]{Estimation};
+    \draw[domain=0:8,variable=\t,smooth,samples=440,arrows={->[length=8]}]
+         plot({f(\t)}:{g(\t)});
+    \path node[pos par=0]{Itération 0}
+          node[pos par=4]{Itération 1};
+\end{tikzpicture}
+\caption{Evolution du Projet Diamond en Scrum}
+\label{fig:project-diamond}
+\end{figure}
