@@ -21,6 +21,9 @@ watch: main.tex
 %.gls: %.aux
 	+makeglossaries $*
 
+%.pdf: %.tex FORCE_MAKE
+	pdflatex %
+
 clean:
 	-latexmk -C
 	-rm -rf build *.aux _minted-build */*-converted-to.*
