@@ -129,22 +129,22 @@ Moez & 6 & 10 & 60\\ \hline
 Rihab & 6 & 10 & 60 \\ \hline
 \multicolumn{2}{c|}{} & \textbf{Total} & 120 \\ \cline{3-4}
     \end{tabular}
-    \caption{Nombre d'heures de travail estimé de l'itération 1}
+    \caption{Nombre d'heures de travail estimé --- Itération 1}
 \label{tab:sprint1-capacity}
 \end{table}
 
 Tout les membres de l'équipe font ensuite l'estimation de temps (en point
-d'histoire d'utilisateur) de chaque tache avec le poker de planning. Les
+d'histoire d'utilisateur) de chaque tâche avec le poker de planning. Les
 estimations utilisés sont $\frac{1}{2}$, $1$, $2$, $3$, $5$, $8$, $13$. Les
-taches peuvent aussi être assignées aux plus qu'un seul membres.
+tâches peuvent aussi être assignées aux plus qu'un seul membres.
 
 Le tableau~\ref{tab:sprint1-estimation} représente les estimations de nos
-taches en heures ($\times2$ signifie que la tache était assigné à deux membres)
-et le membre à qui était assignée la tache.
+tâches en heures ($\times2$ signifie que la tâche était assignée à deux membres)
+et le membre à qui était assignée la tâche.
 
 \begin{center}
     \begin{longtable}{| l | l | l |}
-        \caption{Nombre d'heures estimé pour la réalisation des taches}
+        \caption{Nombre d'heures estimé pour la réalisation des tâches}
 \label{tab:sprint1-estimation} \\
 
         \hline
@@ -175,50 +175,50 @@ Affiche état du périphérique & Rihab & 5 \\ \hline
 \subsection{Évolution du travail}
 
 Au cours de l'itération, on a utilisé Excel et un tableau physique pour suivre
-l'évolution des taches de chaque membre.
+l'évolution des tâches de chaque membre.
 
 \clearpage % FIXME
 
 Dans les figures~\ref{fig:sprint1-fig1},~\ref{fig:sprint1-fig2}
-et~\ref{fig:sprint1-fig2}, on représente l'état du tableau des taches en jour
-de distribution les taches, au milieu et à la fin de l'itération
-respectivement. Les lignes colorés représentent nos taches du binôme. Les
+et~\ref{fig:sprint1-fig2}, on représente l'état du tableau des tâches en jour
+de distribution les tâches, au milieu et à la fin de l'itération
+respectivement. Les lignes colorés représentent nos tâches du binôme. Les
 colonnes du tableau sont:
 
 \begin{description}
     \item [Who] L'allias du nom de chaque membres de l'équipe.
 
         \emph{Exemple:} \textbf{RM} signifie \textbf{R}ihab \textbf{M}ajdoub.
-    \item [À faire (Todo)] Les taches assignés au membres pour cette itération.
-        L'échange des taches entre les membres est possible sur le supervision
+    \item [À faire (Todo)] Les tâches assignés au membres pour cette itération.
+        L'échange des tâches entre les membres est possible sur le supervision
         du Scrum Master.
-    \item [Implémentation] La pourcentage de l'implémentation du tache de 0\%
+    \item [Implémentation] La pourcentage de l'implémentation du tâche de 0\%
         jusqu'à 100\%. Si le développeur a commencé l'implémentation d'une
-        tache, il la déplace dans cette colonne et faire le mise à jour du
+        tâche, il la déplace dans cette colonne et faire le mise à jour du
         pourcentage de l'implémentation à chaque jour pendant un court réunion
         nommée \textquote{Daily Scrum} pendant le, on discute l'évolution du
         travail et le plan du jour prochain.
-    \item [Test/Intégration/Review] L'implémentation du tache est complete,
+    \item [Test/Intégration/Review] L'implémentation du tâche est complete,
         elle est donc en phase d'évaluation et vérification de son
         fonctionnement si intégré dans le reste du système. Depuis la deuxième
         itération, au moins un autre membre doit revue le code pour à fin
         d'assurer la qualité du code, détecter et corriger les défauts le plus
         tôt possible.
-    \item [Complete (Done)] La tache était implémentée et validée.
+    \item [Complete (Done)] La tâche était implémentée et validée.
 \end{description}
 
-On a utilisé des différents couleurs pour différents types des taches:
+On a utilisé des différents couleurs pour différents types des tâches:
 
 \begin{description}
-    \item [Rose] Les taches du développement d'interface web (Dashboard).
-    \item [Verte] Les taches du développement mobile (l'application Android).
-    \item [Jaune] Les taches du développement des services web et d'administration.
+    \item [Rose] Les tâches du développement d'interface web (Dashboard).
+    \item [Verte] Les tâches du développement mobile (l'application Android).
+    \item [Jaune] Les tâches du développement des services web et d'administration.
 \end{description}
 
 La liste des prochaines réunions est écrite dans le tableau aussi:
 
 \begin{itemize}
-    \item Présentations des recherches si la taches inclue une partie du
+    \item Présentations des recherches si la tâche inclue une partie du
         recherche et présentation.
     \item Rendez-vous avec des autres personnes concernés par le projet.
     \item Si un développeur est besoin d'aide ou de discuter un problème
@@ -230,11 +230,11 @@ La liste des prochaines réunions est écrite dans le tableau aussi:
 
 \begin{figure}[htbp]
     \centering
-    \caption{Évolution du travail}
+    \caption[Évolution du travail --- Itération 1]{Évolution du travail}
     \begin{subfigure}{1\textwidth}
         \centering
         \includegraphics[width=0.8\textwidth]{sprint1-fig1}
-        \caption{Distribution des taches de l'itération}
+        \caption{Distribution des tâches de l'itération}
 \label{fig:sprint1-fig1}
     \end{subfigure}
 
@@ -446,41 +446,42 @@ Les exigence de l'api RESTful sont:
 
 
 \section{Conception}
-la figure~\ref{fig:sprint1-webservices-usecase}  ci dessus décrit
-le diagramme de cas
-d'utilisation qui regroupe les scénarios de localisation d'individu.
+
+La figure~\ref{fig:sprint1-webservices-usecase} ci dessus décrit le diagramme
+de cas d'utilisation qui regroupe les scénarios de localisation d'individu.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=1\textwidth]{sprint1-webservices-usecase}
-    \caption{Diagramme de case d'utilisation du services web en itération 1}
+    \caption{Diagramme de case d'utilisation du services web --- Itération 1}
 \label{fig:sprint1-webservices-usecase}
 \end{figure}
 
 %\begin{figure}[htbp]
 %    \centering
 %    \includegraphics[width=0.45\textwidth]{sprint1-webservices-database}
-%    \caption{Diagramme entité-association du service Position en itération 1}
+%    \caption{Diagramme entité-association du service Position --- Itération 1}
 %\end{figure}
-la figure~\ref{fig:sprint1-webservices-post-sequence} décrit le diagramme de
+
+La figure~\ref{fig:sprint1-webservices-post-sequence} décrit le diagramme de
 séquence du service \textquote{Post Position} qui représente les scénarios du la
 l'envoi de la position.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=1\textwidth]{sprint1-webservices-post-sequence}
-    \caption{Diagramme de séquence du service Post Position en itération 1}
+    \caption{Diagramme de séquence du service Post Position --- Itération 1}
 \label{fig:sprint1-webservices-post-sequence}
 \end{figure}
 
-la figure~\ref{fig:sprint1-webservices-get-sequence} décrit le diagramme de
+La figure~\ref{fig:sprint1-webservices-get-sequence} décrit le diagramme de
 séquence du service \textquote{Get Position} qui représente les scénarios du
 récupère la position.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=1\textwidth]{sprint1-webservices-get-sequence}
-    \caption{Diagramme de séquence du service Get Position en itération 1}
+    \caption{Diagramme de séquence du service Get Position --- Itération 1}
 \label{fig:sprint1-webservices-get-sequence}
 \end{figure}
 
@@ -499,13 +500,13 @@ assurer la qualité du code.
     \item Documenter chaque fonction, classe, constante et variable global. On
         a utilisé PHPDoc, apiDoc et JSDoc pour documenter le code PHP, l'api
         RESTful et le code JavaScript respectivement.
-    \item Ecrire les tests unitaires pour les fonctions et les classes selon la
-        technique \acrshort{TDD}. On a autorisé l'ecrire des tests unitaires
-        aprés le développement du code. Les outils utilisés sont PHPUnit pour
+    \item Écrire les tests unitaires pour les fonctions et les classes selon la
+        technique \acrshort{TDD}. On a autorisé l'écrire des tests unitaires
+        après le développement du code. Les outils utilisés sont PHPUnit pour
         PHP et Mocha/Chai pour JavaScript. \TODO{Move to sp2}
 \end{itemize}
 
-Dans 1\ier{} phase, on a implémenté les méthodes POST et GET du ressource
+Dans première phase, on a implémenté les méthodes POST et GET du ressource
 Position. L'architecture résultante est documentée dans
 l'annexe~\ref{appendix:sprint1-position-post-doc}
 et~\ref{appendix:sprint1-position-get-doc}.
@@ -559,8 +560,8 @@ obligatoires et le test de leurs formats.
 
 On avait des problèmes pour le chargement du code à notre serveur causés par le
 blockage du port FTP et inefficacité de compresser le code et le charger depuis
-l'interface web chaque fois. On a décidé d'automatiser ce tache avec un script.
-Après inspecter et étudier l'api d'interface web du serveur FTP, on a
+l'interface web chaque fois. On a décidé d'automatiser cette tâche avec un
+script.  Après inspecter et étudier l'api d'interface web du serveur FTP, on a
 implémenté un script Python qui compresse les fichiers nécessaires, authentifie
 au service web du serveur FTP et charger l'archive.
 
@@ -572,7 +573,7 @@ heures.
 
 L'objectif de la revue de l'itération est de valider l'incrément de produit qui
 a été réalisé pendant cette itération. L'équipe énonce les éléments du backlog
-en début de sprint, et présente les taches finis\footnote{complètement
+en début de sprint, et présente les tâches finis\footnote{complètement
 réalisés}.
 
 Une fois le bilan du sprint réalisé, l'équipe de développement et le
@@ -632,12 +633,12 @@ de notre travail au cours de l'itération par rapport au progrès idéal.
 
 A la fin de cette itération, on avait un prototype minimale fonctionnel
 dont on peut baser notre future travail.
-L'approche suivi de faire le minimum des taches pendant la première itération
+L'approche suivi de faire le minimum des tâches pendant la première itération
 avait des bon effet sur les membre de notre équipe sur tout la motivation et
 la solidarité.
 
 Le tableau~\ref{tab:sprint1-evaluation} présente le pourcentage de
-réalisation de nos taches de cette itération.
+réalisation de nos tâches de cette itération.
 
 \begin{center}
     \begin{longtable}{| l | l |}
