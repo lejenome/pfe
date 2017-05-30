@@ -1,4 +1,5 @@
 \begin{figure}[H]
+    \centering
 \tikzset{nodes={font=\ttfamily,fill=white}}
 \begin{tikzpicture}[
         declare function={%
@@ -9,12 +10,14 @@
         },
         pos par/.style={%
             shift={({f2(#1)}:{g2(#1)})}
-        }
+        },
+        scale=0.68,
+        every node/.style={transform shape},
     ]
     \draw[thick,->] (0,0) -- (0,4.7) node[above]{Fonctionnalités};
     \draw[thick,->] (0,0) -- (4.5,0) node[right]{Resources};
     \draw[thick,->] (0,0) -- (0,-4.5) node[below]{Qualité};
-    \draw[thick,->] (0,0) -- (-4.5,0) node[left]{Estimation};
+    \draw[thick,->] (0,0) -- (-4.5,0) node[left]{Temps};
     \draw[domain=0:8,variable=\t,smooth,samples=440,arrows={->[length=8]}]
          plot({f(\t)}:{g(\t)});
     \path node[pos par=0]{Itération 0}

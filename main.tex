@@ -54,7 +54,6 @@ final,
 \usepackage{graphicx}
 \graphicspath{{figures/}, {diagrams/}}
 \usepackage[update,prepend]{epstopdf}
-\usepackage{background}
 \usepackage{subcaption}
 %\usepackage{svg}
 \usepackage{array}
@@ -204,7 +203,6 @@ final,
 \newcommand{\HDONE}[2]{\setlength{\marginparwidth}{2cm}\colorbox{green}{#1}\todo[done,backgroundcolor=green]{#2}}
 
 \begin{document}
-\SetBgContents{}
 
 \input{00-title}
 
@@ -258,29 +256,20 @@ final,
 \pagenumbering{arabic}
 
 \cleardoublepage
-%\part{Introduction}
-\chapter*{Introduction Générale}
-\addcontentsline{toc}{chapter}{Introduction Générale}
 \input{10-introduction}
 
 \cleardoublepage
-\chapter{Positionnement du projet et Méthode du Travail}
 \input{20-cadreprojet}
 
 \cleardoublepage
-\part*{Itérations}
-\include{30-sprints-introduction}
+\include{30-sprints}
 \include{31-sprint0}
 \include{32-sprint1}
 \include{33-sprint2}
 \include{34-sprint3}
 
 \cleardoublepage
-\chapter*{Conclusion Générale}
-\addcontentsline{toc}{chapter}{Conclusion Générale}
-\backgroundsetup{contents=WIP,scale=8,position={0.9,-1.5},opacity=0.6}
 \input{40-conclusion}
-\SetBgContents{}
 
 %%%% INCLUDE CHAPTERS
 
