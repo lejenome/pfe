@@ -52,12 +52,7 @@ L'objectif de cette itération vise deux environnement:
 
 Dans le but de définir le périmètre fonctionnel de l'itération 1 et faire sa
 planification, tous les membres de l'équipe ont participé à un réunion avec le
-Scrum Master et le Product Owner pour définir le backlog du sprint.
-
-La planification de l'itération représente une étape importante dans la vie de
-l'itération parce que au cours du planification, on divise l'itération a
-plusieurs tâches pour mieux atteindre le résultats attendu à la fin de
-l'itération.
+Scrum Master et le Product Owner pour définir le backlog de l'itération.
 
 Dans cette première itération, on a décidé de diviser cette itération en trois
 grandes parties:
@@ -72,12 +67,10 @@ grandes parties:
 
 \subsection{Backlog de l'Itération}
 
-Les tâches à réaliser peuvent \HTODO{être soient}{contenir?} des tâches de
-recherche, de documentation, de conception, de développement ou bien
-d'installation, de tests, d'intégration, etc\ldots. Il est recommandé lors de
-la planification de la liste des tâches de bien les détailler. Une tâche ne
-doit pas inclure d'autres tâches. Ceci permet de bien cerner le travail
-demandé.
+Les tâches à réaliser peuvent être soient des tâches de développemen, de conception, de documentation
+ou bien
+d'installation, de tests, d'intégration, etc\ldots.
+
 
 \begin{center}
     \footnotesize
@@ -118,14 +111,14 @@ d'heures pendant lesquelles nous nous engageons à travailler.
 
 \begin{table}[htbp]
     \centering
-    \begin{tabular}{| c | c | c | c |}
+    \begin{tabular}{| c | c | c |}
         \hline
-        \textbf{Membre} & \textbf{Nombre d'heures par jour} & \textbf{Nombre de jours présent} & \textbf{Total en heures} \\ \hline
+        \textbf{Membre} & \textbf{Nombre d'heures par jour} & \textbf{Total en heures} \\ \hline
         \hline
 
-Moez & 6 & 10 & 60\\ \hline
-Rihab & 6 & 10 & 60 \\ \hline
-\multicolumn{2}{c|}{} & \textbf{Total} & 120 \\ \cline{3-4}
+Moez & 8 & 140\\ \hline
+Rihab & 8 & 140 \\ \hline
+\multicolumn{1}{c|}{} & \textbf{Total} & 280 \\ \cline{2-3}
     \end{tabular}
     \caption{Nombre d'heures de travail estimé --- Itération 1}
 \label{tab:sprint1-capacity}
@@ -169,88 +162,6 @@ Affiche Multiple marqueurs & Moez & 5 \\ \hline
 Affiche état du périphérique & Rihab & 5 \\ \hline
     \end{longtable}
 \end{center}
-
-\subsection{Évolution du travail}
-
-Au cours de l'itération, on a utilisé Excel et un tableau physique pour suivre
-l'évolution des tâches de chaque membre.
-
-\clearpage % FIXME
-
-Dans les figures~\ref{fig:sprint1-fig1},~\ref{fig:sprint1-fig2}
-et~\ref{fig:sprint1-fig2}, on représente l'état du tableau des tâches en jour
-de distribution les tâches, au milieu et à la fin de l'itération
-respectivement. Les lignes colorés représentent nos tâches du binôme. Les
-colonnes du tableau sont:
-
-\begin{description}
-    \item [Who] L'allias du nom de chaque membres de l'équipe.
-
-        \emph{Exemple:} \textbf{RM} signifie \textbf{R}ihab \textbf{M}ajdoub.
-    \item [À faire (Todo)] Les tâches assignés au membres pour cette itération.
-        L'échange des tâches entre les membres est possible sur le supervision
-        du Scrum Master.
-    \item [Implémentation] La pourcentage de l'implémentation du tâche de 0\%
-        jusqu'à 100\%. Si le développeur a commencé l'implémentation d'une
-        tâche, il la déplace dans cette colonne et faire le mise à jour du
-        pourcentage de l'implémentation à chaque jour pendant un court réunion
-        nommée \textquote{Daily Scrum} pendant le, on discute l'évolution du
-        travail et le plan du jour prochain.
-    \item [Test/Intégration/Review] L'implémentation du tâche est complete,
-        elle est donc en phase d'évaluation et vérification de son
-        fonctionnement si intégré dans le reste du système. Depuis la deuxième
-        itération, au moins un autre membre doit revue le code pour à fin
-        d'assurer la qualité du code, détecter et corriger les défauts le plus
-        tôt possible.
-    \item [Complete (Done)] La tâche était implémentée et validée.
-\end{description}
-
-On a utilisé des différents couleurs pour différents types des tâches:
-
-\begin{description}
-    \item [Rose] Les tâches du développement d'interface web (Dashboard).
-    \item [Verte] Les tâches du développement mobile (l'application Android).
-    \item [Jaune] Les tâches du développement des services web et d'administration.
-\end{description}
-
-La liste des prochaines réunions est écrite dans le tableau aussi:
-
-\begin{itemize}
-    \item Présentations des recherches si la tâche inclue une partie du
-        recherche et présentation.
-    \item Rendez-vous avec des autres personnes concernés par le projet.
-    \item Si un développeur est besoin d'aide ou de discuter un problème
-        rencontré.
-    \item Code Revue à la fin d'itération fait par tous les membres pour
-        évaluer la qualité du code et détecter les défauts du conception et
-        d'implémentation.
-\end{itemize}
-
-\begin{figure}[htbp]
-    \centering
-    \caption[Évolution du travail --- Itération 1]{Évolution du travail}
-    \begin{subfigure}{1\textwidth}
-        \centering
-        \includegraphics[width=0.8\textwidth]{sprint1-fig1}
-        \caption{Distribution des tâches de l'itération}
-\label{fig:sprint1-fig1}
-    \end{subfigure}
-
-    \begin{subfigure}{1\textwidth}
-        \centering
-        \includegraphics[width=0.8\textwidth]{sprint1-fig2}
-        \caption{Au milieu d'itération}
-\label{fig:sprint1-fig2}
-    \end{subfigure}
-
-    \begin{subfigure}{1\textwidth}
-        \centering
-        \includegraphics[width=0.8\textwidth]{sprint1-fig3}
-        \caption{Au fin d'itération}
-\label{fig:sprint1-fig3}
-    \end{subfigure}
-\end{figure}
-\clearpage
 
 \section{Outils utilisés}
 
