@@ -41,7 +41,7 @@ Indentation Mode=normal
 Mode=LaTeX
 
 [document-settings,item:20-cadreprojet.tex]
-Bookmarks=
+Bookmarks=78
 Encoding=UTF-8
 Highlighting=LaTeX
 Indentation Mode=normal
@@ -179,22 +179,22 @@ order=4
 
 [item:20-cadreprojet.tex]
 archive=true
-column=27
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=101
+line=9
 mode=LaTeX
-open=true
+open=false
 order=0
 
 [item:30-sprint0.tex]
 archive=true
-column=9
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=35
+line=0
 mode=LaTeX
-open=true
+open=false
 order=2
 
 [item:31-sprint1.tex]
@@ -202,9 +202,9 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=469
+line=0
 mode=LaTeX
-open=true
+open=false
 order=1
 
 [item:32-sprint2.tex]
@@ -222,9 +222,9 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=327
+line=0
 mode=LaTeX
-open=true
+open=false
 order=3
 
 [item:50-appendix.tex]
@@ -636,20 +636,20 @@ JumpList=
 ViMarks=.,3,0,[,3,0,],0,0
 
 [view-settings,view=0,item:20-cadreprojet.tex]
-CursorColumn=27
-CursorLine=101
+CursorColumn=0
+CursorLine=9
 JumpList=
-ViMarks=.,101,15,[,101,15,],101,26,a,78,0
+ViMarks=.,99,35,[,99,35,],99,42,a,78,0
 
 [view-settings,view=0,item:30-sprint0.tex]
-CursorColumn=9
-CursorLine=35
+CursorColumn=0
+CursorLine=0
 JumpList=
-ViMarks=.,271,0,[,271,0,],271,0
+ViMarks=.,-1,-1,[,-1,-1,],-1,-1
 
 [view-settings,view=0,item:31-sprint1.tex]
 CursorColumn=0
-CursorLine=469
+CursorLine=0
 JumpList=
 ViMarks=.,0,0,[,0,0,],-1,-1
 
@@ -661,9 +661,9 @@ ViMarks=.,0,0,[,0,0,],-1,-1
 
 [view-settings,view=0,item:33-sprint3.tex]
 CursorColumn=0
-CursorLine=327
+CursorLine=0
 JumpList=
-ViMarks=.,268,12,[,268,12,],268,12
+ViMarks=.,-1,-1,[,-1,-1,],-1,-1
 
 [view-settings,view=0,item:51-glossary.tex]
 CursorColumn=0

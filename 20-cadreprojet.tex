@@ -4,7 +4,33 @@
 Le projet présent est effectué au sein de \textquote{Djagora Academy} dans un
 équipe des étudiants. Dans la partie qui suit, on va présenter l'organisme
 d'accueil \textquote{Djagora Academy}, l'équipe de travail et le sujet du
-projet. Ainsi que la méthodologie de gestion du projet choise.
+projet. Ainsi que la méthodologie de gestion du projet choisi.
+
+
+\section{Organisme d'accueil \textquote{Djagora Academy}}
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=.35\textwidth]{logo-djagora}
+    \caption{Logo du \textquote{Djagora Academy}}
+    \label{fig:logo-djagora}
+\end{figure}
+
+\textquote{Djagora Academy} est un programme de mentorat visant accompagner des
+étudiants en année terminale dans la réalisation de projets d'intérêt publique
+dans le but est la création des startups.
+
+Pendant la réalisation des projets des idées des startups, les étudiants
+(mentorés) seront accompagnés par des universitaires et des industriels
+(mentors) avec le soutien de plusieurs compagnies internationales, telles que
+l'European Center for Leadership and Entrepreneurship Education (Eclee France,
+Eclee USA), Djagora University (SénégaL), NorthStar Paradigm Education (USA),
+Continental (Allemagne), Sivantos (Allemagne), Yousoft-IT (Tunisie), Factory
+Campus (Tunisie).
+
+La première version du \textquote{Djagora Academy}, année 2017, a eu le
+lancement de deux idées de startup: \textquote{City Watch} et \textquote{City
+Clean}.
 
 \section{Contexte du Projet}
 
@@ -47,67 +73,21 @@ bancaires, les services de sécurité, les sociétés de transport, \ldots.  Tou
 intervenants de notre système peuvent être des consommateurs et aussi
 fournisseurs de données.
 
-La figure~\ref{fig:citywatch-architecture} représente une vue d'ensemble de la
-platforme \textquote{City Watch}.
+Les donnés sont collectés et envoyés vers le serveur pour les stocker. Puis,
+ils seront analysés et visualisés en forme des diagrammes et des cartographiques.
+Finalement, ils seront utilisés pour assister l'utilisateur dans la route.
+Ces différentes couches sont présentées dans la figure~\ref{fig:citywatch-modules}.
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[width=0.9\textwidth]{citywatch-architecture}
+    \includegraphics[width=1\textwidth]{citywatch-modules}
     \caption{Vue d'ensemble de la plateforme \textquote{City Watch}}
-\label{fig:citywatch-architecture}
+\label{fig:citywatch-modules}
 \end{figure}
-
-\section{Organisme d'accueil \textquote{Djagora Academy}}
-
-\textquote{Djagora Academy} est un programme de mentorat visant accompagner des
-étudiants en année terminale dans la réalisation de projets d'intérêt publique
-dans le but est la création des startups.
-
-Pendant la réalisation des projets des idées des startups, les étudiants
-(mentorés) seront accompagnés par des universitaires et des industriels
-(mentors) avec le soutien de plusieurs compagnies internationales, telles que
-l'European Center for Leadership and Entrepreneurship Education (Eclee France,
-Eclee USA), Djagora University (SénégaL), NorthStar Paradigm Education (USA),
-Continental (Allemagne), Sivantos (Allemagne), Yousoft-IT (Tunisie), Factory
-Campus (Tunisie).
-
-La première version du \textquote{Djagora Academy}, année 2017, a eu le
-lancement de deux idées de startup: \textquote{City Watch} et \textquote{City
-Clean}.
-
-\section{Équipe \textquote{City Watch}}
-
-\textquote{City Watch} est une équipe de 8 membres qui a pris en main ce sujet
-du zéro pour atteindre l'implantation du startup \textquote{City Watch}.
-Durant la période du programme (5 mois), toute l'équipe a profité d'un ensemble
-des formations:
-
-\begin{description}
- \item [Hard Skills] Formations techniques et mentoring par un équipe des
-     experts qui nous a guidé et nous a conseillé tout au long de l'élaboration
-     de notre projet.
- \item [Soft Skills] Esprit d'équipe, flexibilité, adaptabilité et management.
-\end{description}
-
-L'équipe a lancé son site web \url{http://citywatch.factorycampus.net/public/}
-et sa propre logo représenté ci dessus~\ref{fig:logo-citywatch}.
-
-\begin{figure}[htbp]
-    \centering
-    \subcaptionbox{Logo du \textquote{City Watch}\label{fig:logo-citywatch}}
-    [.45\linewidth]
-    {\includegraphics[width=.35\textwidth]{logo-citywatch}}
-    \subcaptionbox{Logo du \textquote{Djagora Academy}\label{fig:logo-djagora}}
-    [.45\linewidth]
-    {\includegraphics[width=.35\textwidth]{logo-djagora}}
-    \caption[Logos du \textquote{City Watch} et \textquote{Djagora Academy}]{}
-\end{figure}
-
-Nous, le binôme, étions deux membres faisions partie de cette équipe.
 
 \section{Gestion du projet \textquote{City Watch}}
 
-Chaque projet, surtout les projets innovants, doivent cibler une méthodologie
+Chaque projet, surtout les projets innovant, doivent cibler une méthodologie
 du travail adéquate pour organiser le travail. Parmi les méthodes actuelles, la
 plus connue et répondue est la méthode ``Scrum''.
 
@@ -119,7 +99,7 @@ incrémentale. Tout au long de cette méthode, le développement est définit,
 d'une façon incrémentale, en cycles de travail appelés Sprints. Un sprint est
 définit sous la forme d'un certain nombre de tâches à réaliser au cours d'une
 itération. Cette dernière ne dure jamais plus que quatre semaines (deux
-semaines la plupart du temps). Les itérations s'enchainent l'une après l'autre
+semaines la plupart du temps). Les itérations s'enchaînent l'une après l'autre
 sans interruption. Les Sprints se terminent à une date spécifique. Ceux-ci ne
 peuvent être prolongés même si le travail ne soit pas terminé. Généralement les
 équipes Scrum choisissent une durée de Sprint et la maintiennent durant le
@@ -137,15 +117,12 @@ feedback obtenu peut être pris en compte sur le Sprint suivant. Scrum insiste
 sur la nécessité de livrer un produit opérationnel, testé et documenté à la fin
 de chaque itération. La figure~\ref{fig:scrum-model} représente la méthode
 agile Scrum.
-
+\input{figures/scrum-model}
 L'application de la méthodologie Scrum dans notre projet \textquote{City Watch}
 va être plus exploitée et détaillée dans le \autoref{sec:sprint0} ``Itération
 0''. Ainsi, la réduction de cet rapport suivi un descriptif appliquant la
 méthode Scrum donc le nom des chapitres suivants est basé sur le nom des
 itérations Scrum.
-
-\input{figures/scrum-model}
-
 
 \subsection{Justification du choix de la méthode agile Scrum}
 
@@ -186,13 +163,13 @@ des avantages considérables pour gérer ces problèmes:
 \end{description}
 
 La nature d'itérations du Scrum et l'engagement des tous les membres concernés
-par le projet permettent l'affinement continuel de les quatres variables du
+par le projet permettent l'affinement continuel de les quatre variables du
 projet, nommées \textquote{Project Diamond} et présentés par la
 figure~\ref{fig:project-diamond}:
 
 \begin{description}
     \item [Fonctionnalités] Les cas d'utilisations demandés par le client.
-    \item [Resources] Budget fourni par le client.
+    \item [Ressources] Budget fourni par le client.
     \item [Qualité] Qualité du code à maintenir par l'équipe.
     \item [Estimation] Temps estimé par l'équipe pour la réalisation du code.
 \end{description}
@@ -204,15 +181,51 @@ un grand projet réparti entre cette équipe et aussi il est paraît la meilleur
 solution pour répondre aux exigences du client et réduire la complexité
 croissante de certains projets.
 
+
+\section{Équipe \textquote{City Watch}}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.35\textwidth]{logo-citywatch}
+    \caption{Logo du \textquote{City Watch}}
+    \label{fig:logo-citywatch}
+\end{figure}
+
+
+\textquote{City Watch} est une équipe de 8 membres qui a pris en main ce sujet
+du zéro pour atteindre l'implantation du startup \textquote{City Watch}.
+Durant la période du programme (5 mois), toute l'équipe a profité d'un ensemble
+des formations:
+
+\begin{description}
+ \item [Hard Skills] Formations techniques et mentoring par un équipe des
+     experts qui nous a guidé et nous a conseillé tout au long de l'élaboration
+     de notre projet.
+ \item [Soft Skills] Esprit d'équipe, flexibilité, adaptabilité et management.
+\end{description}
+
+L'équipe a lancé son site web \url{http://citywatch.factorycampus.net/public/}
+et sa propre logo représenté dans la figure~\ref{fig:logo-citywatch}.
+
+Nous comme étions binôme de cette PFE, nous étions deux membres actifs faisant partie dans l'équipe de
+\textquote{City Watch}.
+Nous avons participé activement avec tous les autres membres de l'équipe à atteindre les buts
+tracés pour le projet \textquote{City Watch}.
+Notre participation inclut toutes les parties du projet, et l'essentiel de notre contribution va
+être présenté dans cet manuscrit.
+Grâce aux compétences techniques de notre formation, l'esprit d'équipe implanté par \textquote{Djagora Academy},
+nous avons surmonté tout ces aspects techniques.
+
 \section*{Conclusion}
 \addcontentsline{toc}{section}{Conclusion}
 
 Le projet présent est effectué au sein de \textquote{Djagora Academy} au sein
-de l'équipe \textquote{City Watch} qui vise à réaliser un systéme de collecte,
+de l'équipe \textquote{City Watch} qui vise à réaliser un système de collecte,
 d'analyse et de valorisation des données tournantes autour du domaine de trafic
 routier. Pour bien gérer ce projet, la méthodologie de gestion du projet Scrum
 a été adoptée et ce pour minimiser les inconvénients connus aux méthodes de
 gestions classiques.
+
 
 % TODO: move to later section
 %\subsubsection{Répartition des rôles}
