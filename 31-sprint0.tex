@@ -19,6 +19,140 @@ la préparation du carnet du produit nommé Backlog Général.
 %cette itération nous définissons le Backlog général de notre projet, ainsi que
 %l'environnement du travail que nous avons besoin.
 
+\section{Planification de l'itération}
+La planification de l’itération représente une étape importante dans la vie de
+l’itération parce que au cours du planification, on divise l’itération a plusieurs
+tâches pour mieux atteindre le résultats attendu à la fin de l’itération.
+\subsection{Répartition des rôles }
+Chaque projet utilisant la méthode Scrum est monté autour d'une équipe
+auto-organisée et multifonctionnelle: auto-organisée car il n'y a pas de chef
+d'équipe qui décide les rôles de chacun, ou de la manière dont un problème est
+résolu, puisque ces problématiques sont traitées par l'équipe dans son
+ensemble; et multifonctionnelle car chaque membre de l'équipe forme une partie
+prenante dans le développement de chaque fonctionnalité depuis l'idée jusqu'à
+l'implémentation finale.
+
+Dans Scrum existe trois principaux rôles:
+
+\begin{itemize}
+    \item Le responsable produit (Product owner).
+    \item Le Scrum Master.
+    \item Les membres de l'équipe.
+\end{itemize}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=.6\textwidth]{sprint0-scrum}
+    \caption{}
+    \label{fig:sprint0-scrum}
+\end{figure}
+\subsubsection{Le responsable produit \textquote{Product Owner}}
+
+Il prend en charge de communiquer la vision globale du produit à l'équipe. Il
+se voit représenter le client final, se met à sa place et priorise ses besoins.
+Celui qui tient ce rôle est celui qui a le plus de visibilité, de
+responsabilité et d'autorité. En effet, la méthode Scrum favorise
+l'auto-organisation de l'équipe.
+
+\subsubsection{Le Scrum Master}
+
+Il joue le rôle du communiquant entre le responsable produit et l'équipe. Il ne
+gère pas l'équipe, mais veille à éliminer tous les obstacles qui peuvent
+empêcher l'équipe d'atteindre les objectifs fixés au cours d'un Sprint. En
+résumé, ce rôle permet à l'équipe de rester créative et productive, tout en
+veillant à ce que les réalisations soient visibles pour le responsable produit.
+
+\subsubsection{Les membres de l'équipe  }
+
+Dans la méthode Scrum, l'équipe est responsable de la réalisation
+opérationnelle des itérations. L'équipe est généralement composée de personnes
+multitâches. C'est toute l'équipe qui est responsable du résultat final de
+chaque itération. La manière dont sont exécutées les tâches est très libre mais
+cette liberté doit être néanmoins cadrée par l'obligation de répondre aux
+objectifs du l'itération.
+
+\subsection{Scrum Board}
+
+Au cours de l'itération, on a utilisé Excel et un tableau physique pour suivre
+l'évolution des tâches de chaque membre.
+
+Dans les figures~\ref{fig:sprint1-fig1},~\ref{fig:sprint1-fig2}
+et~\ref{fig:sprint1-fig2}, on représente l'état du tableau des tâches en jour
+de distribution les tâches, au milieu et à la fin de l'itération
+respectivement. Les lignes colorés représentent nos tâches du binôme. Les
+colonnes du tableau sont:
+
+\begin{description}
+    \item [Who] L'allias du nom de chaque membres de l'équipe.
+
+        \emph{Exemple:} \textbf{RM} signifie \textbf{R}ihab \textbf{M}ajdoub.
+    \item [À faire (Todo)] Les tâches assignés au membres pour cette itération.
+        L'échange des tâches entre les membres est possible sur le supervision
+        du Scrum Master.
+    \item [Implémentation] La pourcentage de l'implémentation du tâche de 0\%
+        jusqu'à 100\%. Si le développeur a commencé l'implémentation d'une
+        tâche, il la déplace dans cette colonne et faire le mise à jour du
+        pourcentage de l'implémentation à chaque jour pendant un court réunion
+        nommée \textquote{Daily Scrum} pendant le, on discute l'évolution du
+        travail et le plan du jour prochain.
+    \item [Test/Intégration/Review] L'implémentation du tâche est complete,
+        elle est donc en phase d'évaluation et vérification de son
+        fonctionnement si intégré dans le reste du système. Depuis la deuxième
+        itération, au moins un autre membre doit revue le code pour à fin
+        d'assurer la qualité du code, détecter et corriger les défauts le plus
+        tôt possible.
+    \item [Complete (Done)] La tâche était implémentée et validée.
+\end{description}
+
+On a utilisé des différents couleurs pour différents types des tâches:
+
+\begin{description}
+    \item [Rose] Les tâches du développement d'interface web (Dashboard).
+    \item [Verte] Les tâches du développement mobile (l'application Android).
+    \item [Jaune] Les tâches du développement des services web et d'administration.
+\end{description}
+
+La liste des prochaines réunions est écrite dans le tableau aussi:
+
+\begin{itemize}
+    \item Présentations des recherches si la tâche inclue une partie du
+        recherche et présentation.
+    \item Rendez-vous avec des autres personnes concernés par le projet.
+    \item Si un développeur est besoin d'aide ou de discuter un problème
+        rencontré.
+    \item Code Revue à la fin d'itération fait par tous les membres pour
+        évaluer la qualité du code et détecter les défauts du conception et
+        d'implémentation.
+\end{itemize}
+
+\begin{figure}[htbp]
+    \centering
+    \caption[Évolution du travail --- Itération 0]{Évolution du travail}
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{sprint1-fig1}
+        \caption{Distribution des tâches de l'itération}
+\label{fig:sprint1-fig1}
+    \end{subfigure}
+
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{sprint1-fig2}
+        \caption{Au milieu d'itération}
+\label{fig:sprint1-fig2}
+    \end{subfigure}
+
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{sprint1-fig3}
+        \caption{Au fin d'itération}
+\label{fig:sprint1-fig3}
+    \end{subfigure}
+\end{figure}
+\subsection{Burndown Chart}
+Pour montrer l'avancement durant une itération donnée, on a besoin de tracer le
+Burndown Chart. Il s'agit d'un graphique simple qui montre le nombre d'heures
+restant à effectuer pour finaliser le produit.
+
 \section{Backlog général}
 
 La première étape de la méthode Scrum consiste à préparer un carnet du produit
@@ -118,54 +252,6 @@ Les valeurs des priorités de cas d'utilisation sont définies comme le suivants
         \hline
     \end{longtable}
 \end{center}
-
-%\subsubsection{Répartition des rôles}
-%
-%Chaque projet utilisant la méthode Scrum est monté autour d'une équipe
-%auto-organisée et multifonctionnelle: auto-organisée car il n'y a pas de chef
-%d'équipe qui décide les rôles de chacun, ou de la manière dont un problème est
-%résolu, puisque ces problématiques sont traitées par l'équipe dans son
-%ensemble; et multifonctionnelle car chaque membre de l'équipe forme une partie
-%prenante dans le développement de chaque fonctionnalité depuis l'idée jusqu'à
-%l'implémentation finale.
-%
-%Dans Scrum existe trois principaux rôles:
-%
-%\begin{itemize}
-%    \item Le responsable produit (Product owner).
-%    \item Le Scrum Master.
-%    \item Le membre de l'équipe.
-%\end{itemize}
-%
-%\paragraph{Le responsable produit}
-%
-%Il prend en charge de communiquer la vision globale du produit à l'équipe. Il
-%se voit représenter le client final, se met à sa place et priorise ses besoins.
-%Celui qui tient ce rôle est celui qui a le plus de visibilité, de
-%responsabilité et d'autorité. En effet, la méthode Scrum favorise
-%l'auto-organisation de l'équipe.
-%
-%\paragraph{Le Scrum Master}
-%
-%Il joue le rôle du communiquant entre le responsable produit et l'équipe. Il ne
-%gère pas l'équipe, mais veille à éliminer tous les obstacles qui peuvent
-%empêcher l'équipe d'atteindre les objectifs fixés au cours d'un Sprint. En
-%résumé, ce rôle permet à l'équipe de rester créative et productive, tout en
-%veillant à ce que les réalisations soient visibles pour le responsable produit.
-%
-%\paragraph{L'équipe}
-%
-%Dans la méthode Scrum, l'équipe est responsable de la réalisation
-%opérationnelle des Sprints. L'équipe est généralement composée de personnes
-%multitâches. C'est toute l'équipe qui est responsable du résultat final de
-%chaque sprint. La manière dont sont exécutées les tâches est très libre mais
-%cette liberté doit être néanmoins cadrée par l'obligation de répondre aux
-%objectifs du sprint.
-%
-%\subsubsection{Durées estimées}
-%Pour montrer l'avancement durant une itération donnée, on a besoin de tracer le
-%Burndown Chart. Il s'agit d'un graphique simple qui montre le nombre d'heures
-%restant à effectuer pour finaliser le produit.
 
 \section{Préparation de l'environnement du travail}
 
