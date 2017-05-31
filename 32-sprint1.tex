@@ -68,12 +68,33 @@ fonctionnalités en trois grandes parties:
         services web.
 \end{enumerate}
 
-\subsection{Backlog de l'Itération}
+\subsection{Backlog de l'itération}
 
 Pour identifier la liste des taches de cette itération, on a étudié un ensemble
 des scénarios qu'on a les décomposés en un ensemble des cas d'utilisations.
 
-\TODO{scénarios + use cases}
+Concernant l'application le scénario est:
+\begin{enumerate}
+ \item Application Android locale installée --> interface contient deux boutons Start/Stop
+ \item Lancer application en mode enligne (GPS + internet activités) sinon en mode
+ hors ligne (GPS + internet désactivés) --> bouton 'Strat' activé et bouton 'Stop' désactivé
+ \item Appuis sur la bouton 'Start' -->  bouton 'Strat' désactivé et bouton 'Stop' activé avec un message d'information
+ \item En cas de rupture de la connexion internet --> retourne vers le cas d'utilisation numéro 2
+ \item Appuis sur la bouton 'Stop' --> quitté l'application
+\end{enumerate}
+
+Concernant le web le scénario est:
+\begin{enumerate}
+ \item Lancer un navigateur(Chrome/Fierfox) + URL(serveur distant)
+ \item Voir la carte (centré à Sfax )
+ \item Un marqueur affiché sur la carte (position du marqueur la plus récente)
+ \item La taille de marqueur reste constante lors du zoom
+ \item L'icône du marqueur doit être personnalisé
+ \item Sans faire d'action la position du marqueur change automatiquement pour montrer la dernier position de l'individu
+ \item le curseur sur le marqueur un fenêtre(pop up) s'affiche --> montrant l'identifiant de la périphérique + longitude +l'altitude
+ \item L'icône de l'individu change sa couleur selon leur mode (enligne/hors ligne)
+ \item En cas de plusieurs utilisateur --> afficher un marqueur pour chacun
+\end{enumerate}
 
 Les tâches à réaliser peuvent être soient des tâches de conception, de
 développement, de tests, d'intégration et de documentation.
@@ -250,8 +271,8 @@ stable~\cite{android-sdk}.
 La figure~\ref{fig:sprint1-android-screenshot} représente l'interface de
 l'application réalisé.
 
-Puisque la tache de l'implementation n'était pas mené par un seul personne, on
-était obligé d'introduire un systéme synchronisation de notre source code.
+Puisque la tache de l'implémentation n'était pas mené par un seul personne, on
+était obligé d'introduire un système de synchronisation de notre source code.
 
 \subsection{Apache Subversion}
 
@@ -433,13 +454,6 @@ suivre la position des multiple smartphones et les afficher dans la carte de
 notre site web.
 
 \subsubsection{Page Web \textquote{Dashboard}}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{sprint1-dashboard-screenshot}
-    \caption{Capture écran de la page web de l'itération 1}
-\label{fig:sprint1-dashboard-screenshot}
-\end{figure}
-
 La figure~\ref{fig:sprint1-dashboard-screenshot} affiche la position des
 individus et son état.
 
@@ -448,12 +462,17 @@ individus et son état.
     \item \textit{Marqueur en Rouge}:Périphérique en hors ligne.
 \end{itemize}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{sprint1-dashboard-screenshot}
+    \caption{Capture écran de la page web de l'itération 1}
+\label{fig:sprint1-dashboard-screenshot}
+\end{figure}
+
+
 
 
 \subsubsection{Application Android}
-
-La figure~\ref{fig:sprint1-android-screenshot} représente l'interface de
-l'application réalisé:
 
 \begin{figure}[H]
     \centering
@@ -461,6 +480,14 @@ l'application réalisé:
     \caption{Capture écran de l'application dans l'itération 1}
 \label{fig:sprint1-android-screenshot}
 \end{figure}
+L'application finale qu'on a aborder dans cette itération composé de trois bouton 'Start', 'Stop' et 'Close'.
+
+
+Le click sur le bouton 'Start' active la délectation continuelle de la position
+qui nécessite la disponibilité de l'internet et du GPS.
+
+Le click sur le bouton 'Stop' désactive la détection de la position.
+
 
 
 \subsection{Avis du Product Owner}
