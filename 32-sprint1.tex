@@ -174,18 +174,15 @@ Affiche état du périphérique & Rihab & 5 \\ \hline
     \end{longtable}
 \end{center}
 
-\section{Environnement du travail}
+\section{Réalisation de l'application mobile}
 
-Pour bien entamer la réalisation de la plateforme \textquote{City Watch}, nous
-avons utilisé différent outils et technologies pour éteindre les but tracés.
+Pour réaliser l'application mobile tracé qui contient une interface graphique
+simple composée de deux boutons, on a choisi d'étudier la plateforme Android et
+de choisir la version SDK optimale pour la réalisation de l'application.
 
-\subsection{Android}
+Android nous permet de réaliser des application basé l'astuce d'activité.
 
-Android est un système d'exploitation conçu en 2007 \TODO{référence} par la
-société Android, startup racheté par Google. Android est Open Source, ça veut
-dire on peut lire le code de ce logiciel le modifier et le redistribuer.
-
-\subsubsection{Activity}
+\subsection{Activité}
 
 Un utilisateur habile d'Android remarque que lors de l'exploitation d'une
 application Android qu'il est en train de naviguer entre des fenêtres et
@@ -250,34 +247,11 @@ ayant un taux d'utilisateur qui est 4.79 \% des utilisateur d'Android notons que
 cet SDK comporte la fonctionnalité d'Android les plus récentes et qui est
 stable~\cite{android-sdk}.
 
-\subsection{Services Web}
+La figure~\ref{fig:sprint1-android-screenshot} représente l'interface de
+l'application réalisé.
 
-Un service web est un protocole d'interface de communication et l'échange de
-données entre applications et systèmes hétérogènes à distance en utilisant les
-technologies Web (HTTP dans notre cas).
-
-Pendant la conception de l'api du service de position, on a étudié les
-différentes variantes des architectures des services web:
-
-\begin{itemize}
-    \item Orienté RPC (ex: XML-RPC, SOAP, JSON-RPC):
-        \begin{itemize}
-            \item Meilleur pour présenter des actions et commandes.
-        \end{itemize}
-    \item Orienté Ressources (ex: RESTful):
-        \begin{itemize}
-            \item Représenter les données sous formes des ressources.
-            \item Utiliser les méthodes HTTP pour modifier/créer/lire/supprimer
-                les données.
-            \item Utiliser les paramètres d'URL pour passer des paramètres.
-            \item Sans état.
-            \item Meilleur pour modéliser un domaine et entités.
-        \end{itemize}
-\end{itemize}
-
-On a choisi d'utiliser l'architecture RESTful comme notre API est mieux décri
-comme ensemble des collections des données dont on peut effectuer avec des
-actions CRUD\@.
+Puisque la tache de l'implementation n'était pas mené par un seul personne, on
+était obligé d'introduire un systéme synchronisation de notre source code.
 
 \subsection{Apache Subversion}
 
@@ -308,7 +282,7 @@ plus répondus sont Git et Apache SVN\@.
 \end{description}
 
 Apache SVN était choisi pour sa simplicité, sa bon support de Windows et pour
-des exigences de spécification. \FIXME{improve sentence}
+des exigences de spécification.
 
 L'outil serveur choisi est VisualSVN Server pour sa simplicité d'installer et
 de configurer et pour son support du Windows.
@@ -321,22 +295,49 @@ Les outils clients choisis sont:
     \item Le support de SVN est intégré au Android Studio et PHPStorm.
 \end{itemize}
 
-\section{Mises des normes}
+\section{Réalisation des services web distants}
 
-Les exigence de l'api RESTful sont:
+Pour réaliser les services web, on a étudié les différentes approches et
+architectures des ces services web.
+
+Un service web est un protocole d'interface de communication et l'échange de
+données entre applications et systèmes hétérogènes à distance en utilisant les
+technologies Web (HTTP dans notre cas). Les différentes variantes des
+architectures des services web:
+
+\begin{itemize}
+    \item Orienté RPC (ex: XML-RPC, SOAP, JSON-RPC):
+        \begin{itemize}
+            \item Meilleur pour présenter des actions et commandes.
+        \end{itemize}
+    \item Orienté Ressources (ex: RESTful):
+        \begin{itemize}
+            \item Représenter les données sous formes des ressources.
+            \item Utiliser les méthodes HTTP pour modifier/créer/lire/supprimer
+                les données.
+            \item Utiliser les paramètres d'URL pour passer des paramètres.
+            \item Sans état.
+            \item Meilleur pour modéliser un domaine et entités.
+        \end{itemize}
+\end{itemize}
+
+On a choisi d'utiliser l'architecture RESTful comme notre API est mieux décri
+comme ensemble des collections des données dont on peut effectuer avec des
+actions CRUD\@.
+
+Avant de commencer la conception et l'implémentation des services web, un
+ensemble des exigences ont été définis:
 
 \begin{description}
-    \item [Performance] Le temps de réponse doit être en une durée raisonnable.
-    \item [Multi-Utilisateurs] On doit avoir la possibilité de stocker et
-        récupérer les positions des différents utilisateurs.
-    \item [Stabilité] L'implémentation doit vérifier la structure des données
-        reçus, la disponibilité des champs obligatoires et leurs formats.
     \item [Portabilité] Le système doit support la différence en zone du temps
         et en internalisation, format de présentation des données géologique et
         sa précision.
+    \item [Stabilité] L'implémentation doit vérifier la structure des données
+        reçus, la disponibilité des champs obligatoires et leurs formats.
 \end{description}
 
-\section{Conception}
+
+\subsection{Conception}
 
 La figure~\ref{fig:sprint1-webservices-usecase} ci dessus décrit le diagramme
 de cas d'utilisation qui regroupe les scénarios de localisation d'individu.
@@ -376,50 +377,16 @@ récupère la position.
 \label{fig:sprint1-webservices-get-sequence}
 \end{figure}
 
-\section{Évaluation suivant les normes mise}
-
-Avant de commencer le développement, on a fixé quelques règles à respecter pour
-assurer la qualité du code.
-
-\begin{itemize}
-    \item Activer le mode strict du PHP et changer le mode de traitement des
-        erreurs au déclenchement des exceptions si possible (PDO, \ldots).
-        Activer le mode strict du JavaScript aussi.
-    \item Utiliser des analyseurs statiques du code: PHP\_CodeSniffer, PHPLint
-        et ESLint pour détecter les erreurs formelles de programmation ou de
-        conception.
-    \item Documenter chaque fonction, classe, constante et variable global. On
-        a utilisé PHPDoc, apiDoc et JSDoc pour documenter le code PHP, l'api
-        RESTful et le code JavaScript respectivement. Pour rédiger les
-        recherches, les présentations et les autres documentations, \LaTeX{}
-        était préféré avec la possibilité d'utiliser Markdown pour la
-        simplisité de son syntaxe.
-    \item Écrire les tests unitaires pour les fonctions et les classes selon la
-        technique \acrshort{TDD}. On a autorisé l'écrire des tests unitaires
-        après le développement du code. Les outils utilisés sont PHPUnit pour
-        PHP et Mocha/Chai pour JavaScript. \TODO{Move to sp2}
-\end{itemize}
+\subsection{Services web}
 
 Dans première phase, on a implémenté les méthodes POST et GET du ressource
 Position. L'architecture résultante est documentée dans
 l'annexe~\ref{appendix:sprint1-position-post-doc}
 et~\ref{appendix:sprint1-position-get-doc}.
 
-On a essayé d'adresser les différents les mises des normes spécifiés;
+On a essayé d'adresser les différents exigences spécifiés:
 
-\subsection{Performance}
-
-On a minimisé la dépendance en bibliothèques externes et extensions PHP\@. De
-plus, Le nombre des requêtes SQL ont étés minimisés à une seule requêtes pour
-chaque méthode du notre service web.
-
-\subsection{Multi-Utilisateurs}
-
-Les positions à enregistrer doivent contenus un id qui doit être utilisé aussi
-pour retirer la dernière position. On a utilisé diffèrent identificateur pour
-chaque périphériques basé sur le MAC du phone.
-
-\subsection{Portabilité}
+\subsubsection{Probabilité}
 
 On a utilisé la format standardisée JSON~\cite{ECMA-404} pour le transfert de
 données ce qui assure la portabilité des représentations des différents types
@@ -441,38 +408,23 @@ jusqu'à 14 chiffres après le séparateur décimal. Les valeurs envoyés doiven
 respecte l'intervalle des diffèrent entités géologiques ($latitude \in [-90,
 90]$, $longitude \in [-180, 180]$)
 
-\subsection{Stabilité}
+\subsubsection{Stabilité}
 
 Pour assuré la stabilité d'un service web, on doit vérifier la validité de
 contenu reçu même si envoyé depuis un source de confiance avant de les
 utiliser. La vérification inclue le test de disponibilité des entités
 obligatoires et le test de leurs formats.
 
-\TODO{tips from Heroku HTTP API design guide}
-
-\section{Contributions}
-
-On avait des problèmes pour le chargement du code à notre serveur causés par le
-blockage du port FTP et inefficacité de compresser le code et le charger depuis
-l'interface web chaque fois. On a décidé d'automatiser cette tâche avec un
-script.  Après inspecter et étudier l'api d'interface web du serveur FTP, on a
-implémenté un script Python qui compresse les fichiers nécessaires, authentifie
-au service web du serveur FTP et charger l'archive.
-
 \section{Revue de cette itération}
 
 À la fin de l'itération, notre équipe et le \textquote{Product Owner} invitées
-se réunissent pour effectuer la revue de sprint, qui dure au maximum quatre
+se réunissent pour effectuer la revue de sprint, qui dure au maximum deux
 heures.
 
 L'objectif de la revue de l'itération est de valider l'incrément de produit qui
 a été réalisé pendant cette itération. L'équipe énonce les éléments du backlog
 en début de sprint, et présente les tâches finis\footnote{complètement
-réalisés}.
-
-Une fois le bilan du sprint réalisé, l'équipe de développement et le
-\textquote{Product Owner} mettent à jour le carnet du produit en fonction de ce
-qui a été réalisé (fini).
+réalisés}. Une démonstration du produit a était fait.
 
 \subsection{Produit de l'itération}
 
@@ -481,6 +433,12 @@ suivre la position des multiple smartphones et les afficher dans la carte de
 notre site web.
 
 \subsubsection{Page Web \textquote{Dashboard}}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{sprint1-dashboard-screenshot}
+    \caption{Capture écran de la page web de l'itération 1}
+\label{fig:sprint1-dashboard-screenshot}
+\end{figure}
 
 La figure~\ref{fig:sprint1-dashboard-screenshot} affiche la position des
 individus et son état.
@@ -490,24 +448,20 @@ individus et son état.
     \item \textit{Marqueur en Rouge}:Périphérique en hors ligne.
 \end{itemize}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.6\textwidth]{sprint1-dashboard-screenshot}
-    \caption{Capture écran de la page web de l'itération 1}
-\label{fig:sprint1-dashboard-screenshot}
-\end{figure}
+
 
 \subsubsection{Application Android}
 
 La figure~\ref{fig:sprint1-android-screenshot} représente l'interface de
-l'application.
+l'application réalisé:
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.45\textwidth]{sprint1-android-screenshot}
-    \caption{Capture écran d'application Android de l'itération 1}
+    \includegraphics[width=0.35\textwidth]{sprint1-android-screenshot}
+    \caption{Capture écran de l'application dans l'itération 1}
 \label{fig:sprint1-android-screenshot}
 \end{figure}
+
 
 \subsection{Avis du Product Owner}
 
@@ -521,6 +475,31 @@ La figure~\ref{fig:sprint1-burndown} présente une vue d'ensemble sur le progrè
 de notre travail au cours de l'itération par rapport au progrès idéal.
 
 \input{figures/sprint1-burndown}
+
+\subsection{Rétrospectif de l'itération}
+
+Au fin du réunion, les membres de l'équipe a fait un rétrospectif interne pour
+créer un plan d'amélioration qui sera mis en place au cours du Sprint suivant.
+On a décidé de suivre quelques règles pour assurer la qualité du code.
+
+\begin{itemize}
+    \item Activer le mode strict du PHP et changer le mode de traitement des
+        erreurs au déclenchement des exceptions si possible (PDO, \ldots).
+        Activer le mode strict du JavaScript aussi.
+    \item Utiliser des analyseurs statiques du code: PHP\_CodeSniffer, PHPLint
+        et ESLint pour détecter les erreurs formelles de programmation ou de
+        conception.
+    \item Documenter chaque fonction, classe, constante et variable global. On
+        a utilisé PHPDoc, apiDoc et JSDoc pour documenter le code PHP, l'api
+        RESTful et le code JavaScript respectivement. Pour rédiger les
+        recherches, les présentations et les autres documentations, \LaTeX{}
+        était préféré avec la possibilité d'utiliser Markdown pour la
+        simplisité de son syntaxe.
+    \item Écrire les tests unitaires pour les fonctions et les classes selon la
+        technique \acrshort{TDD}. On a autorisé l'écrire des tests unitaires
+        après le développement du code. Les outils utilisés sont PHPUnit pour
+        PHP et Mocha/Chai pour JavaScript.
+\end{itemize}
 
 \section*{Conclusion}
 \addcontentsline{toc}{section}{Conclusion}
