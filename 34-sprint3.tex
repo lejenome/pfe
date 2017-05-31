@@ -80,6 +80,42 @@ dans cette itération.
 \end{longtable}
 \end{center}
 
+\begin{table}[!h]
+ \centering
+ \begin{tabular}{| p{3cm} | l |}
+  \hline
+  Cas d'utilisateur & Authentification Utilisateur \\ \hline
+  Acteur & Utilisateur \\ \hline
+  Pré condition & Utilisateur non authentifié \\ \hline
+  Post condition & Utilisateur connecté \\ \hline
+  Description du scénario &
+  \begin{minipage}{11cm}
+\vspace*{0.2cm}
+\begin{itemize}
+\item L'utilisateur ouvre la page Dashboard ou Rapport.
+\item Le système affiche un dialogue d'authentification.
+\item L'utilisateur saisit sont émail et son mot de passe et clique sur le bouton ``Login''.
+\item Le système envoie les information d'identité au serveur.
+\item Le serveur vérifie les information, retourne un jeton d'authentification.
+\item Le système envoie le jeton d'authentification au serveur.
+\item Le serveur vérifie le jeton d'authentification et retourne un jeton d'accès.
+\item Le système affiche la cartographie et récupère les données à afficher.
+\end{itemize}
+\vspace*{0.2cm}
+  \end{minipage} \\ \hline
+  Exception & \begin{minipage}{11cm}
+\vspace*{0.2cm}
+\begin{itemize}
+ \item L'utilisateur n'a pas du compte.
+ \item Les informations d'identité sont invalides.
+\end{itemize}
+\vspace*{0.2cm}
+\end{minipage}
+ \\ \hline
+ \end{tabular}
+ \caption{Description du cas d'utilisation ``Authentification Utilisateur''}
+\end{table}
+
 \subsection{Estimation de l'itération}
 
 Le tableau~\ref{tab:sprint3-capacity} représente le budget horaire des membres
@@ -139,6 +175,8 @@ Rectification chargement image & Rihab & 13 $\times$ 2 \\ \hline
 Étude scénario commercial secousses & Rihab & 13 $\times$ 2 \\ \hline
 \end{longtable}
 \end{center}
+
+\clearpage
 
 \section{Outils utilisés}
 
@@ -239,7 +277,7 @@ de cas d'utilisation de service d'authentification.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{sprint3-webservices-oauth-usecase}
+    \includegraphics[width=.9\textwidth]{sprint3-webservices-oauth-usecase}
     \caption{Diagramme de case d'utilisation d'authentification --- Itération 3}
 \label{fig:sprint3-webservices-oauth-usecase}
 \end{figure}
@@ -293,7 +331,7 @@ Dans cette page nous travaillons alors sur deux parties:
 Aussi, nous participons 80\% à l'ajout de légende a notre carte et affiche le
 filtrage des marqueurs.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
     \begin{subfigure}{.8\textwidth}
     \centering
@@ -311,7 +349,6 @@ filtrage des marqueurs.
 \end{subfigure}
 \caption{Dashboard \textquote{City Watch} au troisième itération}
 \end{figure}
-\clearpage
 
 \subsubsection{Android}
 
@@ -321,7 +358,7 @@ Les données captées par l'application mobile (Position, Secousses,
 Ralentisseur, Réseaux, force du signal et vitesse) sont Récupérées par le
 serveur pour assurer la sauvegarde et la transmission vers une base données.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
     \begin{subfigure}{.45\textwidth}
     \centering
@@ -339,7 +376,6 @@ serveur pour assurer la sauvegarde et la transmission vers une base données.
 \end{subfigure}
 \caption{Interface de l'application au troisième itération}
 \end{figure}
-\clearpage
 
 \subsection{Avis du Product Owner}
 

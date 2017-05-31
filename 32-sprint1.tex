@@ -130,6 +130,54 @@ développement, de tests, d'intégration et de documentation.
     \end{longtable}
 \end{center}
 
+\begin{table}[!h]
+ \centering
+ \begin{tabular}{| p{3cm} | l |}
+  \hline
+  Cas d'utilisateur & Service Save Position \\ \hline
+  Acteur & Utilisateur \\ \hline
+  Pré condition & Position non envoyée \\ \hline
+  Post condition & Position envoyée et enregistrée dans la base de données \\ \hline
+  Description du scénario &
+  \begin{minipage}{11cm}
+\vspace*{0.2cm}
+\begin{itemize}
+\item L'utilisateur active le service de détection de position.
+\item L'application détecte la position à travers le capteur GPS du smartphone.
+\item L'application envoie la position au serveur.
+\item Le serveur vérifie et enregistre la position.
+\item Le serveur retourne un message de confirmation d'enregistrement.
+\end{itemize}
+  \end{minipage} \\ \hline
+  Exception & Aucune exception \\ \hline
+ \end{tabular}
+ \caption{Description du cas d'utilisation ``Service Save Position''}
+\end{table}
+
+\begin{table}[!h]
+ \centering
+ \begin{tabular}{| p{3cm} | l |}
+  \hline
+  Cas d'utilisateur & Service Get Last Position \\ \hline
+  Acteur & Utilisateur \\ \hline
+  Pré condition & Position déja enregistrée \\ \hline
+  Post condition & Position retournée \\ \hline
+  Description du scénario &
+  \begin{minipage}{11cm}
+\vspace*{0.2cm}
+\begin{itemize}
+\item L'utilisateur ouvrir le page du dashboard.
+\item La page récupère la dernière position pour chaque utilisateur.
+\item Le serveur retourne la position du chaque utilisateur.
+\item Le page affiche un marqueur dans la position géographique de chaque utilisateur.
+\item La page répète la récupération de la position et change la localisation du marqueur du marquer chaque 2 secondes.
+\end{itemize}
+  \end{minipage} \\ \hline
+  Exception & Aucune position enregistrer pour l'utilisateur \\ \hline
+ \end{tabular}
+ \caption{Description du cas d'utilisation ``Service Get Last Position''}
+\end{table}
+
 \subsection{Estimation de l'itération}
 
 Avant de commencer le processus d'estimation du temps nécessaire pour la

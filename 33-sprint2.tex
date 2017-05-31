@@ -94,6 +94,38 @@ Le tableau~\ref{tab:sprint2-backlog} représente nos tâches dans cette itérati
     \end{longtable}
 \end{center}
 
+\begin{table}[!h]
+ \centering
+ \begin{tabular}{| p{3cm} | l |}
+  \hline
+  Cas d'utilisateur & Déclaration Rapport \\ \hline
+  Acteur & Utilisateur \\ \hline
+  Pré condition & Aucun pré condition \\ \hline
+  Post condition & Rapport déclarer et enregistrer dans la base de données \\ \hline
+  Description du scénario &
+  \begin{minipage}{11cm}
+\vspace*{0.2cm}
+\begin{itemize}
+\item L'utilisateur remplir le formulaire et clique sur le bouton ``envoyer''.
+\item Le système vérifie la formulaire et charge le photo.
+\item Le serveur enregistre la photo aprés la vérification et retourne son identificateur (UUID).
+\item Le système envoie le rapport au serveur.
+\item Le serveur enregistre le rapport et retourne la confirmation.
+\item Un message de succès s'affiche.
+\end{itemize}
+  \end{minipage} \\ \hline
+  Exception & \begin{minipage}{11cm}
+\vspace*{0.2cm}
+\begin{itemize}
+ \item Type d'image invalide ou sa résolution  très petite.
+ \item Contenu du formulaire incomplète.
+\end{itemize}
+\end{minipage}
+ \\ \hline
+ \end{tabular}
+ \caption{Description du cas d'utilisation ``Service de Déclaration des Rapports''}
+\end{table}
+
 \subsection{Estimation de l'itération}
 
 Comme l'itération précédant, Nous avons fixé la période de cette itération à 3
