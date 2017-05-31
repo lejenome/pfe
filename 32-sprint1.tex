@@ -247,17 +247,8 @@ ayant un taux d'utilisateur qui est 4.79 \% des utilisateur d'Android notons que
 cet SDK comporte la fonctionnalité d'Android les plus récentes et qui est
 stable~\cite{android-sdk}.
 
-\subsection{Application Android}
-
 La figure~\ref{fig:sprint1-android-screenshot} représente l'interface de
-l'application réalisé:
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.45\textwidth]{sprint1-android-screenshot}
-    \caption{Capture écran d'application Android de l'itération 1}
-\label{fig:sprint1-android-screenshot}
-\end{figure}
+l'application réalisé.
 
 Puisque la tache de l'implementation n'était pas mené par un seul personne, on
 était obligé d'introduire un systéme synchronisation de notre source code.
@@ -345,12 +336,13 @@ ensemble des exigences ont été définis:
         reçus, la disponibilité des champs obligatoires et leurs formats.
 \end{description}
 
+
 \subsection{Conception}
 
 La figure~\ref{fig:sprint1-webservices-usecase} ci dessus décrit le diagramme
 de cas d'utilisation qui regroupe les scénarios de localisation d'individu.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{sprint1-webservices-usecase}
     \caption{Diagramme de case d'utilisation du services web --- Itération 1}
@@ -367,7 +359,7 @@ La figure~\ref{fig:sprint1-webservices-post-sequence} décrit le diagramme de
 séquence du service \textquote{Post Position} qui représente les scénarios du la
 l'envoi de la position.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{sprint1-webservices-post-sequence}
     \caption{Diagramme de séquence du service Post Position --- Itération 1}
@@ -378,7 +370,7 @@ La figure~\ref{fig:sprint1-webservices-get-sequence} décrit le diagramme de
 séquence du service \textquote{Get Position} qui représente les scénarios du
 récupère la position.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{sprint1-webservices-get-sequence}
     \caption{Diagramme de séquence du service Get Position --- Itération 1}
@@ -394,7 +386,7 @@ et~\ref{appendix:sprint1-position-get-doc}.
 
 On a essayé d'adresser les différents exigences spécifiés:
 
-\subsubsection{Portabilité}
+\subsubsection{Probabilité}
 
 On a utilisé la format standardisée JSON~\cite{ECMA-404} pour le transfert de
 données ce qui assure la portabilité des représentations des différents types
@@ -441,6 +433,12 @@ suivre la position des multiple smartphones et les afficher dans la carte de
 notre site web.
 
 \subsubsection{Page Web \textquote{Dashboard}}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{sprint1-dashboard-screenshot}
+    \caption{Capture écran de la page web de l'itération 1}
+\label{fig:sprint1-dashboard-screenshot}
+\end{figure}
 
 La figure~\ref{fig:sprint1-dashboard-screenshot} affiche la position des
 individus et son état.
@@ -450,12 +448,20 @@ individus et son état.
     \item \textit{Marqueur en Rouge}:Périphérique en hors ligne.
 \end{itemize}
 
-\begin{figure}[htbp]
+
+
+\subsubsection{Application Android}
+
+La figure~\ref{fig:sprint1-android-screenshot} représente l'interface de
+l'application réalisé:
+
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{sprint1-dashboard-screenshot}
-    \caption{Capture écran de la page web de l'itération 1}
-\label{fig:sprint1-dashboard-screenshot}
+    \includegraphics[width=0.35\textwidth]{sprint1-android-screenshot}
+    \caption{Capture écran de l'application dans l'itération 1}
+\label{fig:sprint1-android-screenshot}
 \end{figure}
+
 
 \subsection{Avis du Product Owner}
 
