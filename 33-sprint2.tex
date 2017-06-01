@@ -4,7 +4,7 @@
 %\addcontentsline{toc}{section}{Introduction}
 
 Une caractéristique du Scrum est l'extension continue des spécifications du
-produit élaboré dans l'itération précédente. En effet Scrum permet à s'adapter
+produit élaboré dans l'itération précédente. En effet, Scrum permet à s'adapter
 au changement seulement entre les itérations. Dans ce contexte, les
 fonctionnalités développées ont été étendues.
 
@@ -94,45 +94,45 @@ Le tableau~\ref{tab:sprint2-backlog} représente nos tâches dans cette itérati
     \end{longtable}
 \end{center}
 
-\begin{table}[!h]
- \centering
- \begin{tabular}{| p{3cm} | l |}
-  \hline
-  Cas d'utilisateur & Déclaration Rapport \\ \hline
-  Acteur & Utilisateur \\ \hline
-  Pré condition & Aucun pré condition \\ \hline
-  Post condition & Rapport déclarer et enregistrer dans la base de données \\ \hline
-  Description du scénario &
-  \begin{minipage}{11cm}
-\vspace*{0.2cm}
-\begin{itemize}
-\item L'utilisateur remplir le formulaire et clique sur le bouton ``envoyer''.
-\item Le système vérifie la formulaire et charge le photo.
-\item Le serveur enregistre la photo aprés la vérification et retourne son identificateur (UUID).
-\item Le système envoie le rapport au serveur.
-\item Le serveur enregistre le rapport et retourne la confirmation.
-\item Un message de succès s'affiche.
-\end{itemize}
-  \end{minipage} \\ \hline
-  Exception & \begin{minipage}{11cm}
-\vspace*{0.2cm}
-\begin{itemize}
- \item Type d'image invalide ou sa résolution  très petite.
- \item Contenu du formulaire incomplète.
-\end{itemize}
-\end{minipage}
- \\ \hline
- \end{tabular}
- \caption{Description du cas d'utilisation ``Service de Déclaration des Rapports''}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{| p{3cm} | l |}
+        \hline
+        Cas d'utilisateur & Déclaration Rapport \\ \hline
+        Acteur & Utilisateur \\ \hline
+        Pré condition & Aucun pré condition \\ \hline
+        Post condition & Rapport déclarer et enregistrer dans la base de données \\ \hline
+        Description du scénario &
+        \begin{minipage}{11cm}
+            \vspace*{0.2cm}
+            \begin{itemize}
+                \item L'utilisateur remplir le formulaire et clique sur le bouton ``envoyer''.
+                \item Le système vérifie la formulaire et charge le photo.
+                \item Le serveur enregistre la photo aprés la vérification et retourne son identificateur (UUID).
+                \item Le système envoie le rapport au serveur.
+                \item Le serveur enregistre le rapport et retourne la confirmation.
+                \item Un message de succès s'affiche.
+            \end{itemize}
+        \end{minipage} \\ \hline
+        Exception & \begin{minipage}{11cm}
+            \vspace*{0.2cm}
+            \begin{itemize}
+                \item Type d'image invalide ou sa résolution  très petite.
+                \item Contenu du formulaire incomplète.
+            \end{itemize}
+        \end{minipage}
+        \\ \hline
+    \end{tabular}
+    \caption{Description du cas d'utilisation ``Service de Déclaration des Rapports''}
 \end{table}
 
 \subsection{Estimation de l'itération}
 
 Comme l'itération précédant, Nous avons fixé la période de cette itération à 3
-semaine. Le budget horaire des membres est présenté dans le
+semaines. Le budget horaire des membres est présenté dans le
 tableau~\ref{tab:sprint2-capacity}.
 
-\begin{table}[htbp]
+\begin{table}[H]
     \centering
     \begin{tabular}{| c | c |}
         \hline
@@ -149,22 +149,14 @@ Rihab & 144 \\ \hline
 Les estimations de nos tâches en heures sont disponibles dans le
 tableau~\ref{tab:sprint2-estimation}.
 
-\begin{center}
-    \begin{longtable}{| l | l | l |}
-        \caption{Nombre d'heures estimé pour la réalisation des tâches}
-\label{tab:sprint2-estimation} \\
+\begin{table}[H]
+    \centering
+    \begin{tabular}{| l | l | l |}
 
         \hline
         \multicolumn{1}{|c}{\textbf{Spécification}} &
         \multicolumn{1}{|c}{\textbf{Membre}} &
         \multicolumn{1}{|c|}{\textbf{Heures}} \\ \hline
-        \endhead
-
-        \hline \multicolumn{3}{|r|}{{Continué en page suivante$\dotsc$}} \\ \hline
-        \endfoot
-
-        \hline \hline
-        \endlastfoot
 
         \hline
 Recherche sur les trajectoires & Rihab & 5 $\times$ 2 \\ \hline
@@ -178,8 +170,10 @@ Implementer la fonctionnalité de déclaration des rapports & Moez & 5 \\ \hline
 Recherche test unitaires & Moez & 5 \\ \hline
 Recherche sur les frameworks PHP & Moez & 5 \\ \hline
 Groupement de secousse sur la carte & Rihab & 5 \\ \hline
-    \end{longtable}
-\end{center}
+    \end{tabular}
+    \caption{Nombre d'heures estimé pour la réalisation des tâches}
+\label{tab:sprint2-estimation}
+\end{table}
 
 %\subsubsection{Évolution du travail}
 
@@ -246,9 +240,9 @@ très élevé.
 La figure~\ref{fig:sprint2-webservices-report-usecase} synthétise le cas
 d'utilisation du services \textquote{Rapport} de la deuxième itération.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{sprint2-webservices-report-usecase}
+    \includegraphics[width=.9\textwidth]{sprint2-webservices-report-usecase}
     \caption{Diagramme de case d'utilisation du services Rapports --- Itération 2}
 \label{fig:sprint2-webservices-report-usecase}
 \end{figure}
@@ -256,9 +250,9 @@ d'utilisation du services \textquote{Rapport} de la deuxième itération.
 Le schéma~\ref{fig:sprint2-webservices-class} présente le diagramme des classes
 du service web dans cette itération.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{sprint2-webservices-class}
+    \includegraphics[width=0.6\textwidth]{sprint2-webservices-class}
     \caption{Diagramme de classe du service web --- Itération 2}
 \label{fig:sprint2-webservices-class}
 \end{figure}
@@ -268,16 +262,16 @@ figures~\ref{fig:sprint2-webservices-report-post-sequence},~\ref{fig:sprint2-web
 décrit les scénarios de la mise à jour de la position dans la deuxième
 itération.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{sprint2-webservices-report-post-sequence}
+    \includegraphics[width=.9\textwidth]{sprint2-webservices-report-post-sequence}
     \caption{Diagramme de séquence du services Post Rapports --- Itération 2}
 \label{fig:sprint2-webservices-report-post-sequence}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{sprint2-webservices-report-get-sequence}
+    \includegraphics[width=.9\textwidth]{sprint2-webservices-report-get-sequence}
     \caption{Diagramme de séquence du services Get Rapports --- Itération 2}
 \label{fig:sprint2-webservices-report-get-sequence}
 \end{figure}
@@ -285,18 +279,19 @@ itération.
 La figure~\ref{fig:sprint2-dashboard-class} représente la nouvelle architecture
 orienté objet de la page \textquote{Dashboard}.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{sprint2-dashboard-class}
+    \includegraphics[width=0.75\textwidth]{sprint2-dashboard-class}
     \caption{Diagramme des classes du Dashboard --- Itération 2}
 \label{fig:sprint2-dashboard-class}
 \end{figure}
 
 \section{Évaluation suivant les normes mises}
 
-L'évaluation produite à la fin de la réunion de revue ne concerne que la satisfaction des clients
-et si le produit est fonctionnel ou pas. Concernant ce sujet, des normes ont été mises afin d'évaluer
-le prototype suivant les aspects de qualité, robustesse, \ldots.
+L'évaluation produite à la fin de la réunion de revue ne concerne que la
+satisfaction des clients et si le produit est fonctionnel ou pas. Concernant ce
+sujet, des normes ont été mises afin d'évaluer le prototype suivant les aspects
+de qualité, robustesse, \ldots.
 
 \subsection{Contributions}
 
@@ -333,9 +328,8 @@ diagram~\ref{fig:sprint2-dashboard-class}. Elle consiste de:
 
 \section{Revue de cette itération}
 
-
-Dés que le temps de l'itération finisse, l'équipe organise une réunion de revue dans
-le but d'évaluer le prototype développé.
+Dés que le temps de l'itération finisse, l'équipe organise une réunion de revue
+dans le but d'évaluer le prototype développé.
 
 \subsection{Produit de l'itération}
 

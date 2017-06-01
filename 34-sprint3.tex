@@ -4,13 +4,13 @@
 %\addcontentsline{toc}{section}{Introduction}
 
 Dans la dernière itération, nous avons collecté un grand ensemble de donnés des
-différents types. Malgré tout, ces donnés n'ont pas de valeur tel que on les
+différents types. Malgré tout, ces donnés n'ont pas de valeur tel que on ne les
 explore pas. C'est le rôle du Business Intelligence que nous allons étudier
 dans cette itération.
 
 \section{But de l'itération}
 
-En accord avec le Product Owner,le but de cette itération est:
+En accord avec le Product Owner, le but de cette itération est:
 
 \begin{description}
     \item [Smartphone] L'ajout de nouvelles fonctionnalités comme:
@@ -80,40 +80,40 @@ dans cette itération.
 \end{longtable}
 \end{center}
 
-\begin{table}[!h]
- \centering
- \begin{tabular}{| p{3cm} | l |}
-  \hline
-  Cas d'utilisateur & Authentification Utilisateur \\ \hline
-  Acteur & Utilisateur \\ \hline
-  Pré condition & Utilisateur non authentifié \\ \hline
-  Post condition & Utilisateur connecté \\ \hline
-  Description du scénario &
-  \begin{minipage}{11cm}
-\vspace*{0.2cm}
-\begin{itemize}
-\item L'utilisateur ouvre la page Dashboard ou Rapport.
-\item Le système affiche un dialogue d'authentification.
-\item L'utilisateur saisit sont émail et son mot de passe et clique sur le bouton ``Login''.
-\item Le système envoie les information d'identité au serveur.
-\item Le serveur vérifie les information, retourne un jeton d'authentification.
-\item Le système envoie le jeton d'authentification au serveur.
-\item Le serveur vérifie le jeton d'authentification et retourne un jeton d'accès.
-\item Le système affiche la cartographie et récupère les données à afficher.
-\end{itemize}
-\vspace*{0.2cm}
-  \end{minipage} \\ \hline
-  Exception & \begin{minipage}{11cm}
-\vspace*{0.2cm}
-\begin{itemize}
- \item L'utilisateur n'a pas du compte.
- \item Les informations d'identité sont invalides.
-\end{itemize}
-\vspace*{0.2cm}
-\end{minipage}
- \\ \hline
- \end{tabular}
- \caption{Description du cas d'utilisation ``Authentification Utilisateur''}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{| p{3cm} | l |}
+        \hline
+        Cas d'utilisateur & Authentification Utilisateur \\ \hline
+        Acteur & Utilisateur \\ \hline
+        Pré condition & Utilisateur non authentifié \\ \hline
+        Post condition & Utilisateur connecté \\ \hline
+        Description du scénario &
+        \begin{minipage}{11cm}
+            \vspace*{0.2cm}
+            \begin{itemize}
+                \item L'utilisateur ouvre la page Dashboard ou Rapport.
+                \item Le système affiche un dialogue d'authentification.
+                \item L'utilisateur saisit sont émail et son mot de passe et clique sur le bouton ``Login''.
+                \item Le système envoie les information d'identité au serveur.
+                \item Le serveur vérifie les information, retourne un jeton d'authentification.
+                \item Le système envoie le jeton d'authentification au serveur.
+                \item Le serveur vérifie le jeton d'authentification et retourne un jeton d'accès.
+                \item Le système affiche la cartographie et récupère les données à afficher.
+            \end{itemize}
+            \vspace*{0.2cm}
+        \end{minipage} \\ \hline
+        Exception & \begin{minipage}{11cm}
+            \vspace*{0.2cm}
+            \begin{itemize}
+                \item L'utilisateur n'a pas du compte.
+                \item Les informations d'identité sont invalides.
+            \end{itemize}
+            \vspace*{0.1cm}
+        \end{minipage}
+        \\ \hline
+    \end{tabular}
+    \caption{Description du cas d'utilisation ``Authentification Utilisateur''}
 \end{table}
 
 \subsection{Estimation de l'itération}
@@ -121,7 +121,7 @@ dans cette itération.
 Le tableau~\ref{tab:sprint3-capacity} représente le budget horaire des membres
 dans les 3 semaines de l'itération.
 
-\begin{table}[htbp]
+\begin{table}[H]
     \centering
     \begin{tabular}{| c | c |}
 \hline
@@ -297,7 +297,7 @@ classes du service web de la troisième itération.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{sprint3-webservices-class}
+    \includegraphics[width=0.7\textwidth]{sprint3-webservices-class}
     \caption{Diagramme de classe du services web --- Itération 3}
 \label{fig:sprint3-webservices-class}
 \end{figure}
@@ -307,7 +307,7 @@ page \textquote{Dashboard} dans la troisième itération.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{sprint3-dashboard-class}
+    \includegraphics[width=.8\textwidth]{sprint3-dashboard-class}
     \caption{Diagramme des classes du Dashboard --- Itération 3}
 \label{fig:sprint3-dashboard-classs}
 \end{figure}
@@ -352,22 +352,20 @@ filtrage des marqueurs.
 
 \subsubsection{Android}
 
-\subsubsection*{}
-
 Les données captées par l'application mobile (Position, Secousses,
 Ralentisseur, Réseaux, force du signal et vitesse) sont Récupérées par le
 serveur pour assurer la sauvegarde et la transmission vers une base données.
 
 \begin{figure}[H]
 \centering
-    \begin{subfigure}{.45\textwidth}
+    \begin{subfigure}{.4\textwidth}
     \centering
   \centering
   \includegraphics[width=1.0\linewidth]{sprint3-android-screenshot1}
   \caption{État désactivé}
 \label{fig:sprint3-android-screenshot1}
 \end{subfigure}
-\begin{subfigure}{.45\textwidth}
+\begin{subfigure}{.4\textwidth}
     \centering
   \centering
   \includegraphics[width=1.0\linewidth]{sprint3-android-screenshot2}
