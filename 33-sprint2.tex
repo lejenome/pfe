@@ -1,4 +1,4 @@
-\chapter[Itération~2:~(~3/8/2017~-~3/28/2017~)]{Itération~2:~\textup{\textto{(~3/8/2017~-~3/28/2017~)}}}
+\chapter{Itération~2~(~3/8/2017~-~3/28/2017~)}
 
 %\section*{Introduction}
 %\addcontentsline{toc}{section}{Introduction}
@@ -13,10 +13,8 @@ fonctionnalités développées ont été étendues.
 L'objectif de cette itération vise trois environnements. Nous allons ajouter
 une nouvelle vision par rapport à l'itération précédentes.
 
-Ils sont comme suites:
-
 \begin{description}
-    \item [Smartphone] L'ajout de nouvelles fonctionnalités comme:
+    \item [Smartphone] Ajouter des nouvelles fonctionnalités comme:
         \begin{itemize}
             \item La capture de l'embouteillage.
             \item La détection des secousses.
@@ -55,8 +53,8 @@ Owner}.
 
 \subsection{Backlog de l'itération}
 
-Le but de cette itération est d'ajouter un système de gestion des rapport,
-d'améliorer la qualité et d'explorer des niveau type des donnes.
+Le but de cette itération est d'ajouter un système de gestion des rapports,
+d'améliorer la qualité et d'explorer des nouvelles type des données.
 
 Le tableau~\ref{tab:sprint2-backlog} représente nos tâches dans cette itération.
 
@@ -80,8 +78,8 @@ Le tableau~\ref{tab:sprint2-backlog} représente nos tâches dans cette itérati
         \endlastfoot
 
         \hline
-2.1 & Recherche sur les trajectoires & Comment présenter et enregistrer les trajectoire & 1 \\ \hline
-2.2 & Affichage du trajet sur la carte & Visualizer le trajectoire d'un périphérique comme un ligne & 1 \\ \hline
+2.1 & Recherche sur les trajectoires & Comment présenter et enregistrer les trajectoires & 1 \\ \hline
+2.2 & Affichage du trajet sur la carte & Visualiser le trajectoire d'un périphérique comme un ligne & 1 \\ \hline
 2.3 & Implementer service d'enregistrement des ralentisseurs & Enregistrer les données nécessaires pour représenter un ralentisseur & 1 \\ \hline
 2.4 & Responsive design & IHM de l'application Android adaptable aux différentes résolutions et rotations & 2 \\ \hline
 2.5 & Implementer l'interface de déclaration un ralentisseur & Bouton rapport activé seulement si la localisation est active & 2 \\ \hline
@@ -106,7 +104,7 @@ Le tableau~\ref{tab:sprint2-backlog} représente nos tâches dans cette itérati
         \begin{minipage}{11cm}
             \vspace*{0.2cm}
             \begin{itemize}
-                \item L'utilisateur remplir le formulaire et clique sur le bouton ``envoyer''.
+                \item L'utilisateur saisi le formulaire et clique sur le bouton ``envoyer''.
                 \item Le système vérifie la formulaire et charge le photo.
                 \item Le serveur enregistre la photo aprés la vérification et retourne son identificateur (UUID).
                 \item Le système envoie le rapport au serveur.
@@ -181,7 +179,7 @@ Groupement de secousse sur la carte & Rihab & 5 \\ \hline
 
 \subsection{Lumen}
 
-On a décidé de migrer vers un framework pour le développement du backend du
+Nous avons décidé de migrer vers un framework pour le développement du backend du
 notre plateforme dans le but de simplifier et améliorer nos services web. Les
 critères de choisir le framework étaient sa performance, sa stabilité et son
 support de développement des api RESTful. Les 3 frameworks principales étudiés:
@@ -194,7 +192,7 @@ support de développement des api RESTful. Les 3 frameworks principales étudié
         modulaire et fournit une haute performance. Pour ajouter le support des
         services web, il nécessite l'ajoute et configurations des multiples des
         extensions.
-    \item [Lumen] Une version minimal du framework Laravel pour le
+    \item [Lumen] Une version minimale du framework Laravel pour le
         développement des services web. Étant basé sur Laravel, il profile d'un
         excellent support des extensions du troisième partie.
 \end{description}
@@ -215,8 +213,8 @@ développement du site web classique ou autres types de développement.
 
 \section{Mises des normes}
 
-Outres que les critères de la premiere itération, les nouveaux critères à
-respecter pour cette itération sont:
+Outres que les critères de la première itération, des nouveaux critères ont
+été ajoutés pendant cette itération:
 
 \subsection{Qualité du trajectoire}
 
@@ -226,13 +224,13 @@ minimum le plus possible.
 
 \subsection{Architecture modulaire}
 
-Architecture de backend doit être modulaire: On doit changer notre code
+Architecture de backend doit être modulaire: nous devons changer notre code
 procédurale par un code orienté objet et minimiser la duplication du code et
-séparer le code des models et le code des contrôleurs.
+séparer le code des modèles et le code des contrôleurs.
 
 \subsection{IHM de la page Dashboard Responsive}
 
-Affiche claire et responsive des marqueurs dans la carte meme si le nombre est
+Affiche claire et responsive des marqueurs dans la carte même si le nombre est
 très élevé.
 
 \section{Conception}
@@ -307,7 +305,7 @@ de qualité, robustesse, \ldots.
 
 Au cours de l'itération avec l'augment des fonctionnalités ajoutées au
 Dashboard, le code JavaScript devenu complexe, dupliqué et difficile à détecter
-les bugs. On a décidé de réécrire le code avec une architecture modulaire et
+les bugs. Nous avons décidé de réécrire le code avec une architecture modulaire et
 plus moderne.
 
 L'utilisation de la version ECMAScript 6 du JavaScript nous a fourni les
@@ -316,13 +314,13 @@ défaut, nouvelles variantes de la boucle For et support de la programmation
 asynchrone.
 
 La nouvelle architecture est décrite dans le
-diagram~\ref{fig:sprint2-dashboard-class}. Elle consiste de:
+diagram~\ref{fig:sprint2-dashboard-class}. Elle se compose de:
 
 \begin{itemize}
-    \item Une classe \verb|Map| contenu tout le logique métier d'initialiser et
-        afficher la carte, registre et filtrer des différents types de données
+    \item Une classe \verb|Map| qui contient le logique métier d'initialiser et
+        afficher la carte, ajouter et filtrer des différents types de données
         et traiter les différents évènements d'interaction humaine machine.
-    \item Une classe abstract \verb|Layer| contenu tout le logique relié à
+    \item Une classe abstract \verb|Layer| qui contient le logique de
         chaque types des données à visualiser dans la map (téléchargement
         continuellement les données, génération les marqueurs ou zones, mise à
         jour des données, définition des filtrages supportés et les
@@ -330,7 +328,7 @@ diagram~\ref{fig:sprint2-dashboard-class}. Elle consiste de:
         différents layers est implémenté dans cette classe abstract.
     \item Une classe pour chaque type de données à visualiser (trajectoire,
         ralentisseurs, secousses, \ldots) qui hérite du classe \verb|Layer|. La
-        plupart du temps, on a juste besoin de définir l'URL du resource, la
+        plupart du temps, nous sommes juste besoin de définir l'URL du resource, la
         listes des icons et des filtrages possibles.
     \item Un espace de noms \verb|Config| contenu les constantes de
         configuration.
@@ -344,16 +342,16 @@ dans le but d'évaluer le prototype développé.
 \subsection{Produit de l'itération}
 
 A la fin de l'itération 2, nous détaillons les différentes spécifications qui
-caractérisent et implémenté le système de gestion des rapport.
+caractérisent et implémentent le système de gestion des rapport.
 
 \subsubsection{Page \textquote{Rapport}}
 
-Dans cette page, nous donne la main à l'utilisateur pour faire un petit rapport
+Dans cette page, nous donne la main à l'utilisateur de déclarer des rapports
 comme expliqué dans la figure~\ref{fig:sprint2-rapport-screenshot1}. Cette page
 permet à l'utilisateur d'envoyer son rapport au serveur pour l'enregistrer. La
-position du rapport est détecté automatique à travers l'api JavaScript standard
-Location. On donne la main à l'utilisateur pour changer la location
-manuellement en glissant le marqueur ou en changer les inputs. Le chargement de
+position du rapport est détectée automatiquement à travers l'api JavaScript standard
+``Location''. On donne la main à l'utilisateur pour changer manuellement la position
+en glissant le marqueur ou en changeant les entrées. Le chargement de
 l'image est obligatoire.
 
 L'envoie du rapport est éxecuté en deux phases:
@@ -374,7 +372,7 @@ L'envoie du rapport est éxecuté en deux phases:
 
 \subsubsection{Page \textquote{Dashboard}}
 
-L'utilitaire de regroupement de marqueurs vous aide à gérer plusieurs marqueurs
+L'utilitaire de regroupement de marqueurs nous aide à gérer plusieurs marqueurs
 à différents niveaux de zoom. Précisément, les marqueurs sont en fait des
 éléments à ce stade et ne deviennent réellement des marqueurs qu'après leur
 rendu. Par souci de clarté, nous ne parlerons que de marqueurs dans ce
@@ -423,17 +421,9 @@ pour faciliter la consultation de la carte.
     \caption{Formulaire d'inscription}
 \end{figure}
 
-Dans notre application, l'utilisateur doit s'inscrit pour accéder à
-l'application. Les données saisies dans le formulaire d'inscription (nom
-d'utilisation, mot de passe) seront envoyées et stockées en toute sécurité et
-confidentialité. Lorsqu'un utilisateur tend à se connecter, il tape son mot de
-passe déjà saisies dans le formulaire d'inscription, alors une vérification
-avec le serveur doit avoir lieu.
-
-\textbf{Note:} Pour chaque nom d'utilisateur ajouté, le serveur vérifie
-l'unicité de ce dernier.
-
-
+Dans notre application, la maquette de formulaire d'inscription été ajoutée
+mais la relation avec le serveur été reportée à l'itération suivante. Pour
+cette itération, le nom d'utilisateur et le mot de passe ne sont pas vérifiés
 
 \subsection{Avis du Product Owner}
 
@@ -453,7 +443,7 @@ de notre travail au cours de l'itération par rapport au progrès idéal.
 \addcontentsline{toc}{section}{Conclusion}
 
 Dans cette itération, la qualité de notre code a été bien améliorée grâce aux
-testes unitaires que nous avons pris et le revue collaboré du code à chaque
+tests unitaires que nous avons pris et le revue collaboré du code à chaque
 changement. De plus l'utilisation d'un framework dans le développement de
 notre service web a facilité et organisé notre code.
 

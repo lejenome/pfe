@@ -1,4 +1,4 @@
-\chapter[Itération~3:~(~4/3/2017~-~4/28/2017~)]{Itération~3:~\textup{\textto{(~4/3/2017~-~4/28/2017~)}}}
+\chapter{Itération~3~(~4/3/2017~-~4/28/2017~)}
 
 %\section*{Introduction}
 %\addcontentsline{toc}{section}{Introduction}
@@ -16,7 +16,7 @@ En accord avec le Product Owner, le but de cette itération est:
     \item [Smartphone] L'ajout de nouvelles fonctionnalités comme:
         \begin{itemize}
             \item La détection des réseaux avec leur intensité.
-            \item l'exploitation des donnes collecté selon le besoin.
+            \item l'exploitation des données collectées selon le besoin.
         \end{itemize}
     \item [Rapport] Typage des rapports.
     \item [Dashboard] \textbf{}
@@ -94,8 +94,8 @@ dans cette itération.
             \begin{itemize}
                 \item L'utilisateur ouvre la page Dashboard ou Rapport.
                 \item Le système affiche un dialogue d'authentification.
-                \item L'utilisateur saisit sont émail et son mot de passe et clique sur le bouton ``Login''.
-                \item Le système envoie les information d'identité au serveur.
+                \item L'utilisateur saisit son émail et son mot de passe et clique sur le bouton ``Login''.
+                \item Le système envoie les informations d'identité au serveur.
                 \item Le serveur vérifie les information, retourne un jeton d'authentification.
                 \item Le système envoie le jeton d'authentification au serveur.
                 \item Le serveur vérifie le jeton d'authentification et retourne un jeton d'accès.
@@ -180,10 +180,10 @@ Rectification du service de chargement d'image & Rihab & 13 $\times$ 2 \\ \hline
 
 \subsection{OAuth2}
 
-Pour sécuriser et limiter l'accès à nos services web, on a décide d'implémenter des différentes techniques dont la première est l'authentification.
+Pour sécuriser et limiter l'accès à nos services web, nous avons décide d'implémenter des différentes techniques dont la première est l'authentification.
 
-Le choix naturel est OAuth2~\cite{RFC6749}. Il est un protocole de délégation
-d'autorisation. Il permet aux applications \textquote{consommateurs} d'avoir un
+Le choix naturel est OAuth2~\cite{RFC6749}. C'est un protocole de délégation
+d'autorisation. Il permet aux applications \textquote{consommateurs} d'avoir
 le permission d'utiliser un service web \textquote{fournisseur}.
 
 \TODO{alternatives + why}
@@ -199,7 +199,7 @@ le permission d'utiliser un service web \textquote{fournisseur}.
 \subsection{Business Intelligence}
 
 La \acrfull{BI}\footnote{Informatique décisionnelle} propose d'utiliser les
-données transitant par le Système d'information en informations susceptibles
+données transitant par le système d'information en informations susceptibles
 d'être exploitées à des fins décisionnelles.
 
 % Sur le plan pratique et technique, la Business Intelligence se compose d'une
@@ -230,9 +230,9 @@ Les 4 fonctions de la chaîne décisionnelle:
         prendre des décisions.
 \end{description}
 
-Dans notre projet, le Product Owner et les participants au projet nous avons
-recommandé d'explorer la solution du Microsoft du BI grâce aux compétences du
-nos encadreurs dans cette technologie. Les outils du Microsoft BI qu'on avait
+Dans notre projet, le Product Owner et les participants au projet nous ont
+recommandé d'explorer la solution du Microsoft du Business Intelligence.Ce choix est basé sur les compétences du
+nos mentors dans cette technologie. Les outils du Microsoft BI qu'on avait
 utilisés au cours de cette itération sont:
 
 \begin{description}
@@ -261,8 +261,8 @@ l'itération 1 et de plus:
         de tel façon, on ne peut pas accéder au contenu protégé sans
         authentification.
     \item [Permissions] Un utilisateur n'a la permission que de changer ses
-        donnés personnelles et n'a pas l'autorisation d'accès au donnés privé
-        de les autres (trajet, détails de contact, \ldots).
+        données personnelles et n'a pas l'autorisation d'accéder aux données privées
+        des autres (trajet, détails de contact, \ldots).
     \item [Visualisation Instantané des Statistiques] Les diagrammes de
         statistiques doivent mets à jour instantanément et continuellement.
 \end{description}

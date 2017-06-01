@@ -1,4 +1,4 @@
-\chapter[Itération~1:~(~2/22/2017~-~3/5/2017~)]{Itération~1:~\textup{\textto{(~2/22/2017~-~3/5/2017~)}}}
+\chapter{Itération~1~(~2/22/2017~-~3/5/2017~)}
 
 La méthodologie Scrum consiste à développer le produit incrémentalement, en
 effet chaque itération résulte un prototype ayant des fonctionnalités du
@@ -10,10 +10,10 @@ toutes les planifications nécessaires indispensables pour atteindre ce but.
 \section{But de l'itération}
 
 Dans le but de définir l'objectif et le périmètre fonctionnel de l'itération 1
-et faire sa planification, tous les membres de l'équipe ont participé à un
+et faire sa planification, tous les membres de l'équipe ont participé à une
 réunion avec le Product Owner. Vue que l'équipe était encore débutante dans la
 méthodologie Scrum et dans l'environnement de travail en équipe, un simple but
-était tracer pour cette itération.
+était tracé pour cette itération.
 
 Le but de cette itération est de réaliser deux applications mobile et web.
 L'application mobile permet simplement de localiser instantanément
@@ -23,7 +23,7 @@ figure~\ref{fig:sprint1-prototype} représente un prototype du produit à
 développer.
 
 Pour éteindre ce but, une planification détaillée des tâches a était donnée
-durant un réunion de trois heures de travail commun.
+durant une réunion de trois heures de travail commun.
 
 \begin{figure}[H]
     \centering
@@ -56,30 +56,30 @@ durant un réunion de trois heures de travail commun.
 
 \section{Planification de l'itération}
 
-Pour réaliser le carnet de cette itération, on a décidé de diviser les
+Pour réaliser le carnet de cette itération, nous avons décidé de diviser les
 fonctionnalités en trois grandes parties:
 
 \begin{enumerate}
-    \item Une partie qui s'occupe de l'application mobile et de la détecte du
+    \item Une partie qui s'occupe de l'application mobile et de la détection de la
         position.
     \item Une partie  s'occupe de la partie web et l'affiche de la position
         actuelle sur une cartographie.
-    \item Une partie consacré pour la réalisation de la base de données et des
+    \item Une partie consacrée à la réalisation de la base de données et des
         services web.
 \end{enumerate}
 
 \subsection{Backlog de l'itération}
 
-Pour identifier la liste des taches de cette itération, on a étudié un ensemble
-des scénarios qu'on a les décomposés en un ensemble des cas d'utilisations.
+Pour identifier la liste des tâches de cette itération, nous avons étudié un ensemble
+des scénarios que nous avons les décomposés en un ensemble des cas d'utilisations.
 
 Concernant l'application mobile, le scénario étudié est:
 
 \begin{enumerate}
     \item Application Android locale installée --> interface contient deux
         boutons ``Start''/``Stop''.
-    \item Lancer l'application en mode en ligne (\acrshort{GPS} + internet
-        activés) sinon en mode hors ligne (\acrshort{GPS} + internet
+    \item Lancer l'application en mode en ligne (\acrshort{GPS} et internet
+        activés) sinon en mode hors ligne (\acrshort{GPS} et internet
         désactivés) --> le bouton ``Start'' activé et le bouton ``Stop''
         désactivé.
     \item Appui sur le bouton ``Start'' -->  le bouton ``Start'' désactivé et
@@ -95,7 +95,7 @@ Concernant la page web, le scénario étudié est:
 \begin{enumerate}
     \item Lancer un navigateur (Chrome/Firefox version récente) + URL de la
         page web dans le serveur distant.
-    \item Voir la carte (centré à Sfax).
+    \item Voir la carte (centrée à Sfax).
     \item Un marqueur affiché sur la carte (en position géographique de
         l'individu la plus récente).
     \item La taille de marqueur reste constante lors du zoom.
@@ -138,9 +138,9 @@ développement, de tests, d'intégration et de documentation.
 1.5 & Recherche sur les spécifications de la plateforme Android & Présenter le modèle de développement Android et choisir le SDK optimale & 1 \\ \hline
 1.6 & Création squelette de l'application mobile & Application fonctionnel (sans les fonctions de localisation) avec l'IHM nécessaire et l'intégration au SVN & 1 \\ \hline
 1.7 & Implémenter service Get Last Position & Le serveur retourne les dernières coordonnées requis & 1 \\ \hline
-1.8 & Rectification service Save Positon & Support multiple périphériques et enregistrer la date d'envoyé & 2 \\ \hline
-1.9 & Rectification service Get Last Position & Retourné la position du périphérique et la date du dernier modification & 2 \\ \hline
-1.10 & Affiche Multiple marqueurs & Afficher dernière position de chaque périphérique dans la carte & 2 \\ \hline
+1.8 & Rectification service Save Positon & Support multiple périphériques et enregistrer la date d'envoi & 2 \\ \hline
+1.9 & Rectification service Get Last Position & Retourner la position du périphérique et la date de la dernière modification & 2 \\ \hline
+1.10 & Affiche Multiple marqueurs & Afficher la dernière position de chaque périphérique dans la carte & 2 \\ \hline
 1.11 & Affiche état du périphérique & Afficher si le périphérique est en ligne ou hors ligne & 3 \\ \hline
     \end{longtable}
 \end{center}
@@ -181,7 +181,7 @@ développement, de tests, d'intégration et de documentation.
         \begin{minipage}{11cm}
             \vspace*{0.2cm}
             \begin{itemize}
-                \item L'utilisateur ouvrir le page du dashboard.
+                \item L'utilisateur ouvre la page du dashboard.
                 \item La page récupère la dernière position pour chaque utilisateur.
                 \item Le serveur retourne la position du chaque utilisateur.
                 \item Le page affiche un marqueur dans la position géographique de chaque utilisateur.
@@ -197,13 +197,13 @@ développement, de tests, d'intégration et de documentation.
 \subsection{Estimation de l'itération}
 
 Avant de commencer le processus d'estimation du temps nécessaire pour la
-réalisation de chaque des taches de l'itération, on a fixé la période d'une
-itération à trois semaines. On a aussi fixé le budget horaire de chaque membre
-comme présenter dans le tableau~\ref{tab:sprint1-capacity}. Le budget horaire
-est les heures qu'on va consacrer pour les taches de l'implémentation du
+réalisation de chaque des taches de l'itération, nous avons fixé la période d'une
+itération à trois semaines. Nous avons aussi fixé le budget horaire de chaque membre
+comme présenté dans le tableau~\ref{tab:sprint1-capacity}. Le budget horaire
+est les heures que nous allons consacrer pour les taches de l'implémentation du
 \textquote{City Watch}. Ce budget se calcule généralement par 70\% jusqu'à 80\%
-de temps de disponibilité à \textquote{Djagora Academy} vue qu'on a des autres
-activités et parfois des heures seront utilisés pour assister à quelques cours.
+de temps de disponibilité à \textquote{Djagora Academy} vue que nous avons des autres
+activités et parfois des heures seront utilisées pour assister à quelques cours.
 
 \begin{table}[H]
     \centering
@@ -222,8 +222,8 @@ Rihab & 8 & 140 \\ \hline
 
 Tout les membres de l'équipe font ensuite l'estimation de temps (en point
 d'histoire d'utilisateur) de chaque tâche avec le poker de planning. Les
-estimations utilisés sont $\frac{1}{2}$, $1$, $2$, $3$, $5$, $8$, $13$. Les
-tâches peuvent aussi être assignées aux plus qu'un seul membres.
+estimations utilisées sont $\frac{1}{2}$, $1$, $2$, $3$, $5$, $8$, $13$. Les
+tâches peuvent aussi être assignées aux plus qu'un seul membre.
 
 Le tableau~\ref{tab:sprint1-estimation} représente les estimations de nos
 tâches en heures ($\times2$ signifie que la tâche était assignée à deux membres)
@@ -252,44 +252,40 @@ Affiche état du périphérique & Rihab & 5 \\ \hline
 
 \section{Réalisation de l'application mobile}
 
-Pour réaliser l'application mobile tracé qui contient une interface graphique
-simple composée de deux boutons, on a choisi d'étudier la plateforme Android et
+Pour réaliser l'application mobile tracée qui contient une interface graphique
+simple composée de deux boutons, nous avons choisi d'étudier la plateforme Android et
 de choisir la version SDK optimale pour la réalisation de l'application.
 
-Android nous permet de réaliser des application basé l'astuce d'activité.
+Android nous permet de réaliser des application basées sur l'astuce d'activité.
 
 \subsection{Activité}
 
 Un utilisateur habile d'Android remarque que lors de l'exploitation d'une
 application Android qu'il est en train de naviguer entre des fenêtres et
-l'application ne afficher qu'une seule fenêtre à la fois ces fenêtre la sont
-des activités on peut différencier ces activité a travers leur interface
-graphique ceci s'applique sur la plupart des application Android car il y a des
-applications qui contiennent pas d'activités. Un première idée qui nous frappe
-la tète c'est que une activité est un conteneur d'élément graphique qui
-constitue un interface graphique. Alors que ne non une activité n'est pas
+l'application n'affiche qu'une seule fenêtre à la fois. Ces fenêtres sont
+des activités. On peut différencier ces activités à travers leur interface
+graphique. Ceci s'applique sur la plupart des applications Android car il y a des
+applications qui ne contiennent pas d'activités. Une première idée adoptée est qu'une activité est un conteneur d'élément graphique qui
+constitue un interface graphique. En effet, une activité n'est pas
 seulement une interface graphique mais elle va établir les liens entre
-l'interface graphique et la logique programma tique de plus l'activité contient
+l'interface graphique et la logique programatique de plus l'activité contient
 des informations sur le statut actuel de l'application qui s'appelle le
-contexte ce contexte permet de faire la liaison entre le système Android et les
+contexte. Ce contexte permet de faire la liaison entre le système Android et les
 autres activités de l'application.
 
 \subsubsection{États d'activités}
 
-Le système Android met en place un système priorités entre application par
-exemple l'utilisateur est en train de naviguer sur internet et écouter de la
-musique il reçois un appel comme l'application qui gère les appel est une
-application plus prioritaire elle prend la du navigateur et le lecteur musique
-pour que l'utilisateur puisse répondre a son appel. Si une application consomme
-trop de ressources et peut bloquer le fonctionnement du système Android,
-Android arrêtera cette application. Et aussi comme expliqué précédemment les
-activités sont gères a partir d'un système de pile d'activités. D'où
-l'apparition de plus d'un état qui sont centré sur l'activité.
+Le système Android met en place un système des priorités entre les applications.
+Par exemple, l'utilisateur est en train de naviguer sur internet et d'écouter de la
+musique. Il reçois un appel. Comme que l'application qui gère les appels est une
+application plus prioritaire, le système pause les autres activités
+pour que l'utilisateur puisse répondre à son appel. Les
+activités sont gérées à partir d'un système de pile d'activités.
 
-On peut différencier ces états par leur visibilité:
+On peut différencier 3 états d'activité:
 
 \begin{itemize}
-    \item État Active.
+    \item État Actif.
     \item État en Pause.
     \item État Arrêté.
 \end{itemize}
@@ -297,11 +293,10 @@ On peut différencier ces états par leur visibilité:
 \subsubsection{Cycle de vie d'une activité}
 
 Une activité n'a pas de contrôle sur son état. Son état change suivant un cycle
-rythmique entre le système Android et les autres application (un système quasi
+rythmique entre le système Android et les autres applications (un système quasi
 dépendant sur des priorités comme expliqué précédemment). La
 figure~\ref{fig:android-activity} explique le cycle de vie d'une activité. Les
-états sont représentés comme des méthodes parce que lors de la programmation,
-ces états sont interroges par le nom de ces méthodes.
+états sont représentés comme des méthodes.
 
 \input{figures/android-activity}
 
@@ -373,20 +368,20 @@ Les outils clients choisis sont:
 
 \section{Réalisation des services web distants}
 
-Pour réaliser les services web, on a étudié les différentes approches et
+Pour réaliser les services web, nous avons étudié les différentes approches et
 architectures des ces services web.
 
 Un service web est un protocole d'interface de communication et l'échange de
 données entre applications et systèmes hétérogènes à distance en utilisant les
 technologies Web (HTTP dans notre cas). Les différentes variantes des
-architectures des services web:
+architectures des services web sont:
 
 \begin{itemize}
-    \item Orienté RPC (ex: XML-RPC, SOAP, JSON-RPC):
+    \item Architecture orientée RPC (ex: XML-RPC, SOAP, JSON-RPC):
         \begin{itemize}
             \item Meilleur pour présenter des actions et commandes.
         \end{itemize}
-    \item Orienté Ressources (ex: RESTful):
+    \item Architecture orientée Ressources (ex: RESTful):
         \begin{itemize}
             \item Représenter les données sous formes des ressources.
             \item Utiliser les méthodes HTTP pour modifier/créer/lire/supprimer
@@ -397,31 +392,29 @@ architectures des services web:
         \end{itemize}
 \end{itemize}
 
-On a choisi d'utiliser l'architecture RESTful comme notre API est mieux décri
-comme ensemble des collections des données dont on peut effectuer avec des
-actions CRUD\@.
+Le choix final de l'architecture du service web à suivre était l'architecture RESTful.
 
 Avant de commencer la conception et l'implémentation des services web, un
-ensemble des exigences ont été définis:
+ensemble des exigences ont été définies:
 
 \begin{description}
     \item [Portabilité] Le système doit support la différence en zone du temps
-        et en internalisation, format de présentation des données géologique et
+        et en internalisation, la format de présentation des données géographiques et
         sa précision.
     \item [Stabilité] L'implémentation doit vérifier la structure des données
-        reçus, la disponibilité des champs obligatoires et leurs formats.
+        reçues, la disponibilité des champs obligatoires et leurs formats.
 \end{description}
 
 
 \subsection{Conception}
 
-La figure~\ref{fig:sprint1-webservices-usecase} ci dessus décrit le diagramme
+La figure~\ref{fig:sprint1-webservices-usecase} décrit le diagramme
 de cas d'utilisation qui regroupe les scénarios de localisation d'individu.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{sprint1-webservices-usecase}
-    \caption{Diagramme de case d'utilisation du services web --- Itération 1}
+    \caption{Diagramme de cas d'utilisation du services web --- Itération 1}
 \label{fig:sprint1-webservices-usecase}
 \end{figure}
 
@@ -446,8 +439,7 @@ du service web dans cette itération.
 \end{figure}
 
 La figure~\ref{fig:sprint1-webservices-post-sequence} décrit le diagramme de
-séquence du service \textquote{Post Position} qui représente les scénarios du la
-l'envoi de la position.
+séquence du service \textquote{Post Position} qui représente les scénarios de l'envoi de la position.
 
 \begin{figure}[H]
     \centering
@@ -458,7 +450,7 @@ l'envoi de la position.
 
 La figure~\ref{fig:sprint1-webservices-get-sequence} décrit le diagramme de
 séquence du service \textquote{Get Position} qui représente les scénarios du
-récupère la position.
+récupération de la position.
 
 \begin{figure}[H]
     \centering
@@ -469,30 +461,30 @@ récupère la position.
 
 \subsection{Services web}
 
-Dans première phase, on a implémenté les méthodes POST et GET du ressource
+Dans première phase, nous avons implémenté les méthodes POST et GET du ressource
 Position. L'architecture résultante est documentée dans
 l'annexe~\ref{appendix:sprint1-position-post-doc}
 et~\ref{appendix:sprint1-position-get-doc}.
 
-On a essayé d'adresser les différents exigences spécifiés:
+Nous avons essayé d'adresser les différentes mises en normes:
 
 \subsubsection{Probabilité}
 
-On a utilisé la format standardisée JSON~\cite{ECMA-404} pour le transfert de
+Nous avons utilisé la format standardisée JSON~\cite{ECMA-404} pour le transfert de
 données ce qui assure la portabilité des représentations des différents types
 des données (nombres, booléens, strings, \ldots) indépendant du
 l'internationalisation (séparateur décimal, \verb|true| vs. \verb|True| vs.
 \verb|vrai| vs. \verb|yes| vs. \verb|y|, \ldots).
 
-Pour le représentation des dates dans le content du requêtes HTTP, on a utilisé
-la format RFC3339~\cite{RFC3339} (basé sur ISO8601~\cite{ISO8601} pour
-l'utilisation dans les protocoles du Web) avec UTC comme la défaut zone du
-temps, ex: \verb|2005-08-15T15:52:01Z|.
+Pour le représentation des dates dans le content du requêtes HTTP, nous avons utilisé
+le format RFC3339~\cite{RFC3339} (basé sur ISO8601~\cite{ISO8601} pour
+l'utilisation dans les protocoles du Web) avec UTC comme la zone du
+temps par défaut, ex: \verb|2005-08-15T15:52:01Z|.
 
-Pour les en-têtes du requêtes HTTP, la format de représentation des dates est
+Pour les en-têtes du requêtes HTTP, le format de représentation des dates est
 RFC1123~\cite{RFC1123}, ex: \verb|Mon, 15 Aug 2005 15:52:01 +0000|.
 
-La format du présentation des positions géologique (latitude et longitude)
+Le format du présentation des positions géologique (latitude et longitude)
 choisie est la même représentation des nombres en JSON avec une précision
 jusqu'à 14 chiffres après le séparateur décimal. Les valeurs envoyés doivent
 respecte l'intervalle des diffèrent entités géologiques ($latitude \in [-90,
@@ -500,9 +492,9 @@ respecte l'intervalle des diffèrent entités géologiques ($latitude \in [-90,
 
 \subsubsection{Stabilité}
 
-Pour assuré la stabilité d'un service web, on doit vérifier la validité de
+Pour assurer la stabilité d'un service web, nous avons vérifié la validité de
 contenu reçu même si envoyé depuis un source de confiance avant de les
-utiliser. La vérification inclue le test de disponibilité des entités
+utiliser. La vérification inclut le test de disponibilité des entités
 obligatoires et le test de leurs formats.
 
 \section{Revue de cette itération}
@@ -513,13 +505,13 @@ heures.
 
 L'objectif de la revue de l'itération est de valider l'incrément de produit qui
 a été réalisé pendant cette itération. L'équipe énonce les éléments du backlog
-en début de sprint, et présente les tâches finis\footnote{complètement
-réalisés}. Une démonstration du produit a était fait.
+en début de sprint, et présente les tâches finies (complètement
+réalisées).
 
 \subsection{Produit de l'itération}
 
-A la fin de l'itération 1, nous avons un première produit partiel permettant de
-suivre la position des multiple smartphones et les afficher dans la carte de
+A la fin de l'itération 1, nous avons un premier produit partiel permettant de
+suivre la position des multiples smartphones et les afficher dans la carte de
 notre site web.
 
 \subsubsection{Page Web \textquote{Dashboard}}
@@ -547,9 +539,9 @@ individus et son état.
 \label{fig:sprint1-android-screenshot}
 \end{figure}
 
-L'application finale qu'on a aborder dans cette itération composé de trois
-bouton ``Start'', ``Stop'' et ``Close''.  Le clique sur le bouton ``Start''
-active la délectation continuelle de la position qui nécessite la disponibilité
+L'application Android de cette itération est composée de trois
+boutons ``Start'', ``Stop'' et ``Close''.  Le clique sur le bouton ``Start''
+active la détection continuelle de la position qui nécessite la disponibilité
 de l'Internet et du \acrshort{GPS}.  Le clique sur le bouton ``Stop'' désactive
 la détection de la position.
 
@@ -568,9 +560,9 @@ de notre travail au cours de l'itération par rapport au progrès idéal.
 
 \subsection{Rétrospectif de l'itération}
 
-Au fin du réunion, les membres de l'équipe a fait un rétrospectif interne pour
-créer un plan d'amélioration qui sera mis en place au cours du Sprint suivant.
-On a décidé de suivre quelques règles pour assurer la qualité du code.
+Â la fin de la réunion, les membres de l'équipe ont fait un rétrospectif interne pour
+créer un plan d'amélioration qui sera mis en place au cours de l'itération suivante.
+Nous avons décidé de suivre quelques règles pour assurer la qualité du code.
 
 \begin{itemize}
     \item Activer le mode strict du PHP et changer le mode de traitement des
@@ -594,11 +586,8 @@ On a décidé de suivre quelques règles pour assurer la qualité du code.
 \section*{Conclusion}
 \addcontentsline{toc}{section}{Conclusion}
 
-À la fin de cette itération, on avait un prototype minimale fonctionnel
+À la fin de cette itération, nous avons un prototype fonctionnel
 dont on peut baser notre future travail.
-L'approche suivi de faire le minimum des tâches pendant la première itération
-avait des bon effet sur les membre de notre équipe sur tout la motivation et
-la solidarité.
 
 Le tableau~\ref{tab:sprint1-evaluation} présente le pourcentage de
 réalisation de nos tâches de cette itération.
