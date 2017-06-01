@@ -4,13 +4,13 @@
 %\addcontentsline{toc}{section}{Introduction}
 
 Dans la dernière itération, nous avons collecté un grand ensemble de donnés des
-différents types. Malgré tout, ces donnés n'ont pas de valeur tel que on les
+différents types. Malgré tout, ces donnés n'ont pas de valeur tel que on ne les
 explore pas. C'est le rôle du Business Intelligence que nous allons étudier
 dans cette itération.
 
 \section{But de l'itération}
 
-En accord avec le Product Owner,le but de cette itération est:
+En accord avec le Product Owner, le but de cette itération est:
 
 \begin{description}
     \item [Smartphone] L'ajout de nouvelles fonctionnalités comme:
@@ -61,59 +61,59 @@ dans cette itération.
  \endlastfoot
 
 \hline
-3.1 & Integration Dashboard et Rapport dans l'application android & Implémenté la méthode qui affiche les pages ``Dashboard et Rapport'' chacun a un bouton spécifié   & 1 \\ \hline
-3.2 & Authentification Restful  & Ajouter l'authentification dans le serveur pour assurer la sécurité   & 1 \\ \hline
-3.3 & landing page & créer une nouvel page Web  & 3\\ \hline
-3.4 & Compte utilisateur & Base de données accecible depuis l'application et le web& 2 \\ \hline
-3.5 & Post réseau & Methode POST Restful & 1 \\ \hline
-3.6 & GET réseau & Methode GET Restful & 1 \\ \hline
-3.7 & Post vitesse & Methode POST vitesse & 1 \\ \hline
-3.8 & Get vitesse & Methode GET & 1 \\ \hline
-3.9 & Appplication Android Responsive & Responsive design coter android & 3 \\ \hline
-3.10 & IHM & l'ajout des boutons radio pour distinguer (pieton / voiture)(android) & 3 \\ \hline
-3.11 & Recherche Business intelligence & BI & 2 \\ \hline
-3.12 & Implantation des BD au BI & données accessible en BI & 2\\ \hline
-3.13 & création Logo &Ajouter Logo dans l'application & 3 \\ \hline
-3.14 & étude scénario commercial embouteillage & scénario de marketing& 2\\ \hline
-3.15 & Rectification chargement image & \ldots & 1 \\ \hline
-3.16 & étude scénario commercial secousses & scénario de marketing& 2\\ \hline
+3.1 & Intégration Dashboard et Rapport dans l'application Android & Implémenté la méthode qui affiche les pages ``Dashboard et Rapport'' chacun a un bouton spécifié   & 1 \\ \hline
+3.2 & Authentification RESTful & Ajouter l'authentification dans le serveur pour assurer la sécurité & 1 \\ \hline
+3.3 & Landing page & Créer une page Web pour la commercialisation et définition de \textquote{City Watch} & 3 \\ \hline
+3.4 & Compte utilisateur & Modifications nécessaires pour le support des comptes d'utilisateur et l'intégration avec le reste des tableaux & 2 \\ \hline
+3.5 & Service d'enregistrement les informations du réseau & Enregistrer les informations des réseaux cellulaires (opérateur, génération, force du signal) & 1 \\ \hline
+3.6 & Service de récupération des informations réseaux  & Retourner les informations du réseaux cellulaire & 1 \\ \hline
+3.7 & Service d'enregistrement du vitesse du véhicule & Enregistrer les vitesses du véhicule le long du trajectoire & 1 \\ \hline
+3.8 & Service de récupération du vitesse & Retourner la vitesse moyenne des véhicules dans une zone & 1 \\ \hline
+3.9 & Application Android Responsive & Supporter plus résolutions & 3 \\ \hline
+3.10 & Recherche Business intelligence & L'utilité du Business Intelligence et les solutions disponibles & 2 \\ \hline
+3.11 & Intégrer la base de données avec BI & Intégrer BD du service web à la solution BI choisie & 2\\ \hline
+3.12 & Logo du \textquote{City Watch} & Designer un Logo pour \textquote{City Watch} et pour ses applications & 3 \\ \hline
+3.13 & Étude scénario de commercial d'embouteillage & Les scénarios possibles pour le marketing des données d'embouteillage & 2\\ \hline
+3.14 & Rectification du service de chargement d'image & Fixer les cas où l'image ne peut pas charger au serveur & 1 \\ \hline
+3.15 & Étude scénario de commercial des secousses & Les scénarios possibles pour le marketing des données de secousses & 2\\ \hline
+% 3.16 & IHM & Ajout des boutons radio pour distinguer (pieton / voiture)(android) & 3 \\ \hline
 \end{longtable}
 \end{center}
 
-\begin{table}[!h]
- \centering
- \begin{tabular}{| p{3cm} | l |}
-  \hline
-  Cas d'utilisateur & Authentification Utilisateur \\ \hline
-  Acteur & Utilisateur \\ \hline
-  Pré condition & Utilisateur non authentifié \\ \hline
-  Post condition & Utilisateur connecté \\ \hline
-  Description du scénario &
-  \begin{minipage}{11cm}
-\vspace*{0.2cm}
-\begin{itemize}
-\item L'utilisateur ouvre la page Dashboard ou Rapport.
-\item Le système affiche un dialogue d'authentification.
-\item L'utilisateur saisit sont émail et son mot de passe et clique sur le bouton ``Login''.
-\item Le système envoie les information d'identité au serveur.
-\item Le serveur vérifie les information, retourne un jeton d'authentification.
-\item Le système envoie le jeton d'authentification au serveur.
-\item Le serveur vérifie le jeton d'authentification et retourne un jeton d'accès.
-\item Le système affiche la cartographie et récupère les données à afficher.
-\end{itemize}
-\vspace*{0.2cm}
-  \end{minipage} \\ \hline
-  Exception & \begin{minipage}{11cm}
-\vspace*{0.2cm}
-\begin{itemize}
- \item L'utilisateur n'a pas du compte.
- \item Les informations d'identité sont invalides.
-\end{itemize}
-\vspace*{0.2cm}
-\end{minipage}
- \\ \hline
- \end{tabular}
- \caption{Description du cas d'utilisation ``Authentification Utilisateur''}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{| p{3cm} | l |}
+        \hline
+        Cas d'utilisateur & Authentification Utilisateur \\ \hline
+        Acteur & Utilisateur \\ \hline
+        Pré condition & Utilisateur non authentifié \\ \hline
+        Post condition & Utilisateur connecté \\ \hline
+        Description du scénario &
+        \begin{minipage}{11cm}
+            \vspace*{0.2cm}
+            \begin{itemize}
+                \item L'utilisateur ouvre la page Dashboard ou Rapport.
+                \item Le système affiche un dialogue d'authentification.
+                \item L'utilisateur saisit sont émail et son mot de passe et clique sur le bouton ``Login''.
+                \item Le système envoie les information d'identité au serveur.
+                \item Le serveur vérifie les information, retourne un jeton d'authentification.
+                \item Le système envoie le jeton d'authentification au serveur.
+                \item Le serveur vérifie le jeton d'authentification et retourne un jeton d'accès.
+                \item Le système affiche la cartographie et récupère les données à afficher.
+            \end{itemize}
+            \vspace*{0.2cm}
+        \end{minipage} \\ \hline
+        Exception & \begin{minipage}{11cm}
+            \vspace*{0.2cm}
+            \begin{itemize}
+                \item L'utilisateur n'a pas du compte.
+                \item Les informations d'identité sont invalides.
+            \end{itemize}
+            \vspace*{0.1cm}
+        \end{minipage}
+        \\ \hline
+    \end{tabular}
+    \caption{Description du cas d'utilisation ``Authentification Utilisateur''}
 \end{table}
 
 \subsection{Estimation de l'itération}
@@ -121,7 +121,7 @@ dans cette itération.
 Le tableau~\ref{tab:sprint3-capacity} représente le budget horaire des membres
 dans les 3 semaines de l'itération.
 
-\begin{table}[htbp]
+\begin{table}[H]
     \centering
     \begin{tabular}{| c | c |}
 \hline
@@ -157,26 +157,24 @@ en heures pour cette itération.
  \endlastfoot
 
 \hline
-Integration Dashboard et Rapport dans l'application android & Rihab & 5 $\times$ 2 \\ \hline
-Authentification Restful& Rihab \& Moez & 13 $\times$ 2 \\ \hline
-landing page& Rihab & 13 \\ \hline
-Compte utilisateur& Moez & 8 \\ \hline
-Post réseau& Moez & 5  \\ \hline
-GET réseau& Moez & 5  \\ \hline
-Post vitesse& Rihab & 5  \\ \hline
-Get vitesse& Rihab & 5  \\ \hline
-Appplication Android Responsive & Rihab & 13 \\ \hline
-IHM & Rihab & 5 $\times$ 2 \\ \hline
-Recherche Business intelligence& Moez & 13 $\times$ 2 \\ \hline
-Implantation des BD au BI& Moez & 13 $\times$ 2 \\ \hline
-création Logo& Rihab & 13 \\ \hline
-Étude scénario commercial embouteillage& Rihab & 13 $\times$ 2 \\ \hline
-Rectification chargement image & Rihab & 13 $\times$ 2 \\ \hline
-Étude scénario commercial secousses & Rihab & 13 $\times$ 2 \\ \hline
+Intégration Dashboard et Rapport dans l'application Android & Rihab & 5 $\times$ 2 \\ \hline
+Authentification RESTful & Rihab \& Moez & 13 $\times$ 2 \\ \hline
+Landing page & Rihab & 13 \\ \hline
+Compte utilisateur & Moez & 8 \\ \hline
+Service d'enregistrement les informations du réseau & Moez & 5  \\ \hline
+Service de récupération des informations réseaux  & Moez & 5  \\ \hline
+Service d'enregistrement du vitesse du véhicule & Rihab & 5  \\ \hline
+Service de récupération du vitesse & Rihab & 5  \\ \hline
+Application Android Responsive & Rihab & 13 \\ \hline
+Recherche Business intelligence & Moez & 13 $\times$ 2 \\ \hline
+Intégrer la base de données avec BI & Moez & 13 $\times$ 2 \\ \hline
+Logo du \textquote{City Watch} & Rihab & 13 \\ \hline
+Étude scénario de commercial d'embouteillage & Rihab & 13 $\times$ 2 \\ \hline
+Rectification du service de chargement d'image & Rihab & 13 $\times$ 2 \\ \hline
+Étude scénario de commercial des secousses & Rihab & 13 $\times$ 2 \\ \hline
+%IHM & Rihab & 5 $\times$ 2 \\ \hline
 \end{longtable}
 \end{center}
-
-\clearpage
 
 \section{Outils utilisés}
 
@@ -184,7 +182,7 @@ Rectification chargement image & Rihab & 13 $\times$ 2 \\ \hline
 
 Pour sécuriser et limiter l'accès à nos services web, on a décide d'implémenter des différentes techniques dont la première est l'authentification.
 
-Le choix naturel est OAuth2~\cite{RFC6749}. Il est un protocale de délégation
+Le choix naturel est OAuth2~\cite{RFC6749}. Il est un protocole de délégation
 d'autorisation. Il permet aux applications \textquote{consommateurs} d'avoir un
 le permission d'utiliser un service web \textquote{fournisseur}.
 
@@ -240,12 +238,11 @@ utilisés au cours de cette itération sont:
 \begin{description}
     \item [\acrfull{SSIS}] La solution du Microsoft pour l'\acrshort{ETL}. Elle
         permet d'extraire et d'importer aisément les donnée à un ou des bases
-        de données du serveur SQL Server.
+        de données du serveur MS SQL Server.
     \item [MS Power BI] Permettre de générer des tableaux du bord des rapports
         visuels et dynamiques accessible en ligne facilement et sans besoin du
         codage. C'est une solution alternative de \acrfull{SSRS}.
 \end{description}
-%\clearpage
 
 %\begin{figure}[htbp]
 %  \centering
@@ -288,7 +285,7 @@ séquence du services d'authentification.
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{sprint3-webservices-oauth-sequence}
-    \caption{Diagramme de sequence d'authentification --- Itération 3}
+    \caption{Diagramme de séquence d'authentification --- Itération 3}
 \label{fig:sprint3-webservices-oauth-sequence}
 \end{figure}
 
@@ -297,9 +294,19 @@ classes du service web de la troisième itération.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{sprint3-webservices-class}
+    \includegraphics[width=0.7\textwidth]{sprint3-webservices-class}
     \caption{Diagramme de classe du services web --- Itération 3}
 \label{fig:sprint3-webservices-class}
+\end{figure}
+
+Le schéma~\ref{fig:sprint3-webservices-database} présente la base de données
+du service web dans cette itération.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{sprint3-webservices-database}
+    \caption{Base de données du service web --- Itération 3}
+\label{fig:sprint3-webservices-database}
 \end{figure}
 
 La figure~\ref{fig:sprint3-dashboard-classs} décrit le diagramme des classes du
@@ -307,7 +314,7 @@ page \textquote{Dashboard} dans la troisième itération.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{sprint3-dashboard-class}
+    \includegraphics[width=.8\textwidth]{sprint3-dashboard-class}
     \caption{Diagramme des classes du Dashboard --- Itération 3}
 \label{fig:sprint3-dashboard-classs}
 \end{figure}
@@ -352,22 +359,20 @@ filtrage des marqueurs.
 
 \subsubsection{Android}
 
-\subsubsection*{}
-
 Les données captées par l'application mobile (Position, Secousses,
 Ralentisseur, Réseaux, force du signal et vitesse) sont Récupérées par le
 serveur pour assurer la sauvegarde et la transmission vers une base données.
 
 \begin{figure}[H]
 \centering
-    \begin{subfigure}{.45\textwidth}
+    \begin{subfigure}{.4\textwidth}
     \centering
   \centering
   \includegraphics[width=1.0\linewidth]{sprint3-android-screenshot1}
   \caption{État désactivé}
 \label{fig:sprint3-android-screenshot1}
 \end{subfigure}
-\begin{subfigure}{.45\textwidth}
+\begin{subfigure}{.4\textwidth}
     \centering
   \centering
   \includegraphics[width=1.0\linewidth]{sprint3-android-screenshot2}
@@ -393,7 +398,7 @@ de notre travail au cours de l'itération par rapport au progrès idéal.
 \addcontentsline{toc}{section}{Conclusion}
 
 A fin de cette itération, nous avons découvert des nouveaux aspects intéressants dans notre projet
-qui nécessitent l'intervention des technologies (big-data, data mining, \ldots).
+qui nécessitent l'intervention des technologies (Big Data, Data mining, \ldots).
 
 Le tableau~\ref{tab:sprint3-evaluation} présente le pourcentage de
 réalisation de nos tâches de cette itération.
@@ -414,21 +419,20 @@ réalisation de nos tâches de cette itération.
         \endlastfoot
 
         \hline
-Integration Dashboard et Rapport dans l'application android & Effectué 100\% \\ \hline
-Authentification Restful&  Effectué 100\% \\ \hline
-landing page& Effectué 100\% \\ \hline
-Compte utilisateur& Effectué 100\% \\ \hline
-Post réseau& Effectué 100\% \\ \hline
-GET réseau&  Effectué 100\% \\ \hline
-Post vitesse&  Effectué 100\% \\ \hline
-Get vitesse& Effectué 100\% \\ \hline
-Appplication Android Responsive & Effectué 100\% \\ \hline
-IHM & Effectué 100\% \\ \hline
-Recherche Business intelligence& Effectué 100\% \\ \hline
-Implantation des BD au BI & Effectué 30\% \\ \hline
-création Logo&  Effectué 80\% \\ \hline
-Étude scénario commercial embouteillage& Effectué 100\% \\ \hline
-Rectification chargement image & Effectué 100\% \\ \hline
-Étude scénario commercial secousses &  Effectué 100\% \\ \hline
+Intégration Dashboard et Rapport dans l'application Android & Effectué 100\% \\ \hline
+Authentification RESTful & Effectué 100\% \\ \hline
+Landing page & Effectué 100\% \\ \hline
+Compte utilisateur & Effectué 100\% \\ \hline
+Service d’enregistrement les informations du réseau & Effectué 100\% \\ \hline
+Service de récupération des informations réseaux & Effectué 100\% \\ \hline
+Service d’enregistrement du vitesse du véhicule & Effectué 100\% \\ \hline
+Service de récupération du vitesse & Effectué 100\% \\ \hline
+Application Android Responsive & Effectué 100\% \\ \hline
+Recherche Business intelligence & Effectué 100\% \\ \hline
+Intégrer la base de données avec BI & Effectué 30\% \\ \hline
+Logo du \textquote{City Watch} & Effectué 80\% \\ \hline
+Étude scénario de commercial d’embouteillage & Effectué 100\% \\ \hline
+Rectification du service de chargement d’image & Effectué 100\% \\ \hline
+Étude scénario de commercial des secousses & Effectué 100\% \\ \hline
 \end{longtable}
 \end{center}
