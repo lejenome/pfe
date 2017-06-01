@@ -1,0 +1,52 @@
+\subsection{Service Post Position}
+\label{appendix:sprint1-position-post-doc}
+
+\textbf{POST} \ \texttt{/positions/\textit{:id}}
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabularx}{\textwidth}{@{}llll@{}}
+        \multicolumn{4}{X}{\textbf{Paramètres Service Post Position}} \\
+        \toprule
+        \rowcolor{gray!20}
+        \multicolumn{1}{l}{\textbf{Élément}} &
+        \multicolumn{1}{l}{\textbf{Obligation}} &
+        \multicolumn{1}{l}{\textbf{Type}} &
+        \multicolumn{1}{l}{\textbf{Description}} \\
+        \midrule
+        \verb|:id| & obligatoire & string & identificateur du périphérique \\
+        \verb|lat| & obligatoire & nombre [-90, 90] & latitude de la position \\
+        \verb|lng| & obligatoire & nombre [-180, 180] & longitude de la position \\
+        \verb|last_modified| & optionnel & string (RFC3339) & date du capture de la position \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\textbf{Réponse Codes}
+
+\begin{description}
+    \item[\texttt{204 No Content}] Position était crée ou mette à jour avec succès.
+    \item[\texttt{400 Bad Request}] Le contenu JSON n'est pas valide.
+    \item[\texttt{422 Unprocessable Entity}] Entité obligatoire absente ou format d'une entité est invalide.
+\end{description}
+
+\textbf{Entités de réponse:} n/a
+
+\begin{listing}[H]
+    %\caption*{Démonstration Service Post Position}
+    \begin{minted}[label={Exmple Requéte}]{bash}
+curl -i -X POST http://localhost/positions/1 \
+     -d '{"lat": 10.71979600000000,
+          "lat": "34.72563400000000",
+          "last_modified": "2017-03-27 10:34:01"}' \
+     -H 'Content-Type: application/json'
+\end{minted}
+\begin{minted}[label={Réponse en Succés}]{http}
+HTTP/1.1 200 Success
+Content-Type: application/json
+
+{
+    "success": true
+}
+\end{minted}
+\end{listing}

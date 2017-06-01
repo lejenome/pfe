@@ -1,0 +1,75 @@
+\subsection{Service Get Position}
+\label{appendix:sprint1-position-get-doc}
+
+\textbf{GET} \ \texttt{/positions/\textit{:id}}
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabularx}{\textwidth}{@{}llll@{}}
+        \multicolumn{4}{X}{\textbf{Paramètres Service Get Position}} \\
+        \toprule
+        \rowcolor{gray!20}
+        \multicolumn{1}{l}{\textbf{Élément}} &
+        \multicolumn{1}{l}{\textbf{Obligation}} &
+        \multicolumn{1}{l}{\textbf{Type}} &
+        \multicolumn{1}{l}{\textbf{Description}} \\
+        \midrule
+        \verb|:id| & obligatoire & string & identificateur du périphérique \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabularx}{\textwidth}{@{}lll@{}}
+        \multicolumn{3}{X}{\textbf{Entités du réponse du Service Post Position}} \\
+        \toprule
+        \rowcolor{gray!20}
+        \multicolumn{1}{l}{\textbf{Élément}} &
+        \multicolumn{1}{l}{\textbf{Type}} &
+        \multicolumn{1}{l}{\textbf{Description}} \\
+        \midrule
+        \verb|lat| & nombre [-90, 90] & latitude de la position \\
+        \verb|lng| & nombre [-180, 180] & longitude de la position \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabularx}{\textwidth}{@{}lll@{}}
+        \multicolumn{3}{X}{\textbf{En-tête Réponse Service Get Position}} \\
+        \toprule
+        \rowcolor{gray!20}
+        \multicolumn{1}{l}{\textbf{En-tête}} &
+        \multicolumn{1}{l}{\textbf{Type}} &
+        \multicolumn{1}{l}{\textbf{Description}} \\
+        \midrule
+        \verb|Last-Modified| & string (RFC1123) & Date du dernier modification du position \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\textbf{Réponse Codes}
+
+\begin{description}
+    \item[\texttt{200 Success}] Dernière position du périphérique spécifié retournée.
+    \item[\texttt{404 Not Found}] Aucune position trouvée pour le périphérique spécifié.
+\end{description}
+
+\begin{listing}[H]
+    %\caption*{Démonstration Service Get Position}
+    \begin{minted}[label={Exemple Requéte}]{bash}
+curl -i http://localhost/api/v1/positions/1
+\end{minted}
+\begin{minted}[label={Réponse en Succés}]{http}
+HTTP/1.1 200 OK
+Content-Type: application/json
+Last-Modified: Wed, 17 May 2017 14:51:00 GMT
+
+{
+    "lng": "10.71989600000000",
+    "lat": "34.72526400000000"
+}
+\end{minted}
+\end{listing}

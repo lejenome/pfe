@@ -11,142 +11,14 @@ travail pendant l'itération 1. Quelques exemples du réquetes sont ajoutés à 
 fin de chaque documentation du service web.
 
 \clearpage
-\subsection{Service Post Position}
-\label{appendix:sprint1-position-post-doc}
-
-\textbf{POST} \ \texttt{/positions/\textit{:id}}
-
-\begin{table}[htbp]
-    \centering
-    \begin{tabularx}{\textwidth}{@{}llll@{}}
-        \multicolumn{4}{X}{\textbf{Paramètres Service Post Position}} \\
-        \toprule
-        \rowcolor{gray!20}
-        \multicolumn{1}{l}{\textbf{Élément}} &
-        \multicolumn{1}{l}{\textbf{Obligation}} &
-        \multicolumn{1}{l}{\textbf{Type}} &
-        \multicolumn{1}{l}{\textbf{Description}} \\
-        \midrule
-        \verb|:id| & obligatoire & string & identificateur du périphérique \\
-        \verb|lat| & obligatoire & nombre [-90, 90] & latitude de la position \\
-        \verb|lng| & obligatoire & nombre [-180, 180] & longitude de la position \\
-        \verb|last_modified| & optionnel & string (RFC3339) & date du capture de la position \\
-        \bottomrule
-    \end{tabularx}
-\end{table}
-
-\textbf{Réponse Codes}
-
-\begin{description}
-    \item[\texttt{204 No Content}] Position était crée ou mette à jour avec succès.
-    \item[\texttt{400 Bad Request}] Le contenu JSON n'est pas valide.
-    \item[\texttt{422 Unprocessable Entity}] Entité obligatoire absente ou format d'une entité est invalide.
-\end{description}
-
-\textbf{Entités de réponse:} n/a
-
-\begin{listing}[H]
-    %\caption*{Démonstration Service Post Position}
-    \begin{minted}[label={Exmple Requéte}]{bash}
-curl -i -X POST http://localhost/positions/1 \
-     -d '{"lat": 10.71979600000000,
-          "lat": "34.72563400000000",
-          "last_modified": "2017-03-27 10:34:01"}' \
-     -H 'Content-Type: application/json'
-\end{minted}
-\begin{minted}[label={Réponse en Succés}]{http}
-HTTP/1.1 200 Success
-Content-Type: application/json
-
-{
-    "success": true
-}
-\end{minted}
-\end{listing}
+\input{api-documentation/sp1-post-position}
+\clearpage
+\input{api-documentation/sp1-get-position}
 
 \clearpage
-\subsection{Service Get Position}
-\label{appendix:sprint1-position-get-doc}
+\section{Documentation des Services Web des itérations 2 \& 3}
 
-\textbf{GET} \ \texttt{/positions/\textit{:id}}
-
-\begin{table}[htbp]
-    \centering
-    \begin{tabularx}{\textwidth}{@{}llll@{}}
-        \multicolumn{4}{X}{\textbf{Paramètres Service Get Position}} \\
-        \toprule
-        \rowcolor{gray!20}
-        \multicolumn{1}{l}{\textbf{Élément}} &
-        \multicolumn{1}{l}{\textbf{Obligation}} &
-        \multicolumn{1}{l}{\textbf{Type}} &
-        \multicolumn{1}{l}{\textbf{Description}} \\
-        \midrule
-        \verb|:id| & obligatoire & string & identificateur du périphérique \\
-        \bottomrule
-    \end{tabularx}
-\end{table}
-
-\begin{table}[htbp]
-    \centering
-    \begin{tabularx}{\textwidth}{@{}lll@{}}
-        \multicolumn{3}{X}{\textbf{Entités du réponse du Service Post Position}} \\
-        \toprule
-        \rowcolor{gray!20}
-        \multicolumn{1}{l}{\textbf{Élément}} &
-        \multicolumn{1}{l}{\textbf{Type}} &
-        \multicolumn{1}{l}{\textbf{Description}} \\
-        \midrule
-        \verb|lat| & nombre [-90, 90] & latitude de la position \\
-        \verb|lng| & nombre [-180, 180] & longitude de la position \\
-        \bottomrule
-    \end{tabularx}
-\end{table}
-
-\begin{table}[htbp]
-    \centering
-    \begin{tabularx}{\textwidth}{@{}lll@{}}
-        \multicolumn{3}{X}{\textbf{En-tête Réponse Service Get Position}} \\
-        \toprule
-        \rowcolor{gray!20}
-        \multicolumn{1}{l}{\textbf{En-tête}} &
-        \multicolumn{1}{l}{\textbf{Type}} &
-        \multicolumn{1}{l}{\textbf{Description}} \\
-        \midrule
-        \verb|Last-Modified| & string (RFC1123) & Date du dernier modification du position \\
-        \bottomrule
-    \end{tabularx}
-\end{table}
-
-\textbf{Réponse Codes}
-
-\begin{description}
-    \item[\texttt{200 Success}] Dernière position du périphérique spécifié retournée.
-    \item[\texttt{404 Not Found}] Aucune position trouvée pour le périphérique spécifié.
-\end{description}
-
-\begin{listing}[H]
-    %\caption*{Démonstration Service Get Position}
-    \begin{minted}[label={Exemple Requéte}]{bash}
-curl -i http://localhost/api/v1/positions/1
-\end{minted}
-\begin{minted}[label={Réponse en Succés}]{http}
-HTTP/1.1 200 OK
-Content-Type: application/json
-Last-Modified: Wed, 17 May 2017 14:51:00 GMT
-
-{
-    "lng": "10.71989600000000",
-    "lat": "34.72526400000000"
-}
-\end{minted}
-\end{listing}
-
-\clearpage
-\section{Documentation des Services Web d'itération 2}
-
-\TODO{doc}
-
-\clearpage
-\section{Documentation des Services Web d'itération 3}
+Dans les pages suivantes, on décommente l'API RESTful finale résultante du notre
+travail pendant les itérations 1 et 3.
 
 \TODO{doc}
