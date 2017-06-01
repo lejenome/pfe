@@ -1,4 +1,4 @@
-DIFF_REV:=v0.3.0
+DIFF_REV:=v0.4.0
 
 all: report
 
