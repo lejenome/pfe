@@ -23,8 +23,7 @@ la préparation du carnet du produit nommé Backlog Général.
 
 La planification de l'itération représente une étape importante dans la vie de
 l'itération parce que au cours du planification, on divise l'itération a
-plusieurs tâches pour mieux atteindre le but à la fin de
-l'itération.
+plusieurs tâches pour mieux atteindre le but à la fin de l'itération.
 
 \subsection{Répartition des rôles}
 
@@ -87,7 +86,8 @@ Au cours de chaque itération du projet, on a utilisé Excel et un tableau
 physique pour suivre l'évolution des tâches de chaque membre.
 
 Dans la figure~\ref{fig:scrum-board}, on représente le tableau des tâches. Les
-lignes colorées représentent nos tâches du binôme. Les colonnes du tableau sont:
+lignes colorées représentent nos tâches du binôme. Les colonnes du tableau
+sont:
 
 \begin{description}
     \item [Who] L'allias du nom de chaque membres de l'équipe.
@@ -99,9 +99,9 @@ lignes colorées représentent nos tâches du binôme. Les colonnes du tableau s
     \item [Implémentation] La pourcentage de l'implémentation du tâche de 0\%
         jusqu'à 100\%. Si le développeur a commencé l'implémentation d'une
         tâche, il la déplace dans cette colonne et faire le mise à jour du
-        pourcentage de l'implémentation à chaque jour pendant un réunion de 20 minutes
-        nommé \textquote{Daily Scrum} pendant le, on discute l'évolution du
-        travail et le plan du jour prochain.
+        pourcentage de l'implémentation à chaque jour pendant un réunion de 20
+        minutes nommé \textquote{Daily Scrum} pendant le, on discute
+        l'évolution du travail et le plan du jour prochain.
     \item [Test/Intégration/Review] L'implémentation du tâche est complète,
         elle est donc en phase d'évaluation et vérification de son
         fonctionnement si intégré dans le reste du système. Depuis la deuxième
@@ -167,9 +167,9 @@ La liste des prochaines réunions est écrite dans le tableau aussi:
 
 \subsection{Burndown Chart}
 
-Pour montrer l'avancement durant une itération donnée, le
-Burndown Chart (graphique d'avancement) est tracé. Il s'agit d'un graphique simple qui
-montre le nombre d'heures restant à effectuer pour finir les tâches d'itération
+Pour montrer l'avancement durant une itération donnée, le Burndown Chart
+(graphique d'avancement) est tracé. Il s'agit d'un graphique simple qui montre
+le nombre d'heures restant à effectuer pour finir les tâches d'itération
 courante. Les graphiques d'avancement de chaque itération sont disponibles dans
 les figures~\ref{fig:sprint1-burndown},~\ref{fig:sprint2-burndown}
 et~\ref{fig:sprint3-burndown}.
@@ -204,8 +204,8 @@ participation de binôme par les cercles du texte souligné.
 \input{figures/product-backlog}
 
 Le tableau~\ref{tab:product-backlog} représente une liste plus détaillé des cas
-d'utilisations que nous allons les implémenter pendant les 3 premières itérations.
-La définition des ces cas d'utilisation suit la forme suivante:
+d'utilisations que nous allons les implémenter pendant les 3 premières
+itérations.  La définition des ces cas d'utilisation suit la forme suivante:
 
 \begin{displayquote}
     En tant que \textbf{X}, je peux \textbf{Y} Afin d'\textbf{Z}.
@@ -275,9 +275,9 @@ Les valeurs des priorités de cas d'utilisation (présentées dans la colonnes
 
 \section{Environnement du travail}
 
-Pendant l'itération 0, nous avons fait un recherche sur les choix techniques à fin de
-mettre en place l'environnement de développement de différentes parties du
-projet. Ces choix concernent l'environnement logiciel à utiliser tel que les
+Pendant l'itération 0, nous avons fait un recherche sur les choix techniques à
+fin de mettre en place l'environnement de développement de différentes parties
+du projet. Ces choix concernent l'environnement logiciel à utiliser tel que les
 langages de programmation, les frameworks et les outils de développement.
 
 % \subsection{Environnement logiciel}
@@ -298,8 +298,8 @@ Mai 2017, la dernière version majeure du système Android est Nougat (7.X)
 disponible depuis le mois d'aout 2016~\cite{android-7-release} avec le dernier
 mise à jour est 7.1.2 disponible depuis le 5 janvier 2017.
 
-Nous avons choisi de supporter le système Android comme notre première plateforme. Ce
-choix était basé sur différents aspects:
+Nous avons choisi de supporter le système Android comme notre première
+plateforme. Ce choix était basé sur différents aspects:
 
 \begin{itemize}
     \item La part de marché des smartphones et tablettes Android.
@@ -322,8 +322,8 @@ fonctionnalités et le choix de la version de SDK dépend de ces fonctionnalité
 \subsection{Développement Web}
 
 En se basant sur les conseils du Product Owner et aux limites d'environnement
-de développement dont le serveur supporte seulement PHP, nous avons choisi le langage
-de programmation PHP (PHP 7.0) pour le développement des services web.
+de développement dont le serveur supporte seulement PHP, nous avons choisi le
+langage de programmation PHP (PHP 7.0) pour le développement des services web.
 
 Les points fort du PHP:
 
@@ -354,13 +354,14 @@ multi-plateforme de JetBrains. Il regroupe sous une interface conviviale un
 Vim a été aussi utilisé avec un ensemble des extensions pour enrichir ses
 fonctionnalités.
 
-Pour le développement du front-end, nous avons choisi d'utiliser les technologies Web modernes qui nous permettre de
-créer une application web interactive et dynamique rapidement et aisément sans
-besoin d'un backend pour générer le contenu.
+Pour le développement du front-end, nous avons choisi d'utiliser les
+technologies Web modernes qui nous permettre de créer une application web
+interactive et dynamique rapidement et aisément sans besoin d'un backend pour
+générer le contenu.
 
 \begin{description}
-    \item [HTML 5.1] Nous avons utilisé les tags sémantique, les nouveaux types et
-        attributs de validation du formulaire et les nouveautés
+    \item [HTML 5.1] Nous avons utilisé les tags sémantique, les nouveaux types
+        et attributs de validation du formulaire et les nouveautés
         des api Web comme l'api DOM et l'api de localisation.
     \item [JavaScript 7] Ou encore ECMAScript 2016\textregistered définit dans
         la spécification ECMA-262~\cite{ECMA262}. JavaScript est un langage
@@ -375,8 +376,8 @@ besoin d'un backend pour générer le contenu.
         simplifier le travail.
 \end{description}
 
-L'utilisation de ces dernières mise à jours des standards du web a causé le support
-de l'application web que par seulement les dernières versions des
+L'utilisation de ces dernières mise à jours des standards du web a causé le
+support de l'application web que par seulement les dernières versions des
 navigateurs principales\footnote{Firefox v45+ (sans support d'input de type
 date), Google Chrome v50+, Edge v14+, Sfari 10+ (sans support d'input de type
 date), Opera 37}. Le support des autres anciennes versions et des autres

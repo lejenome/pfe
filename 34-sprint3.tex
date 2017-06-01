@@ -3,10 +3,10 @@
 %\section*{Introduction}
 %\addcontentsline{toc}{section}{Introduction}
 
-Dans la dernière itération, nous avons collecté un grand ensemble de donnés des
-différents types. Malgré tout, ces donnés n'ont pas de valeur tel que on ne les
-explore pas. C'est le rôle du Business Intelligence que nous allons étudier
-dans cette itération.
+Dans la dernière itération, nous avons collecté un grand ensemble de données
+des différentes types. Malgré tout, ces données n'ont pas de valeur tel que on
+ne les explore pas. C'est le rôle du Business Intelligence que nous allons
+étudier dans cette itération.
 
 \section{But de l'itération}
 
@@ -180,11 +180,13 @@ Rectification du service de chargement d'image & Rihab & 13 $\times$ 2 \\ \hline
 
 \subsection{OAuth2}
 
-Pour sécuriser et limiter l'accès à nos services web, nous avons décide d'implémenter des différentes techniques dont la première est l'authentification.
+Pour sécuriser et limiter l'accès à nos services web, nous avons décide
+d'implémenter des différentes techniques dont la première est
+l'authentification.
 
 Le choix naturel est OAuth2~\cite{RFC6749}. C'est un protocole de délégation
-d'autorisation. Il permet aux applications \textquote{consommateurs} d'avoir
-le permission d'utiliser un service web \textquote{fournisseur}.
+d'autorisation. Il permet aux applications \textquote{consommateurs} d'avoir le
+permission d'utiliser un service web \textquote{fournisseur}.
 
 \TODO{alternatives + why}
 
@@ -231,9 +233,9 @@ Les 4 fonctions de la chaîne décisionnelle:
 \end{description}
 
 Dans notre projet, le Product Owner et les participants au projet nous ont
-recommandé d'explorer la solution du Microsoft du Business Intelligence.Ce choix est basé sur les compétences du
-nos mentors dans cette technologie. Les outils du Microsoft BI qu'on avait
-utilisés au cours de cette itération sont:
+recommandé d'explorer la solution du Microsoft du Business Intelligence.Ce
+choix est basé sur les compétences du nos mentors dans cette technologie. Les
+outils du Microsoft BI qu'on avait utilisés au cours de cette itération sont:
 
 \begin{description}
     \item [\acrfull{SSIS}] La solution du Microsoft pour l'\acrshort{ETL}. Elle
@@ -261,16 +263,16 @@ l'itération 1 et de plus:
         de tel façon, on ne peut pas accéder au contenu protégé sans
         authentification.
     \item [Permissions] Un utilisateur n'a la permission que de changer ses
-        données personnelles et n'a pas l'autorisation d'accéder aux données privées
-        des autres (trajet, détails de contact, \ldots).
+        données personnelles et n'a pas l'autorisation d'accéder aux données
+        privées des autres (trajet, détails de contact, \ldots).
     \item [Visualisation Instantané des Statistiques] Les diagrammes de
         statistiques doivent mets à jour instantanément et continuellement.
 \end{description}
 
 \section{Conception}
 
-La figure~\ref{fig:sprint3-webservices-oauth-usecase} décrit le diagramme
-de cas d'utilisation de service d'authentification.
+La figure~\ref{fig:sprint3-webservices-oauth-usecase} décrit le diagramme de
+cas d'utilisation de service d'authentification.
 
 \begin{figure}[H]
     \centering
@@ -289,8 +291,8 @@ séquence du services d'authentification.
 \label{fig:sprint3-webservices-oauth-sequence}
 \end{figure}
 
-La figure~\ref{fig:sprint3-webservices-class} présente le diagramme de
-classes du service web de la troisième itération.
+La figure~\ref{fig:sprint3-webservices-class} présente le diagramme de classes
+du service web de la troisième itération.
 
 \begin{figure}[H]
     \centering
@@ -299,8 +301,8 @@ classes du service web de la troisième itération.
 \label{fig:sprint3-webservices-class}
 \end{figure}
 
-Le schéma~\ref{fig:sprint3-webservices-database} présente la base de données
-du service web dans cette itération.
+Le schéma~\ref{fig:sprint3-webservices-database} présente la base de données du
+service web dans cette itération.
 
 \begin{figure}[H]
     \centering
@@ -327,6 +329,7 @@ page \textquote{Dashboard} dans la troisième itération.
 \subsection{Produit de l'itération}
 
 \subsubsection{Légende du Dashboard}
+
 Dans cette page nous travaillons alors sur deux parties:
 
 \begin{itemize}
@@ -384,8 +387,8 @@ serveur pour assurer la sauvegarde et la transmission vers une base données.
 
 \subsection{Avis du Product Owner}
 
-Après la présentation du produit final, le \textquote{Product Owner} était très satisfait
-a notre travail.
+Après la présentation du produit final, le \textquote{Product Owner} était très
+satisfait a notre travail.
 
 \subsection{Burndown chart}
 
@@ -397,11 +400,12 @@ de notre travail au cours de l'itération par rapport au progrès idéal.
 \section*{Conclusion}
 \addcontentsline{toc}{section}{Conclusion}
 
-A fin de cette itération, nous avons découvert des nouveaux aspects intéressants dans notre projet
-qui nécessitent l'intervention des technologies (Big Data, Data mining, \ldots).
+A fin de cette itération, nous avons découvert des nouveaux aspects
+intéressants dans notre projet qui nécessitent l'intervention des technologies
+(Big Data, Data mining, \ldots).
 
-Le tableau~\ref{tab:sprint3-evaluation} présente le pourcentage de
-réalisation de nos tâches de cette itération.
+Le tableau~\ref{tab:sprint3-evaluation} présente le pourcentage de réalisation
+de nos tâches de cette itération.
 
 \begin{center}
     \begin{longtable}{| l | l |}
