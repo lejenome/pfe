@@ -1,0 +1,26 @@
+\subsection{Service Get Reports}
+\label{appendix:sprint3-reports-get-doc}
+
+\textbf{GET} \ \texttt{/reports}
+
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{@{}p{3cm} p{3.5cm} p{7.5cm}@{}}
+        \multicolumn{3}{X}{\textbf{Entités du réponse du Service Get Reports}} \\
+        \toprule
+        \rowcolor{gray!20}
+        \multicolumn{1}{l}{\textbf{Élément}} &
+        \multicolumn{1}{l}{\textbf{Type}} &
+        \multicolumn{1}{l}{\textbf{Description}} \\
+        \midrule
+        \verb|.| & Object[] & liste des rapports \\
+        \verb|.id| & nombre & identificateur du rapport \\
+        \verb|.type| & string & type du rapport \\
+        \verb|.description| & string & description (commentaire) du rapport \\
+        \verb|.lat| & nombre & latitude du rapport \\
+        \verb|.lng| & nombre & longitude du rapport \\
+        \verb|.photo| & string (URL) & URL d'image du rapport \\
+        \verb|.created_at| & string (RFC3339) & date de création \\
+        \bottomrule
+    \end{tabularx}
+\end{table}

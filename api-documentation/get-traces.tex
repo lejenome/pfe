@@ -1,0 +1,63 @@
+\subsection{Service Get Trace}
+\label{appendix:sprint3-trace-get-doc}
+
+\textbf{GET} \ \texttt{/device/:id/trace}
+
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{@{}p{2cm} p{2cm} p{3.5cm} p{6cm}@{}}
+        \multicolumn{4}{X}{\textbf{Paramètres Service Get Trace}} \\
+        \toprule
+        \rowcolor{gray!20}
+        \multicolumn{1}{l}{\textbf{Élément}} &
+        \multicolumn{1}{l}{\textbf{Obligation}} &
+        \multicolumn{1}{l}{\textbf{Type}} &
+        \multicolumn{1}{l}{\textbf{Description}} \\
+        \midrule
+        \verb|:id| & obligatoire & int & identificateur du périphérique \\
+        \verb|since| & optionnel & string (RFC3339) & filtrer le trajectoire depuis cette date \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{@{}p{3cm} p{3.5cm} p{7.5cm}@{}}
+        \multicolumn{3}{X}{\textbf{Entités du réponse du Service Get Trace}} \\
+        \toprule
+        \rowcolor{gray!20}
+        \multicolumn{1}{l}{\textbf{Élément}} &
+        \multicolumn{1}{l}{\textbf{Type}} &
+        \multicolumn{1}{l}{\textbf{Description}} \\
+        \midrule
+        \verb|.| & Object & Objet du format GeoJson, voir l'exemple \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\begin{listing}[H]
+    %\caption*{Démonstration Service Get Position}
+    \begin{minted}[label={Exemple Requéte}]{bash}
+curl -i http://localhost/api/v1/device/2/trace
+\end{minted}
+\begin{minted}[label={Réponse en Succés}]{http}
+HTTP/1.1 200 OK
+Content-Type: application/vnd.geo+json
+Last-Modified: Wed, 17 May 2017 14:51:00 GMT
+
+{
+    "type": "Feature",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [10.101515121, 34.148454874],
+        [10.115445441, 34.145645455],
+      ]
+    },
+    "properties": {
+      "name": "Trace",
+      "device_id": 2
+    }
+}
+\end{minted}
+\end{listing}

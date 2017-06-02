@@ -1,0 +1,23 @@
+\subsection{Service Get Photo}
+\label{appendix:sprint3-photo-get-doc}
+
+\textbf{GET} \ \texttt{/photo/:id}
+
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{@{}p{2cm} p{2cm} p{3.5cm} p{6cm}@{}}
+        \multicolumn{4}{X}{\textbf{Paramètres Service Get Photo}} \\
+        \toprule
+        \rowcolor{gray!20}
+        \multicolumn{1}{l}{\textbf{Élément}} &
+        \multicolumn{1}{l}{\textbf{Obligation}} &
+        \multicolumn{1}{l}{\textbf{Type}} &
+        \multicolumn{1}{l}{\textbf{Description}} \\
+        \midrule
+        \verb|:id| & obligatoire & string (UUID v4) & identificateur \\
+        \verb|h| & optionnel & number & hauteur maximale d'image \\
+        \verb|w| & optionnel & number & largeur maximale d'image \\
+        \verb|f| & optionnel & string & type à retourner. Les valeurs possibles sont: jpg, pg, gif, bmp, data-url (base64) \\
+        \bottomrule
+    \end{tabularx}
+\end{table}

@@ -1,0 +1,23 @@
+\subsection{Service Post Potholes}
+\label{appendix:sprint1-potholes-post-doc}
+
+\textbf{POST} \ \texttt{/potholes}
+
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{@{}p{2cm} p{2cm} p{3.5cm} p{6cm}@{}}
+        \multicolumn{4}{X}{\textbf{Paramètres Service Post Potholes}} \\
+        \toprule
+        \rowcolor{gray!20}
+        \multicolumn{1}{l}{\textbf{Élément}} &
+        \multicolumn{1}{l}{\textbf{Obligation}} &
+        \multicolumn{1}{l}{\textbf{Type}} &
+        \multicolumn{1}{l}{\textbf{Description}} \\
+        \midrule
+        \verb|lat| & obligatoire & nombre [-90, 90] & latitude de la secousse \\
+        \verb|lng| & obligatoire & nombre [-180, 180] & longitude de la secousse \\
+        \verb|intensity| & obligatoire & nombre [0, 7] & intensité de la secousse \\
+        \verb|dir| & obligatoire & nombre [0, 360[ & degrée de la direction du secousse \\
+        \bottomrule
+    \end{tabularx}
+\end{table}

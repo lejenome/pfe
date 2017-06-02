@@ -1,0 +1,45 @@
+\subsection{Service Get Speedbumps}
+\label{appendix:sprint3-speedbumps-get-doc}
+
+\textbf{GET} \ \texttt{/speedbumps}
+
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{@{}p{2cm} p{2cm} p{3.5cm} p{6cm}@{}}
+        \multicolumn{4}{X}{\textbf{Paramètres Service Get Speedbumps}} \\
+        \toprule
+        \rowcolor{gray!20}
+        \multicolumn{1}{l}{\textbf{Élément}} &
+        \multicolumn{1}{l}{\textbf{Obligation}} &
+        \multicolumn{1}{l}{\textbf{Type}} &
+        \multicolumn{1}{l}{\textbf{Description}} \\
+        \midrule
+        \verb|lat| & optionnel & nombre & trouver les ralentisseurs de position relative à cette latitude. Dépend du paramètre lng. \\
+        \verb|lng| & optionnel & nombre & trouver les ralentisseurs de position relative à cette longitude. Dépend du paramètre lat. \\
+        \verb|dir| & optionnel & nombre & trouver les ralentisseurs de position relative à cette direction. Dépend des paramètres lat et lng. \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{@{}p{3cm} p{3.5cm} p{7.5cm}@{}}
+        \multicolumn{3}{X}{\textbf{Entités du réponse du Service Get Speedbumps}} \\
+        \toprule
+        \rowcolor{gray!20}
+        \multicolumn{1}{l}{\textbf{Élément}} &
+        \multicolumn{1}{l}{\textbf{Type}} &
+        \multicolumn{1}{l}{\textbf{Description}} \\
+        \midrule
+        \verb|.| & Object[] & liste des ralentisseurs \\
+        \verb|.id| & nombre & identificateur du ralentisseur \\
+        \verb|.lat| & nombre & latitude du ralentisseur \\
+        \verb|.lng| & nombre & longitude du ralentisseur \\
+        \verb|.intesity| & nombre & intensité du ralentisseur \\
+        \verb|.dir| & nombre & direction en dégrée du ralentisseur \\
+        \verb|.created_at| & string (RFC3339) & date de création \\
+        \verb|.updated_at| & string (RFC3339) & date du dernière confirmation\\
+        \verb|.nb| & nombre & nombre des confirmations (ralentisseurs reportées dans la même zone)\\
+        \bottomrule
+    \end{tabularx}
+\end{table}

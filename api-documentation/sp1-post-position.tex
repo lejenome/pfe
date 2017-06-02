@@ -3,9 +3,9 @@
 
 \textbf{POST} \ \texttt{/positions/\textit{:id}}
 
-\begin{table}[htbp]
+\begin{table}[H]
     \centering
-    \begin{tabularx}{\textwidth}{@{}llll@{}}
+    \begin{tabularx}{\textwidth}{@{}p{3cm} p{2cm} p{3.5cm} p{5cm}@{}}
         \multicolumn{4}{X}{\textbf{Paramètres Service Post Position}} \\
         \toprule
         \rowcolor{gray!20}
@@ -14,10 +14,10 @@
         \multicolumn{1}{l}{\textbf{Type}} &
         \multicolumn{1}{l}{\textbf{Description}} \\
         \midrule
-        \verb|:id| & obligatoire & string & identificateur du périphérique \\
+        \verb|:id| & obligatoire & string & id du périphérique \\
         \verb|lat| & obligatoire & nombre [-90, 90] & latitude de la position \\
         \verb|lng| & obligatoire & nombre [-180, 180] & longitude de la position \\
-        \verb|last_modified| & optionnel & string (RFC3339) & date du capture de la position \\
+        \verb|last_modified| & optionnel & string (RFC3339) & date de sa capture \\
         \bottomrule
     \end{tabularx}
 \end{table}

@@ -1,0 +1,21 @@
+\subsection{Service Post Speedbumps}
+\label{appendix:sprint1-speedbumps-post-doc}
+
+\textbf{POST} \ \texttt{/speedbumps}
+
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{\textwidth}{@{}p{2cm} p{2cm} p{3.5cm} p{6cm}@{}}
+        \multicolumn{4}{X}{\textbf{Paramètres Service Post Speedbumps}} \\
+        \toprule
+        \rowcolor{gray!20}
+        \multicolumn{1}{l}{\textbf{Élément}} &
+        \multicolumn{1}{l}{\textbf{Obligation}} &
+        \multicolumn{1}{l}{\textbf{Type}} &
+        \multicolumn{1}{l}{\textbf{Description}} \\
+        \midrule
+        \verb|lat| & obligatoire & nombre [-90, 90] & latitude du ralentisseur \\
+        \verb|lng| & obligatoire & nombre [-180, 180] & longitude du ralentisseur \\
+        \verb|dir| & obligatoire & nombre [0, 360[ & degrée de la direction du ralentisseur \\
+    \end{tabularx}
+\end{table}

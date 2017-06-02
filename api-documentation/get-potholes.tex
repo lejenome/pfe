@@ -1,12 +1,12 @@
-\subsection{Service Get Position}
+\subsection{Service Get Potholes}
 \label{appendix:sprint3-potholes-get-doc}
 
 \textbf{GET} \ \texttt{/potholes}
 
-\begin{table}[htbp]
+\begin{table}[H]
     \centering
-    \begin{tabularx}{\textwidth}{@{}p{2cm} p{2cm} p{2cm} p{7.7cm}@{}}
-        \multicolumn{4}{X}{\textbf{Paramètres Service Get Position}} \\
+    \begin{tabularx}{\textwidth}{@{}p{2cm} p{2cm} p{3.5cm} p{6cm}@{}}
+        \multicolumn{4}{X}{\textbf{Paramètres Service Get Potholes}} \\
         \toprule
         \rowcolor{gray!20}
         \multicolumn{1}{l}{\textbf{Élément}} &
@@ -21,10 +21,10 @@
     \end{tabularx}
 \end{table}
 
-\begin{table}[htbp]
+\begin{table}[H]
     \centering
-    \begin{tabularx}{\textwidth}{@{}lll@{}}
-        \multicolumn{3}{X}{\textbf{Entités du réponse du Service Post Position}} \\
+    \begin{tabularx}{\textwidth}{@{}p{3cm} p{3.5cm} p{7.5cm}@{}}
+        \multicolumn{3}{X}{\textbf{Entités du réponse du Service Get Potholes}} \\
         \toprule
         \rowcolor{gray!20}
         \multicolumn{1}{l}{\textbf{Élément}} &
@@ -38,13 +38,8 @@
         \verb|.intesity| & nombre & intensité de la secousse \\
         \verb|.dir| & nombre & direction en dégrée de la secousse \\
         \verb|.created_at| & string (RFC3339) & date de création \\
-        \verb|.nb| & nombre & nombre des secousses reportées dans la même zone\\
+        \verb|.updated_at| & string (RFC3339) & date de la dernière confirmation \\
+        \verb|.nb| & nombre & nombre des confirmations (secousses reportées dans la même zone) \\
         \bottomrule
     \end{tabularx}
 \end{table}
-
-\textbf{Réponse Codes}
-
-\begin{description}
-    \item[\texttt{200 Success}] Liste des secousses retournée.
-\end{description}
