@@ -124,54 +124,54 @@ développement, de tests, d'intégration et de documentation.
     \end{longtable}
 \end{center}
 
-\begin{table}[H]
-    \centering
-    \begin{tabular}{| p{3cm} | l |}
-        \hline
-        Cas d'utilisateur & Service Save Position \\ \hline
-        Acteur & Utilisateur \\ \hline
-        Pré condition & Position non envoyée \\ \hline
-        Post condition & Position envoyée et enregistrée dans la base de données \\ \hline
-        Description du scénario &
-        \begin{minipage}{11cm}
-            \vspace*{0.2cm}
-            \begin{itemize}
-                \item L'utilisateur active le service de détection de position.
-                \item L'application détecte la position à travers le capteur \acrshort{GPS} du smartphone.
-                \item L'application envoie la position au serveur.
-                \item Le serveur vérifie et enregistre la position.
-                \item Le serveur retourne un message de confirmation d'enregistrement.
-            \end{itemize}
-        \end{minipage} \\ \hline
-        Exception & Aucune exception \\ \hline
-    \end{tabular}
-    \caption{Description du cas d'utilisation ``Service Save Position''}
-\end{table}
-
-\begin{table}[H]
-    \centering
-    \begin{tabular}{| p{3cm} | l |}
-        \hline
-        Cas d'utilisateur & Service Get Last Position \\ \hline
-        Acteur & Utilisateur \\ \hline
-        Pré condition & Position déjà enregistrée \\ \hline
-        Post condition & Position retournée \\ \hline
-        Description du scénario &
-        \begin{minipage}{11cm}
-            \vspace*{0.2cm}
-            \begin{itemize}
-                \item L'utilisateur ouvre la page du dashboard.
-                \item La page récupère la dernière position pour chaque utilisateur.
-                \item Le serveur retourne la position du chaque utilisateur.
-                \item Le page affiche un marqueur dans la position géographique de chaque utilisateur.
-                \item La page répète la récupération de la position et change la localisation du marqueur du marquer chaque 2 secondes.
-            \end{itemize}
-            \vspace{0.1cm}
-        \end{minipage} \\ \hline
-        Exception & Aucune position enregistrer pour l'utilisateur \\ \hline
-    \end{tabular}
-    \caption{Description du cas d'utilisation ``Service Get Last Position''}
-\end{table}
+%\begin{table}[H]
+%    \centering
+%    \begin{tabular}{| p{3cm} | l |}
+%        \hline
+%        Cas d'utilisateur & Service Save Position \\ \hline
+%        Acteur & Utilisateur \\ \hline
+%        Pré condition & Position non envoyée \\ \hline
+%        Post condition & Position envoyée et enregistrée dans la base de données \\ \hline
+%        Description du scénario &
+%        \begin{minipage}{11cm}
+%            \vspace*{0.2cm}
+%            \begin{itemize}
+%                \item L'utilisateur active le service de détection de position.
+%                \item L'application détecte la position à travers le capteur \acrshort{GPS} du smartphone.
+%                \item L'application envoie la position au serveur.
+%                \item Le serveur vérifie et enregistre la position.
+%                \item Le serveur retourne un message de confirmation d'enregistrement.
+%            \end{itemize}
+%        \end{minipage} \\ \hline
+%        Exception & Aucune exception \\ \hline
+%    \end{tabular}
+%    \caption{Description du cas d'utilisation ``Service Save Position''}
+%\end{table}
+%
+%\begin{table}[H]
+%    \centering
+%    \begin{tabular}{| p{3cm} | l |}
+%        \hline
+%        Cas d'utilisateur & Service Get Last Position \\ \hline
+%        Acteur & Utilisateur \\ \hline
+%        Pré condition & Position déjà enregistrée \\ \hline
+%        Post condition & Position retournée \\ \hline
+%        Description du scénario &
+%        \begin{minipage}{11cm}
+%            \vspace*{0.2cm}
+%            \begin{itemize}
+%                \item L'utilisateur ouvre la page du dashboard.
+%                \item La page récupère la dernière position pour chaque utilisateur.
+%                \item Le serveur retourne la position du chaque utilisateur.
+%                \item Le page affiche un marqueur dans la position géographique de chaque utilisateur.
+%                \item La page répète la récupération de la position et change la localisation du marqueur du marquer chaque 2 secondes.
+%            \end{itemize}
+%            \vspace{0.1cm}
+%        \end{minipage} \\ \hline
+%        Exception & Aucune position enregistrer pour l'utilisateur \\ \hline
+%    \end{tabular}
+%    \caption{Description du cas d'utilisation ``Service Get Last Position''}
+%\end{table}
 
 \subsection{Estimation de l'itération}
 
@@ -403,7 +403,11 @@ de cas d'utilisation qui regroupe les scénarios de localisation d'individu.
 
 La figure~\ref{fig:sprint1-webservices-post-sequence} décrit le diagramme de
 séquence du service \textquote{Post Position} qui représente les scénarios de
-l'envoi de la position.
+l'envoi de la position. L'utilisateur ouvre l'application mobile et active la
+localisation. L'application capture la position à travers le GPS et l'envoie au
+serveur. Le serveur vérifie le chemin de la requête, sa format et son contenu
+puis enregistre la position de l'individu. L'application renvoie la position en
+changement de la localisation pour que le serveur la met à jour.
 
 \begin{figure}[H]
     \centering
@@ -414,7 +418,13 @@ l'envoi de la position.
 
 La figure~\ref{fig:sprint1-webservices-get-sequence} décrit le diagramme de
 séquence du service \textquote{Get Position} qui représente les scénarios du
-récupération de la position.
+récupération de la position. L'utilisateur visite la page web du dashboard pour
+consulter sa dernière position.  Le système récupère la dernière position des
+périphériques chaque 2 secondes et met à jour la position géographique des
+marqueurs dans la cartographie et leurs états à hors ligne s'ils n'ont aucun
+mise à jour du position depuis 60 secondes. Pour chaque requête de
+récupération, le serveur vérifie la présence de la position du périphérique et
+retourne sa dernière position enregistrée.
 
 \begin{figure}[H]
     \centering
@@ -561,12 +571,6 @@ la qualité du code.
         PHP et Mocha/Chai pour JavaScript.
 \end{itemize}
 
-\section*{Conclusion}
-\addcontentsline{toc}{section}{Conclusion}
-
-À la fin de cette itération, nous avons un prototype fonctionnel dont on peut
-baser notre future travail.
-
 Le tableau~\ref{tab:sprint1-evaluation} présente le pourcentage de réalisation
 de nos tâches de cette itération.
 
@@ -599,3 +603,9 @@ Affiche Multiple marqueurs & Effectué 100\% \\ \hline
 Affiche état du périphérique & Effectué 100\% \\ \hline
     \end{longtable}
 \end{center}
+
+\section*{Conclusion}
+\addcontentsline{toc}{section}{Conclusion}
+
+À la fin de cette itération, nous avons un prototype fonctionnel dont on peut
+baser notre future travail.

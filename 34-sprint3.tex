@@ -77,41 +77,41 @@ dans cette itération.
 \end{longtable}
 \end{center}
 
-\begin{table}[H]
-    \centering
-    \begin{tabular}{| p{3cm} | l |}
-        \hline
-        Cas d'utilisateur & Authentification Utilisateur \\ \hline
-        Acteur & Utilisateur \\ \hline
-        Pré condition & Utilisateur non authentifié \\ \hline
-        Post condition & Utilisateur connecté \\ \hline
-        Description du scénario &
-        \begin{minipage}{11cm}
-            \vspace*{0.2cm}
-            \begin{itemize}
-                \item L'utilisateur ouvre la page Dashboard ou Rapport.
-                \item Le système affiche un dialogue d'authentification.
-                \item L'utilisateur saisit son émail et son mot de passe et clique sur le bouton ``Login''.
-                \item Le système envoie les informations d'identité au serveur.
-                \item Le serveur vérifie les information, retourne un jeton d'authentification.
-                \item Le système envoie le jeton d'authentification au serveur.
-                \item Le serveur vérifie le jeton d'authentification et retourne un jeton d'accès.
-                \item Le système affiche la cartographie et récupère les données à afficher.
-            \end{itemize}
-            \vspace*{0.2cm}
-        \end{minipage} \\ \hline
-        Exception & \begin{minipage}{11cm}
-            \vspace*{0.2cm}
-            \begin{itemize}
-                \item L'utilisateur n'a pas du compte.
-                \item Les informations d'identité sont invalides.
-            \end{itemize}
-            \vspace*{0.1cm}
-        \end{minipage}
-        \\ \hline
-    \end{tabular}
-    \caption{Description du cas d'utilisation ``Authentification Utilisateur''}
-\end{table}
+%\begin{table}[H]
+%    \centering
+%    \begin{tabular}{| p{3cm} | l |}
+%        \hline
+%        Cas d'utilisateur & Authentification Utilisateur \\ \hline
+%        Acteur & Utilisateur \\ \hline
+%        Pré condition & Utilisateur non authentifié \\ \hline
+%        Post condition & Utilisateur connecté \\ \hline
+%        Description du scénario &
+%        \begin{minipage}{11cm}
+%            \vspace*{0.2cm}
+%            \begin{itemize}
+%                \item L'utilisateur ouvre la page Dashboard ou Rapport.
+%                \item Le système affiche un dialogue d'authentification.
+%                \item L'utilisateur saisit son émail et son mot de passe et clique sur le bouton ``Login''.
+%                \item Le système envoie les informations d'identité au serveur.
+%                \item Le serveur vérifie les information, retourne un jeton d'authentification.
+%                \item Le système envoie le jeton d'authentification au serveur.
+%                \item Le serveur vérifie le jeton d'authentification et retourne un jeton d'accès.
+%                \item Le système affiche la cartographie et récupère les données à afficher.
+%            \end{itemize}
+%            \vspace*{0.2cm}
+%        \end{minipage} \\ \hline
+%        Exception & \begin{minipage}{11cm}
+%            \vspace*{0.2cm}
+%            \begin{itemize}
+%                \item L'utilisateur n'a pas du compte.
+%                \item Les informations d'identité sont invalides.
+%            \end{itemize}
+%            \vspace*{0.1cm}
+%        \end{minipage}
+%        \\ \hline
+%    \end{tabular}
+%    \caption{Description du cas d'utilisation ``Authentification Utilisateur''}
+%\end{table}
 
 \subsection{Estimation de l'itération}
 
@@ -361,13 +361,6 @@ de notre travail au cours de l'itération par rapport au progrès idéal.
 
 \input{figures/sprint3-burndown}
 
-\section*{Conclusion}
-\addcontentsline{toc}{section}{Conclusion}
-
-A fin de cette itération, nous avons découvert des nouveaux aspects
-intéressants dans notre projet qui nécessitent l'intervention des technologies
-(Big Data, Data mining, \ldots).
-
 Le tableau~\ref{tab:sprint3-evaluation} présente le pourcentage de réalisation
 de nos tâches de cette itération.
 
@@ -404,3 +397,10 @@ Rectification du service de chargement d’image & Effectué 100\% \\ \hline
 Étude scénario de commercial des secousses & Effectué 100\% \\ \hline
 \end{longtable}
 \end{center}
+
+\section*{Conclusion}
+\addcontentsline{toc}{section}{Conclusion}
+
+A fin de cette itération, nous avons découvert des nouveaux aspects
+intéressants dans notre projet qui nécessitent l'intervention des technologies
+(Big Data, Data mining, \ldots).

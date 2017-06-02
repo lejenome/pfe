@@ -81,37 +81,37 @@ itération.
     \end{longtable}
 \end{center}
 
-\begin{table}[H]
-    \centering
-    \begin{tabular}{| p{3cm} | l |}
-        \hline
-        Cas d'utilisateur & Déclaration Rapport \\ \hline
-        Acteur & Utilisateur \\ \hline
-        Pré condition & Aucun pré condition \\ \hline
-        Post condition & Rapport déclarer et enregistrer dans la base de données \\ \hline
-        Description du scénario &
-        \begin{minipage}{11cm}
-            \vspace*{0.2cm}
-            \begin{itemize}
-                \item L'utilisateur saisi le formulaire et clique sur le bouton ``envoyer''.
-                \item Le système vérifie la formulaire et charge le photo.
-                \item Le serveur enregistre la photo aprés la vérification et retourne son identificateur (UUID).
-                \item Le système envoie le rapport au serveur.
-                \item Le serveur enregistre le rapport et retourne la confirmation.
-                \item Un message de succès s'affiche.
-            \end{itemize}
-        \end{minipage} \\ \hline
-        Exception & \begin{minipage}{11cm}
-            \vspace*{0.2cm}
-            \begin{itemize}
-                \item Type d'image invalide ou sa résolution  très petite.
-                \item Contenu du formulaire incomplète.
-            \end{itemize}
-        \end{minipage}
-        \\ \hline
-    \end{tabular}
-    \caption{Description du cas d'utilisation ``Service de Déclaration des Rapports''}
-\end{table}
+%\begin{table}[H]
+%    \centering
+%    \begin{tabular}{| p{3cm} | l |}
+%        \hline
+%        Cas d'utilisateur & Déclaration Rapport \\ \hline
+%        Acteur & Utilisateur \\ \hline
+%        Pré condition & Aucun pré condition \\ \hline
+%        Post condition & Rapport déclarer et enregistrer dans la base de données \\ \hline
+%        Description du scénario &
+%        \begin{minipage}{11cm}
+%            \vspace*{0.2cm}
+%            \begin{itemize}
+%                \item L'utilisateur saisi le formulaire et clique sur le bouton ``envoyer''.
+%                \item Le système vérifie la formulaire et charge le photo.
+%                \item Le serveur enregistre la photo aprés la vérification et retourne son identificateur (UUID).
+%                \item Le système envoie le rapport au serveur.
+%                \item Le serveur enregistre le rapport et retourne la confirmation.
+%                \item Un message de succès s'affiche.
+%            \end{itemize}
+%        \end{minipage} \\ \hline
+%        Exception & \begin{minipage}{11cm}
+%            \vspace*{0.2cm}
+%            \begin{itemize}
+%                \item Type d'image invalide ou sa résolution  très petite.
+%                \item Contenu du formulaire incomplète.
+%            \end{itemize}
+%        \end{minipage}
+%        \\ \hline
+%    \end{tabular}
+%    \caption{Description du cas d'utilisation ``Service de Déclaration des Rapports''}
+%\end{table}
 
 \subsection{Estimation de l'itération}
 
@@ -225,10 +225,13 @@ d'utilisation du services \textquote{Rapport} de la deuxième itération.
 \label{fig:sprint2-webservices-report-usecase}
 \end{figure}
 
-Les deux
-figures~\ref{fig:sprint2-webservices-report-post-sequence},~\ref{fig:sprint2-webservices-report-get-sequence}
-décrit les scénarios de la mise à jour de la position dans la deuxième
-itération.
+La figures~\ref{fig:sprint2-webservices-report-post-sequence} décrit le
+scénario de déclaration d'un rapport de point de vue du service web.
+L'utilisateur peut déclarer un rapport à travers la page rapport hébergée dans
+le site ou à travers la page rapport intégrée dans l'application mobile. Après
+de remplir le formulaire et de cliquer sur le bouton ``envoie'', le système
+vérifie les champs, charge l'image au serveur puis envoie le rapport en
+utilisant l'identificateur assigné à l'image.
 
 \begin{figure}[H]
     \centering
@@ -236,6 +239,13 @@ itération.
     \caption{Diagramme de séquence du services Post Rapports --- Itération 2}
 \label{fig:sprint2-webservices-report-post-sequence}
 \end{figure}
+
+La figures~\ref{fig:sprint2-webservices-report-get-sequence} décrit le
+scénario² de récupération d'un rapport de point de vue du service
+web.L'utilisateur visite la page dashboard pour consulter les rapports.  Le
+système récupère la liste des rapports chaque 10 minutes et les affiche comme
+des marqueurs dans la cartographie.  Pour chaque rapport, le système télécharge
+sa image.
 
 \begin{figure}[H]
     \centering
@@ -249,7 +259,7 @@ orienté objet de la page \textquote{Dashboard}.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{sprint2-dashboard-class}
+    \includegraphics[width=0.7\textwidth]{sprint2-dashboard-class}
     \caption{Diagramme des classes du Dashboard --- Itération 2}
 \label{fig:sprint2-dashboard-class}
 \end{figure}
@@ -336,7 +346,7 @@ L'envoie du rapport est éxecuté en deux phases:
         rapport, id image, commentaire (optionnel) et les coordonnées.
 \end{enumerate}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{sprint2-rapport-screenshot1}
     \caption{Page Rapport}
@@ -357,7 +367,7 @@ s'affichent sur la carte. Lorsqu'il effectue un zoom arrière comme montre la
 figure~\ref{fig:sprint2-dashboard-screenshot2}, les marqueurs se regroupent
 pour faciliter la consultation de la carte.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \begin{subfigure}{.5\textwidth}
         \centering
         \includegraphics[width=.9\linewidth]{sprint2-dashboard-screenshot1}
@@ -412,14 +422,6 @@ de notre travail au cours de l'itération par rapport au progrès idéal.
 
 \input{figures/sprint2-burndown}
 
-\section*{Conclusion}
-\addcontentsline{toc}{section}{Conclusion}
-
-Dans cette itération, la qualité de notre code a été bien améliorée grâce aux
-tests unitaires que nous avons pris et le revue collaboré du code à chaque
-changement. De plus l'utilisation d'un framework dans le développement de notre
-service web a facilité et organisé notre code.
-
 Le tableau~\ref{tab:sprint2-evaluation} présente le pourcentage de
 réalisation de nos tâches de cette itération.
 \begin{center}
@@ -451,3 +453,11 @@ Recherche sur les frameworks PHP & Effectué 100\% \\ \hline
 Groupement de secousse sur la carte & Effectué 100\% \\ \hline
     \end{longtable}
 \end{center}
+
+\section*{Conclusion}
+\addcontentsline{toc}{section}{Conclusion}
+
+Dans cette itération, la qualité de notre code a été bien améliorée grâce aux
+tests unitaires que nous avons pris et le revue collaboré du code à chaque
+changement. De plus l'utilisation d'un framework dans le développement de notre
+service web a facilité et organisé notre code.
