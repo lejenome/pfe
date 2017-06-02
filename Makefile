@@ -6,6 +6,14 @@ report: main.tex
 	mkdir -p build
 	+latexmk -jobname=build/report main.tex
 
+presentation: presentation.tex
+	mkdir -p build
+	+latexmk -jobname=build/presentation presentation.tex
+
+watch-presentation: presentation.tex
+	mkdir -p build
+	+latexmk -jobname=build/presentation presentation.tex -pvc
+
 diff:
 	mkdir -p build
 	+latexdiff-vc --git -r $(DIFF_REV) main.tex -d build/old-$(DIFF_REV) --flatten --force
