@@ -1,5 +1,8 @@
 DIFF_REV:=v0.4.0
 
+default: presentation.tex
+	pdflatex presentation.tex -o presentation.pdf
+
 all: report
 
 report: presentation.tex
