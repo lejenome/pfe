@@ -2,18 +2,18 @@ DIFF_REV:=v0.4.0
 
 all: report
 
-report: main.tex
-	mkdir -p build
-	+latexmk -jobname=build/report main.tex
+report: presentation.tex
+	mkdir -p ../build
+	+latexmk -jobname=../build/presentation presentation.tex
 
 diff:
 	mkdir -p build
-	+latexdiff-vc --git -r $(DIFF_REV) main.tex -d build/old-$(DIFF_REV) --flatten --force
-	+latexmk -jobname=build/diff build/old-$(DIFF_REV)/main.tex -f
+	+latexdiff-vc --git -r $(DIFF_REV) presentation.tex -d build/old-$(DIFF_REV) --flatten --force
+	+latexmk -jobname=build/diff build/old-$(DIFF_REV)/presentation.tex -f
 
-watch: main.tex
+watch: presentation.tex
 	mkdir -p build
-	+latexmk -jobname=build/report main.tex -pvc
+	+latexmk -jobname=../build/presentation presentation.tex -pvc
 
 %.nls: %.nlo
 	+makeindex $*.nlo -s nomencl.ist -o $*.nls

@@ -1,7 +1,4 @@
-\chapter{Itération~2~(~3/8/2017~-~3/28/2017~)}
-
-%\section*{Introduction}
-%\addcontentsline{toc}{section}{Introduction}
+\chapter{Itération 2}
 
 Une caractéristique du Scrum est l'extension continue des spécifications du
 produit élaboré dans l'itération précédente. En effet, Scrum permet à s'adapter
@@ -36,15 +33,6 @@ une nouvelle vision par rapport à l'itération précédentes.
         \end{itemize}
 \end{description}
 
-%La méthodologie Scrum a eu un impact positif sur les développeurs, du point de
-%vue social, elle a valorisé le travail en équipe, la solidarité, le respect et
-%la communication entre toutes les parties prenantes (client, développeurs,
-%\ldots). Elle a aussi changé leur vison sur le développement des logiciels.
-
-%L'objectif de cette itération est d'ajouter un système de gestion des rapport,
-%d'améliorer la qualité de service web de location et d'enrichir des
-%fonctionnalités du \textquote{Dashboard}.
-
 \section{Planification de l'itération}
 
 Au sein de la réunion de planification nous avons sélectionné les tâches à
@@ -56,7 +44,8 @@ Owner}.
 Le but de cette itération est d'ajouter un système de gestion des rapports,
 d'améliorer la qualité et d'explorer des nouvelles type des données.
 
-Le tableau~\ref{tab:sprint2-backlog} représente nos tâches dans cette itération.
+Le tableau~\ref{tab:sprint2-backlog} représente nos tâches dans cette
+itération.
 
 \begin{center}
     \footnotesize
@@ -179,10 +168,11 @@ Groupement de secousse sur la carte & Rihab & 5 \\ \hline
 
 \subsection{Lumen}
 
-Nous avons décidé de migrer vers un framework pour le développement du backend du
-notre plateforme dans le but de simplifier et améliorer nos services web. Les
-critères de choisir le framework étaient sa performance, sa stabilité et son
-support de développement des api RESTful. Les 3 frameworks principales étudiés:
+Nous avons décidé de migrer vers un framework pour le développement du backend
+du notre plateforme dans le but de simplifier et améliorer nos services web.
+Les critères de choisir le framework étaient sa performance, sa stabilité et
+son support de développement des api RESTful. Les 3 frameworks principales
+étudiés:
 
 \begin{description}
     \item [Slim] Un macro framework performant avec support de développement
@@ -200,16 +190,6 @@ support de développement des api RESTful. Les 3 frameworks principales étudié
 Lumen était choisi pour sa simplicité de configurer et de lancer et pour son
 support de migrer vers Laravel en cas ou on aura besoin de supporter le
 développement du site web classique ou autres types de développement.
-
-
-%Pour le développement de backend du notre plateforme, la langue du
-%programmation PHP a été pré choisi. Mais, on avait la responsabilité de choisir
-%les bibliothèques et les frameworks. Pendant la 1\iere{} itération, le but
-%était de se familiariser avec la langue PHP\@. Donc, on a utilisé seulement les
-%extensions officiel du PHP incluant PDO, \ldots. Dans l'itération suivante, on
-%a étudié les frameworks disponibles. A la fin, on a choisi le framework Lumen
-%qui est une version simplifié du Laravel pour le développement des API
-%\acrshort{RESTful}.
 
 \section{Mises des normes}
 
@@ -245,26 +225,6 @@ d'utilisation du services \textquote{Rapport} de la deuxième itération.
 \label{fig:sprint2-webservices-report-usecase}
 \end{figure}
 
-Le schéma~\ref{fig:sprint2-webservices-class} présente le diagramme des classes
-du service web dans cette itération.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{sprint2-webservices-class}
-    \caption{Diagramme de classe du service web --- Itération 2}
-\label{fig:sprint2-webservices-class}
-\end{figure}
-
-Le schéma~\ref{fig:sprint2-webservices-database} présente la base de données
-du service web dans cette itération.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{sprint2-webservices-database}
-    \caption{Base de données du service web --- Itération 2}
-\label{fig:sprint2-webservices-database}
-\end{figure}
-
 Les deux
 figures~\ref{fig:sprint2-webservices-report-post-sequence},~\ref{fig:sprint2-webservices-report-get-sequence}
 décrit les scénarios de la mise à jour de la position dans la deuxième
@@ -289,10 +249,23 @@ orienté objet de la page \textquote{Dashboard}.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{sprint2-dashboard-class}
+    \includegraphics[width=0.8\textwidth]{sprint2-dashboard-class}
     \caption{Diagramme des classes du Dashboard --- Itération 2}
 \label{fig:sprint2-dashboard-class}
 \end{figure}
+
+Le schéma~\ref{fig:sprint2-webservices-class} présente le diagramme des classes
+du service web dans cette itération.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{sprint2-webservices-class}
+    \caption{Diagramme de classe du service web --- Itération 2}
+\label{fig:sprint2-webservices-class}
+\end{figure}
+
+Le schéma de la base de données de cette itération est dans
+l'annexe~\ref{sec:sprint3-database}.
 
 \section{Évaluation suivant les normes mises}
 
@@ -305,8 +278,8 @@ de qualité, robustesse, \ldots.
 
 Au cours de l'itération avec l'augment des fonctionnalités ajoutées au
 Dashboard, le code JavaScript devenu complexe, dupliqué et difficile à détecter
-les bugs. Nous avons décidé de réécrire le code avec une architecture modulaire et
-plus moderne.
+les bugs. Nous avons décidé de réécrire le code avec une architecture modulaire
+et plus moderne.
 
 L'utilisation de la version ECMAScript 6 du JavaScript nous a fourni les
 techniques de base nécessaires comme POO, Template Strings, paramètres par
@@ -328,8 +301,8 @@ diagram~\ref{fig:sprint2-dashboard-class}. Elle se compose de:
         différents layers est implémenté dans cette classe abstract.
     \item Une classe pour chaque type de données à visualiser (trajectoire,
         ralentisseurs, secousses, \ldots) qui hérite du classe \verb|Layer|. La
-        plupart du temps, nous sommes juste besoin de définir l'URL du resource, la
-        listes des icons et des filtrages possibles.
+        plupart du temps, nous sommes juste besoin de définir l'URL du
+        resource, la listes des icons et des filtrages possibles.
     \item Un espace de noms \verb|Config| contenu les constantes de
         configuration.
 \end{itemize}
@@ -349,10 +322,10 @@ caractérisent et implémentent le système de gestion des rapport.
 Dans cette page, nous donne la main à l'utilisateur de déclarer des rapports
 comme expliqué dans la figure~\ref{fig:sprint2-rapport-screenshot1}. Cette page
 permet à l'utilisateur d'envoyer son rapport au serveur pour l'enregistrer. La
-position du rapport est détectée automatiquement à travers l'api JavaScript standard
-``Location''. On donne la main à l'utilisateur pour changer manuellement la position
-en glissant le marqueur ou en changeant les entrées. Le chargement de
-l'image est obligatoire.
+position du rapport est détectée automatiquement à travers l'api JavaScript
+standard ``Location''. On donne la main à l'utilisateur pour changer
+manuellement la position en glissant le marqueur ou en changeant les entrées.
+Le chargement de l'image est obligatoire.
 
 L'envoie du rapport est éxecuté en deux phases:
 
@@ -444,8 +417,8 @@ de notre travail au cours de l'itération par rapport au progrès idéal.
 
 Dans cette itération, la qualité de notre code a été bien améliorée grâce aux
 tests unitaires que nous avons pris et le revue collaboré du code à chaque
-changement. De plus l'utilisation d'un framework dans le développement de
-notre service web a facilité et organisé notre code.
+changement. De plus l'utilisation d'un framework dans le développement de notre
+service web a facilité et organisé notre code.
 
 Le tableau~\ref{tab:sprint2-evaluation} présente le pourcentage de
 réalisation de nos tâches de cette itération.

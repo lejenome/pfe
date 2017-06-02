@@ -1,0 +1,50 @@
+\subsection{Service Get Position}
+\label{appendix:sprint3-potholes-get-doc}
+
+\textbf{GET} \ \texttt{/potholes}
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabularx}{\textwidth}{@{}p{2cm} p{2cm} p{2cm} p{7.7cm}@{}}
+        \multicolumn{4}{X}{\textbf{Paramètres Service Get Position}} \\
+        \toprule
+        \rowcolor{gray!20}
+        \multicolumn{1}{l}{\textbf{Élément}} &
+        \multicolumn{1}{l}{\textbf{Obligation}} &
+        \multicolumn{1}{l}{\textbf{Type}} &
+        \multicolumn{1}{l}{\textbf{Description}} \\
+        \midrule
+        \verb|lat| & optionnel & nombre & trouver les secousses de position relative à cette latitude. Dépend du paramètre lng. \\
+        \verb|lng| & optionnel & nombre & trouver les secousses de position relative à cette longitude. Dépend du paramètre lat. \\
+        \verb|dir| & optionnel & nombre & trouver les secousses de position relative à cette direction. Dépend des paramètres lat et lng. \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabularx}{\textwidth}{@{}lll@{}}
+        \multicolumn{3}{X}{\textbf{Entités du réponse du Service Post Position}} \\
+        \toprule
+        \rowcolor{gray!20}
+        \multicolumn{1}{l}{\textbf{Élément}} &
+        \multicolumn{1}{l}{\textbf{Type}} &
+        \multicolumn{1}{l}{\textbf{Description}} \\
+        \midrule
+        \verb|.| & Object[] & liste des secousses \\
+        \verb|.id| & nombre & identificateur de la secousse \\
+        \verb|.lat| & nombre & latitude de la position \\
+        \verb|.lng| & nombre & longitude de la position \\
+        \verb|.intesity| & nombre & intensité de la secousse \\
+        \verb|.dir| & nombre & direction en dégrée de la secousse \\
+        \verb|.created_at| & string (RFC3339) & date de création \\
+        \verb|.nb| & nombre & nombre des secousses reportées dans la même zone\\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\textbf{Réponse Codes}
+
+\begin{description}
+    \item[\texttt{200 Success}] Liste des secousses retournée.
+\end{description}

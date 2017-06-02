@@ -4,7 +4,6 @@
 \documentclass[
 a4paper,
 12pt,
-%twoside,
 onecolumn,
 titlepage,
 final,
@@ -27,8 +26,8 @@ final,
 \usepackage{ifxetex,ifluatex}
 \usepackage{ifthen}
 
-%\usepackage{mathspec}
 \usepackage{amssymb,amsmath}
+\usepackage{gensymb}
 \usepackage{cfr-lm}
 
 %\usepackage{xltxtra,xunicode}
@@ -55,7 +54,6 @@ final,
 \graphicspath{{figures/}, {diagrams/}}
 \usepackage[update,prepend]{epstopdf}
 \usepackage{subcaption}
-%\usepackage{svg}
 \usepackage{array}
 \usepackage{tabularx}
 \usepackage{booktabs}
@@ -145,10 +143,8 @@ final,
     %bindingoffset=.5cm, % Binding offset
     top=3cm, % Top margin
     bottom=2.5cm, % Bottom margin
-    %showframe, % Uncomment to show how the type block is set on the page
 }
 
-%%% Custom sectioning
 \usepackage{sectsty}
 \allsectionsfont{\large\bfseries\scshape}
 
@@ -170,7 +166,6 @@ final,
   {}% <numberless-entry-format>
   {\hfill\contentspage}% <filler-page-format>
 
-%%% Custom headers/footers (fancyhdr package)
 \usepackage{fancyhdr}
 \usepackage[bottom]{footmisc}
 
@@ -198,14 +193,6 @@ final,
   activityRuns/.style = {base, fill=green!30},
   process/.style = {base, minimum width=2.5cm, fill=orange!15, font=\ttfamily},
 }
-
-\usepackage{todonotes}
-\newcommand{\TODO}[1]{\setlength{\marginparwidth}{2cm}\todo{#1}}
-\newcommand{\HTODO}[2]{\setlength{\marginparwidth}{2cm}\colorbox{yellow}{#1}\todo{#2}}
-\newcommand{\FIXME}[1]{\setlength{\marginparwidth}{2cm}\todo[backgroundcolor=red]{#1}}
-\newcommand{\HFIXME}[2]{\setlength{\marginparwidth}{2cm}\colorbox{pink}{#1}\todo[backgroundcolor=red]{#2}}
-\newcommand{\DONE}[1]{\setlength{\marginparwidth}{2cm}\todo[done]{#1}}
-\newcommand{\HDONE}[2]{\setlength{\marginparwidth}{2cm}\colorbox{green}{#1}\todo[done,backgroundcolor=green]{#2}}
 
 \begin{document}
 
@@ -239,25 +226,15 @@ final,
 \clearpage
 \listoftables
 
-% list of abbreviations
-%\nomenclature{$c$}{Speed of light in a vacuum inertial frame}
-%\nomenclature{$h$}{Planck constant}
-%\printnomenclature
-
 \cleardoublepage
 \setlength{\parskip}{8pt}
 \renewcommand{\baselinestretch}{1.4}\normalsize
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{1pt}
-%\fancyhead[LE,RO]{\itshape CityWatch}
-%\rhead{\leftmark}
 \renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
 \rhead{\thechapter  \ -- \ \nouppercase\leftmark}
 \rfoot{\thepage}
-%\setlength{\headheight}{13.6pt}
-%\renewcommand{\sectionmark}[1]{\markright{\thesection\ \ --\ \ #1}}
-%\renewcommand{\chaptermark}[1]{\markright{\thechapter\ \ --\ \ #1}}
 \pagenumbering{arabic}
 
 \cleardoublepage
@@ -276,8 +253,6 @@ final,
 \cleardoublepage
 \input{40-conclusion}
 
-%%%% INCLUDE CHAPTERS
-
 \cleardoublepage
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ \ --\ \ #1}}
 %\appendix
@@ -290,7 +265,8 @@ final,
   {\hfill\contentspage}% <filler-page-format>
 \begin{appendices}
 \input{50-api-documentation}
-\input{51-code-quality}
+%\input{51-code-quality}
+\input{52-database}
 \end{appendices}
 
 \cleardoublepage
@@ -314,6 +290,5 @@ final,
 \printbibliography[keyword={Standard},heading=subbibliography,title={Standards}]
 \printbibliography[notkeyword={Standard},heading=subbibliography,title={Autres Sources}]
 \include{02-abstract}
-% \listoftodos % TODO FIXME list
 
 \end{document}

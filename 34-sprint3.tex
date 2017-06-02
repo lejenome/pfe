@@ -1,12 +1,9 @@
-\chapter{Itération~3~(~4/3/2017~-~4/28/2017~)}
+\chapter{Itération 3}
 
-%\section*{Introduction}
-%\addcontentsline{toc}{section}{Introduction}
-
-Dans la dernière itération, nous avons collecté un grand ensemble de donnés des
-différents types. Malgré tout, ces donnés n'ont pas de valeur tel que on ne les
-explore pas. C'est le rôle du Business Intelligence que nous allons étudier
-dans cette itération.
+Dans la dernière itération, nous avons collecté un grand ensemble de données
+des différentes types. Malgré tout, ces données n'ont pas de valeur tel que on
+ne les explore pas. C'est le rôle du Business Intelligence que nous allons
+étudier dans cette itération.
 
 \section{But de l'itération}
 
@@ -180,21 +177,13 @@ Rectification du service de chargement d'image & Rihab & 13 $\times$ 2 \\ \hline
 
 \subsection{OAuth2}
 
-Pour sécuriser et limiter l'accès à nos services web, nous avons décide d'implémenter des différentes techniques dont la première est l'authentification.
+Pour sécuriser et limiter l'accès à nos services web, nous avons décide
+d'implémenter des différentes techniques dont la première est
+l'authentification.
 
 Le choix naturel est OAuth2~\cite{RFC6749}. C'est un protocole de délégation
-d'autorisation. Il permet aux applications \textquote{consommateurs} d'avoir
-le permission d'utiliser un service web \textquote{fournisseur}.
-
-\TODO{alternatives + why}
-
-% Les API REST sont basées sur le protocole HTTP, qui signifie Hypertext Transfer Protocol.
-% C'est ce qui est au cœur du web! C'est un protocole qui définit la communication
-% entre les différentes parties du web. L'échange est basé sur des requêtes client et serveur.
-% Un client lance une requête HTTP, et le serveur renvoie une réponse.
-% Ce sont des méthodes qui définissent les requêtes que le client peut effectuer,
-% dont GET\footnote{Récupérer une ressource (ne modifie pas la ressource).}, PUT\footnote{Modifier une ressource.},
-% POST\footnote{Créer une ressource.}, DELETE\footnote{Supprimer une ressource.} encore plus.
+d'autorisation. Il permet aux applications \textquote{consommateurs} d'avoir le
+permission d'utiliser un service web \textquote{fournisseur}.
 
 \subsection{Business Intelligence}
 
@@ -202,14 +191,7 @@ La \acrfull{BI}\footnote{Informatique décisionnelle} propose d'utiliser les
 données transitant par le système d'information en informations susceptibles
 d'être exploitées à des fins décisionnelles.
 
-% Sur le plan pratique et technique, la Business Intelligence se compose d'une
-% famille d'outils informatiques et de progiciels assurant le fonctionnement de
-% la chaîne de traitement de l'information.
-
 Les 4 fonctions de la chaîne décisionnelle:
-
-% comment s'explique la
-% figure~\ref{fig:sprint3-businessintelligence} sont:
 
 \begin{description}
     \item [\acrfull{ETL}] Collecter, nettoyer et consolider les données
@@ -217,8 +199,6 @@ Les 4 fonctions de la chaîne décisionnelle:
         usage décisionnel.
     \item [\acrfull{DW}] Stocker Centraliser les données structurées et
         traitées afin qu'elles soient disponibles pour un usage décisionnel.
-%    \item [??] Distribuer Ou plutôt faciliter l'accessibilité des informations
-%        selon les fonctions et les types d'utilisation.
     \item [\acrfull{OLAP}] Exploiter ou comment assister du mieux possible
         l'utilisateur afin qu'il puisse extraire la substance de l'information
         des données stockées à cet usage.
@@ -231,9 +211,9 @@ Les 4 fonctions de la chaîne décisionnelle:
 \end{description}
 
 Dans notre projet, le Product Owner et les participants au projet nous ont
-recommandé d'explorer la solution du Microsoft du Business Intelligence.Ce choix est basé sur les compétences du
-nos mentors dans cette technologie. Les outils du Microsoft BI qu'on avait
-utilisés au cours de cette itération sont:
+recommandé d'explorer la solution du Microsoft du Business Intelligence.Ce
+choix est basé sur les compétences du nos mentors dans cette technologie. Les
+outils du Microsoft BI qu'on avait utilisés au cours de cette itération sont:
 
 \begin{description}
     \item [\acrfull{SSIS}] La solution du Microsoft pour l'\acrshort{ETL}. Elle
@@ -243,13 +223,6 @@ utilisés au cours de cette itération sont:
         visuels et dynamiques accessible en ligne facilement et sans besoin du
         codage. C'est une solution alternative de \acrfull{SSRS}.
 \end{description}
-
-%\begin{figure}[htbp]
-%  \centering
-%  \includegraphics[width=0.8\textwidth]{sprint3-businessintelligence}
-%  \caption{Les 4 phases du processus de Business Intelligence}
-%  \label{fig:sprint3-businessintelligence}
-%\end{figure}
 
 \section{Mises des normes}
 
@@ -261,16 +234,16 @@ l'itération 1 et de plus:
         de tel façon, on ne peut pas accéder au contenu protégé sans
         authentification.
     \item [Permissions] Un utilisateur n'a la permission que de changer ses
-        données personnelles et n'a pas l'autorisation d'accéder aux données privées
-        des autres (trajet, détails de contact, \ldots).
+        données personnelles et n'a pas l'autorisation d'accéder aux données
+        privées des autres (trajet, détails de contact, \ldots).
     \item [Visualisation Instantané des Statistiques] Les diagrammes de
         statistiques doivent mets à jour instantanément et continuellement.
 \end{description}
 
 \section{Conception}
 
-La figure~\ref{fig:sprint3-webservices-oauth-usecase} décrit le diagramme
-de cas d'utilisation de service d'authentification.
+La figure~\ref{fig:sprint3-webservices-oauth-usecase} décrit le diagramme de
+cas d'utilisation de service d'authentification.
 
 \begin{figure}[H]
     \centering
@@ -289,26 +262,6 @@ séquence du services d'authentification.
 \label{fig:sprint3-webservices-oauth-sequence}
 \end{figure}
 
-La figure~\ref{fig:sprint3-webservices-class} présente le diagramme de
-classes du service web de la troisième itération.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\textwidth]{sprint3-webservices-class}
-    \caption{Diagramme de classe du services web --- Itération 3}
-\label{fig:sprint3-webservices-class}
-\end{figure}
-
-Le schéma~\ref{fig:sprint3-webservices-database} présente la base de données
-du service web dans cette itération.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{sprint3-webservices-database}
-    \caption{Base de données du service web --- Itération 3}
-\label{fig:sprint3-webservices-database}
-\end{figure}
-
 La figure~\ref{fig:sprint3-dashboard-classs} décrit le diagramme des classes du
 page \textquote{Dashboard} dans la troisième itération.
 
@@ -319,6 +272,19 @@ page \textquote{Dashboard} dans la troisième itération.
 \label{fig:sprint3-dashboard-classs}
 \end{figure}
 
+La figure~\ref{fig:sprint3-webservices-class} présente le diagramme de classes
+du service web de la troisième itération.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{sprint3-webservices-class}
+    \caption{Diagramme de classe du services web --- Itération 3}
+\label{fig:sprint3-webservices-class}
+\end{figure}
+
+Le schéma de la base de données de cette itération est dans
+l'annexe~\ref{sec:sprint3-database}.
+
 \section{Revue de cette itération}
 
 % On rappelons que nous travaillons dans un équipe Scrum qui nécessite
@@ -327,6 +293,7 @@ page \textquote{Dashboard} dans la troisième itération.
 \subsection{Produit de l'itération}
 
 \subsubsection{Légende du Dashboard}
+
 Dans cette page nous travaillons alors sur deux parties:
 
 \begin{itemize}
@@ -340,17 +307,17 @@ filtrage des marqueurs.
 
 \begin{figure}[H]
 \centering
-    \begin{subfigure}{.8\textwidth}
+    \begin{subfigure}{.7\textwidth}
     \centering
   \centering
-  \includegraphics[width=1.0\linewidth]{sprint3-dashboard-screenshot1}
+  \includegraphics[width=\linewidth, height=5.5cm]{sprint3-dashboard-screenshot1}
   \caption{Marqueurs activé}
 \label{fig:sprint3-dashboard-screenshot1}
 \end{subfigure}
-\begin{subfigure}{.8\textwidth}
+\begin{subfigure}{.7\textwidth}
     \centering
   \centering
-  \includegraphics[width=1.0\linewidth]{sprint3-dashboard-screenshot2}
+  \includegraphics[width=\linewidth, height=5.5cm]{sprint3-dashboard-screenshot2}
   \caption{Quelques marqueurs désactivé}
 \label{sprint3-dashboard-screenshot2}
 \end{subfigure}
@@ -384,8 +351,8 @@ serveur pour assurer la sauvegarde et la transmission vers une base données.
 
 \subsection{Avis du Product Owner}
 
-Après la présentation du produit final, le \textquote{Product Owner} était très satisfait
-a notre travail.
+Après la présentation du produit final, le \textquote{Product Owner} était très
+satisfait a notre travail.
 
 \subsection{Burndown chart}
 
@@ -397,11 +364,12 @@ de notre travail au cours de l'itération par rapport au progrès idéal.
 \section*{Conclusion}
 \addcontentsline{toc}{section}{Conclusion}
 
-A fin de cette itération, nous avons découvert des nouveaux aspects intéressants dans notre projet
-qui nécessitent l'intervention des technologies (Big Data, Data mining, \ldots).
+A fin de cette itération, nous avons découvert des nouveaux aspects
+intéressants dans notre projet qui nécessitent l'intervention des technologies
+(Big Data, Data mining, \ldots).
 
-Le tableau~\ref{tab:sprint3-evaluation} présente le pourcentage de
-réalisation de nos tâches de cette itération.
+Le tableau~\ref{tab:sprint3-evaluation} présente le pourcentage de réalisation
+de nos tâches de cette itération.
 
 \begin{center}
     \begin{longtable}{| l | l |}
