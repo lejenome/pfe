@@ -69,14 +69,14 @@ itération.
         \hline
 2.1 & Recherche sur les trajectoires & Comment présenter et enregistrer les trajectoires & 1 \\ \hline
 2.2 & Affichage du trajet sur la carte & Visualiser le trajectoire d'un périphérique comme un ligne & 1 \\ \hline
-2.3 & Implementer service d'enregistrement des ralentisseurs & Enregistrer les données nécessaires pour représenter un ralentisseur & 1 \\ \hline
+2.3 & Implémenter service d'enregistrement des ralentisseurs & Enregistrer les données nécessaires pour représenter un ralentisseur & 1 \\ \hline
 2.4 & Responsive design & IHM de l'application Android adaptable aux différentes résolutions et rotations & 2 \\ \hline
-2.5 & Implementer l'interface de déclaration un ralentisseur & Bouton rapport activé seulement si la localisation est active & 2 \\ \hline
+2.5 & Implémenter l'interface de déclaration un ralentisseur & Bouton rapport activé seulement si la localisation est active & 2 \\ \hline
 2.6 & Filtrage des marqueurs dans la carte & Légende simplifiée permettant de choisir les types de données affichés dans la carte & 1 \\ \hline
-2.7 & Implementer service de chargement de l'image & Charger, valider et enregistrer les images dans le serveur & 1 \\ \hline
-2.8 & Implementer la fonctionnalité de déclaration des rapports & Formulaire avec validation et service d'enregistrement dans le serveur & 1 \\ \hline
+2.7 & Implémenter service de chargement de l'image & Charger, valider et enregistrer les images dans le serveur & 1 \\ \hline
+2.8 & Implémenter la fonctionnalité de déclaration des rapports & Formulaire avec validation et service d'enregistrement dans le serveur & 1 \\ \hline
 2.9 & Recherche test unitaires & Comment améliorer la qualité du code et installation d'une solution des tests unitaires & 1 \\ \hline
-2.10 & Recherche sur les frameworks PHP & Choisir le framework optimal pour notre platform et faire la migration & 2 \\ \hline
+2.10 & Recherche sur les frameworks PHP & Choisir le framework optimal pour notre plateforme et faire la migration & 2 \\ \hline
 2.11 & Groupement de secousse sur la carte & Les marqueurs de secousses regroupés lors d'un zoom out sur la carte et séparer lors d'un zoom in & 3 \\ \hline
     \end{longtable}
 \end{center}
@@ -148,12 +148,12 @@ tableau~\ref{tab:sprint2-estimation}.
         \hline
 Recherche sur les trajectoires & Rihab & 5 $\times$ 2 \\ \hline
 Affichage du trajet sur la carte & Moez & 13 $\times$ 2 \\ \hline
-Implementer service d'enregistrement des ralentisseurs & Moez & 5 \\ \hline
+Implémenter service d'enregistrement des ralentisseurs & Moez & 5 \\ \hline
 Responsive design & Rihab & 5 $\times$ 2 \\ \hline
-Implementer l'interface de déclaration d'un ralentisseur & Rihab & 13 $\times$ 2 \\ \hline
+Implémenter l'interface de déclaration d'un ralentisseur & Rihab & 13 $\times$ 2 \\ \hline
 Filtrage des marqueurs dans la carte & Rihab & 13 \\ \hline
-Implementer service de chargement de l'image & Moez & 5 \\ \hline
-Implementer la fonctionnalité de déclaration des rapports & Moez & 5 \\ \hline
+Implémenter service de chargement de l'image & Moez & 5 \\ \hline
+Implémenter la fonctionnalité de déclaration des rapports & Moez & 5 \\ \hline
 Recherche test unitaires & Moez & 5 \\ \hline
 Recherche sur les frameworks PHP & Moez & 5 \\ \hline
 Groupement de secousse sur la carte & Rihab & 5 \\ \hline
@@ -176,7 +176,7 @@ son support de développement des api RESTful. Les 3 frameworks principales
 
 \begin{description}
     \item [Slim] Un macro framework performant avec support de développement
-        des services web de premiere classe. Il manque le support pour
+        des services web de première classe. Il manque le support pour
         développer des sites web classiques.
     \item [Symfony] Le framework PHP de référence. Il suivre une architecture
         modulaire et fournit une haute performance. Pour ajouter le support des
@@ -188,7 +188,7 @@ son support de développement des api RESTful. Les 3 frameworks principales
 \end{description}
 
 Lumen était choisi pour sa simplicité de configurer et de lancer et pour son
-support de migrer vers Laravel en cas ou on aura besoin de supporter le
+support de migrer vers Laravel en cas où on aura besoin de supporter le
 développement du site web classique ou autres types de développement.
 
 \section{Mises des normes}
@@ -196,7 +196,7 @@ développement du site web classique ou autres types de développement.
 Outres que les critères de la première itération, des nouveaux critères ont
 été ajoutés pendant cette itération:
 
-\subsection{Qualité du trajectoire}
+\subsection{Qualité de la trajectoire}
 
 Le trajectoire doit être aligné sur le trajet avec bonne précision. Et le
 nombre des positions nécessaire pour tracer le trajectoire doivent être le
@@ -242,7 +242,7 @@ utilisant l'identificateur assigné à l'image.
 
 La figures~\ref{fig:sprint2-webservices-report-get-sequence} décrit le
 scénario² de récupération d'un rapport de point de vue du service
-web.L'utilisateur visite la page dashboard pour consulter les rapports.  Le
+web. L'utilisateur visite la page Dashboard pour consulter les rapports.  Le
 système récupère la liste des rapports chaque 10 minutes et les affiche comme
 des marqueurs dans la cartographie.  Pour chaque rapport, le système télécharge
 sa image.
@@ -281,7 +281,7 @@ l'annexe~\ref{sec:sprint3-database}.
 
 L'architecture résultante du services web est documentée dans
 l'annexe~\ref{sec:sprint2-webservices-doc}. La format GeoJson était utilisée
-pour la représentation du trajectoire.
+pour la représentation de la trajectoire.
 
 \subsection{Contributions}
 
@@ -296,22 +296,22 @@ défaut, nouvelles variantes de la boucle For et support de la programmation
 asynchrone.
 
 La nouvelle architecture est décrite dans le
-diagram~\ref{fig:sprint2-dashboard-class}. Elle se compose de:
+diagramme~\ref{fig:sprint2-dashboard-class}. Elle se compose de:
 
 \begin{itemize}
-    \item Une classe \verb|Map| qui contient le logique métier d'initialiser et
+    \item Une classe \verb|Map| qui contient la logique métier d'initialiser et
         afficher la carte, ajouter et filtrer des différents types de données
         et traiter les différents évènements d'interaction humaine machine.
-    \item Une classe abstract \verb|Layer| qui contient le logique de
-        chaque types des données à visualiser dans la map (téléchargement
+    \item Une classe abstraite \verb|Layer| qui contient la logique de
+        chaque types des données à visualiser dans la cartographie (téléchargement
         continuellement les données, génération les marqueurs ou zones, mise à
         jour des données, définition des filtrages supportés et les
         informations additionnelles à afficher). Le code commun entre
-        différents layers est implémenté dans cette classe abstract.
+        différents couches est implémenté dans cette classe abstraite.
     \item Une classe pour chaque type de données à visualiser (trajectoire,
         ralentisseurs, secousses, \ldots) qui hérite du classe \verb|Layer|. La
         plupart du temps, nous sommes juste besoin de définir l'URL du
-        resource, la listes des icons et des filtrages possibles.
+        ressource, la listes des icônes et des filtrages possibles.
     \item Un espace de noms \verb|Config| contenu les constantes de
         configuration.
 \end{itemize}
@@ -336,7 +336,7 @@ standard ``Location''. On donne la main à l'utilisateur pour changer
 manuellement la position en glissant le marqueur ou en changeant les entrées.
 Le chargement de l'image est obligatoire.
 
-L'envoie du rapport est éxecuté en deux phases:
+L'envoie du rapport est exécuté en deux phases:
 
 \begin{enumerate}
     \item Chargement de l'image au serveur. Si le type et le taille de l'image
@@ -441,12 +441,12 @@ réalisation de nos tâches de cette itération.
         \hline
 Recherche sur les trajectoires & Effectué 100\% \\ \hline
 Affichage du trajet sur la carte & Effectué 100\% \\ \hline
-Implementer service d'enregistrement des ralentisseurs & Effectué 100\% \\ \hline
+Implémenter service d'enregistrement des ralentisseurs & Effectué 100\% \\ \hline
 Responsive design & Effectué 80\% \\ \hline
-Implementer l'interface de déclaration d'un ralentisseur & Effectué 100\% \\ \hline
+Implémenter l'interface de déclaration d'un ralentisseur & Effectué 100\% \\ \hline
 Filtrage des marqueurs dans la carte & Effectué 100\% \\ \hline
-Implementer service de chargement de l'image & Effectué 70\% \\ \hline
-Implementer la fonctionnalité de déclaration des rapports & Effectué 100\% \\ \hline
+Implémenter service de chargement de l'image & Effectué 70\% \\ \hline
+Implémenter la fonctionnalité de déclaration des rapports & Effectué 100\% \\ \hline
 Recherche test unitaires & Effectué 80\% \\ \hline
 Recherche sur les frameworks PHP & Effectué 100\% \\ \hline
 Groupement de secousse sur la carte & Effectué 100\% \\ \hline

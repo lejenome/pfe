@@ -15,7 +15,7 @@ réunion avec le Product Owner. Vue que l'équipe était encore débutante dans 
 méthodologie Scrum et dans l'environnement de travail en équipe, un simple but
 était tracé pour cette itération.
 
-Le but de cette itération est de réaliser deux applications mobile et web.
+Le but de cette itération est de réaliser deux applications mobiles et web.
 L'application mobile permet simplement de localiser instantanément
 l'utilisateur et l'application web montre sa position géographique actuelle
 continuellement sur une cartographie avec un marqueur. La
@@ -237,7 +237,7 @@ simple composée de deux boutons, nous avons choisi d'étudier la plateforme
 Android et de choisir la version SDK optimale pour la réalisation de
 l'application.
 
-Android nous permet de réaliser des application basées sur l'astuce d'activité.
+Android nous permet de réaliser des applications basées sur l'astuce d'activité.
 
 \subsection{Activité}
 
@@ -250,7 +250,7 @@ des applications qui ne contiennent pas d'activités. Une première idée adopt�
 est qu'une activité est un conteneur d'élément graphique qui constitue un
 interface graphique. En effet, une activité n'est pas seulement une interface
 graphique mais elle va établir les liens entre l'interface graphique et la
-logique programatique de plus l'activité contient des informations sur le
+logique programmatique de plus l'activité contient des informations sur le
 statut actuel de l'application qui s'appelle le contexte. Ce contexte permet de
 faire la liaison entre le système Android et les autres activités de
 l'application.
@@ -259,7 +259,7 @@ l'application.
 
 Le système Android met en place un système des priorités entre les
 applications.  Par exemple, l'utilisateur est en train de naviguer sur internet
-et d'écouter de la musique. Il reçois un appel. Comme que l'application qui
+et d'écouter de la musique. Il reçoit un appel. Comme que l'application qui
 gère les appels est une application plus prioritaire, le système pause les
 autres activités pour que l'utilisateur puisse répondre à son appel. Les
 activités sont gérées à partir d'un système de pile d'activités.
@@ -303,9 +303,9 @@ figure~\ref{fig:android-activity} explique le cycle de vie d'une activité. Les
 La figure~\ref{fig:sprint1-android-screenshot} représente l'interface de
 l'application réalisé.
 
-Puisque la tache de l'implémentation n'était pas mené par un seul personne, on
+Puisque la tache de l'implémentation n'était pas menée par un seul personne, on
 était obligé d'introduire un système de synchronisation de notre source code.
-Apache SVN était choisi pour sa simplicité, sa bon support de Windows et pour
+Apache SVN était choisi pour sa simplicité, son bon support de Windows et pour
 des exigences de spécification.
 
 %\subsection{Apache Subversion}
@@ -420,7 +420,7 @@ changement de la localisation pour que le serveur la met à jour.
 
 La figure~\ref{fig:sprint1-webservices-get-sequence} décrit le diagramme de
 séquence du service \textquote{Get Position} qui représente les scénarios du
-récupération de la position. L'utilisateur visite la page web du dashboard pour
+récupération de la position. L'utilisateur visite la page web du Dashboard pour
 consulter sa dernière position.  Le système récupère la dernière position des
 périphériques chaque 2 secondes et met à jour la position géographique des
 marqueurs dans la cartographie et leurs états à hors ligne s'ils n'ont aucun
@@ -465,7 +465,7 @@ différents types des données (nombres, booléens, strings, \ldots) indépendan
 du l'internationalisation (séparateur décimal, \verb|true| vs. \verb|True| vs.
 \verb|vrai| vs. \verb|yes| vs. \verb|y|, \ldots).
 
-Pour le représentation des dates dans le content du requêtes HTTP, nous avons
+Pour la représentation des dates dans le content du requêtes HTTP, nous avons
 utilisé le format RFC3339~\cite{RFC3339} (basé sur ISO8601~\cite{ISO8601} pour
 l'utilisation dans les protocoles du Web) avec UTC comme la zone du temps par
 défaut, ex: \verb|2005-08-15T15:52:01Z|.
@@ -473,10 +473,10 @@ défaut, ex: \verb|2005-08-15T15:52:01Z|.
 Pour les en-têtes du requêtes HTTP, le format de représentation des dates est
 RFC1123~\cite{RFC1123}, ex: \verb|Mon, 15 Aug 2005 15:52:01 +0000|.
 
-Le format du présentation des positions géologique (latitude et longitude)
+Le format de la présentation des positions géologique (latitude et longitude)
 choisie est la même représentation des nombres en JSON avec une précision
-jusqu'à 14 chiffres après le séparateur décimal. Les valeurs envoyés doivent
-respecte l'intervalle des diffèrent entités géologiques ($latitude \in [-90,
+jusqu'à 14 chiffres après le séparateur décimal. Les valeurs envoyées doivent
+respecter l'intervalle des diffèrent entités géologiques ($latitude \in [-90,
 90]$, $longitude \in [-180, 180]$)
 
 \subsubsection{Stabilité}
@@ -566,7 +566,7 @@ la qualité du code.
         RESTful et le code JavaScript respectivement. Pour rédiger les
         recherches, les présentations et les autres documentations, \LaTeX{}
         était préféré avec la possibilité d'utiliser Markdown pour la
-        simplisité de son syntaxe.
+        simplicité de sa syntaxe.
     \item Écrire les tests unitaires pour les fonctions et les classes selon la
         technique \acrshort{TDD}. On a autorisé l'écrire des tests unitaires
         après le développement du code. Les outils utilisés sont PHPUnit pour

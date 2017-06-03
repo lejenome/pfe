@@ -19,7 +19,7 @@ En accord avec le Product Owner, le but de cette itération est:
     \item [Dashboard] \textbf{}
 
         \begin{itemize}
-            \item Élaboration des mécanisme d'authentification.
+            \item Élaboration des mécanismes d'authentification.
             \item Des nouveaux marqueurs qui spécifient chaque type de rapport
                 ajouté.
         \end{itemize}
@@ -64,8 +64,8 @@ dans cette itération.
 3.4 & Compte utilisateur & Modifications nécessaires pour le support des comptes d'utilisateur et l'intégration avec le reste des tableaux & 2 \\ \hline
 3.5 & Service d'enregistrement les informations du réseau & Enregistrer les informations des réseaux cellulaires (opérateur, génération, force du signal) & 1 \\ \hline
 3.6 & Service de récupération des informations réseaux  & Retourner les informations du réseaux cellulaire & 1 \\ \hline
-3.7 & Service d'enregistrement du vitesse du véhicule & Enregistrer les vitesses du véhicule le long du trajectoire & 1 \\ \hline
-3.8 & Service de récupération du vitesse & Retourner la vitesse moyenne des véhicules dans une zone & 1 \\ \hline
+3.7 & Service d'enregistrement de la vitesse du véhicule & Enregistrer les vitesses du véhicule le long de la trajectoire & 1 \\ \hline
+3.8 & Service de récupération de la vitesse & Retourner la vitesse moyenne des véhicules dans une zone & 1 \\ \hline
 3.9 & Application Android Responsive & Supporter plus résolutions & 3 \\ \hline
 3.10 & Recherche Business intelligence & L'utilité du Business Intelligence et les solutions disponibles & 2 \\ \hline
 3.11 & Intégrer la base de données avec BI & Intégrer BD du service web à la solution BI choisie & 2\\ \hline
@@ -160,8 +160,8 @@ Landing page & Rihab & 13 \\ \hline
 Compte utilisateur & Moez & 8 \\ \hline
 Service d'enregistrement les informations du réseau & Moez & 5  \\ \hline
 Service de récupération des informations réseaux  & Moez & 5  \\ \hline
-Service d'enregistrement du vitesse du véhicule & Rihab & 5  \\ \hline
-Service de récupération du vitesse & Rihab & 5  \\ \hline
+Service d'enregistrement de la vitesse du véhicule & Rihab & 5  \\ \hline
+Service de récupération de la vitesse & Rihab & 5  \\ \hline
 Application Android Responsive & Rihab & 13 \\ \hline
 Recherche Business intelligence & Moez & 13 $\times$ 2 \\ \hline
 Intégrer la base de données avec BI & Moez & 13 $\times$ 2 \\ \hline
@@ -177,12 +177,12 @@ Rectification du service de chargement d'image & Rihab & 13 $\times$ 2 \\ \hline
 
 \subsection{OAuth2}
 
-Pour sécuriser et limiter l'accès à nos services web, nous avons décide
+Pour sécuriser et limiter l'accès à nos services web, nous avons décidé
 d'implémenter des différentes techniques dont la première est
 l'authentification.
 
 Le choix naturel est OAuth2~\cite{RFC6749}. C'est un protocole de délégation
-d'autorisation. Il permet aux applications \textquote{consommateurs} d'avoir le
+d'autorisation. Il permet aux applications \textquote{consommateurs} d'avoir la
 permission d'utiliser un service web \textquote{fournisseur}.
 
 \subsection{Business Intelligence}
@@ -206,12 +206,12 @@ Les 4 fonctions de la chaîne décisionnelle:
         traitées. Les rapports peuvent être des rapports traditionnels composés
         des tableaux ou des rapport visuels composés des diagrammes et cartes
         dynamiques ou statiques d'une manière synthétique ou détaillée. Ces
-        rapports sont ensuite utilisé par les décideurs et les dirigeants pour
+        rapports sont ensuite utilisés par les décideurs et les dirigeants pour
         prendre des décisions.
 \end{description}
 
 Dans notre projet, le Product Owner et les participants au projet nous ont
-recommandé d'explorer la solution du Microsoft du Business Intelligence.Ce
+recommandé d'explorer la solution du Microsoft du Business Intelligence. Ce
 choix est basé sur les compétences du nos mentors dans cette technologie. Les
 outils du Microsoft BI qu'on avait utilisés au cours de cette itération sont:
 
@@ -226,7 +226,7 @@ outils du Microsoft BI qu'on avait utilisés au cours de cette itération sont:
 
 \section{Mises des normes}
 
-Les critères à respecter pendant cette itération incluent les même critères de
+Les critères à respecter pendant cette itération incluent les mêmes critères de
 l'itération 1 et de plus:
 
 \begin{description}
@@ -253,7 +253,7 @@ cas d'utilisation de service d'authentification.
 \end{figure}
 
 La figure~\ref{fig:sprint3-webservices-oauth-sequence} présente le diagramme de
-séquence du services d'authentification.
+séquence du service d'authentification.
 
 \begin{figure}[H]
     \centering
@@ -311,17 +311,17 @@ filtrage des marqueurs.
     \centering
   \centering
   \includegraphics[width=\linewidth, height=5.5cm]{sprint3-dashboard-screenshot1}
-  \caption{Marqueurs activé}
+  \caption{Marqueurs activés}
 \label{fig:sprint3-dashboard-screenshot1}
 \end{subfigure}
 \begin{subfigure}{.7\textwidth}
     \centering
   \centering
   \includegraphics[width=\linewidth, height=5.5cm]{sprint3-dashboard-screenshot2}
-  \caption{Quelques marqueurs désactivé}
+  \caption{Quelques marqueurs désactivés}
 \label{sprint3-dashboard-screenshot2}
 \end{subfigure}
-\caption{Dashboard \textquote{City Watch} au troisième itération}
+\caption{Dashboard \textquote{City Watch} à la troisième itération}
 \end{figure}
 
 \subsubsection{Android}
@@ -346,7 +346,7 @@ serveur pour assurer la sauvegarde et la transmission vers une base données.
   \caption{État activé}
 \label{fig:sprint3-android-screenshot2}
 \end{subfigure}
-\caption{Interface de l'application au troisième itération}
+\caption{Interface de l'application à la troisième itération}
 \end{figure}
 
 \subsection{Avis du Product Owner}
@@ -386,8 +386,8 @@ Landing page & Effectué 100\% \\ \hline
 Compte utilisateur & Effectué 100\% \\ \hline
 Service d’enregistrement les informations du réseau & Effectué 100\% \\ \hline
 Service de récupération des informations réseaux & Effectué 100\% \\ \hline
-Service d’enregistrement du vitesse du véhicule & Effectué 100\% \\ \hline
-Service de récupération du vitesse & Effectué 100\% \\ \hline
+Service d’enregistrement de la vitesse du véhicule & Effectué 100\% \\ \hline
+Service de récupération de la vitesse & Effectué 100\% \\ \hline
 Application Android Responsive & Effectué 100\% \\ \hline
 Recherche Business intelligence & Effectué 100\% \\ \hline
 Intégrer la base de données avec BI & Effectué 30\% \\ \hline
