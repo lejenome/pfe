@@ -282,71 +282,73 @@ figure~\ref{fig:android-activity} explique le cycle de vie d'une activité. Les
 
 \input{figures/android-activity}
 
-\subsubsection{Comment choisir le SDK optimale}
-
-Une SDK permet l'application de marcher sur la version Android visé et les
-versions ultérieure il a noté de prendre en considération le taux des
-utilisateurs visé par cette application. Aussi il faut travailler avec une SDK
-digne de confidence qui n'a pas de problème ou bug qui peuvent bloquer ou
-arrêter le fonctionnement de l'application le SDK choisi doit pouvoir supporter
-les fonctionnalité offerte par l'application si on va utiliser une
-fonctionnalité qui utilise les empreinte le SDK dont on a travailler
-l'application doit supporter cette fonctionnalité lorsque le travail sur une
-application est en groupe il est mieux que tous ce groupe utilise la même SDK
-pour éviter tous problème de compatibilité et conflit entre versions de SDK
-donc il faut choisir une SDK qui est populaire en utilisation et qui est
-stable. Dans notre projet on va utiliser SDK 23 qui vise la version Android 6.0
-ayant un taux d'utilisateur qui est 4.79 \% des utilisateur d'Android notons
-que cet SDK comporte la fonctionnalité d'Android les plus récentes et qui est
-stable~\cite{android-sdk}.
+%\subsubsection{Comment choisir le SDK optimale}
+%
+%%Une SDK permet l'application de marcher sur la version Android visé et les
+%versions ultérieure il a noté de prendre en considération le taux des
+%utilisateurs visé par cette application. Aussi il faut travailler avec une SDK
+%digne de confidence qui n'a pas de problème ou bug qui peuvent bloquer ou
+%arrêter le fonctionnement de l'application le SDK choisi doit pouvoir supporter
+%les fonctionnalité offerte par l'application si on va utiliser une
+%fonctionnalité qui utilise les empreinte le SDK dont on a travailler
+%l'application doit supporter cette fonctionnalité lorsque le travail sur une
+%application est en groupe il est mieux que tous ce groupe utilise la même SDK
+%pour éviter tous problème de compatibilité et conflit entre versions de SDK
+%donc il faut choisir une SDK qui est populaire en utilisation et qui est
+%stable. Dans notre projet on va utiliser SDK 23 qui vise la version Android 6.0
+%ayant un taux d'utilisateur qui est 4.79 \% des utilisateur d'Android notons
+%que cet SDK comporte la fonctionnalité d'Android les plus récentes et qui est
+%stable~\cite{android-sdk}.
 
 La figure~\ref{fig:sprint1-android-screenshot} représente l'interface de
 l'application réalisé.
 
 Puisque la tache de l'implémentation n'était pas mené par un seul personne, on
 était obligé d'introduire un système de synchronisation de notre source code.
-
-\subsection{Apache Subversion}
-
-Les logiciels de gestion de versions \acrshort{VCS} nous permettent de
-conserver la chronologie des modifications du source de code, ainsi récupérer
-les version intermédiaires et les différences entre eux, et facilitent la
-collaboration au développement. Les deux logiciels de gestion de versions les
-plus répondus sont Git et Apache SVN\@.
-
-\begin{description}
-    \item [Git] Logiciel de gestion de versions distribué avec des branches
-        légères. La récupération des versions précédentes et l'enregistrement
-        des changements sont possibles sans besoin d'accès au dépôt distant car
-        chaque développeur a une copie complète du dépôt. Le modèle Fork
-        (Dupliquer), Commit (Modifier), Merge (Fusionner) a eu un grand succès
-        dans les projets libres.
-    \item [Apache SVN] Logiciel de gestion de versions centralisé. Il est connu
-        pour sa simplicité comme il n'est pas un distinct entre un dépôt local
-        vs. Dépôt distant, on faire juste une copie du dossier de travail d'une
-        version précise. Les commandes sont simples:
-        \begin{itemize}
-            \item \verb|svn checkin| \ \ vs. \ \ \verb|git commit; git push|
-            \item \verb|svn update| \ \ vs. \ \ \verb|git fetch; git rebase|
-        \end{itemize}
-        Le support du Windows est excellent surtout les outils graphiques. La
-        plus tard des fonctionnalités du SVN nécessitent l'accès au dépôt
-        (distant).
-\end{description}
-
 Apache SVN était choisi pour sa simplicité, sa bon support de Windows et pour
 des exigences de spécification.
 
-L'outil serveur choisi est VisualSVN Server pour sa simplicité d'installer et
-de configurer et pour son support du Windows.
-
-Les outils clients choisis sont:
-
-\begin{itemize}
-    \item TortoiseSVN pour l'intégration avec le système Windows.
-    \item La commande de ligne \verb|svn| est utilisée en Linux.
-    \item Le support de SVN est intégré au Android Studio et PHPStorm.
-\end{itemize}
+%\subsection{Apache Subversion}
+%
+%Les logiciels de gestion de versions \acrshort{VCS} nous permettent de
+%conserver la chronologie des modifications du source de code, ainsi récupérer
+%les version intermédiaires et les différences entre eux, et facilitent la
+%collaboration au développement. Les deux logiciels de gestion de versions les
+%plus répondus sont Git et Apache SVN\@.
+%
+%\begin{description}
+%    \item [Git] Logiciel de gestion de versions distribué avec des branches
+%        légères. La récupération des versions précédentes et l'enregistrement
+%        des changements sont possibles sans besoin d'accès au dépôt distant car
+%        chaque développeur a une copie complète du dépôt. Le modèle Fork
+%        (Dupliquer), Commit (Modifier), Merge (Fusionner) a eu un grand succès
+%        dans les projets libres.
+%    \item [Apache SVN] Logiciel de gestion de versions centralisé. Il est connu
+%        pour sa simplicité comme il n'est pas un distinct entre un dépôt local
+%        vs. Dépôt distant, on faire juste une copie du dossier de travail d'une
+%        version précise. Les commandes sont simples:
+%        \begin{itemize}
+%            \item \verb|svn checkin| \ \ vs. \ \ \verb|git commit; git push|
+%            \item \verb|svn update| \ \ vs. \ \ \verb|git fetch; git rebase|
+%        \end{itemize}
+%        Le support du Windows est excellent surtout les outils graphiques. La
+%        plus tard des fonctionnalités du SVN nécessitent l'accès au dépôt
+%        (distant).
+%\end{description}
+%
+%Apache SVN était choisi pour sa simplicité, sa bon support de Windows et pour
+%des exigences de spécification.
+%
+%L'outil serveur choisi est VisualSVN Server pour sa simplicité d'installer et
+%de configurer et pour son support du Windows.
+%
+%Les outils clients choisis sont:
+%
+%\begin{itemize}
+%    \item TortoiseSVN pour l'intégration avec le système Windows.
+%    \item La commande de ligne \verb|svn| est utilisée en Linux.
+%    \item Le support de SVN est intégré au Android Studio et PHPStorm.
+%\end{itemize}
 
 \section{Réalisation des services web distants}
 
