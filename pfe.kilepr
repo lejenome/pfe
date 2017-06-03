@@ -229,8 +229,8 @@ encoding=UTF-8
 highlight=LaTeX
 line=240
 mode=LaTeX
-open=false
-order=0
+open=true
+order=1
 
 [item:30-sprints-introduction.tex]
 archive=true
@@ -304,10 +304,10 @@ order=0
 
 [item:40-conclusion.tex]
 archive=true
-column=124
+column=49
 encoding=UTF-8
 highlight=LaTeX
-line=14
+line=17
 mode=LaTeX
 open=true
 order=0
@@ -744,7 +744,7 @@ ViMarks=.,43,16,[,43,16,],43,16
 CursorColumn=1
 CursorLine=240
 JumpList=
-ViMarks=.,240,0,[,240,0,],240,0
+ViMarks=.,0,0,[,0,0,],-1,-1
 
 [view-settings,view=0,item:30-sprints-introduction.tex]
 CursorColumn=0
@@ -783,10 +783,10 @@ JumpList=
 ViMarks=.,263,55,[,263,55,],263,63
 
 [view-settings,view=0,item:40-conclusion.tex]
-CursorColumn=124
-CursorLine=14
+CursorColumn=49
+CursorLine=17
 JumpList=
-ViMarks=.,19,11,[,19,11,],19,11
+ViMarks=.,15,79,[,15,79,],15,79
 
 [view-settings,view=0,item:50-api-documentation.tex]
 CursorColumn=0
