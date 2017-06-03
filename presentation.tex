@@ -3,30 +3,39 @@
 \usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
 
-\usetheme{Warsaw}
+%\usetheme{tb}
+\definecolor{kugreen}{RGB}{66,103,104}
+\definecolor{kugreenlys}{RGB}{86,157,160}
+\definecolor{kugreenlyslys}{RGB}{165,165,165}
+\definecolor{kugreenlyslyslys}{RGB}{242,242,242}
+\setbeamercovered{transparent}
+\mode<presentation>
+{  \usetheme{PaloAlto}
+  \usecolortheme[named=kugreen]{structure}
+  \useinnertheme{circles}
+  \usefonttheme[onlymath]{serif}
+  \setbeamercovered{transparent}
+  \setbeamertemplate{blocks}[rounded][shadow=true]
+}
 
-\title[Service Routière]{Implémentation de Service de Collecte et de Stockage des Données sur une plateforme de services Routières}
+\title[Service Routière]{\textbf{Implémentation de Service de Collecte et de Stockage des Données sur une plateforme de services Routières}}
 %\subtitle{Mémoire de projet de fin d'études}
 \author{Moez Bouhlel \and Rihab Majdoub}
-\author[Moez B. \and Rihab M.]{\textbf {Moez Bouhlel \and Rihab Majdoub\\ \footnotesize Sour la direction de: Dr. Mohammed Amri}}
+\author[Moez B. \and Rihab M.]{\textbf {Moez Bouhlel \and Rihab Majdoub\\[0.2cm] \footnotesize Sous la direction de: \\ Dr. Mohamed Mhiri \and M. Mohamed Amri}}
 \institute{Faculté des Sciences de Sfax}
-%\logo{\includegraphics[width=4cm]{figures/logo-djagora.png}}
-%\logo{\includegraphics[width=2cm]{figures/fss-old.eps}}
-\titlegraphic{\includegraphics[width=2cm]{figures/fss-old.eps}}
+%\titlegraphic{\includegraphics[width=2cm]{figures/logo-djagora}}
+\logo{\includegraphics[width=1.6cm]{./figures/fss-old}}
 \date{05/06/2017}
 \begin{document}
 {
-    \makeatletter
-        \setbeamertemplate{headline}[default] % not mandatory, but I though it was better to set it blank
-            \def\beamer@entrycode{\vspace*{-\headheight}} % here is the part we are interested in :)
-            \makeatother
-\frame{\titlepage}
+    \frame{\titlepage}
 }
 
 \begin{frame}
-\frametitle{Plan de la présentation}
-\tableofcontents[hideallsubsections]
+    \frametitle{Plan de la présentation}
+    \tableofcontents[hideallsubsections]
 \end{frame}
+
 \AtBeginSection[]
 {
   \begin{frame}
@@ -35,7 +44,7 @@
   \end{frame}
 }
 
-\section{Introduction Générale}
+\section{Contexte de projet}
 \begin{frame}
 \frametitle{Organisme d'accueil}
 \framesubtitle{Djagora Academy}
@@ -82,41 +91,93 @@
     \framesubtitle{Architecture}
     \begin{figure}
         \centering
-    \includegraphics[width=.63\textwidth]{figures/citywatch-modules.png}
+    \includegraphics[width=.73\textwidth]{figures/citywatch-modules.png}
 \end{figure}
 \end{frame}
 
+\section{Gestion projet selon Scrum}
 \begin{frame}
     \frametitle{Gestion du projet}
     \framesubtitle{Scrum}
     \includegraphics{figures/scrum-model.png}
 \end{frame}
 
+\section{Itération 1: Service Localisation}
+\begin{frame}
+    \frametitle{But de l'itération}
+\end{frame}
+\begin{frame}
+    \frametitle{Diagramme de cas d'utilisation}
+    \begin{figure}
+        \includegraphics[width=1\textwidth]{./diagrams/sprint1-webservices-usecase.jpg}
+    \end{figure}
+\end{frame}
+\begin{frame}
+    \frametitle{Diagramme de séquence}
+    \begin{figure}
+        \includegraphics[width=0.7\textwidth]{./diagrams/sprint1-webservices-post-sequence.jpg}
+    \end{figure}
+\end{frame}
+\begin{frame}
+    \frametitle{Produit de l'itération}
+\end{frame}
+
+\section{Itération 2: Gestion des Rapports}
+\begin{frame}
+    \frametitle{But de l'itération}
+\end{frame}
+\begin{frame}
+    \frametitle{Diagramme de cas d'utilisation}
+    \begin{figure}
+        \includegraphics[width=\textwidth]{./diagrams/sprint2-webservices-report-usecase}
+    \end{figure}
+\end{frame}
+\begin{frame}
+    \frametitle{Diagramme de séquence}
+    \begin{figure}
+        \includegraphics[width=.8\textwidth]{./diagrams/sprint2-webservices-report-post-sequence}
+    \end{figure}
+\end{frame}
+\begin{frame}
+    \frametitle{Produit de l'itération}
+\end{frame}
+
+\section{Itération 3: Authentification}
+\begin{frame}
+    \frametitle{But de l'itération}
+\end{frame}
+\begin{frame}
+    \frametitle{Diagramme de cas d'utilisation}
+    \begin{figure}
+        \includegraphics[width=\textwidth]{./diagrams/sprint3-webservices-oauth-usecase}
+    \end{figure}
+\end{frame}
+\begin{frame}
+    \frametitle{Diagramme de séquence}
+    \begin{figure}
+        \includegraphics[width=.65\textwidth]{./diagrams/sprint3-webservices-oauth-sequence}
+    \end{figure}
+\end{frame}
+\begin{frame}
+    \frametitle{Produit de l'itération}
+\end{frame}
+
 \section{Réalisation}
-\subsection{Itération 1}
-\subsection{Itération 2}
-\subsection{Itération 3}
-\begin{frame}
-    \frametitle{}
-\end{frame}
 
 \begin{frame}
-    \frametitle{}
+\frametitle{Technologies utilisées}
 \end{frame}
-
-\section{Démonstration}
 \begin{frame}
     \begin{center}
         \textbf{\Huge Démo}
     \end{center}
 \end{frame}
 
-\section{Conclusion}
+\section{Conclusion \& Perspectives}
 \begin{frame}
     \frametitle{Conclusion}
 \end{frame}
 
-\section{Perspectives}
 \begin{frame}
     \frametitle{Perspectives}
 \end{frame}
