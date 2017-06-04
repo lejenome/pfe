@@ -1,6 +1,6 @@
 $pdf_mode = 1;        # 1: pdflatex, 4: lualatex, 5: xelatex
 $postscript_mode = $dvi_mode = 0;
-@default_files = ('main.tex');
+@default_files = ('report.tex');
 # %preview_continous_mode = 1;
 $use_make_for_missing_files = 1;
 
