@@ -34,7 +34,7 @@ watch: report.tex
 
 clean:
 	-latexmk -C
-	-rm -rf build *.aux _minted-build */*-converted-to.*
+	-rm -rf build *.aux report/*.aux _minted-build */*-converted-to.*
 	# *.lof *.fls *.glg *.acn *.acr *.alg *.aux *.glo *.gls *.ilg
 	# *.ist *.lof *.log *.lol *.lot *.nlo *.nls *.toc *.fdb* *.out
 	# *.bbl *.blg *.dvi *.tdo _minted-main _minted-build *.pyg *.synctex.gz
