@@ -1,8 +1,14 @@
+%\documentclass[aspectratio=169]{beamer}
 \documentclass{beamer}
 
 \usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
 \usepackage[page]{appendix}
+\usepackage{graphicx}
+\graphicspath{{figures/}, {diagrams/}}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{arrows.meta}
 \usepackage{smartdiagram}
 
 %\usetheme{tb}
@@ -11,13 +17,19 @@
 \definecolor{kugreenlyslys}{RGB}{165,165,165}
 \definecolor{kugreenlyslyslys}{RGB}{242,242,242}
 \setbeamercovered{transparent}
-\mode<presentation>
-{  \usetheme{PaloAlto}
+\mode<presentation>{%
+  \usetheme{PaloAlto}
   \usecolortheme[named=kugreen]{structure}
   \useinnertheme{circles}
   \usefonttheme[onlymath]{serif}
   \setbeamercovered{transparent}
   \setbeamertemplate{blocks}[rounded][shadow=true]
+  \addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+  }
 }
 
 \title[Service Routière]{\textbf{Implémentation de Service de Collecte et de Stockage des Données sur une plateforme de services Routières}}
@@ -25,23 +37,26 @@
 \author{Moez Bouhlel \and Rihab Majdoub}
 \author[Moez B. \and Rihab M.]{\textbf {Moez Bouhlel \and Rihab Majdoub\\[0.2cm] \footnotesize Sous la direction de: \\ Dr. Mohamed Mhiri \and M. Mohamed Amri}}
 \institute{Faculté des Sciences de Sfax}
-\titlegraphic{\includegraphics[width=2cm]{figures/logo-djagora}}
-\logo{\includegraphics[width=1.6cm]{./figures/fss-old}}
+%\titlegraphic{\includegraphics[width=2cm]{logo-djagora}}
+\logo{\includegraphics[width=1.6cm]{fss-old}}
 \date{05/06/2017}
 
 \begin{document}
 
-{
-    \frame{\titlepage}
-}
+\begin{frame}
+   \tikz [remember picture,overlay]
+    \node at
+        ([yshift=-0.8cm, xshift=-1.4cm]current page.north east)
+        {\includegraphics[width=2.8cm,height=1.6cm]{logo-djagora}};
+   \titlepage
+\end{frame}
 
 \begin{frame}
     \frametitle{Plan de la présentation}
     \tableofcontents[hideallsubsections]
 \end{frame}
 
-\AtBeginSection[]
-{
+\AtBeginSection[]{%
   \begin{frame}
     \frametitle{Plan de la présentation}
     \tableofcontents[currentsection,hideothersubsections]
@@ -53,23 +68,25 @@
 \begin{frame}
     \frametitle{Organisme d'accueil}
     \framesubtitle{Djagora Academy}
+\begin{columns}
+\begin{column}{0.4\textwidth}
     \begin{figure}
-        \includegraphics[width=.7\textwidth]{figures/logo-djagora.png}
+        \includegraphics[width=\textwidth]{logo-djagora.png}
     \end{figure}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Présentation du projet}
-    \framesubtitle{Équipe City Watch}
-    \begin{figure}
-        \includegraphics[width=.6\textwidth]{figures/logo-citywatch.jpg}
-    \end{figure}
+\end{column}
+\begin{column}{.6\textwidth}
+\begin{itemize}
+\item Promgramme de mentorat
+\item Accélerateur des startups
+\end{itemize}
+\end{column}
+\end{columns}
 \end{frame}
 
 \begin{frame}
     \frametitle{Problématique}
-    \includegraphics[width=.6\textwidth]{figures/datamanagement-issues.jpg}
-    \includegraphics[width=.32\textwidth]{figures/question.png}
+    \includegraphics[width=.6\textwidth]{datamanagement-issues}
+    \includegraphics[width=.32\textwidth]{question}
 \end{frame}
 
 \begin{frame}
@@ -78,25 +95,25 @@
     \begin{columns}
         \begin{column}{0.5\textwidth}
             \begin{figure}
-                \includegraphics[width=1\textwidth]{figures/logo-citywatch.jpg}
+                \includegraphics[width=1\textwidth]{logo-citywatch}
             \end{figure}
         \end{column}
         \begin{column}{0.5\textwidth}
             \begin{itemize}
-                \item<1-> Collecte des données
-                \item<2-> Analyse des données
-                \item<3-> Valorisation des données
+                \item Startup
+                \item 8 membres
+                \item Services de consultings
+                \item Services routières
             \end{itemize}
         \end{column}
     \end{columns}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Présentation du projet}
-    \framesubtitle{Architecture}
+    \frametitle{Objectifs du projet}
     \begin{figure}
         \centering
-        \includegraphics[width=.73\textwidth]{figures/citywatch-modules.png}
+        \includegraphics[width=.73\textwidth]{citywatch-modules}
     \end{figure}
 \end{frame}
 
@@ -105,16 +122,17 @@
 %\begin{frame}
 %    \frametitle{Pourquoi Scrum}
 %    \centering
-%    \includegraphics[width=.7\textwidth]{figures/scrum-logo}
+%    \includegraphics[width=.7\textwidth]{scrum-logo}
 %\end{frame}
 
 \begin{frame}
-    \frametitle{Méthodologie Scrum}
+    \frametitle{Méthode Scrum}
     \centering
-    \includegraphics{figures/scrum-model}
+    \includegraphics{scrum-model}
 \end{frame}
 
 \begin{frame}
+\frametitle{Découpage du projet}
 \begin{figure}
     \smartdiagram[descriptive diagram]{%
   {Itération 1, {Service de localisation}},
@@ -136,23 +154,30 @@
 \begin{frame}
     \frametitle{Diagramme de cas d'utilisation}
     \begin{figure}
-        \includegraphics[width=1\textwidth]{./diagrams/sprint1-webservices-usecase.jpg}
+        \includegraphics[width=1\textwidth]{sprint1-webservices-usecase}
     \end{figure}
 \end{frame}
 
 \begin{frame}
     \frametitle{Diagramme de séquence}
     \begin{figure}
-        \includegraphics[width=0.7\textwidth]{./diagrams/sprint1-webservices-post-sequence.jpg}
+        \includegraphics[width=0.7\textwidth]{sprint1-webservices-post-sequence}
     \end{figure}
 \end{frame}
 
 \begin{frame}
     \frametitle{Produit de l'itération}
     \begin{figure}
-        \includegraphics[width=0.3\textwidth]{./figures/sprint1-android-screenshot}
-        \includegraphics[width=0.7\textwidth]{./figures/sprint1-dashboard-screenshot}
+        \includegraphics[width=0.3\textwidth]{sprint1-android-screenshot}
+        \includegraphics[width=0.7\textwidth]{sprint1-dashboard-screenshot}
     \end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Évaluation de l'itération}
+\begin{minipage}{\textwidth}
+\input{./figures/sprint1-burndown}
+\end{minipage}
 \end{frame}
 
 \section{Itération 2: Gestion des Rapports}
@@ -161,7 +186,7 @@
     \frametitle{But de l'itération}
     \begin{itemize}
         \item<1-> Déclaration des rapports.
-        \item<2-> Détecte des secousses et ralentisseurs.
+        \item<2-> Détection des secousses et des ralentisseurs.
         \item<3-> Consultation des trajectoires, des rapports, des secousses et des ralentisseurs.
     \end{itemize}
 \end{frame}
@@ -169,22 +194,22 @@
 \begin{frame}
     \frametitle{Diagramme de cas d'utilisation}
     \begin{figure}
-        \includegraphics[width=\textwidth]{./diagrams/sprint2-webservices-report-usecase}
+        \includegraphics[width=\textwidth]{sprint2-webservices-report-usecase}
     \end{figure}
 \end{frame}
 
 \begin{frame}
     \frametitle{Diagramme de séquence}
     \begin{figure}
-        \includegraphics[width=.8\textwidth]{./diagrams/sprint2-webservices-report-post-sequence}
+        \includegraphics[width=.8\textwidth]{sprint2-webservices-report-post-sequence}
     \end{figure}
 \end{frame}
 
 \begin{frame}
     \frametitle{Produit de l'itération}
     \begin{figure}
-        \includegraphics[width=0.45\textwidth,height=4cm]{./figures/sprint2-rapport-screenshot1}
-        \includegraphics[width=0.5\textwidth]{./figures/sprint2-dashboard-screenshot2}
+        \includegraphics[width=0.45\textwidth,height=4cm]{sprint2-rapport-screenshot1}
+        \includegraphics[width=0.5\textwidth]{sprint2-dashboard-screenshot2}
     \end{figure}
 \end{frame}
 
@@ -202,41 +227,44 @@
 \begin{frame}
     \frametitle{Diagramme de cas d'utilisation}
     \begin{figure}
-        \includegraphics[width=\textwidth]{./diagrams/sprint3-webservices-oauth-usecase}
+        \includegraphics[width=\textwidth]{sprint3-webservices-oauth-usecase}
     \end{figure}
 \end{frame}
 
 \begin{frame}
     \frametitle{Diagramme de séquence}
     \begin{figure}
-        \includegraphics[width=.65\textwidth]{./diagrams/sprint3-webservices-oauth-sequence}
+        \includegraphics[width=.65\textwidth]{sprint3-webservices-oauth-sequence}
     \end{figure}
 \end{frame}
 
 \begin{frame}
     \frametitle{Produit de l'itération}
     \begin{figure}
-        \includegraphics[width=0.45\textwidth,height=4cm]{./figures/sprint2-rapport-screenshot1}
-        \includegraphics[width=0.5\textwidth]{./figures/sprint2-dashboard-screenshot2}
+        \includegraphics[width=0.45\textwidth,height=4cm]{sprint2-rapport-screenshot1}
+        \includegraphics[width=0.5\textwidth]{sprint2-dashboard-screenshot2}
     \end{figure}
 \end{frame}
+
 
 \section{Réalisation}
 
 \begin{frame}
     \frametitle{Technologies utilisées}
     \begin{itemize}
-        \item Modèle MVC
+        \item Architecture MVC
         \item Architecture RESTful
         \item Format JSON
         \item PHP (Laravel) + MySQL
+        \item JavaScript + HTML5
+        \item Java + Android
     \end{itemize}
 \end{frame}
 
 \begin{frame}
     \begin{center}
     \begin{figure}
-        \includegraphics[width=0.9\textwidth]{./figures/demo}
+        \includegraphics[width=0.9\textwidth]{demo}
     \end{figure}
     \end{center}
 \end{frame}
@@ -246,18 +274,18 @@
 \begin{frame}
     \frametitle{Conclusion}
     \begin{itemize}
-        \item<1-> Développement des Services Web.
-        \item<2-> Méthodologie Scrum.
-        \item<3-> Nouvelles technologies.
+        \item Développer des Services Web tel que: service de position et service de ralentisseurs.
+        \item Découper le projet suivant la méthode Scrum en 3 itérations: service de localisation, gestion des rapport et authentification.
+        \item Utiliser des technologies modernes comme JSON, RESTful, Android.
     \end{itemize}
 \end{frame}
 
 \begin{frame}
     \frametitle{Perspectives}
     \begin{itemize}
-        \item<1-> Appliquer la solution dans des scénarios.
-        \item<2-> Étendre l'application dans un environnement du Big Data.
-        \item<3-> Valoriser notre solution pour l'ouverture d'une startup.
+        \item Appliquer la solution dans des scénarios comme calcule du chemin optimal suivant les caractéristiques des marchandises.
+        \item Étendre l'application dans un environnement du Big Data comme Business Intelligence, data mining.
+        \item Valoriser notre solution pour l'ouverture d'une startup de service de consulting.
     \end{itemize}
 \end{frame}
 
