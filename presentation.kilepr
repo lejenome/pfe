@@ -28,13 +28,13 @@ archive=true
 column=3
 encoding=UTF-8
 highlight=LaTeX
-line=103
+line=104
 mode=LaTeX
 open=true
 order=0
 
 [view-settings,view=0,item:presentation.tex]
 CursorColumn=3
-CursorLine=103
+CursorLine=104
 JumpList=
 ViMarks=
