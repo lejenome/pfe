@@ -12,28 +12,14 @@ width=0.9\textwidth,
 height=8cm,
 %major grid style={line width=.2pt,draw=gray!50},
 ]
-      \addplot[mark=*,cyan] plot coordinates {%
+      \addplot[gray!40] plot coordinates {%
 (0, 412)
-(1, 389)
-(2, 366)
-(3, 343)
-(4, 320)
-(5, 297)
-(6, 274)
-(7, 251)
-(8, 228)
-(9, 205)
-(10, 182)
-(11, 159)
-(12, 136)
-(13, 113)
-(14, 90)
-(15, 67)
-(16, 44)
-(17, 21)
 (18, 0)
     };
-    \addlegendentry{Temps estimé}
+      \addplot[gray!40] plot coordinates {%
+(0, 140)
+(18, 0)
+    };
 
     \addplot[mark=*,red] plot coordinates {%
         (0, 412)
@@ -56,7 +42,30 @@ height=8cm,
         (17, 0)
         (18, 0)
     };
-    \addlegendentry{Temps réelement pris}
+    \addlegendentry{Temps réellement pris}
+
+    \addplot[mark=*,cyan] plot coordinates {%
+        (0, 140)
+        (1, 132)
+        (2, 126)
+        (3, 108)
+        (4, 90)
+        (5, 79)
+        (6, 70)
+        (7, 61)
+        (8, 55)
+        (9, 47)
+        (10, 39)
+        (11, 30)
+        (12, 21)
+        (13, 15)
+        (14, 8)
+        (15, 1)
+        (16, 2)
+        (17, 2)
+        (18, 2)
+    };
+    \addlegendentry{Temps pris par binôme}
 \end{axis}
 \end{tikzpicture}
 \caption{Graphique d'avancement - Itération 1}

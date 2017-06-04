@@ -32,7 +32,7 @@
   }
 }
 
-\title[Service Routière]{\textbf{Implémentation de Service de Collecte et de Stockage des Données sur une plateforme de services Routières}}
+\title[Service Routier]{\textbf{Implémentation de Services de Collecte et de Stockage des Données sur une plateforme de services Routiers}}
 %\subtitle{Mémoire de projet de fin d'études}
 \author{Moez Bouhlel \and Rihab Majdoub}
 \author[Moez B. \and Rihab M.]{\textbf {Moez Bouhlel \and Rihab Majdoub\\[0.2cm] \footnotesize Sous la direction de: \\ Dr. Mohamed Mhiri \and M. Mohamed Amri}}
@@ -63,7 +63,7 @@
   \end{frame}
 }
 
-\section{Contexte de projet}
+\section{Contexte du projet}
 
 \begin{frame}
     \frametitle{Organisme d'accueil}
@@ -76,22 +76,23 @@
 \end{column}
 \begin{column}{.6\textwidth}
 \begin{itemize}
-\item Promgramme de mentorat
-\item Accélerateur des startups
+\item Programme de mentorat
+\item Accélérateur des startups
+\item Amélorier les comptétences dures et souples (Hard and Soft Skills)
 \end{itemize}
 \end{column}
 \end{columns}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Problématique}
+    \frametitle{Problématique et motivation}
     \includegraphics[width=.6\textwidth]{datamanagement-issues}
     \includegraphics[width=.32\textwidth]{question}
 \end{frame}
 
 \begin{frame}
     \frametitle{Présentation du projet}
-    \framesubtitle{Objectif}
+    \framesubtitle{Objectifs}
     \begin{columns}
         \begin{column}{0.5\textwidth}
             \begin{figure}
@@ -103,7 +104,7 @@
                 \item Startup
                 \item 8 membres
                 \item Services de consultings
-                \item Services routières
+                \item Informations routiers
             \end{itemize}
         \end{column}
     \end{columns}
@@ -113,20 +114,20 @@
     \frametitle{Objectifs du projet}
     \begin{figure}
         \centering
-        \includegraphics[width=.73\textwidth]{citywatch-modules}
+        \includegraphics[width=.85\textwidth]{citywatch-modules-participation}
     \end{figure}
 \end{frame}
 
-\section{Gestion projet selon Scrum}
+\section{Gestion de projet selon SCRUM}
 
 %\begin{frame}
-%    \frametitle{Pourquoi Scrum}
+%    \frametitle{Pourquoi SCRUM}
 %    \centering
 %    \includegraphics[width=.7\textwidth]{scrum-logo}
 %\end{frame}
 
 \begin{frame}
-    \frametitle{Méthode Scrum}
+    \frametitle{Méthode SCRUM}
     \centering
     \includegraphics{scrum-model}
 \end{frame}
@@ -134,10 +135,12 @@
 \begin{frame}
 \frametitle{Découpage du projet}
 \begin{figure}
-    \smartdiagram[descriptive diagram]{%
-  {Itération 1, {Service de localisation}},
-  {Itération 2, {Gestion des rapports}},
-  {Itération 3, {Authentification}}}
+%    \smartdiagram[descriptive diagram]{%
+%  {Itération 0, {Préparatifs à SCRUM}},
+%  {Itération 1, {Service de localisation}},
+%  {Itération 2, {Gestion des rapports}},
+%  {Itération 3, {Service web d'authentification}}}
+    \includegraphics[width=.87\textwidth]{sprints-overview}
 \end{figure}
 \end{frame}
 
@@ -146,8 +149,15 @@
 \begin{frame}
     \frametitle{But de l'itération}
     \begin{itemize}
-        \item<1-> Application mobile qui détecte la position géographique.
-        \item<2-> Page web pour afficher la dernière position.
+        \item backend:
+        \begin{itemize}
+        \item Service web de géolocalisation
+        \end{itemize}
+    \item frontend:
+        \begin{itemize}
+        \item Application mobile qui détecte la position géographique.
+        \item Projection de positions sur une carte Google map.
+    \end{itemize}
     \end{itemize}
 \end{frame}
 
@@ -159,14 +169,14 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Diagramme de séquence}
+    \frametitle{Diagramme de séquences}
     \begin{figure}
         \includegraphics[width=0.7\textwidth]{sprint1-webservices-post-sequence}
     \end{figure}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Produit de l'itération}
+    \frametitle{Prototype de l'itération}
     \begin{figure}
         \includegraphics[width=0.3\textwidth]{sprint1-android-screenshot}
         \includegraphics[width=0.7\textwidth]{sprint1-dashboard-screenshot}
@@ -176,7 +186,7 @@
 \begin{frame}
 \frametitle{Évaluation de l'itération}
 \begin{minipage}{\textwidth}
-\input{./figures/sprint1-burndown}
+\input{./figures/sprint1-burndown-full}
 \end{minipage}
 \end{frame}
 
@@ -185,9 +195,9 @@
 \begin{frame}
     \frametitle{But de l'itération}
     \begin{itemize}
-        \item<1-> Déclaration des rapports.
-        \item<2-> Détection des secousses et des ralentisseurs.
-        \item<3-> Consultation des trajectoires, des rapports, des secousses et des ralentisseurs.
+        \item Déclaration des rapports.
+        \item Détection des secousses et des ralentisseurs.
+        \item Consultation des trajectoires, des rapports, des secousses et des ralentisseurs.
     \end{itemize}
 \end{frame}
 
@@ -199,28 +209,28 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Diagramme de séquence}
+    \frametitle{Diagramme de séquences}
     \begin{figure}
         \includegraphics[width=.8\textwidth]{sprint2-webservices-report-post-sequence}
     \end{figure}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Produit de l'itération}
+    \frametitle{Prototype de l'itération}
     \begin{figure}
         \includegraphics[width=0.45\textwidth,height=4cm]{sprint2-rapport-screenshot1}
         \includegraphics[width=0.5\textwidth]{sprint2-dashboard-screenshot2}
     \end{figure}
 \end{frame}
 
-\section{Itération 3: Authentification}
+\section{Itération 3: Service web d'authentification}
 
 \begin{frame}
     \frametitle{But de l'itération}
     \begin{itemize}
-        \item<1-> Détecte et projection de vitesse moyenne, d'état du réseau cellulaire.
-        \item<2-> Authentification.
-        \item<3-> Business Intelligence.
+        \item Détection et projection de la vitesse moyenne et de l'état du réseau cellulaire.
+        \item Service web d'authentification
+        \item Traitement et visualisation des données en procédant par ``Business Intelligence'': le cas des secousses.
     \end{itemize}
 \end{frame}
 
@@ -232,17 +242,17 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Diagramme de séquence}
+    \frametitle{Diagramme de séquences}
     \begin{figure}
         \includegraphics[width=.65\textwidth]{sprint3-webservices-oauth-sequence}
     \end{figure}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Produit de l'itération}
+    \frametitle{Prototype de l'itération}
     \begin{figure}
-        \includegraphics[width=0.45\textwidth,height=4cm]{sprint2-rapport-screenshot1}
-        \includegraphics[width=0.5\textwidth]{sprint2-dashboard-screenshot2}
+        \includegraphics[width=0.35\textwidth]{sprint3-android-screenshot2}
+        \includegraphics[width=0.67\textwidth]{sprint3-dashboard-screenshot1}
     \end{figure}
 \end{frame}
 
@@ -251,14 +261,27 @@
 
 \begin{frame}
     \frametitle{Technologies utilisées}
-    \begin{itemize}
-        \item Architecture MVC
-        \item Architecture RESTful
-        \item Format JSON
-        \item PHP (Laravel) + MySQL
-        \item JavaScript + HTML5
-        \item Java + Android
-    \end{itemize}
+    \begin{description}
+        \item [Architecture] \textbf{}
+
+            \begin{itemize}
+                \item MVC
+                \item RESTful
+            \end{itemize}
+        \item [Langages de programmation] \textbf{}
+
+            \begin{itemize}
+                \item PHP 7
+                \item JavaScript (ECMAScript 2016)
+                \item Java
+            \end{itemize}
+        \item [Plateformes \& frameworks] \textbf{}
+
+            \begin{itemize}
+                \item Lumen
+                \item Android
+            \end{itemize}
+    \end{description}
 \end{frame}
 
 \begin{frame}
@@ -274,18 +297,19 @@
 \begin{frame}
     \frametitle{Conclusion}
     \begin{itemize}
-        \item Développer des Services Web tel que: service de position et service de ralentisseurs.
-        \item Découper le projet suivant la méthode Scrum en 3 itérations: service de localisation, gestion des rapport et authentification.
-        \item Utiliser des technologies modernes comme JSON, RESTful, Android.
+        \item Développer des Services Web tels que: service de géolocalisation et service de ralentisseurs.
+        \item Gérer le projet suivant SCRUM: 3 itérations sont retenues.
+        \item Maîtriser plusieurs technologies telles que JSON, RESTful, Android, OAuth2, etc.
+        \item Améliorer nos compétences comportementales et managériales.
     \end{itemize}
 \end{frame}
 
 \begin{frame}
     \frametitle{Perspectives}
     \begin{itemize}
-        \item Appliquer la solution dans des scénarios comme calcule du chemin optimal suivant les caractéristiques des marchandises.
-        \item Étendre l'application dans un environnement du Big Data comme Business Intelligence, data mining.
-        \item Valoriser notre solution pour l'ouverture d'une startup de service de consulting.
+        \item Appliquer la solution dans des scénarios comme le calcul du chemin optimal suivant les caractéristiques des marchandises.
+        \item Mettre en place tout le processus du Big Data.
+        \item Implantation de la start-up ``City Watch''.
     \end{itemize}
 \end{frame}
 
@@ -298,7 +322,8 @@
 
 \section*{Annexe}
 \begin{frame}
-\frametitle{Diagramme 1}
+\frametitle{Diagrammes}
+\textbf{TODO:} add class diagrams, database schema.
 \end{frame}
 
 \end{document}
