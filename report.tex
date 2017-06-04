@@ -21,7 +21,7 @@ final,
 
 %\usepackage[nottoc]{tocbibind}
 \usepackage[style=alphabetic,backend=bibtex8]{biblatex}
-\addbibresource{61-bibliography.bib}
+\addbibresource{report/61-bibliography.bib}
 
 \usepackage{ifxetex,ifluatex}
 \usepackage{ifthen}
@@ -173,7 +173,7 @@ final,
 \VerbatimFootnotes
 
 \makeglossaries
-\input{60-glossary}
+\input{report/60-glossary}
 
 \title{La Plateforme CityWatch - Mémoire de Projet de Fin d'études}
 \author{Moez Bouhlel}
@@ -196,16 +196,16 @@ final,
 
 \begin{document}
 
-\input{00-title}
+\input{report/00-title}
 
 \pagestyle{empty}
 \pagenumbering{roman}
 
-% \include{01-quote}
+% \include{report/01-quote}
 \cleardoublepage
-\include{03-dedicaces}
+\include{report/03-dedicaces}
 \cleardoublepage
-\include{04-merci}
+\include{report/04-merci}
 \fancypagestyle{plain}{%
     \fancyhf{}
     \rfoot{\thepage}
@@ -238,20 +238,20 @@ final,
 \pagenumbering{arabic}
 
 \cleardoublepage
-\input{10-introduction}
+\input{report/10-introduction}
 
 \cleardoublepage
-\input{20-cadreprojet}
+\input{report/20-cadreprojet}
 
 \cleardoublepage
-\include{30-sprints}
-\include{31-sprint0}
-\include{32-sprint1}
-\include{33-sprint2}
-\include{34-sprint3}
+\include{report/30-sprints}
+\include{report/31-sprint0}
+\include{report/32-sprint1}
+\include{report/33-sprint2}
+\include{report/34-sprint3}
 
 \cleardoublepage
-\input{40-conclusion}
+\input{report/40-conclusion}
 
 \cleardoublepage
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ \ --\ \ #1}}
@@ -264,9 +264,9 @@ final,
   {}% <numberless-entry-format>
   {\hfill\contentspage}% <filler-page-format>
 \begin{appendices}
-\input{50-api-documentation}
-%\input{51-code-quality}
-\input{52-database}
+\input{report/50-api-documentation}
+%\input{report/51-code-quality}
+\input{report/52-database}
 \end{appendices}
 
 \cleardoublepage
@@ -289,6 +289,6 @@ final,
 \printbibheading
 \printbibliography[keyword={Standard},heading=subbibliography,title={Standards}]
 \printbibliography[notkeyword={Standard},heading=subbibliography,title={Autres Sources}]
-\include{02-abstract}
+\include{report/02-abstract}
 
 \end{document}
