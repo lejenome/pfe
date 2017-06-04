@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[french]{babel}
 \usepackage[page]{appendix}
+\usepackage{smartdiagram}
 
 %\usetheme{tb}
 \definecolor{kugreen}{RGB}{66,103,104}
@@ -24,7 +25,7 @@
 \author{Moez Bouhlel \and Rihab Majdoub}
 \author[Moez B. \and Rihab M.]{\textbf {Moez Bouhlel \and Rihab Majdoub\\[0.2cm] \footnotesize Sous la direction de: \\ Dr. Mohamed Mhiri \and M. Mohamed Amri}}
 \institute{Faculté des Sciences de Sfax}
-%\titlegraphic{\includegraphics[width=2cm]{figures/logo-djagora}}
+\titlegraphic{\includegraphics[width=2cm]{figures/logo-djagora}}
 \logo{\includegraphics[width=1.6cm]{./figures/fss-old}}
 \date{05/06/2017}
 
@@ -101,16 +102,25 @@
 
 \section{Gestion projet selon Scrum}
 
-\begin{frame}
-    \frametitle{Pourquoi Scrum}
-    \centering
-    \includegraphics[width=.7\textwidth]{figures/scrum-logo}
-\end{frame}
+%\begin{frame}
+%    \frametitle{Pourquoi Scrum}
+%    \centering
+%    \includegraphics[width=.7\textwidth]{figures/scrum-logo}
+%\end{frame}
 
 \begin{frame}
     \frametitle{Méthodologie Scrum}
     \centering
     \includegraphics{figures/scrum-model}
+\end{frame}
+
+\begin{frame}
+\begin{figure}
+    \smartdiagram[descriptive diagram]{%
+  {Itération 1, {Service de localisation}},
+  {Itération 2, {Gestion des rapports}},
+  {Itération 3, {Authentification}}}
+\end{figure}
 \end{frame}
 
 \section{Itération 1: Service Localisation}
