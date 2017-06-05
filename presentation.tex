@@ -10,6 +10,7 @@
 \usepackage{pgfplots}
 \usetikzlibrary{arrows.meta}
 \usepackage{smartdiagram}
+\usepackage{csquotes}
 
 %\usetheme{tb}
 \definecolor{kugreen}{RGB}{66,103,104}
@@ -78,7 +79,7 @@
 \begin{itemize}
 \item Programme de mentorat
 \item Accélérateur des startups
-\item Amélorier les comptétences dures et souples (Hard and Soft Skills)
+\item Améliorer les compétences dures et souples (Hard and Soft Skills)
 \end{itemize}
 \end{column}
 \end{columns}
@@ -103,8 +104,8 @@
             \begin{itemize}
                 \item Startup
                 \item 8 membres
-                \item Services de consultings
-                \item Informations routiers
+                \item Services de consulting
+                \item Informations routières
             \end{itemize}
         \end{column}
     \end{columns}
@@ -156,7 +157,7 @@
     \item frontend:
         \begin{itemize}
         \item Application mobile qui détecte la position géographique.
-        \item Projection de positions sur une carte Google map.
+        \item Projection de positions sur une carte Google Maps.
     \end{itemize}
     \end{itemize}
 \end{frame}
@@ -309,7 +310,7 @@
     \begin{itemize}
         \item Appliquer la solution dans des scénarios comme le calcul du chemin optimal suivant les caractéristiques des marchandises.
         \item Mettre en place tout le processus du Big Data.
-        \item Implantation de la start-up ``City Watch''.
+        \item Implantation de la start-up \textquote{City Watch}.
     \end{itemize}
 \end{frame}
 
@@ -329,11 +330,28 @@
     \end{center}
 \end{frame}
 
+{%
+    \setbeamertemplate{navigation symbols}{}
+    \begin{frame}[plain]
+        \begin{tikzpicture}[remember picture,overlay]
+            \node[at=(current page.center)] {%
+                \includegraphics[width=\paperwidth]{business-model}
+            };
+        \end{tikzpicture}
+     \end{frame}
+}
 
 \begin{frame}
     \frametitle{Diagramme de classes --- Itération 1}
     \begin{figure}
         \includegraphics[width=0.8\textwidth]{sprint1-webservices-class}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Schéma de la base des données --- Itération 1}
+    \begin{figure}
+        \includegraphics[width=0.6\textwidth]{sprint1-webservices-database}
     \end{figure}
 \end{frame}
 
@@ -352,6 +370,13 @@
 \end{frame}
 
 \begin{frame}
+    \frametitle{Schéma de la base des données --- Itération 2}
+    \begin{figure}
+        \includegraphics[width=0.87\textwidth]{sprint2-webservices-database}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
     \frametitle{Diagramme de classes --- Itération 3}
     \begin{figure}
         \includegraphics[width=0.85\textwidth]{sprint3-webservices-class}
@@ -362,6 +387,13 @@
     \frametitle{Diagramme de classes (Web) --- Itération 3}
     \begin{figure}
         \includegraphics[width=0.5\textwidth]{sprint3-dashboard-class}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Schéma de la base des données --- Itération 3}
+    \begin{figure}
+        \includegraphics[width=0.55\textwidth]{sprint3-webservices-database}
     \end{figure}
 \end{frame}
 
