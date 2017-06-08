@@ -355,7 +355,7 @@ des exigences de spécification.
 Pour réaliser les services web, nous avons étudié les différentes approches et
 architectures des ces services web.
 
-Un service web est un protocole d'interface de communication et l'échange de
+Un service web est un protocole d'interface de communication et d'échange de
 données entre applications et systèmes hétérogènes à distance en utilisant les
 technologies Web (HTTP dans notre cas). Les différentes variantes des
 architectures des services web sont:
@@ -372,24 +372,23 @@ architectures des services web sont:
                 les données.
             \item Utiliser les paramètres d'URL pour passer des paramètres.
             \item Sans état.
-            \item Meilleur pour modéliser un domaine et entités.
+            \item Meilleur pour modéliser un domaine et des entités.
         \end{itemize}
 \end{itemize}
 
-Le choix final de l'architecture du service web à suivre était l'architecture
+Le choix final de l'architecture du service web à suivre est l'architecture
 RESTful.
 
 Avant de commencer la conception et l'implémentation des services web, un
 ensemble des exigences ont été définies:
 
 \begin{description}
-    \item [Portabilité] Le système doit support la différence en zone du temps
+    \item [Portabilité] Le système doit supporter la différence en zone du temps
         et en internalisation, la format de présentation des données
         géographiques et sa précision.
     \item [Stabilité] L'implémentation doit vérifier la structure des données
         reçues, la disponibilité des champs obligatoires et leurs formats.
 \end{description}
-
 
 \subsection{Conception}
 
@@ -407,7 +406,7 @@ La figure~\ref{fig:sprint1-webservices-post-sequence} décrit le diagramme de
 séquence du service \textquote{Post Position} qui représente les scénarios de
 l'envoi de la position. L'utilisateur ouvre l'application mobile et active la
 localisation. L'application capture la position à travers le GPS et l'envoie au
-serveur. Le serveur vérifie le chemin de la requête, sa format et son contenu
+serveur. Le serveur vérifie le chemin de la requête, son format et son contenu
 puis enregistre la position de l'individu. L'application renvoie la position en
 changement de la localisation pour que le serveur la met à jour.
 
@@ -423,8 +422,8 @@ séquence du service \textquote{Get Position} qui représente les scénarios du
 récupération de la position. L'utilisateur visite la page web du Dashboard pour
 consulter sa dernière position.  Le système récupère la dernière position des
 périphériques chaque 2 secondes et met à jour la position géographique des
-marqueurs dans la cartographie et leurs états à hors ligne s'ils n'ont aucun
-mise à jour du position depuis 60 secondes. Pour chaque requête de
+marqueurs dans la cartographie et leurs états hors ligne s'ils n'ont aucun
+mise à jour de position depuis 60 secondes. Pour chaque requête de
 récupération, le serveur vérifie la présence de la position du périphérique et
 retourne sa dernière position enregistrée.
 
@@ -457,12 +456,12 @@ et~\ref{appendix:sprint1-position-get-doc}.
 
 Nous avons essayé d'adresser les différentes mises en normes:
 
-\subsubsection{Probabilité}
+\subsubsection{Portabilité}
 
-Nous avons utilisé la format standardisée JSON~\cite{ECMA-404} pour le
+Nous avons utilisé le format standardisé JSON~\cite{ECMA-404} pour le
 transfert de données ce qui assure la portabilité des représentations des
-différents types des données (nombres, booléens, strings, \ldots) indépendant
-du l'internationalisation (séparateur décimal, \verb|true| vs. \verb|True| vs.
+différents types des données (nombres, booléens, strings, \ldots) indépendants
+de l'internationalisation (séparateur décimal, \verb|true| vs. \verb|True| vs.
 \verb|vrai| vs. \verb|yes| vs. \verb|y|, \ldots).
 
 Pour la représentation des dates dans le content du requêtes HTTP, nous avons
@@ -470,26 +469,26 @@ utilisé le format RFC3339~\cite{RFC3339} (basé sur ISO8601~\cite{ISO8601} pour
 l'utilisation dans les protocoles du Web) avec UTC comme la zone du temps par
 défaut, ex: \verb|2005-08-15T15:52:01Z|.
 
-Pour les en-têtes du requêtes HTTP, le format de représentation des dates est
+Pour les en-têtes des requêtes HTTP, le format de représentation des dates est
 RFC1123~\cite{RFC1123}, ex: \verb|Mon, 15 Aug 2005 15:52:01 +0000|.
 
-Le format de la présentation des positions géologique (latitude et longitude)
+Le format de la présentation des positions géologiques (latitude et longitude)
 choisie est la même représentation des nombres en JSON avec une précision
 jusqu'à 14 chiffres après le séparateur décimal. Les valeurs envoyées doivent
-respecter l'intervalle des diffèrent entités géologiques ($latitude \in [-90,
+respecter l'intervalle des différentes entités géologiques ($latitude \in [-90,
 90]$, $longitude \in [-180, 180]$)
 
 \subsubsection{Stabilité}
 
 Pour assurer la stabilité d'un service web, nous avons vérifié la validité de
-contenu reçu même si envoyé depuis un source de confiance avant de les
+contenu reçu même s'il était envoyé depuis une source de confiance avant de les
 utiliser. La vérification inclut le test de disponibilité des entités
 obligatoires et le test de leurs formats.
 
 \section{Revue de cette itération}
 
 À la fin de l'itération, notre équipe et le \textquote{Product Owner} invitées
-se réunissent pour effectuer la revue de sprint, qui dure au maximum deux
+se réunissent pour effectuer la revue de l'itération, qui dure au maximum deux
 heures.
 
 L'objectif de la revue de l'itération est de valider l'incrément de produit qui
@@ -499,7 +498,7 @@ en début de sprint, et présente les tâches finies (complètement réalisées)
 \subsection{Produit de l'itération}
 
 A la fin de l'itération 1, nous avons un premier produit partiel permettant de
-suivre la position des multiples smartphones et les afficher dans la carte de
+suivre la position des multiples smartphones et de les afficher dans la carte de
 notre site web.
 
 \subsubsection{Page Web \textquote{Dashboard}}
@@ -568,8 +567,7 @@ la qualité du code.
         était préféré avec la possibilité d'utiliser Markdown pour la
         simplicité de sa syntaxe.
     \item Écrire les tests unitaires pour les fonctions et les classes selon la
-        technique \acrshort{TDD}. On a autorisé l'écrire des tests unitaires
-        après le développement du code. Les outils utilisés sont PHPUnit pour
+        technique \acrshort{TDD}. Les outils utilisés sont PHPUnit pour
         PHP et Mocha/Chai pour JavaScript.
 \end{itemize}
 
@@ -609,5 +607,8 @@ Affiche état du périphérique & Effectué 100\% \\ \hline
 \section*{Conclusion}
 \addcontentsline{toc}{section}{Conclusion}
 
-À la fin de cette itération, nous avons un prototype fonctionnel dont on peut
-baser notre future travail.
+À la fin de cette itération, nous avons un prototype fonctionnel dont nous pouvons
+baser notre future travail. Ce prototype était composé d'une application mobile
+Android qui détecte la position de l'individu instantanément et continuellement et
+une page web qui affiche la dernière position sur une cartographie. L'échange et le
+stockage des données sont assurés par des services web.
