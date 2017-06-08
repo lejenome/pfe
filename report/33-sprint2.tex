@@ -36,13 +36,13 @@ une nouvelle vision par rapport à l'itération précédentes.
 \section{Planification de l'itération}
 
 Au sein de la réunion de planification nous avons sélectionné les tâches à
-réaliser au cours de cette itération tout en accord avec le \textquote{Product
+réaliser au cours de cette itération en accord avec le \textquote{Product
 Owner}.
 
 \subsection{Backlog de l'itération}
 
 Le but de cette itération est d'ajouter un système de gestion des rapports,
-d'améliorer la qualité et d'explorer des nouvelles type des données.
+d'améliorer la qualité et d'explorer des nouveaux type des données.
 
 Le tableau~\ref{tab:sprint2-backlog} représente nos tâches dans cette
 itération.
@@ -115,7 +115,7 @@ itération.
 
 \subsection{Estimation de l'itération}
 
-Comme l'itération précédant, Nous avons fixé la période de cette itération à 3
+Comme l'itération précédente, nous avons fixé la période de cette itération à 3
 semaines. Le budget horaire des membres est présenté dans le
 tableau~\ref{tab:sprint2-capacity}.
 
@@ -170,37 +170,36 @@ Groupement de secousse sur la carte & Rihab & 5 \\ \hline
 
 Nous avons décidé de migrer vers un framework pour le développement du backend
 du notre plateforme dans le but de simplifier et améliorer nos services web.
-Les critères de choisir le framework étaient sa performance, sa stabilité et
-son support de développement des api RESTful. Les 3 frameworks principales
+Les critères de choix du framework étaient sa performance, sa stabilité et
+son support de développement des api RESTful. Les 3 frameworks principaux
 étudiés:
 
 \begin{description}
     \item [Slim] Un macro framework performant avec support de développement
         des services web de première classe. Il manque le support pour
         développer des sites web classiques.
-    \item [Symfony] Le framework PHP de référence. Il suivre une architecture
+    \item [Symfony] Le framework PHP de référence. Il suit une architecture
         modulaire et fournit une haute performance. Pour ajouter le support des
-        services web, il nécessite l'ajoute et configurations des multiples des
+        services web, il nécessite l'ajout et la configuration de multiples
         extensions.
     \item [Lumen] Une version minimale du framework Laravel pour le
-        développement des services web. Étant basé sur Laravel, il profile d'un
-        excellent support des extensions du troisième partie.
+        développement des services web. Étant basé sur Laravel, il profit d'un
+        excellent support d'extensions de la troisième partie.
 \end{description}
 
-Lumen était choisi pour sa simplicité de configurer et de lancer et pour son
+Lumen était choisi pour sa simplicité de configuration et de lancement et pour son
 support de migrer vers Laravel en cas où on aura besoin de supporter le
 développement du site web classique ou autres types de développement.
 
-\section{Mises des normes}
+\section{Mises des critères}
 
 Outres que les critères de la première itération, des nouveaux critères ont
 été ajoutés pendant cette itération:
 
 \subsection{Qualité de la trajectoire}
 
-Le trajectoire doit être aligné sur le trajet avec bonne précision. Et le
-nombre des positions nécessaire pour tracer le trajectoire doivent être le
-minimum le plus possible.
+La trajectoire doit être alignée sur le trajet avec une bonne précision. Le
+nombre des positions nécessaire pour tracer la trajectoire doivent être minimal.
 
 \subsection{Architecture modulaire}
 
@@ -228,8 +227,7 @@ d'utilisation du services \textquote{Rapport} de la deuxième itération.
 La figures~\ref{fig:sprint2-webservices-report-post-sequence} décrit le
 scénario de déclaration d'un rapport de point de vue du service web.
 L'utilisateur peut déclarer un rapport à travers la page rapport hébergée dans
-le site ou à travers la page rapport intégrée dans l'application mobile. Après
-de remplir le formulaire et de cliquer sur le bouton ``envoie'', le système
+le site ou à travers la page rapport intégrée dans l'application mobile. Après remplir le formulaire et de cliquer sur le bouton ``envoie'', le système
 vérifie les champs, charge l'image au serveur puis envoie le rapport en
 utilisant l'identificateur assigné à l'image.
 
@@ -241,21 +239,21 @@ utilisant l'identificateur assigné à l'image.
 \end{figure}
 
 La figures~\ref{fig:sprint2-webservices-report-get-sequence} décrit le
-scénario² de récupération d'un rapport de point de vue du service
+scénario de récupération d'un rapport de point de vue du service
 web. L'utilisateur visite la page Dashboard pour consulter les rapports.  Le
 système récupère la liste des rapports chaque 10 minutes et les affiche comme
 des marqueurs dans la cartographie.  Pour chaque rapport, le système télécharge
-sa image.
+l'image.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=.9\textwidth]{sprint2-webservices-report-get-sequence}
-    \caption{Diagramme de séquence du services Get Rapports --- Itération 2}
+    \caption{Diagramme de séquence de services Get Rapports --- Itération 2}
 \label{fig:sprint2-webservices-report-get-sequence}
 \end{figure}
 
 La figure~\ref{fig:sprint2-dashboard-class} représente la nouvelle architecture
-orienté objet de la page \textquote{Dashboard}.
+orientée objet de la page \textquote{Dashboard}.
 
 \begin{figure}[H]
     \centering
@@ -285,12 +283,11 @@ pour la représentation de la trajectoire.
 
 \subsection{Contributions}
 
-Au cours de l'itération avec l'augment des fonctionnalités ajoutées au
+Au cours de l'itération avec l'augmentation des fonctionnalités ajoutées au
 Dashboard, le code JavaScript devenu complexe, dupliqué et difficile à détecter
-les bugs. Nous avons décidé de réécrire le code avec une architecture modulaire
-et plus moderne.
+les bugs. Nous avons décidé de réécrire le code avec une architecture modulaire.
 
-L'utilisation de la version ECMAScript 6 du JavaScript nous a fourni les
+L'utilisation de la version ECMAScript 6 de JavaScript nous a fourni les
 techniques de base nécessaires comme POO, Template Strings, paramètres par
 défaut, nouvelles variantes de la boucle For et support de la programmation
 asynchrone.
@@ -307,11 +304,11 @@ diagramme~\ref{fig:sprint2-dashboard-class}. Elle se compose de:
         continuellement les données, génération les marqueurs ou zones, mise à
         jour des données, définition des filtrages supportés et les
         informations additionnelles à afficher). Le code commun entre
-        différents couches est implémenté dans cette classe abstraite.
+        différentes couches est implémenté dans cette classe abstraite.
     \item Une classe pour chaque type de données à visualiser (trajectoire,
         ralentisseurs, secousses, \ldots) qui hérite du classe \verb|Layer|. La
-        plupart du temps, nous sommes juste besoin de définir l'URL du
-        ressource, la listes des icônes et des filtrages possibles.
+        plupart du temps, nous avons juste besoin de définir l'URL de la
+        ressource, la liste des icônes et des filtrages possibles.
     \item Un espace de noms \verb|Config| contenu les constantes de
         configuration.
 \end{itemize}
@@ -403,7 +400,7 @@ pour faciliter la consultation de la carte.
     \caption{Formulaire d'inscription}
 \end{figure}
 
-Dans notre application, la maquette de formulaire d'inscription été ajoutée
+Dans notre application, la maquette de formulaire d'inscription a été ajoutée
 mais la relation avec le serveur été reportée à l'itération suivante. Pour
 cette itération, le nom d'utilisateur et le mot de passe ne sont pas vérifiés
 
@@ -457,6 +454,6 @@ Groupement de secousse sur la carte & Effectué 100\% \\ \hline
 \addcontentsline{toc}{section}{Conclusion}
 
 Dans cette itération, la qualité de notre code a été bien améliorée grâce aux
-tests unitaires que nous avons pris et le revue collaboré du code à chaque
+tests unitaires que nous avons prises et à la revue collaboré du code à chaque
 changement. De plus l'utilisation d'un framework dans le développement de notre
 service web a facilité et organisé notre code.
